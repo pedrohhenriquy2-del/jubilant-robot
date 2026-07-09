@@ -62,6 +62,48 @@ no código:
   clientes atendidas em Unaí-MG").
 - **Favicon** — `public/favicon.svg` está com o ícone padrão do Vite.
 
+## Publicação (Vercel + domínio Registro.br)
+
+O projeto é um site estático (SPA sem rotas client-side), então o deploy na
+Vercel é direto — sem configuração extra além do padrão do Vite.
+
+### 1. Publicar na Vercel
+
+1. Acesse [vercel.com](https://vercel.com) e crie uma conta gratuita
+   fazendo login com o GitHub.
+2. Clique em **Add New → Project** e importe o repositório
+   `pedrohhenriquy2-del/jubilant-robot`.
+3. A Vercel detecta automaticamente o framework **Vite** — mantenha:
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+4. Clique em **Deploy**. Em ~1 minuto o site fica no ar em um endereço do
+   tipo `jubilant-robot.vercel.app`.
+5. A partir daí, todo push no branch `main` gera um novo deploy automático.
+
+### 2. Comprar o domínio no Registro.br
+
+1. Acesse [registro.br](https://registro.br) e registre o domínio desejado
+   (ex: `seluneoficial.com.br`).
+2. No painel do Registro.br, acesse o domínio → **Editar Zona DNS** (ou
+   "DNS" / "Servidores DNS").
+
+### 3. Apontar o domínio para a Vercel
+
+1. No painel da Vercel, abra o projeto → **Settings → Domains** → adicione
+   o domínio comprado no Registro.br.
+2. A Vercel vai mostrar os registros DNS necessários, tipicamente:
+   - Um registro **A** apontando para `76.76.21.21` (domínio raiz, ex:
+     `seluneoficial.com.br`)
+   - Um registro **CNAME** apontando para `cname.vercel-dns.com` (para o
+     subdomínio `www`)
+   - *(a Vercel sempre mostra os valores atualizados na tela — use os que
+     aparecerem lá, pois podem mudar)*
+3. Volte à Zona DNS do Registro.br e cadastre esses registros exatamente
+   como a Vercel indicou.
+4. Aguarde a propagação do DNS (de minutos a até 24h). A Vercel emite o
+   certificado HTTPS automaticamente assim que detectar o domínio
+   apontado corretamente.
+
 ## Stack
 
 - [Vite](https://vite.dev/) + React
