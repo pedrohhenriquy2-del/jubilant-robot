@@ -11,11 +11,13 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="order-2 md:order-1 relative"
         >
-          {/* TROCAR: placeholder pela foto real da profissional ou do espaço */}
-          <div className="aspect-square w-full rounded-[2rem] bg-gradient-to-br from-offwhite to-beige flex items-center justify-center shadow-md">
-            <span className="text-ink-soft/60 text-sm">
-              [ Foto da profissional / espaço da clínica ]
-            </span>
+          <div className="aspect-square w-full rounded-[2rem] overflow-hidden shadow-md">
+            <img
+              src={`${import.meta.env.BASE_URL}about-clinica.webp`}
+              alt="Profissional realizando procedimento facial no espaço da Selune Oficial"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
 
