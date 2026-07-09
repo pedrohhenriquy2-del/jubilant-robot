@@ -43,6 +43,12 @@ para trocar textos, links ou dados de contato.
 - **Instagram**: `@seluneoficialoficial.com.br`
 - **Fotos da Galeria** — 5 fotos reais em `public/gallery/` referenciadas em
   `GALLERY_IMAGES` (`src/constants.js`).
+- **Foto do Hero** — `public/hero-produto.jpeg` (produto usado nos
+  procedimentos).
+- **Foto do Sobre** — `public/about-clinica.webp`.
+- **Fotos dos Depoimentos** — 4 fotos reais de clientes em
+  `public/testimonials/`.
+- **Fonte dos títulos** — Jost (trocada a pedido do cliente).
 
 ## O que ainda precisa ser substituído antes de publicar de verdade
 
@@ -52,15 +58,16 @@ no código:
 - **Mapa do Google Maps** — `CONTACT.mapsEmbedSrc` em `src/constants.js` usa
   uma busca pelo endereço como aproximação. Para o pin exato, gerar o embed
   real em Google Maps → Compartilhar → Incorporar mapa e colar aqui.
-- **Fotos do Hero e do Sobre** — os blocos com fundo degradê e o texto
-  `[ Foto ... ]` ainda são placeholders em `src/components/Hero.jsx` e
-  `src/components/About.jsx`. Substituir por `<img src="..." />` com fotos
-  reais (a Galeria já usa fotos reais).
 - **Imagem Open Graph** — `og:image` em `index.html` (recomendado
-  1200x630px), usada quando o link do site é compartilhado no WhatsApp/redes.
-- **Serviços, depoimentos e FAQ** — revisar os textos de exemplo em
-  `src/constants.js` (`SERVICES`, `TESTIMONIALS`, `FAQ_ITEMS`) e ajustar
-  para os procedimentos, valores e depoimentos reais.
+  1200x630px, ainda não existe o arquivo), usada quando o link do site é
+  compartilhado no WhatsApp/redes.
+- **Textos dos depoimentos** — os nomes (Camila, Fernanda, Juliana,
+  Patrícia) e os textos em `TESTIMONIALS` (`src/constants.js`) ainda são de
+  exemplo, mesmo já usando fotos reais das clientes — revisar para bater com
+  o que cada uma realmente disse.
+- **Serviços e FAQ** — revisar os textos de exemplo em `src/constants.js`
+  (`SERVICES`, `FAQ_ITEMS`) e ajustar para os procedimentos e valores reais
+  (o FAQ hoje não informa preço, só manda chamar no WhatsApp).
 - **Selo de confiança** — `TRUST_BADGE` em `src/constants.js` (ex: "+300
   clientes atendidas em Unaí-MG").
 - **Favicon** — `public/favicon.svg` está com o ícone padrão do Vite.
