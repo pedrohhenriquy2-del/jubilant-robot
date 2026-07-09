@@ -41,6 +41,8 @@ para trocar textos, links ou dados de contato.
 - **WhatsApp**: `(38) 99965-9366`
 - **Endereço**: Rua Dr. Natal Rabelo, s/n — Bairro Sagrada Família, Unaí - MG
 - **Instagram**: `@seluneoficialoficial.com.br`
+- **Fotos da Galeria** — 5 fotos reais em `public/gallery/` referenciadas em
+  `GALLERY_IMAGES` (`src/constants.js`).
 
 ## O que ainda precisa ser substituído antes de publicar de verdade
 
@@ -50,10 +52,10 @@ no código:
 - **Mapa do Google Maps** — `CONTACT.mapsEmbedSrc` em `src/constants.js` usa
   uma busca pelo endereço como aproximação. Para o pin exato, gerar o embed
   real em Google Maps → Compartilhar → Incorporar mapa e colar aqui.
-- **Fotos** — todos os blocos com fundo degradê e o texto
-  `[ Foto ... ]` são placeholders: Hero (`src/components/Hero.jsx`), Sobre
-  (`src/components/About.jsx`) e Galeria (`src/components/Gallery.jsx`).
-  Substituir por `<img src="..." />` com as fotos reais.
+- **Fotos do Hero e do Sobre** — os blocos com fundo degradê e o texto
+  `[ Foto ... ]` ainda são placeholders em `src/components/Hero.jsx` e
+  `src/components/About.jsx`. Substituir por `<img src="..." />` com fotos
+  reais (a Galeria já usa fotos reais).
 - **Imagem Open Graph** — `og:image` em `index.html` (recomendado
   1200x630px), usada quando o link do site é compartilhado no WhatsApp/redes.
 - **Serviços, depoimentos e FAQ** — revisar os textos de exemplo em
