@@ -111,21 +111,25 @@ export const GALLERY_IMAGES = [
 export const TESTIMONIALS = [
   {
     name: "Camila Rezende",
+    photo: "/testimonials/camila-rezende.jpeg",
     rating: 5,
     text: "Minha pele nunca esteve tão limpa e uniforme. O atendimento é super acolhedor, me senti cuidada do início ao fim.",
   },
   {
     name: "Fernanda Alves",
+    photo: "/testimonials/fernanda-alves.jpeg",
     rating: 5,
     text: "Fiz a limpeza de pele profunda e amei o resultado. Ambiente impecável e profissional muito atenciosa.",
   },
   {
     name: "Juliana Martins",
+    photo: "/testimonials/juliana-martins.webp",
     rating: 5,
     text: "Já é minha terceira sessão na Selune e cada vez saio mais satisfeita. Recomendo de olhos fechados!",
   },
   {
     name: "Patrícia Gomes",
+    photo: "/testimonials/patricia-gomes.jpeg",
     rating: 5,
     text: "Atendimento personalizado de verdade. Explicaram cada etapa do procedimento e minha pele agradeceu.",
   },

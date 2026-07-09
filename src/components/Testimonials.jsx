@@ -43,9 +43,17 @@ export default function Testimonials() {
               <p className="text-ink-soft leading-relaxed mb-5">
                 "{t.text}"
               </p>
-              <span className="text-sm font-medium text-ink">
-                {t.name}
-              </span>
+              <div className="flex items-center gap-3">
+                <img
+                  src={t.photo}
+                  alt={t.name}
+                  loading="lazy"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                <span className="text-sm font-medium text-ink">
+                  {t.name}
+                </span>
+              </div>
             </motion.div>
           ))}
         </div>
