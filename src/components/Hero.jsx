@@ -51,11 +51,13 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="relative"
         >
-          {/* TROCAR: substituir pelo placeholder por foto real da esteticista/procedimento */}
-          <div className="aspect-[4/5] w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl">
-            <span className="text-ink-soft/60 text-sm">
-              [ Foto da esteticista / procedimento ]
-            </span>
+          <div className="aspect-[4/5] w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-10">
+            <img
+              src={`${import.meta.env.BASE_URL}hero-produto.jpeg`}
+              alt="Sérum Principia utilizado nos procedimentos da Selune Oficial"
+              loading="lazy"
+              className="max-w-full max-h-full object-contain"
+            />
           </div>
           <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-2xl bg-gold-light/70 -z-10" />
         </motion.div>
