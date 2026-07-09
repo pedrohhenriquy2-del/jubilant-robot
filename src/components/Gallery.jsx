@@ -20,7 +20,6 @@ export default function Gallery() {
           </h2>
         </motion.div>
 
-        {/* TROCAR: cada bloco pelo <img> real (antes/depois, espaço, procedimentos) */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {GALLERY_IMAGES.map((img, i) => (
             <motion.div
@@ -29,13 +28,14 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              className="aspect-square rounded-xl bg-gradient-to-br from-beige to-beige-dark/70 flex items-center justify-center"
-              role="img"
-              aria-label={img.alt}
+              className="aspect-square rounded-xl overflow-hidden bg-beige"
             >
-              <span className="text-ink-soft/50 text-xs text-center px-3">
-                {img.alt}
-              </span>
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           ))}
         </div>

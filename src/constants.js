@@ -81,12 +81,31 @@ export const SERVICES = [
 ];
 
 export const GALLERY_IMAGES = [
-  { id: 1, alt: "Ambiente acolhedor da clínica Selune Oficial" },
-  { id: 2, alt: "Procedimento de limpeza de pele em andamento" },
-  { id: 3, alt: "Resultado de pele após tratamento facial" },
-  { id: 4, alt: "Produtos utilizados nos procedimentos da Selune" },
-  { id: 5, alt: "Sala de atendimento da Selune Oficial em Unaí" },
-  { id: 6, alt: "Cliente satisfeita após sessão de skincare" },
+  {
+    id: 1,
+    src: "/gallery/limpeza-profunda.png",
+    alt: "Limpeza de pele profunda em andamento na Selune Oficial",
+  },
+  {
+    id: 2,
+    src: "/gallery/procedimento-laser.webp",
+    alt: "Procedimento facial com aparelho de luz na Selune Oficial",
+  },
+  {
+    id: 3,
+    src: "/gallery/produtos-ambiente.webp",
+    alt: "Produtos utilizados e ambiente acolhedor da Selune Oficial",
+  },
+  {
+    id: 4,
+    src: "/gallery/limpeza-detalhe.webp",
+    alt: "Detalhe de procedimento de limpeza facial na Selune Oficial",
+  },
+  {
+    id: 5,
+    src: "/gallery/atendimento-mascara.webp",
+    alt: "Atendimento com máscara facial na Selune Oficial",
+  },
 ];
 
 export const TESTIMONIALS = [
