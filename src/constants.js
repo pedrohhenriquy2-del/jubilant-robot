@@ -4,8 +4,7 @@
 // sem precisar mexer nos componentes.
 // ============================================================
 
-// TROCAR: número real do WhatsApp no formato 55DDDNÚMERO (só dígitos)
-export const WHATSAPP_NUMBER = "55XXXXXXXXXXX";
+export const WHATSAPP_NUMBER = "5538999659366";
 
 export const WHATSAPP_MESSAGE =
   "Olá! Vim pelo site e gostaria de agendar uma limpeza de pele na Selune Oficial 🌿";
@@ -19,21 +18,18 @@ export const BRAND = {
   tagline: "Estética facial em Unaí, MG",
 };
 
-// TROCAR: endereço exato da clínica
 export const CONTACT = {
-  address: "Rua Placeholder, 123 — Centro, Unaí - MG",
+  address: "Rua Dr. Natal Rabelo, s/n — Bairro Sagrada Família, Unaí - MG",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
     { day: "Domingo", time: "Fechado" },
   ],
-  // TROCAR: link/handle real do Instagram
-  instagram: "https://instagram.com/selune.oficial",
-  instagramHandle: "@selune.oficial",
-  whatsappDisplay: "(38) XXXXX-XXXX",
-  // TROCAR: coordenadas reais para o embed do Google Maps
+  instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
+  instagramHandle: "@seluneoficialoficial.com.br",
+  whatsappDisplay: "(38) 99965-9366",
   mapsEmbedSrc:
-    "https://www.google.com/maps?q=Unaí,MG&output=embed",
+    "https://www.google.com/maps?q=Rua+Dr.+Natal+Rabelo,+Bairro+Sagrada+Família,+Unaí,+MG&output=embed",
 };
 
 export const NAV_LINKS = [
