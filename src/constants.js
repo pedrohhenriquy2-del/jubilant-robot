@@ -80,30 +80,34 @@ export const SERVICES = [
   },
 ];
 
+// Prefixo do caminho de assets em public/ — usa a base configurada no Vite
+// (funciona tanto em localhost quanto na subpasta do GitHub Pages)
+const ASSET_BASE = import.meta.env.BASE_URL;
+
 export const GALLERY_IMAGES = [
   {
     id: 1,
-    src: "/gallery/limpeza-profunda.png",
+    src: `${ASSET_BASE}gallery/limpeza-profunda.png`,
     alt: "Limpeza de pele profunda em andamento na Selune Oficial",
   },
   {
     id: 2,
-    src: "/gallery/procedimento-laser.webp",
+    src: `${ASSET_BASE}gallery/procedimento-laser.webp`,
     alt: "Procedimento facial com aparelho de luz na Selune Oficial",
   },
   {
     id: 3,
-    src: "/gallery/produtos-ambiente.webp",
+    src: `${ASSET_BASE}gallery/produtos-ambiente.webp`,
     alt: "Produtos utilizados e ambiente acolhedor da Selune Oficial",
   },
   {
     id: 4,
-    src: "/gallery/limpeza-detalhe.webp",
+    src: `${ASSET_BASE}gallery/limpeza-detalhe.webp`,
     alt: "Detalhe de procedimento de limpeza facial na Selune Oficial",
   },
   {
     id: 5,
-    src: "/gallery/atendimento-mascara.webp",
+    src: `${ASSET_BASE}gallery/atendimento-mascara.webp`,
     alt: "Atendimento com máscara facial na Selune Oficial",
   },
 ];
@@ -111,25 +115,25 @@ export const GALLERY_IMAGES = [
 export const TESTIMONIALS = [
   {
     name: "Camila Rezende",
-    photo: "/testimonials/camila-rezende.jpeg",
+    photo: `${ASSET_BASE}testimonials/camila-rezende.jpeg`,
     rating: 5,
     text: "Minha pele nunca esteve tão limpa e uniforme. O atendimento é super acolhedor, me senti cuidada do início ao fim.",
   },
   {
     name: "Fernanda Alves",
-    photo: "/testimonials/fernanda-alves.jpeg",
+    photo: `${ASSET_BASE}testimonials/fernanda-alves.jpeg`,
     rating: 5,
     text: "Fiz a limpeza de pele profunda e amei o resultado. Ambiente impecável e profissional muito atenciosa.",
   },
   {
     name: "Juliana Martins",
-    photo: "/testimonials/juliana-martins.webp",
+    photo: `${ASSET_BASE}testimonials/juliana-martins.webp`,
     rating: 5,
     text: "Já é minha terceira sessão na Selune e cada vez saio mais satisfeita. Recomendo de olhos fechados!",
   },
   {
     name: "Patrícia Gomes",
-    photo: "/testimonials/patricia-gomes.jpeg",
+    photo: `${ASSET_BASE}testimonials/patricia-gomes.jpeg`,
     rating: 5,
     text: "Atendimento personalizado de verdade. Explicaram cada etapa do procedimento e minha pele agradeceu.",
   },
