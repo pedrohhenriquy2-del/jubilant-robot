@@ -50,6 +50,9 @@ para trocar textos, links ou dados de contato.
 - **Fotos dos Depoimentos** — 4 fotos reais de clientes em
   `public/testimonials/`.
 - **Fonte dos títulos** — Jost (trocada a pedido do cliente).
+- **Meta Pixel (Facebook)** — ID `61591657476960` configurado em
+  `index.html`, com evento de conversão `Contact` disparado em todos os
+  botões do WhatsApp (`trackWhatsAppClick` em `src/constants.js`).
 - **Favicon** — monograma "S" em `public/favicon.svg`.
 - **Imagem Open Graph** — `public/og-image.jpg` (1200x630, recorte da foto
   da seção Sobre), referenciada em `index.html`.

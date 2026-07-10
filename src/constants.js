@@ -13,6 +13,14 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIC
   WHATSAPP_MESSAGE
 )}`;
 
+// Dispara o evento de conversão do Meta Pixel ao clicar em qualquer
+// botão do WhatsApp (cliques abrem o link normalmente, só registra antes).
+export function trackWhatsAppClick() {
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("track", "Contact");
+  }
+}
+
 export const BRAND = {
   name: "Selune Oficial",
   tagline: "Estética facial em Unaí, MG",

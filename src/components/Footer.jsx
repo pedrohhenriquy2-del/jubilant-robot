@@ -1,6 +1,12 @@
 import { MessageCircle } from "lucide-react";
 import InstagramIcon from "./icons/InstagramIcon";
-import { BRAND, FOOTER_LINKS, CONTACT, WHATSAPP_LINK } from "../constants";
+import {
+  BRAND,
+  FOOTER_LINKS,
+  CONTACT,
+  WHATSAPP_LINK,
+  trackWhatsAppClick,
+} from "../constants";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -39,6 +45,7 @@ export default function Footer() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
             aria-label="WhatsApp"
             className="h-10 w-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-cream/20 transition-colors"
           >
