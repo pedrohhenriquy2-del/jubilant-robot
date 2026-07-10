@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
-import { WHATSAPP_LINK } from "../constants";
+import { WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
 export default function WhatsAppFloatButton() {
   return (
@@ -8,6 +8,7 @@ export default function WhatsAppFloatButton() {
       href={WHATSAPP_LINK}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={trackWhatsAppClick}
       aria-label="Falar no WhatsApp"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}

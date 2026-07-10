@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { BRAND, NAV_LINKS, WHATSAPP_LINK } from "../constants";
+import { BRAND, NAV_LINKS, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +40,7 @@ export default function Header() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackWhatsAppClick}
           className="hidden md:inline-flex items-center rounded-full bg-nude-dark px-5 py-2.5 text-sm font-medium text-cream hover:bg-gold transition-colors"
         >
           Agendar no WhatsApp
@@ -79,6 +80,7 @@ export default function Header() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackWhatsAppClick}
                 className="mt-2 inline-flex justify-center rounded-full bg-nude-dark px-5 py-2.5 text-sm font-medium text-cream hover:bg-gold transition-colors"
               >
                 Agendar no WhatsApp

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle, MapPin, Clock } from "lucide-react";
 import InstagramIcon from "./icons/InstagramIcon";
-import { CONTACT, WHATSAPP_LINK } from "../constants";
+import { CONTACT, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
 export default function Contact() {
   return (
@@ -26,6 +26,7 @@ export default function Contact() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
             className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-gold transition-colors"
           >
             <MessageCircle size={20} />
@@ -80,6 +81,7 @@ export default function Contact() {
                     href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={trackWhatsAppClick}
                     className="text-ink-soft hover:text-nude-dark transition-colors"
                   >
                     WhatsApp

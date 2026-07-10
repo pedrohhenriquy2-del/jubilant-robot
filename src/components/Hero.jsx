@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { WHATSAPP_LINK, TRUST_BADGE } from "../constants";
+import { WHATSAPP_LINK, TRUST_BADGE, trackWhatsAppClick } from "../constants";
 
 export default function Hero() {
   return (
@@ -31,6 +31,7 @@ export default function Hero() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppClick}
               className="inline-flex items-center rounded-full bg-nude-dark px-7 py-3.5 text-sm md:text-base font-medium text-cream hover:bg-gold transition-colors shadow-lg shadow-nude/20"
             >
               Agende sua limpeza de pele
