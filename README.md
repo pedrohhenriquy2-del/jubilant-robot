@@ -39,7 +39,8 @@ para trocar textos, links ou dados de contato.
 ## O que já foi preenchido
 
 - **WhatsApp**: `(38) 99965-9366`
-- **Endereço**: Rua Dr. Natal Rabelo, s/n — Bairro Sagrada Família, Unaí - MG
+- **Endereço**: exibido só como "Unaí, Minas Gerais" (sem rua/bairro, a
+  pedido do cliente).
 - **Instagram**: `@seluneoficialoficial.com.br`
 - **Fotos da Galeria** — 5 fotos reais em `public/gallery/` referenciadas em
   `GALLERY_IMAGES` (`src/constants.js`).

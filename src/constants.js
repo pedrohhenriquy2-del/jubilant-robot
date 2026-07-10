@@ -19,7 +19,7 @@ export const BRAND = {
 };
 
 export const CONTACT = {
-  address: "Rua Dr. Natal Rabelo, s/n — Bairro Sagrada Família, Unaí - MG",
+  address: "Unaí, Minas Gerais",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
@@ -28,10 +28,8 @@ export const CONTACT = {
   instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
   instagramHandle: "@seluneoficialoficial.com.br",
   whatsappDisplay: "(38) 99965-9366",
-  // TROCAR: aproximação por nome + endereço. Para o pin exato da clínica,
-  // gerar o embed real em Google Maps → Compartilhar → Incorporar mapa.
   mapsEmbedSrc:
-    "https://www.google.com/maps?q=Selune+Oficial,+Rua+Dr.+Natal+Rabelo,+Bairro+Sagrada+Família,+Unaí,+MG&output=embed",
+    "https://www.google.com/maps?q=Unaí,+Minas+Gerais&output=embed",
 };
 
 export const NAV_LINKS = [
