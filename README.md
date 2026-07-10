@@ -75,33 +75,31 @@ no código:
 - **Selo de confiança** — `TRUST_BADGE` em `src/constants.js` (ex: "+300
   clientes atendidas em Unaí-MG") — confirmar se o número é real.
 
-## Publicação (GitHub Pages + domínio Registro.br)
+## Publicação (GitHub Pages + domínio próprio)
 
 O site é publicado automaticamente pelo workflow
-`.github/workflows/deploy-pages.yml` a cada push em `main`, hoje disponível em
-`https://pedrohhenriquy2-del.github.io/jubilant-robot/`.
+`.github/workflows/deploy-pages.yml` a cada push em `main`. O domínio
+`seluneoficial.com.br` já está configurado no código (`public/CNAME` e as
+meta tags de `og:image`/`og:url` em `index.html`) — falta só apontar o DNS
+e habilitar no GitHub (dois passos que só o dono da conta consegue fazer):
 
-### 1. Comprar o domínio no Registro.br
+### 1. Apontar o DNS no Registro.br (ou onde o domínio foi registrado)
 
-1. Acesse [registro.br](https://registro.br) e registre o domínio desejado
-   (ex: `seluneoficial.com.br`).
-2. No painel do Registro.br, acesse o domínio → **Editar Zona DNS** (ou
-   "DNS" / "Servidores DNS").
+Na Zona DNS do domínio, cadastre:
+- 4 registros **A** para o domínio raiz (`seluneoficial.com.br`) apontando
+  para os IPs do GitHub Pages:
+  `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- Um registro **CNAME** para `www` apontando para
+  `pedrohhenriquy2-del.github.io`
 
-### 2. Apontar o domínio para o GitHub Pages
+### 2. Habilitar no GitHub
 
-1. Na Zona DNS do Registro.br, cadastre:
-   - 4 registros **A** para o domínio raiz (`seluneoficial.com.br`) apontando
-     para os IPs do GitHub Pages:
-     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - Um registro **CNAME** para `www` apontando para
-     `pedrohhenriquy2-del.github.io`
-2. No GitHub, vá em **Settings → Pages** do repositório → em "Custom domain"
-   digite o domínio (ex: `seluneoficial.com.br`) e salve. Isso cria um
-   arquivo `CNAME` no repositório automaticamente.
-3. Aguarde a propagação do DNS (de minutos a até 24h) e depois marque
-   **"Enforce HTTPS"** em Settings → Pages — o GitHub emite o certificado
-   automaticamente assim que detectar o domínio apontado corretamente.
+1. Vá em **Settings → Pages** do repositório → em "Custom domain" digite
+   `seluneoficial.com.br` e salve (o GitHub vai reconhecer o arquivo `CNAME`
+   já commitado).
+2. Aguarde a propagação do DNS (de minutos a até 24h) e depois marque
+   **"Enforce HTTPS"** — o GitHub emite o certificado automaticamente assim
+   que detectar o domínio apontado corretamente.
 
 ## Stack
 
