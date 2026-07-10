@@ -28,8 +28,10 @@ export const CONTACT = {
   instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
   instagramHandle: "@seluneoficialoficial.com.br",
   whatsappDisplay: "(38) 99965-9366",
+  // TROCAR: aproximação por nome + endereço. Para o pin exato da clínica,
+  // gerar o embed real em Google Maps → Compartilhar → Incorporar mapa.
   mapsEmbedSrc:
-    "https://www.google.com/maps?q=Rua+Dr.+Natal+Rabelo,+Bairro+Sagrada+Família,+Unaí,+MG&output=embed",
+    "https://www.google.com/maps?q=Selune+Oficial,+Rua+Dr.+Natal+Rabelo,+Bairro+Sagrada+Família,+Unaí,+MG&output=embed",
 };
 
 export const NAV_LINKS = [

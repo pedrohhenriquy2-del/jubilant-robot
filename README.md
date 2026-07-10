@@ -49,18 +49,21 @@ para trocar textos, links ou dados de contato.
 - **Fotos dos Depoimentos** — 4 fotos reais de clientes em
   `public/testimonials/`.
 - **Fonte dos títulos** — Jost (trocada a pedido do cliente).
+- **Favicon** — monograma "S" em `public/favicon.svg`.
+- **Imagem Open Graph** — `public/og-image.jpg` (1200x630, recorte da foto
+  da seção Sobre), referenciada em `index.html`.
+- **Mapa do Google Maps** — `CONTACT.mapsEmbedSrc` agora busca pelo nome
+  "Selune Oficial" + endereço (mais preciso que só o endereço).
 
 ## O que ainda precisa ser substituído antes de publicar de verdade
 
 Tudo abaixo está marcado com comentários `// TROCAR` ou `<!-- TROCAR -->`
 no código:
 
-- **Mapa do Google Maps** — `CONTACT.mapsEmbedSrc` em `src/constants.js` usa
-  uma busca pelo endereço como aproximação. Para o pin exato, gerar o embed
-  real em Google Maps → Compartilhar → Incorporar mapa e colar aqui.
-- **Imagem Open Graph** — `og:image` em `index.html` (recomendado
-  1200x630px, ainda não existe o arquivo), usada quando o link do site é
-  compartilhado no WhatsApp/redes.
+- **Pin exato do Google Maps** — `CONTACT.mapsEmbedSrc` em `src/constants.js`
+  ainda é uma busca por nome + endereço, não o pin exato da clínica. Para o
+  pin exato, gerar o embed real em Google Maps → Compartilhar → Incorporar
+  mapa e colar aqui.
 - **Textos dos depoimentos** — os nomes (Camila, Fernanda, Juliana,
   Patrícia) e os textos em `TESTIMONIALS` (`src/constants.js`) ainda são de
   exemplo, mesmo já usando fotos reais das clientes — revisar para bater com
@@ -69,8 +72,7 @@ no código:
   (`SERVICES`, `FAQ_ITEMS`) e ajustar para os procedimentos e valores reais
   (o FAQ hoje não informa preço, só manda chamar no WhatsApp).
 - **Selo de confiança** — `TRUST_BADGE` em `src/constants.js` (ex: "+300
-  clientes atendidas em Unaí-MG").
-- **Favicon** — `public/favicon.svg` está com o ícone padrão do Vite.
+  clientes atendidas em Unaí-MG") — confirmar se o número é real.
 
 ## Publicação (GitHub Pages + domínio Registro.br)
 
