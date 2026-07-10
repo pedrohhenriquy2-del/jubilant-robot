@@ -4,16 +4,16 @@
   --font-display: "Jost", "Inter", ui-sans-serif, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --color-cream: #fbf7f2;
-  --color-offwhite: #f5efe6;
-  --color-beige: #ece2d3;
-  --color-beige-dark: #d9c8ae;
+  --color-cream: #f2f5f8;
+  --color-offwhite: #e9eef3;
+  --color-beige: #dbe3ea;
+  --color-beige-dark: #c1ccd8;
   --color-nude: #cf9d84;
   --color-nude-dark: #b97f66;
   --color-gold: #b8945f;
   --color-gold-light: #d8bd8f;
-  --color-ink: #2b2621;
-  --color-ink-soft: #5a5148;
+  --color-ink: #24303a;
+  --color-ink-soft: #55636e;
 }
 
 html {
