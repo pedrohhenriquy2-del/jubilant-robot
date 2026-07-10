@@ -79,14 +79,14 @@ no código:
 
 O site é publicado automaticamente pelo workflow
 `.github/workflows/deploy-pages.yml` a cada push em `main`. O domínio
-`seluneoficial.com.br` já está configurado no código (`public/CNAME` e as
+`selune-oficial.com.br` já está configurado no código (`public/CNAME` e as
 meta tags de `og:image`/`og:url` em `index.html`) — falta só apontar o DNS
 e habilitar no GitHub (dois passos que só o dono da conta consegue fazer):
 
 ### 1. Apontar o DNS no Registro.br (ou onde o domínio foi registrado)
 
 Na Zona DNS do domínio, cadastre:
-- 4 registros **A** para o domínio raiz (`seluneoficial.com.br`) apontando
+- 4 registros **A** para o domínio raiz (`selune-oficial.com.br`) apontando
   para os IPs do GitHub Pages:
   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 - Um registro **CNAME** para `www` apontando para
@@ -95,7 +95,7 @@ Na Zona DNS do domínio, cadastre:
 ### 2. Habilitar no GitHub
 
 1. Vá em **Settings → Pages** do repositório → em "Custom domain" digite
-   `seluneoficial.com.br` e salve (o GitHub vai reconhecer o arquivo `CNAME`
+   `selune-oficial.com.br` e salve (o GitHub vai reconhecer o arquivo `CNAME`
    já commitado).
 2. Aguarde a propagação do DNS (de minutos a até 24h) e depois marque
    **"Enforce HTTPS"** — o GitHub emite o certificado automaticamente assim
