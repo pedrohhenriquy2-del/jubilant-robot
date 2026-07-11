@@ -9,7 +9,7 @@ function FaqItem({ item, isOpen, onToggle }) {
       <button
         type="button"
         onClick={onToggle}
-        className="w-full flex items-center justify-between gap-4 py-5 text-left"
+        className="w-full flex items-center justify-center gap-4 py-5 text-center"
       >
         <span className="text-ink font-medium">{item.question}</span>
         <motion.span
@@ -29,7 +29,7 @@ function FaqItem({ item, isOpen, onToggle }) {
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-ink-soft leading-relaxed">
+            <p className="pb-5 text-ink-soft leading-relaxed text-center">
               {item.answer}
             </p>
           </motion.div>

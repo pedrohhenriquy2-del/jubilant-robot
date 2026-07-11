@@ -12,6 +12,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
+          className="text-center flex flex-col items-center"
         >
           <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
             Estética facial em Unaí, MG
@@ -26,7 +27,7 @@ export default function Hero() {
             cuidado e um espaço feito para o seu bem-estar, aqui em Unaí-MG.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href={WHATSAPP_LINK}
               target="_blank"

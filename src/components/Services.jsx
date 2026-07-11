@@ -33,7 +33,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-                className="rounded-2xl bg-cream p-7 border border-beige hover:border-nude/60 hover:shadow-lg transition-all"
+                className="rounded-2xl bg-cream p-7 border border-beige hover:border-nude/60 hover:shadow-lg transition-all text-center flex flex-col items-center"
               >
                 <div className="h-11 w-11 rounded-full bg-beige flex items-center justify-center mb-5">
                   <Icon size={20} className="text-nude-dark" />
