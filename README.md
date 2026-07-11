@@ -67,6 +67,16 @@ para trocar textos, links ou dados de contato.
   e vídeo reais. Para adicionar um novo produto, inclua um item em
   `PRODUCTS` com `name`, `price`, `paymentLink` e, se tiver, `photo`/`video`
   (arquivos em `public/products/`).
+- **Página de vendas dedicada do Mix-01** — `mix-01.html` (entrada
+  separada do Vite, `src/ProductSalesPage.jsx`), com benefícios da
+  fórmula, vídeo, FAQ e botão de compra levando ao checkout real. O botão
+  "Comprar" da seção Produtos no site principal redireciona pra essa
+  página (`product.salesPageUrl`); é ela quem tem o link direto do
+  Mercado Pago. Ideal pra usar como link de anúncio/bio do Instagram
+  (`seudominio.com.br/mix-01.html`). Para criar uma página assim pra outro
+  produto, duplique `mix-01.html` + `ProductSalesPage.jsx`, adicione a
+  entrada em `vite.config.js` (`build.rollupOptions.input`) e aponte
+  `salesPageUrl` do produto pra ela.
 
 ## O que ainda precisa ser substituído antes de publicar de verdade
 

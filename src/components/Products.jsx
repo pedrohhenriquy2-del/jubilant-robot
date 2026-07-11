@@ -78,9 +78,7 @@ export default function Products() {
                   {formatPrice(product.price)}
                 </p>
                 <a
-                  href={product.paymentLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={product.salesPageUrl || product.paymentLink}
                   onClick={trackProductClick}
                   className="inline-flex items-center gap-2 rounded-full bg-nude-dark px-6 py-3 text-sm font-medium text-cream hover:bg-gold transition-colors"
                 >
