@@ -58,6 +58,12 @@ para trocar textos, links ou dados de contato.
   da seção Sobre), referenciada em `index.html`.
 - **Mapa do Google Maps** — `CONTACT.mapsEmbedSrc` agora busca pelo nome
   "Selune Oficial" + endereço (mais preciso que só o endereço).
+- **Seção de Produtos** — nova seção `src/components/Products.jsx`, com
+  catálogo em `PRODUCTS` (`src/constants.js`). Cada produto tem nome, preço
+  e um link de pagamento real do Mercado Pago (criado manualmente no
+  painel deles, em "Cobranças → Criar link de pagamento"). Para adicionar
+  um novo produto, adicione um item em `PRODUCTS` com `name`, `price` e
+  `paymentLink`. Fotos ainda são placeholder até as fotos reais chegarem.
 
 ## O que ainda precisa ser substituído antes de publicar de verdade
 
