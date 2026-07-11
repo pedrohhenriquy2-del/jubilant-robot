@@ -73,8 +73,6 @@ function BuyButton({ className = "", children = "Comprar agora" }) {
   return (
     <a
       href={product.paymentLink}
-      target="_blank"
-      rel="noopener noreferrer"
       onClick={trackProductClick}
       className={`inline-flex items-center justify-center gap-2 rounded-full bg-nude-dark text-cream font-medium hover:bg-gold transition-colors shadow-lg shadow-nude/20 ${className}`}
     >
@@ -285,8 +283,6 @@ export default function ProductSalesPage() {
               </p>
               <a
                 href={product.paymentLink}
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={trackProductClick}
                 className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-gold transition-colors"
               >
