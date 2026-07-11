@@ -96,6 +96,16 @@ no código:
   (o FAQ hoje não informa preço, só manda chamar no WhatsApp).
 - **Selo de confiança** — `TRUST_BADGE` em `src/constants.js` (ex: "+300
   clientes atendidas em Unaí-MG") — confirmar se o número é real.
+- **Avaliações da página de vendas do Mix-01** — ainda não tem avaliações
+  reais de clientes; hoje usa um selo "Novidade na Selune Oficial" em vez
+  de prova social fabricada. Assim que tiver depoimentos reais de quem
+  comprou (nome + comentário), adicionar em `src/ProductSalesPage.jsx`.
+
+## SEO técnico
+
+- **`public/robots.txt`** e **`public/sitemap.xml`** já configurados,
+  apontando para `selune-oficial.com.br`. Atualizar o `sitemap.xml` se
+  novas páginas de produto forem criadas.
 
 ## Publicação (GitHub Pages + domínio próprio)
 
