@@ -26,7 +26,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="order-1 md:order-2"
+          className="order-1 md:order-2 text-center flex flex-col items-center"
         >
           <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
             Sobre a Selune

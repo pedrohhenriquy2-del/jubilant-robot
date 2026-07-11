@@ -13,13 +13,13 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink text-cream/80 py-12">
-      <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center md:flex-row md:items-center md:justify-between gap-8">
         <div>
           <p className="font-display text-xl text-cream">{BRAND.name}</p>
           <p className="text-sm text-cream/60 mt-1">{BRAND.tagline}</p>
         </div>
 
-        <nav className="flex flex-wrap gap-x-6 gap-y-2">
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           {FOOTER_LINKS.map((link) => (
             <a
               key={link.href}
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 mt-8 pt-6 border-t border-cream/10">
+      <div className="mx-auto max-w-6xl px-6 mt-8 pt-6 border-t border-cream/10 text-center">
         <p className="text-xs text-cream/50">
           © {year} {BRAND.name}. Todos os direitos reservados. Unaí, MG.
         </p>

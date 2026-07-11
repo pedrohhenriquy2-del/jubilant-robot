@@ -29,7 +29,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
-              className="rounded-2xl bg-cream p-7 border border-beige"
+              className="rounded-2xl bg-cream p-7 border border-beige text-center flex flex-col items-center"
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, idx) => (
@@ -43,7 +43,7 @@ export default function Testimonials() {
               <p className="text-ink-soft leading-relaxed mb-5">
                 "{t.text}"
               </p>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col items-center gap-3">
                 <img
                   src={t.photo}
                   alt={t.name}

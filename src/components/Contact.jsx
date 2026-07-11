@@ -40,19 +40,18 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 text-center flex flex-col items-center"
           >
-            <div className="flex gap-4">
-              <MapPin size={22} className="text-nude-dark shrink-0 mt-1" />
+            <div className="flex flex-col items-center gap-2">
+              <MapPin size={22} className="text-nude-dark shrink-0" />
               <div>
                 <p className="font-medium text-ink">Endereço</p>
-                {/* TROCAR: endereço completo em constants.js */}
                 <p className="text-ink-soft">{CONTACT.address}</p>
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <Clock size={22} className="text-nude-dark shrink-0 mt-1" />
+            <div className="flex flex-col items-center gap-2">
+              <Clock size={22} className="text-nude-dark shrink-0" />
               <div>
                 <p className="font-medium text-ink">Horário de atendimento</p>
                 {CONTACT.hours.map((h) => (
@@ -63,11 +62,11 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <InstagramIcon size={22} className="text-nude-dark shrink-0 mt-1" />
+            <div className="flex flex-col items-center gap-2">
+              <InstagramIcon size={22} className="text-nude-dark shrink-0" />
               <div>
                 <p className="font-medium text-ink">Redes sociais</p>
-                <div className="flex gap-4 mt-1">
+                <div className="flex justify-center gap-4 mt-1">
                   {/* TROCAR: link real do Instagram em constants.js */}
                   <a
                     href={CONTACT.instagram}
