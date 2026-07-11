@@ -71,6 +71,7 @@ export const PRODUCTS = [
       "Acne, oleosidade, textura irregular, poros dilatados e perda de viço.",
     price: 79.75,
     paymentLink: "https://mpago.la/2ursVmB",
+    salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.jpeg`,
     video: `${ASSET_BASE}products/mix-01-video.mp4`,
   },
