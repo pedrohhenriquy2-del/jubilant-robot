@@ -44,9 +44,29 @@ export const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
+  { label: "Produtos", href: "#produtos" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
+];
+
+// Dispara o evento de conversão do Meta Pixel ao clicar em "Comprar".
+export function trackProductClick() {
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("track", "InitiateCheckout");
+  }
+}
+
+// Catálogo de produtos com link de pagamento real (Mercado Pago).
+// TROCAR: cada produto tem foto placeholder até a foto real chegar.
+// Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
+export const PRODUCTS = [
+  {
+    id: 1,
+    name: "Sérum Reparador Blend Nano Ácido Hialurônico + Vitamina E",
+    price: 79.75,
+    paymentLink: "https://mpago.la/2ursVmB",
+  },
 ];
 
 export const SERVICES = [
