@@ -59,11 +59,14 @@ para trocar textos, links ou dados de contato.
 - **Mapa do Google Maps** — `CONTACT.mapsEmbedSrc` agora busca pelo nome
   "Selune Oficial" + endereço (mais preciso que só o endereço).
 - **Seção de Produtos** — nova seção `src/components/Products.jsx`, com
-  catálogo em `PRODUCTS` (`src/constants.js`). Cada produto tem nome, preço
-  e um link de pagamento real do Mercado Pago (criado manualmente no
-  painel deles, em "Cobranças → Criar link de pagamento"). Para adicionar
-  um novo produto, adicione um item em `PRODUCTS` com `name`, `price` e
-  `paymentLink`. Fotos ainda são placeholder até as fotos reais chegarem.
+  catálogo em `PRODUCTS` (`src/constants.js`). Cada produto tem nome,
+  descrição, preço, link de pagamento real do Mercado Pago (criado
+  manualmente no painel deles, em "Cobranças → Criar link de pagamento"),
+  foto (`public/products/`) e opcionalmente um vídeo curto de explicação.
+  Primeiro produto cadastrado: Principia Sérum Mix-01 (R$79,75), com foto
+  e vídeo reais. Para adicionar um novo produto, inclua um item em
+  `PRODUCTS` com `name`, `price`, `paymentLink` e, se tiver, `photo`/`video`
+  (arquivos em `public/products/`).
 
 ## O que ainda precisa ser substituído antes de publicar de verdade
 
