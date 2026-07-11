@@ -57,15 +57,22 @@ export function trackProductClick() {
   }
 }
 
+// Prefixo do caminho de assets em public/ — usa a base configurada no Vite
+// (funciona tanto em localhost quanto na subpasta do GitHub Pages)
+const ASSET_BASE = import.meta.env.BASE_URL;
+
 // Catálogo de produtos com link de pagamento real (Mercado Pago).
-// TROCAR: cada produto tem foto placeholder até a foto real chegar.
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
   {
     id: 1,
-    name: "Sérum Reparador Blend Nano Ácido Hialurônico + Vitamina E",
+    name: "Principia Sérum Mix-01 (Niacinamida + Ácido Glicólico)",
+    description:
+      "Acne, oleosidade, textura irregular, poros dilatados e perda de viço.",
     price: 79.75,
     paymentLink: "https://mpago.la/2ursVmB",
+    photo: `${ASSET_BASE}products/mix-01.jpeg`,
+    video: `${ASSET_BASE}products/mix-01-video.mp4`,
   },
 ];
 
@@ -107,10 +114,6 @@ export const SERVICES = [
       "Conjunto de técnicas voltadas a prevenir e suavizar linhas finas, devolvendo firmeza ao rosto.",
   },
 ];
-
-// Prefixo do caminho de assets em public/ — usa a base configurada no Vite
-// (funciona tanto em localhost quanto na subpasta do GitHub Pages)
-const ASSET_BASE = import.meta.env.BASE_URL;
 
 export const GALLERY_IMAGES = [
   {

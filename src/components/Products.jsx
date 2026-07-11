@@ -38,16 +38,42 @@ export default function Products() {
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
               className="rounded-2xl bg-offwhite border border-beige overflow-hidden flex flex-col text-center items-center"
             >
-              {/* TROCAR: substituir pelo placeholder pela foto real do produto */}
-              <div className="aspect-square w-full bg-gradient-to-br from-beige to-beige-dark/70 flex items-center justify-center">
-                <span className="text-ink-soft/50 text-xs text-center px-6">
-                  [ Foto do produto ]
-                </span>
-              </div>
-              <div className="p-6 flex flex-col items-center flex-1">
+              {product.photo ? (
+                <div className="aspect-square w-full bg-white flex items-center justify-center p-6">
+                  <img
+                    src={product.photo}
+                    alt={product.name}
+                    loading="lazy"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ) : (
+                // TROCAR: substituir pelo placeholder pela foto real do produto
+                <div className="aspect-square w-full bg-gradient-to-br from-beige to-beige-dark/70 flex items-center justify-center">
+                  <span className="text-ink-soft/50 text-xs text-center px-6">
+                    [ Foto do produto ]
+                  </span>
+                </div>
+              )}
+              <div className="p-6 flex flex-col items-center flex-1 w-full">
                 <h3 className="text-base font-medium text-ink mb-2">
                   {product.name}
                 </h3>
+                {product.description && (
+                  <p className="text-sm text-ink-soft mb-4">
+                    {product.description}
+                  </p>
+                )}
+                {product.video && (
+                  <video
+                    src={product.video}
+                    poster={product.photo}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full rounded-xl mb-5 max-h-72"
+                  />
+                )}
                 <p className="text-lg font-semibold text-nude-dark mb-5 mt-auto">
                   {formatPrice(product.price)}
                 </p>
