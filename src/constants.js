@@ -61,7 +61,8 @@ export function trackProductClick() {
 // (funciona tanto em localhost quanto na subpasta do GitHub Pages)
 const ASSET_BASE = import.meta.env.BASE_URL;
 
-// Catálogo de produtos com link de pagamento real (Mercado Pago).
+// Catálogo de produtos com link de checkout real (Yampi, afiliado
+// conectado ao Mercado Pago).
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
   {
@@ -70,7 +71,8 @@ export const PRODUCTS = [
     description:
       "Acne, oleosidade, textura irregular, poros dilatados e perda de viço.",
     price: 79.75,
-    paymentLink: "https://mpago.la/2ursVmB",
+    paymentLink:
+      "https://app.yampi.com.br/checkout/affiliations/814753?binded=1&forcePaymentMethods=0",
     salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.jpeg`,
     video: `${ASSET_BASE}products/mix-01-video.mp4`,
