@@ -124,6 +124,13 @@ export default function ProductSalesPage() {
                 {product.description}
               </p>
 
+              <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
+                <Sparkles size={14} className="text-nude-dark" />
+                <span className="text-xs text-ink-soft font-medium">
+                  Novidade na Selune Oficial
+                </span>
+              </div>
+
               <p className="mt-8 text-3xl md:text-4xl font-semibold text-nude-dark">
                 {formatPrice(product.price)}
               </p>
