@@ -8,9 +8,13 @@ import {
   MessageCircle,
   Lock,
   CreditCard,
+  QrCode,
+  Barcode,
+  BadgeCheck,
 } from "lucide-react";
 import {
   BRAND,
+  LOGO,
   WHATSAPP_LINK,
   PRODUCTS,
   trackWhatsAppClick,
@@ -87,8 +91,15 @@ export default function ProductSalesPage() {
     <div className="bg-cream text-ink">
       <header className="border-b border-beige sticky top-0 z-40 bg-cream/95 backdrop-blur">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <a href="/" className="font-display text-xl text-ink">
-            {BRAND.name}
+          <a href="/" className="flex items-center gap-2.5">
+            <img
+              src={LOGO}
+              alt={BRAND.name}
+              className="h-9 w-9 rounded-full object-cover"
+            />
+            <span className="font-display text-xl text-ink hidden sm:inline">
+              {BRAND.name}
+            </span>
           </a>
           <a
             href={WHATSAPP_LINK}
@@ -137,14 +148,21 @@ export default function ProductSalesPage() {
                 <BuyButton className="px-10 py-4 text-base w-full sm:w-auto" />
               </div>
 
-              <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-xs text-ink-soft">
+              <div className="mt-5 flex items-center justify-center md:justify-start gap-2 text-ink-soft">
+                <QrCode size={18} />
+                <CreditCard size={18} />
+                <Barcode size={18} />
+                <span className="text-xs">Pix, cartão ou boleto</span>
+              </div>
+
+              <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-xs text-ink-soft">
                 <span className="inline-flex items-center gap-1.5">
                   <Lock size={14} className="text-nude-dark" />
-                  Pagamento seguro
+                  Ambiente seguro
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <CreditCard size={14} className="text-nude-dark" />
-                  Cartão ou PIX via Mercado Pago
+                  <BadgeCheck size={14} className="text-nude-dark" />
+                  Pagamento processado pelo Mercado Pago
                 </span>
               </div>
             </motion.div>
@@ -277,10 +295,16 @@ export default function ProductSalesPage() {
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                 Pronta para cuidar da sua pele?
               </h2>
-              <p className="text-cream/70 max-w-md mb-8">
+              <p className="text-cream/70 max-w-md mb-2">
                 {formatPrice(product.price)} — pagamento seguro pelo Mercado
                 Pago.
               </p>
+              <div className="flex items-center justify-center gap-2 text-cream/60 mb-6">
+                <QrCode size={16} />
+                <CreditCard size={16} />
+                <Barcode size={16} />
+                <span className="text-xs">Pix, cartão ou boleto</span>
+              </div>
               <a
                 href={product.paymentLink}
                 onClick={trackProductClick}
