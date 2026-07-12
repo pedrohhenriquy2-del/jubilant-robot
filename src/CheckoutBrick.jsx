@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { initMercadoPago, Payment, StatusScreen } from "@mercadopago/sdk-react";
 import { XCircle } from "lucide-react";
 
 const PUBLIC_KEY = import.meta.env.VITE_MP_PUBLIC_KEY;
 
-let initialized = false;
+// Precisa rodar antes de qualquer Brick montar (não dentro de useEffect,
+// senão o <Payment> pode montar antes da inicialização terminar).
+if (PUBLIC_KEY) {
+  initMercadoPago(PUBLIC_KEY, { locale: "pt-BR" });
+}
 
 export default function CheckoutBrick({ amount, description }) {
   const [paymentId, setPaymentId] = useState(null);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    if (PUBLIC_KEY && !initialized) {
-      initMercadoPago(PUBLIC_KEY, { locale: "pt-BR" });
-      initialized = true;
-    }
-  }, []);
 
   if (!PUBLIC_KEY) {
     return (
