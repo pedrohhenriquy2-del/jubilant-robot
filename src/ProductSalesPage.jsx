@@ -21,6 +21,7 @@ import {
   trackProductClick,
 } from "./constants";
 import WhatsAppFloatButton from "./components/WhatsAppFloatButton";
+import CheckoutBrick from "./CheckoutBrick";
 
 const product = PRODUCTS[0];
 
@@ -76,7 +77,7 @@ const FAQ = [
 function BuyButton({ className = "", children = "Comprar agora" }) {
   return (
     <a
-      href={product.paymentLink}
+      href="#checkout"
       onClick={trackProductClick}
       className={`inline-flex items-center justify-center gap-2 rounded-full bg-nude-dark text-cream font-medium hover:bg-gold transition-colors shadow-lg shadow-nude/20 ${className}`}
     >
@@ -254,6 +255,44 @@ export default function ProductSalesPage() {
           </div>
         </motion.section>
 
+        {/* Checkout embutido */}
+        <motion.section
+          id="checkout"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="py-16 md:py-20 bg-cream scroll-mt-20"
+        >
+          <div className="mx-auto max-w-lg px-6">
+            <div className="text-center mb-8">
+              <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
+                Finalizar compra
+              </span>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-2">
+                {product.name}
+              </h2>
+              <p className="text-2xl font-semibold text-nude-dark">
+                {formatPrice(product.price)}
+              </p>
+            </div>
+            <div className="rounded-2xl bg-offwhite border border-beige p-4 md:p-6">
+              <CheckoutBrick amount={product.price} description={product.name} />
+            </div>
+            <p className="mt-4 text-center text-xs text-ink-soft">
+              Prefere pagar por outro meio?{" "}
+              <a
+                href={product.paymentLink}
+                onClick={trackProductClick}
+                className="underline hover:text-nude-dark"
+              >
+                Use o link de pagamento do Mercado Pago
+              </a>
+              .
+            </p>
+          </div>
+        </motion.section>
+
         {/* FAQ */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -306,7 +345,7 @@ export default function ProductSalesPage() {
                 <span className="text-xs">Pix, cartão ou boleto</span>
               </div>
               <a
-                href={product.paymentLink}
+                href="#checkout"
                 onClick={trackProductClick}
                 className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-gold transition-colors"
               >
