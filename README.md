@@ -101,51 +101,6 @@ no código:
   de prova social fabricada. Assim que tiver depoimentos reais de quem
   comprou (nome + comentário), adicionar em `src/ProductSalesPage.jsx`.
 
-## Checkout embutido (Mercado Pago Checkout Bricks)
-
-A página de vendas do Mix-01 (`src/ProductSalesPage.jsx`, seção
-`#checkout`) tem um formulário de pagamento embutido (`src/CheckoutBrick.jsx`,
-usando `@mercadopago/sdk-react`) com a cara do site, em vez de redirecionar
-para o Mercado Pago. Ele processa cartão, Pix e boleto direto na página.
-
-Isso precisa de um backend (função serverless), então **não funciona no
-GitHub Pages** — só quando o site é publicado na Vercel (ver seção abaixo).
-Enquanto isso não estiver configurado, existe um link de backup abaixo do
-formulário apontando pro link de pagamento direto do Mercado Pago
-(`product.paymentLink` em `src/constants.js`), para não deixar o site sem
-forma de vender.
-
-Peças do checkout embutido:
-- **`api/create-payment.js`** — função serverless que recebe os dados do
-  formulário (Payment Brick) e cria o pagamento de verdade via SDK do
-  Mercado Pago, usando `MERCADOPAGO_ACCESS_TOKEN` (variável de ambiente
-  secreta, nunca no código).
-- **`src/CheckoutBrick.jsx`** — componente React que renderiza o formulário
-  (`Payment` Brick) usando `VITE_MP_PUBLIC_KEY` (essa não é secreta, pode
-  ficar no build do frontend) e envia os dados pra `/api/create-payment`.
-- **`.env.example`** — documenta as duas variáveis. Copie para `.env` local
-  se quiser rodar com `npm run dev` testando o checkout (a chave pública
-  só, o access token não faz sentido localmente sem back-end rodando via
-  Vercel CLI).
-
-### Publicar na Vercel (necessário pro checkout embutido funcionar)
-
-1. Crie uma conta gratuita em https://vercel.com (dá pra usar login do
-   GitHub).
-2. "Add New… → Project" e importe o repositório `jubilant-robot`.
-3. Em **Settings → Environment Variables**, adicione:
-   - `VITE_MP_PUBLIC_KEY` — chave pública do Mercado Pago (Developers →
-     Credenciais de produção).
-   - `MERCADOPAGO_ACCESS_TOKEN` — Access Token de produção (mesma página).
-     **Nunca** commitar esse valor no repositório.
-4. Faça o deploy. A Vercel detecta o `vercel.json` (build com Vite,
-   `dist/` como saída) e publica `api/create-payment.js` como função
-   serverless automaticamente.
-5. Para usar o domínio próprio na Vercel, troque o DNS do
-   `selune-oficial.com.br` (hoje apontado pro GitHub Pages, ver seção
-   seguinte) para os registros que a Vercel indicar em **Settings →
-   Domains** do projeto.
-
 ## SEO técnico
 
 - **`public/robots.txt`** e **`public/sitemap.xml`** já configurados,
