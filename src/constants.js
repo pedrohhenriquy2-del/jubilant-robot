@@ -4,6 +4,12 @@
 // sem precisar mexer nos componentes.
 // ============================================================
 
+// Prefixo do caminho de assets em public/ — usa a base configurada no Vite
+// (funciona tanto em localhost quanto na subpasta do GitHub Pages)
+const ASSET_BASE = import.meta.env.BASE_URL;
+
+export const LOGO = `${ASSET_BASE}logo.jpg`;
+
 export const WHATSAPP_NUMBER = "5538999659366";
 
 export const WHATSAPP_MESSAGE =
@@ -23,7 +29,7 @@ export function trackWhatsAppClick() {
 
 export const BRAND = {
   name: "Selune Oficial",
-  tagline: "Estética facial em Unaí, MG",
+  tagline: "Beleza, autocuidado e confiança",
 };
 
 export const CONTACT = {
@@ -56,10 +62,6 @@ export function trackProductClick() {
     window.fbq("track", "InitiateCheckout");
   }
 }
-
-// Prefixo do caminho de assets em public/ — usa a base configurada no Vite
-// (funciona tanto em localhost quanto na subpasta do GitHub Pages)
-const ASSET_BASE = import.meta.env.BASE_URL;
 
 // Catálogo de produtos com link de checkout (link de pagamento direto do
 // Mercado Pago, sem depender de plataforma terceira).

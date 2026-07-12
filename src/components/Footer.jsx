@@ -2,6 +2,7 @@ import { MessageCircle } from "lucide-react";
 import InstagramIcon from "./icons/InstagramIcon";
 import {
   BRAND,
+  LOGO,
   FOOTER_LINKS,
   CONTACT,
   WHATSAPP_LINK,
@@ -14,9 +15,16 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-cream/80 py-12">
       <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center md:flex-row md:items-center md:justify-between gap-8">
-        <div>
-          <p className="font-display text-xl text-cream">{BRAND.name}</p>
-          <p className="text-sm text-cream/60 mt-1">{BRAND.tagline}</p>
+        <div className="flex items-center gap-3">
+          <img
+            src={LOGO}
+            alt={BRAND.name}
+            className="h-12 w-12 rounded-full object-cover"
+          />
+          <div>
+            <p className="font-display text-xl text-cream">{BRAND.name}</p>
+            <p className="text-sm text-cream/60 mt-1">{BRAND.tagline}</p>
+          </div>
         </div>
 
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
