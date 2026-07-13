@@ -38,7 +38,18 @@ export default function Products() {
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
               className="rounded-2xl bg-offwhite border border-beige overflow-hidden flex flex-col text-center items-center"
             >
-              {product.photo ? (
+              {product.video ? (
+                <div className="aspect-square w-full bg-white flex items-center justify-center p-6">
+                  <video
+                    src={product.video}
+                    poster={product.photo}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ) : product.photo ? (
                 <div className="aspect-square w-full bg-white flex items-center justify-center p-6">
                   <img
                     src={product.photo}
@@ -64,14 +75,12 @@ export default function Products() {
                     {product.description}
                   </p>
                 )}
-                {product.video && (
-                  <video
-                    src={product.video}
-                    poster={product.photo}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full rounded-xl mb-5 max-h-72"
+                {product.video && product.photo && (
+                  <img
+                    src={product.photo}
+                    alt={product.name}
+                    loading="lazy"
+                    className="w-full rounded-xl mb-5 max-h-72 object-contain"
                   />
                 )}
                 <p className="text-lg font-semibold text-nude-dark mb-5 mt-auto">
