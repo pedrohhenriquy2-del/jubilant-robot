@@ -54,11 +54,13 @@ export default function Hero() {
           className="relative"
         >
           <div className="aspect-[4/5] w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-10">
-            <img
-              src={`${import.meta.env.BASE_URL}hero-produto.jpeg`}
-              alt="Sérum Principia utilizado nos procedimentos da Selune Oficial"
-              loading="lazy"
-              className="max-w-full max-h-full object-contain"
+            <video
+              src={`${import.meta.env.BASE_URL}hero-produto-video.mp4`}
+              poster={`${import.meta.env.BASE_URL}hero-produto.jpeg`}
+              controls
+              playsInline
+              preload="metadata"
+              className="max-w-full max-h-full rounded-2xl"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-2xl bg-gold-light/70 -z-10" />
