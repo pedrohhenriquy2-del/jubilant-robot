@@ -19,7 +19,7 @@ export default function Contact() {
           </h2>
           <p className="text-cream/70 max-w-lg mx-auto mb-8">
             Fale agora com a gente e agende sua sessão de limpeza de pele em
-            Unaí-MG. Vagas limitadas por semana para garantir atendimento
+            Brasília-DF. Vagas limitadas por semana para garantir atendimento
             individualizado.
           </p>
           <a
@@ -99,7 +99,7 @@ export default function Contact() {
           >
             {/* TROCAR: mapsEmbedSrc em constants.js pelas coordenadas reais */}
             <iframe
-              title="Localização da Selune Oficial em Unaí-MG"
+              title="Localização da Selune Oficial em Brasília-DF"
               src={CONTACT.mapsEmbedSrc}
               width="100%"
               height="100%"

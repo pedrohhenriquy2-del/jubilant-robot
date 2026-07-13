@@ -33,7 +33,7 @@ export const BRAND = {
 };
 
 export const CONTACT = {
-  address: "Unaí, Minas Gerais",
+  address: "Brasília, Distrito Federal",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
@@ -43,7 +43,7 @@ export const CONTACT = {
   instagramHandle: "@seluneoficialoficial.com.br",
   whatsappDisplay: "(38) 99965-9366",
   mapsEmbedSrc:
-    "https://www.google.com/maps?q=Unaí,+Minas+Gerais&output=embed",
+    "https://www.google.com/maps?q=Brasília,+Distrito+Federal&output=embed",
 };
 
 export const NAV_LINKS = [
@@ -208,6 +208,6 @@ export const FAQ_ITEMS = [
   },
 ];
 
-export const TRUST_BADGE = "+300 clientes atendidas em Unaí-MG";
+export const TRUST_BADGE = "+300 clientes atendidas em Brasília-DF";
 
 export const FOOTER_LINKS = NAV_LINKS;
