@@ -15,7 +15,7 @@ export default function Hero() {
           className="text-center flex flex-col items-center"
         >
           <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
-            Estética facial em Unaí, MG
+            Estética facial em Brasília, DF
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-ink font-semibold">
             Sua pele merece cuidado, leveza e{" "}
@@ -24,7 +24,7 @@ export default function Hero() {
           <p className="mt-6 text-base md:text-lg text-ink-soft max-w-md">
             Na Selune Oficial, cada sessão de limpeza de pele é pensada para
             devolver o equilíbrio, o viço e a saúde da sua pele — com técnica,
-            cuidado e um espaço feito para o seu bem-estar, aqui em Unaí-MG.
+            cuidado e um espaço feito para o seu bem-estar, aqui em Brasília-DF.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

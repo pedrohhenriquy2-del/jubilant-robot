@@ -1,7 +1,7 @@
 # Selune Oficial — Landing Page
 
 Landing page da **Selune Oficial**, clínica de estética facial (limpeza de
-pele) em Unaí, MG. Construída com Vite + React, Tailwind CSS v4 e Framer
+pele) em Brasília, DF. Construída com Vite + React, Tailwind CSS v4 e Framer
 Motion, com foco em conversão via WhatsApp.
 
 ## Rodando o projeto localmente
@@ -39,7 +39,7 @@ para trocar textos, links ou dados de contato.
 ## O que já foi preenchido
 
 - **WhatsApp**: `(38) 99965-9366`
-- **Endereço**: exibido só como "Unaí, Minas Gerais" (sem rua/bairro, a
+- **Endereço**: exibido só como "Brasília, Distrito Federal" (sem rua/bairro, a
   pedido do cliente).
 - **Instagram**: `@seluneoficialoficial.com.br`
 - **Fotos da Galeria** — 5 fotos reais em `public/gallery/` referenciadas em
@@ -95,7 +95,7 @@ no código:
   (`SERVICES`, `FAQ_ITEMS`) e ajustar para os procedimentos e valores reais
   (o FAQ hoje não informa preço, só manda chamar no WhatsApp).
 - **Selo de confiança** — `TRUST_BADGE` em `src/constants.js` (ex: "+300
-  clientes atendidas em Unaí-MG") — confirmar se o número é real.
+  clientes atendidas em Brasília-DF") — confirmar se o número é real.
 - **Avaliações da página de vendas do Mix-01** — ainda não tem avaliações
   reais de clientes; hoje usa um selo "Novidade na Selune Oficial" em vez
   de prova social fabricada. Assim que tiver depoimentos reais de quem
