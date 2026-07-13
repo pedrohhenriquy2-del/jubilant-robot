@@ -75,7 +75,9 @@ export const PRODUCTS = [
     paymentLink: "https://seluneoficial.mycartpanda.com/checkout/211495421:1",
     salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.jpeg`,
-    video: `${ASSET_BASE}products/mix-01-video.mp4`,
+    // TROCAR: vídeo removido — mostrava produto de outra marca e pessoas
+    // genéricas de IA/banco de imagens. Adicionar de volta só com um vídeo
+    // real do Mix-01, sem esses problemas.
   },
 ];
 
