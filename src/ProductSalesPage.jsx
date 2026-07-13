@@ -174,46 +174,52 @@ export default function ProductSalesPage() {
               className="relative"
             >
               <div className="aspect-square w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-10">
-                <img
-                  src={product.photo}
-                  alt={product.name}
-                  className="max-w-full max-h-full object-contain drop-shadow-lg"
-                />
+                {product.video ? (
+                  <video
+                    src={product.video}
+                    poster={product.photo}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="max-w-full max-h-full rounded-2xl drop-shadow-lg"
+                  />
+                ) : (
+                  <img
+                    src={product.photo}
+                    alt={product.name}
+                    className="max-w-full max-h-full object-contain drop-shadow-lg"
+                  />
+                )}
               </div>
               <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-2xl bg-gold-light/70 -z-10" />
             </motion.div>
           </div>
         </section>
 
-        {/* Video */}
-        {product.video && (
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="py-16 md:py-20 bg-offwhite"
-          >
-            <div className="mx-auto max-w-5xl px-6 text-center">
-              <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
-                Veja de perto
-              </span>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-10">
-                Conheça o Mix-01 em detalhes
-              </h2>
-              <div className="mx-auto max-w-xs rounded-2xl overflow-hidden shadow-xl border border-beige">
-                <video
-                  src={product.video}
-                  poster={product.photo}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full block"
-                />
-              </div>
+        {/* Foto do produto */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="py-16 md:py-20 bg-offwhite"
+        >
+          <div className="mx-auto max-w-5xl px-6 text-center">
+            <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
+              Veja de perto
+            </span>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-10">
+              Conheça o Mix-01 em detalhes
+            </h2>
+            <div className="mx-auto max-w-xs rounded-2xl overflow-hidden shadow-xl border border-beige">
+              <img
+                src={product.photo}
+                alt={product.name}
+                className="w-full block"
+              />
             </div>
-          </motion.section>
-        )}
+          </div>
+        </motion.section>
 
         {/* Benefits */}
         <motion.section
