@@ -65,7 +65,7 @@ const FAQ = [
   },
   {
     q: "Como funciona o pagamento?",
-    a: "O pagamento é feito de forma segura pelo Mercado Pago, com cartão ou PIX.",
+    a: "O pagamento é feito em ambiente seguro, com cartão, PIX ou boleto.",
   },
   {
     q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -162,7 +162,7 @@ export default function ProductSalesPage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <BadgeCheck size={14} className="text-nude-dark" />
-                  Pagamento processado pelo Mercado Pago
+                  Pagamento processado em ambiente seguro
                 </span>
               </div>
             </motion.div>
@@ -296,8 +296,7 @@ export default function ProductSalesPage() {
                 Pronta para cuidar da sua pele?
               </h2>
               <p className="text-cream/70 max-w-md mb-2">
-                {formatPrice(product.price)} — pagamento seguro pelo Mercado
-                Pago.
+                {formatPrice(product.price)} — pagamento em ambiente seguro.
               </p>
               <div className="flex items-center justify-center gap-2 text-cream/60 mb-6">
                 <QrCode size={16} />
