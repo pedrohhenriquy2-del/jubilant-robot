@@ -118,9 +118,36 @@ export default function ProductSalesPage() {
         <section className="bg-gradient-to-b from-offwhite to-cream">
           <div className="mx-auto max-w-5xl px-6 py-14 md:py-20 grid md:grid-cols-2 gap-12 items-center">
             <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="relative order-first md:order-last"
+            >
+              <div className="aspect-square w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-10">
+                {product.video ? (
+                  <video
+                    src={product.video}
+                    poster={product.photo}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="max-w-full max-h-full rounded-2xl drop-shadow-lg"
+                  />
+                ) : (
+                  <img
+                    src={product.photo}
+                    alt={product.name}
+                    className="max-w-full max-h-full object-contain drop-shadow-lg"
+                  />
+                )}
+              </div>
+              <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-2xl bg-gold-light/70 -z-10" />
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
               className="text-center md:text-left"
             >
               <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
@@ -165,33 +192,6 @@ export default function ProductSalesPage() {
                   Pagamento processado em ambiente seguro
                 </span>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="relative"
-            >
-              <div className="aspect-square w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-10">
-                {product.video ? (
-                  <video
-                    src={product.video}
-                    poster={product.photo}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="max-w-full max-h-full rounded-2xl drop-shadow-lg"
-                  />
-                ) : (
-                  <img
-                    src={product.photo}
-                    alt={product.name}
-                    className="max-w-full max-h-full object-contain drop-shadow-lg"
-                  />
-                )}
-              </div>
-              <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-2xl bg-gold-light/70 -z-10" />
             </motion.div>
           </div>
         </section>
