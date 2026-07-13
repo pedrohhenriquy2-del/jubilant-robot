@@ -71,7 +71,7 @@ export const PRODUCTS = [
     name: "Principia Sérum Mix-01 (Niacinamida + Ácido Glicólico)",
     description:
       "Acne, oleosidade, textura irregular, poros dilatados e perda de viço.",
-    price: 79.75,
+    price: 96.5,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE6SI",
     salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.jpeg`,
