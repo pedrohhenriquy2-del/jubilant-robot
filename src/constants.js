@@ -81,6 +81,36 @@ export const PRODUCTS = [
   },
 ];
 
+// Selos de confiança/segurança. TROCAR: não afirmar registro específico em
+// órgãos regulatórios (ex: ANVISA) sem documentação real que comprove isso —
+// aqui ficam apenas compromissos gerais de boas práticas e qualidade.
+export const SAFETY_BADGES = [
+  {
+    icon: "ShieldCheck",
+    title: "Boas práticas de biossegurança",
+    description:
+      "Protocolos de higiene e segurança seguidos em cada etapa do atendimento.",
+  },
+  {
+    icon: "BadgeCheck",
+    title: "Produtos de qualidade",
+    description:
+      "Fórmulas com ingredientes seguros e reconhecidos, escolhidos com cuidado.",
+  },
+  {
+    icon: "GraduationCap",
+    title: "Profissionais capacitados",
+    description:
+      "Equipe treinada para cuidar da sua pele com técnica e segurança.",
+  },
+  {
+    icon: "HeartHandshake",
+    title: "Transparência com você",
+    description:
+      "Atendimento claro, sem promessas milagrosas, focado no seu bem-estar real.",
+  },
+];
+
 export const SERVICES = [
   {
     icon: "Sparkles",

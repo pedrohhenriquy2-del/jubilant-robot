@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import TrustBadges from "./components/TrustBadges";
 import Services from "./components/Services";
 import Products from "./components/Products";
 import Gallery from "./components/Gallery";
@@ -17,6 +18,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <TrustBadges />
         <Services />
         <Products />
         <Gallery />
