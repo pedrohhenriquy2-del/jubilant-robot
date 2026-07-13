@@ -60,23 +60,24 @@ para trocar textos, links ou dados de contato.
   "Selune Oficial" + endereço (mais preciso que só o endereço).
 - **Seção de Produtos** — nova seção `src/components/Products.jsx`, com
   catálogo em `PRODUCTS` (`src/constants.js`). Cada produto tem nome,
-  descrição, preço, link de pagamento real do Mercado Pago (criado
-  manualmente no painel deles, em "Cobranças → Criar link de pagamento"),
-  foto (`public/products/`) e opcionalmente um vídeo curto de explicação.
-  Primeiro produto cadastrado: Principia Sérum Mix-01 (R$79,75), com foto
-  e vídeo reais. Para adicionar um novo produto, inclua um item em
-  `PRODUCTS` com `name`, `price`, `paymentLink` e, se tiver, `photo`/`video`
-  (arquivos em `public/products/`).
+  descrição, preço, link de checkout (hoje Perfect Pay) e foto
+  (`public/products/`). Primeiro produto cadastrado: Principia Sérum
+  Mix-01 (R$96,50), com foto real. Para adicionar um novo produto, inclua
+  um item em `PRODUCTS` com `name`, `price`, `paymentLink` e, se tiver,
+  `photo`/`video` (arquivos em `public/products/`).
 - **Página de vendas dedicada do Mix-01** — `mix-01.html` (entrada
   separada do Vite, `src/ProductSalesPage.jsx`), com benefícios da
-  fórmula, vídeo, FAQ e botão de compra levando ao checkout real. O botão
-  "Comprar" da seção Produtos no site principal redireciona pra essa
-  página (`product.salesPageUrl`); é ela quem tem o link direto do
-  Mercado Pago. Ideal pra usar como link de anúncio/bio do Instagram
-  (`seudominio.com.br/mix-01.html`). Para criar uma página assim pra outro
-  produto, duplique `mix-01.html` + `ProductSalesPage.jsx`, adicione a
-  entrada em `vite.config.js` (`build.rollupOptions.input`) e aponte
-  `salesPageUrl` do produto pra ela.
+  fórmula, FAQ e botão de compra levando ao checkout real (Perfect Pay). O
+  botão "Comprar" da seção Produtos no site principal redireciona pra essa
+  página (`product.salesPageUrl`). Ideal pra usar como link de
+  anúncio/bio do Instagram (`seudominio.com.br/mix-01.html`). Para criar
+  uma página assim pra outro produto, duplique `mix-01.html` +
+  `ProductSalesPage.jsx`, adicione a entrada em `vite.config.js`
+  (`build.rollupOptions.input`) e aponte `salesPageUrl` do produto pra ela.
+- **Seção de segurança e qualidade** — `src/components/TrustBadges.jsx`,
+  com selos de boas práticas (`SAFETY_BADGES` em `src/constants.js`). Não
+  cita ANVISA porque não há registro/notificação formal comprovado — só
+  quando houver documento real disso deve ser adicionado.
 
 ## O que ainda precisa ser substituído antes de publicar de verdade
 
