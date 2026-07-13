@@ -63,7 +63,7 @@ export function trackProductClick() {
   }
 }
 
-// Catálogo de produtos com link de checkout (CartPanda).
+// Catálogo de produtos com link de checkout (Perfect Pay).
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
   {
@@ -72,7 +72,7 @@ export const PRODUCTS = [
     description:
       "Acne, oleosidade, textura irregular, poros dilatados e perda de viço.",
     price: 79.75,
-    paymentLink: "https://seluneoficial.mycartpanda.com/checkout/211495421:1",
+    paymentLink: "https://go.perfectpay.com.br/PPU38CQE6SD",
     salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.jpeg`,
     // TROCAR: vídeo removido — mostrava produto de outra marca e pessoas
