@@ -88,6 +88,15 @@ export const PRODUCTS = [
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE85U",
     photo: `${ASSET_BASE}products/kit-avancado-vc-rn.webp`,
   },
+  {
+    id: 3,
+    name: "Principia Protetor Solar Facial PS-01 FPS 60",
+    description:
+      "16,5% mix de filtros UV + 5% niacinamida. Toque seco, antioleosidade, proteção UVA e UVB.",
+    price: 37.9,
+    paymentLink: "https://go.perfectpay.com.br/PPU38CQE87N",
+    photo: `${ASSET_BASE}products/protetor-solar-ps-01.jpg`,
+  },
 ];
 
 // Selos de confiança/segurança. TROCAR: não afirmar registro específico em
