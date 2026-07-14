@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Sparkles, Users } from "lucide-react";
 import { TRUST_BADGE } from "../constants";
 
 export default function Hero() {
@@ -12,9 +13,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center flex flex-col items-center"
+          className="text-center md:text-left flex flex-col items-center md:items-start"
         >
-          <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
+          <span className="inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-5">
+            <Sparkles size={13} />
             Estética facial em Brasília, DF
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-ink font-semibold">
@@ -28,7 +30,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
-            <span className="h-2 w-2 rounded-full bg-gold" />
+            <Users size={15} className="text-nude-dark" />
             <span className="text-xs md:text-sm text-ink-soft font-medium">
               {TRUST_BADGE}
             </span>
