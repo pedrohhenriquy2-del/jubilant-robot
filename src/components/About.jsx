@@ -32,7 +32,7 @@ export default function About() {
             Sobre a Selune
           </span>
           <h2 className="text-3xl md:text-4xl text-ink font-semibold mb-6">
-            Cuidado facial pensado para você, em Brasília-DF
+            Cuidado facial pensado para você, atendemos em todo o Brasil
           </h2>
           <p className="text-ink-soft leading-relaxed mb-4">
             A Selune Oficial nasceu para oferecer um cuidado facial próximo,
