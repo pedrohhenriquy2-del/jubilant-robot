@@ -24,7 +24,7 @@ export default function Hero() {
             <span className="text-nude-dark italic">renovação de verdade</span>
           </h1>
           <p className="mt-6 text-base md:text-lg text-ink-soft max-w-md">
-            Na Selune Oficial, cada sessão de limpeza de pele é pensada para
+            Na nossa loja Selune Oficial, cada sessão de limpeza de pele é pensada para
             devolver o equilíbrio, o viço e a saúde da sua pele — com técnica,
             cuidado e um espaço feito para o seu bem-estar, aqui em Brasília-DF.
           </p>
