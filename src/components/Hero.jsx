@@ -26,7 +26,7 @@ export default function Hero() {
           <p className="mt-6 text-base md:text-lg text-ink-soft max-w-md">
             Na nossa loja Selune Oficial, cada sessão de limpeza de pele é pensada para
             devolver o equilíbrio, o viço e a saúde da sua pele — com técnica,
-            cuidado e um espaço feito para o seu bem-estar, aqui em Brasília-DF.
+            cuidado e um espaço feito para o seu bem-estar.
           </p>
 
           <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
