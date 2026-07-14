@@ -15,6 +15,9 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="text-center md:text-left flex flex-col items-center md:items-start"
         >
+          <span className="block font-display text-sm tracking-[0.2em] text-ink mb-2">
+            SELUNE OFICIAL
+          </span>
           <span className="inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-5">
             <Sparkles size={13} />
             Estética facial
