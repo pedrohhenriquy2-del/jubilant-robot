@@ -79,6 +79,15 @@ export const PRODUCTS = [
     // genéricas de IA/banco de imagens. Adicionar de volta só com um vídeo
     // real do Mix-01, sem esses problemas.
   },
+  {
+    id: 2,
+    name: "Kit Avançado VC + RN com GL-01",
+    description:
+      "Protetor solar PS-01 (60 FPS), sérum facial RN-0,3 (retinol), gel de limpeza GL-01, sérum facial VC-10 (vitamina C) e sérum facial AH-2 (ácido hialurônico) — rotina completa de skincare.",
+    price: 305,
+    paymentLink: "https://go.perfectpay.com.br/PPU38CQE85U",
+    photo: `${ASSET_BASE}products/kit-avancado-vc-rn.webp`,
+  },
 ];
 
 // Selos de confiança/segurança. TROCAR: não afirmar registro específico em
