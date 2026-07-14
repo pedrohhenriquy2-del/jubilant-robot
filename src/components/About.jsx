@@ -32,7 +32,7 @@ export default function About() {
             Sobre a Selune
           </span>
           <h2 className="text-3xl md:text-4xl text-ink font-semibold mb-6">
-            Cuidado facial pensado para você, atendemos em todo o Brasil
+            Cuidado facial pensado para você, em Brasília-DF
           </h2>
           <p className="text-ink-soft leading-relaxed mb-4">
             A Selune Oficial nasceu para oferecer um cuidado facial próximo,
@@ -43,7 +43,9 @@ export default function About() {
           <p className="text-ink-soft leading-relaxed">
             Em um ambiente acolhedor e reservado, unimos técnica apurada a um
             atendimento humano — para que você saia não só com a pele mais
-            limpa, mas com a sensação de ter sido genuinamente cuidada.
+            limpa, mas com a sensação de ter sido genuinamente cuidada. Já os
+            nossos produtos de skincare, como o Sérum Mix-01, enviamos para
+            todo o Brasil.
           </p>
         </motion.div>
       </div>
