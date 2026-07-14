@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { WHATSAPP_LINK, TRUST_BADGE, trackWhatsAppClick } from "../constants";
+import { TRUST_BADGE } from "../constants";
 
 export default function Hero() {
   return (
@@ -26,18 +26,6 @@ export default function Hero() {
             devolver o equilíbrio, o viço e a saúde da sua pele — com técnica,
             cuidado e um espaço feito para o seu bem-estar, aqui em Brasília-DF.
           </p>
-
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={trackWhatsAppClick}
-              className="inline-flex items-center rounded-full bg-nude-dark px-7 py-3.5 text-sm md:text-base font-medium text-cream hover:bg-gold transition-colors shadow-lg shadow-nude/20"
-            >
-              Agende sua limpeza de pele
-            </a>
-          </div>
 
           <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
             <span className="h-2 w-2 rounded-full bg-gold" />
