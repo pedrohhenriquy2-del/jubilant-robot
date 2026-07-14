@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Users } from "lucide-react";
+import { Sparkles, Heart } from "lucide-react";
 import { TRUST_BADGE } from "../constants";
 
 export default function Hero() {
@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
-            <Users size={15} className="text-nude-dark" />
+            <Heart size={15} className="text-nude-dark" />
             <span className="text-xs md:text-sm text-ink-soft font-medium">
               {TRUST_BADGE}
             </span>
