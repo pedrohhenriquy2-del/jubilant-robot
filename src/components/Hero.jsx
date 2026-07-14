@@ -43,7 +43,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="relative"
         >
-          <div className="aspect-[4/5] w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-10">
+          <div className="aspect-[4/5] w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-3">
             <video
               src={`${import.meta.env.BASE_URL}hero-produto-video.mp4`}
               poster={`${import.meta.env.BASE_URL}hero-produto.jpeg`}
@@ -52,11 +52,6 @@ export default function Hero() {
               preload="metadata"
               className="max-w-full max-h-full rounded-2xl"
             />
-          </div>
-          <div className="absolute top-5 left-5 rounded-full bg-cream/90 backdrop-blur px-4 py-2 shadow-md">
-            <span className="font-display text-sm tracking-[0.15em] text-ink">
-              SELUNE OFICIAL
-            </span>
           </div>
           <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-2xl bg-gold-light/70 -z-10" />
         </motion.div>
