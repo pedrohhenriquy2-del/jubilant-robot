@@ -97,6 +97,15 @@ export const PRODUCTS = [
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE87N",
     photo: `${ASSET_BASE}products/protetor-solar-ps-01.jpg`,
   },
+  {
+    id: 4,
+    name: "Principia Gel de Limpeza Facial GL-01 200g",
+    description:
+      "13% mix de tensoativos, 2% ácido salicílico e 3% glicerina. Reduz oleosidade, poros dilatados e textura irregular, com mais maciez e viço.",
+    price: 45.5,
+    paymentLink: "https://go.perfectpay.com.br/PPU38CQE87U",
+    photo: `${ASSET_BASE}products/gel-limpeza-gl-01.jpg`,
+  },
 ];
 
 // Selos de confiança/segurança. TROCAR: não afirmar registro específico em
