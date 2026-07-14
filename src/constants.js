@@ -265,6 +265,6 @@ export const FAQ_ITEMS = [
   },
 ];
 
-export const TRUST_BADGE = "+300 clientes atendidas em Brasília-DF";
+export const TRUST_BADGE = "Cuidado de pele com resultado real";
 
 export const FOOTER_LINKS = NAV_LINKS;
