@@ -66,6 +66,7 @@ export default function Footer() {
         <p className="text-xs text-cream/50">
           © {year} {BRAND.name}. Todos os direitos reservados. Brasília, DF.
         </p>
+        <p className="text-xs text-cream/50 mt-1">CNPJ: {CONTACT.cnpj}</p>
       </div>
     </footer>
   );

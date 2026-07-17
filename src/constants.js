@@ -34,6 +34,7 @@ export const BRAND = {
 
 export const CONTACT = {
   address: "Brasília, Distrito Federal",
+  cnpj: "56.996.633/0001-56",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
