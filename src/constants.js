@@ -12,6 +12,24 @@ export const LOGO = `${ASSET_BASE}logo.jpg`;
 
 export const WHATSAPP_NUMBER = "5538999659366";
 
+// Taxa de conversão aproximada BRL -> EUR, usada só para exibir um valor de
+// referência a clientes de Portugal. A cobrança final acontece em reais no
+// checkout do Perfect Pay. Atualizar este número periodicamente.
+export const BRL_TO_EUR_RATE = 0.16;
+
+export function formatPrice(value, currency = "BRL") {
+  if (currency === "EUR") {
+    return (value * BRL_TO_EUR_RATE).toLocaleString("pt-PT", {
+      style: "currency",
+      currency: "EUR",
+    });
+  }
+  return value.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+}
+
 export const WHATSAPP_MESSAGE =
   "Olá! Vim pelo site e gostaria de agendar uma limpeza de pele na Selune Oficial 🌿";
 

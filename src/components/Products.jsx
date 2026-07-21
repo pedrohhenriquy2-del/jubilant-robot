@@ -1,15 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ShoppingBag } from "lucide-react";
-import { PRODUCTS, trackProductClick } from "../constants";
-
-function formatPrice(value) {
-  return value.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL",
-  });
-}
+import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
+import CurrencyToggle from "./CurrencyToggle";
 
 export default function Products() {
+  const [currency, setCurrency] = useState("BRL");
+
   return (
     <section id="produtos" className="py-20 md:py-28 bg-cream">
       <div className="mx-auto max-w-6xl px-6">
@@ -23,9 +20,10 @@ export default function Products() {
           <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
             Produtos
           </span>
-          <h2 className="text-3xl md:text-4xl text-ink font-semibold">
+          <h2 className="text-3xl md:text-4xl text-ink font-semibold mb-6">
             Skincare para continuar o cuidado em casa
           </h2>
+          <CurrencyToggle currency={currency} onChange={setCurrency} />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -83,9 +81,16 @@ export default function Products() {
                     className="w-full rounded-xl mb-5 max-h-72 object-contain"
                   />
                 )}
-                <p className="text-lg font-semibold text-nude-dark mb-5 mt-auto">
-                  {formatPrice(product.price)}
-                </p>
+                <div className="mb-5 mt-auto">
+                  <p className="text-lg font-semibold text-nude-dark">
+                    {formatPrice(product.price, currency)}
+                  </p>
+                  {currency === "EUR" && (
+                    <p className="text-[11px] text-ink-soft mt-0.5">
+                      Valor aproximado, cobrado em R$ no checkout
+                    </p>
+                  )}
+                </div>
                 <a
                   href={product.salesPageUrl || product.paymentLink}
                   onClick={trackProductClick}
