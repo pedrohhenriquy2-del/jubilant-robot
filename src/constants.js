@@ -51,7 +51,7 @@ export const BRAND = {
 };
 
 export const CONTACT = {
-  address: "Brasil",
+  address: "No Brasil",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
