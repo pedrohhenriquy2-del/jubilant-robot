@@ -11,6 +11,7 @@ import {
   QrCode,
   Barcode,
   BadgeCheck,
+  Truck,
 } from "lucide-react";
 import {
   BRAND,
@@ -190,6 +191,10 @@ export default function ProductSalesPage() {
                 <span className="inline-flex items-center gap-1.5">
                   <BadgeCheck size={14} className="text-nude-dark" />
                   Pagamento processado em ambiente seguro
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Truck size={14} className="text-nude-dark" />
+                  Envio para Brasil e Portugal
                 </span>
               </div>
             </motion.div>

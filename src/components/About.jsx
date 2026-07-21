@@ -45,7 +45,7 @@ export default function About() {
             atendimento humano — para que você saia não só com a pele mais
             limpa, mas com a sensação de ter sido genuinamente cuidada. Já os
             nossos produtos de skincare, como o Sérum Mix-01, enviamos para
-            todo o Brasil.
+            todo o Brasil e também para Portugal.
           </p>
         </motion.div>
       </div>

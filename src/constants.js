@@ -254,9 +254,9 @@ export const FAQ_ITEMS = [
       "Para manter os resultados, o ideal é repetir o procedimento a cada 30 a 45 dias, mas isso pode variar conforme o tipo e a necessidade da sua pele.",
   },
   {
-    question: "Vocês entregam os produtos para todo o Brasil?",
+    question: "Vocês entregam os produtos para todo o Brasil e Portugal?",
     answer:
-      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
+      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil e também para Portugal, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
   },
   {
     question: "Vocês atendem todos os tipos de pele?",
