@@ -51,7 +51,7 @@ export const BRAND = {
 };
 
 export const CONTACT = {
-  address: "Brasília, Distrito Federal",
+  address: "Brasil",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
@@ -61,7 +61,7 @@ export const CONTACT = {
   instagramHandle: "@seluneoficialoficial.com.br",
   whatsappDisplay: "(38) 99965-9366",
   mapsEmbedSrc:
-    "https://www.google.com/maps?q=Brasília,+Distrito+Federal&output=embed",
+    "https://www.google.com/maps?q=Brasil&output=embed",
 };
 
 export const NAV_LINKS = [
