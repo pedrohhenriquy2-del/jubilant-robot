@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, Lock, QrCode, CreditCard, Barcode, Truck } from "lucide-react";
 import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
 import CurrencyToggle from "./CurrencyToggle";
 
@@ -24,6 +24,23 @@ export default function Products() {
             Skincare para continuar o cuidado em casa
           </h2>
           <CurrencyToggle currency={currency} onChange={setCurrency} />
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
+            <span className="inline-flex items-center gap-1.5">
+              <Lock size={14} className="text-nude-dark" />
+              Pagamento em ambiente seguro
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <QrCode size={14} className="text-nude-dark" />
+              <CreditCard size={14} className="text-nude-dark" />
+              <Barcode size={14} className="text-nude-dark" />
+              Pix, cartão ou boleto
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Truck size={14} className="text-nude-dark" />
+              Envio para Brasil e Portugal
+            </span>
+          </div>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
