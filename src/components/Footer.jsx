@@ -64,7 +64,7 @@ export default function Footer() {
 
       <div className="mx-auto max-w-6xl px-6 mt-8 pt-6 border-t border-cream/10 text-center">
         <p className="text-xs text-cream/50">
-          © {year} {BRAND.name}. Todos os direitos reservados. Brasília, DF.
+          © {year} {BRAND.name}. Todos os direitos reservados. Brasil.
         </p>
       </div>
     </footer>

@@ -18,8 +18,8 @@ export default function Contact() {
             Está pronta para dar esse cuidado à sua pele?
           </h2>
           <p className="text-cream/70 max-w-lg mx-auto mb-8">
-            Fale agora com a gente e agende sua sessão de limpeza de pele em
-            Brasília-DF. Vagas limitadas por semana para garantir atendimento
+            Fale agora com a gente e agende sua sessão de limpeza de pele no
+            Brasil. Vagas limitadas por semana para garantir atendimento
             individualizado.
           </p>
           <a
@@ -47,6 +47,10 @@ export default function Contact() {
               <div>
                 <p className="font-medium text-ink">Endereço</p>
                 <p className="text-ink-soft">{CONTACT.address}</p>
+                <p className="text-xs text-ink-soft/70 mt-1">
+                  Endereço exato enviado pelo WhatsApp ao confirmar o
+                  agendamento
+                </p>
               </div>
             </div>
 
@@ -99,7 +103,7 @@ export default function Contact() {
           >
             {/* TROCAR: mapsEmbedSrc em constants.js pelas coordenadas reais */}
             <iframe
-              title="Localização da Selune Oficial em Brasília-DF"
+              title="Localização da Selune Oficial no Brasil"
               src={CONTACT.mapsEmbedSrc}
               width="100%"
               height="100%"

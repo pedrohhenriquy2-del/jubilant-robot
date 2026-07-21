@@ -12,6 +12,24 @@ export const LOGO = `${ASSET_BASE}logo.jpg`;
 
 export const WHATSAPP_NUMBER = "5538999659366";
 
+// Taxa de conversão aproximada BRL -> EUR, usada só para exibir um valor de
+// referência a clientes de Portugal. A cobrança final acontece em reais no
+// checkout do Perfect Pay. Atualizar este número periodicamente.
+export const BRL_TO_EUR_RATE = 0.16;
+
+export function formatPrice(value, currency = "BRL") {
+  if (currency === "EUR") {
+    return (value * BRL_TO_EUR_RATE).toLocaleString("pt-PT", {
+      style: "currency",
+      currency: "EUR",
+    });
+  }
+  return value.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+}
+
 export const WHATSAPP_MESSAGE =
   "Olá! Vim pelo site e gostaria de agendar uma limpeza de pele na Selune Oficial 🌿";
 
@@ -33,7 +51,7 @@ export const BRAND = {
 };
 
 export const CONTACT = {
-  address: "Brasília, Distrito Federal",
+  address: "Brasil",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
@@ -43,7 +61,7 @@ export const CONTACT = {
   instagramHandle: "@seluneoficialoficial.com.br",
   whatsappDisplay: "(38) 99965-9366",
   mapsEmbedSrc:
-    "https://www.google.com/maps?q=Brasília,+Distrito+Federal&output=embed",
+    "https://www.google.com/maps?q=Brasil&output=embed",
 };
 
 export const NAV_LINKS = [
@@ -254,9 +272,9 @@ export const FAQ_ITEMS = [
       "Para manter os resultados, o ideal é repetir o procedimento a cada 30 a 45 dias, mas isso pode variar conforme o tipo e a necessidade da sua pele.",
   },
   {
-    question: "Vocês entregam os produtos para todo o Brasil?",
+    question: "Vocês entregam os produtos para todo o Brasil e Portugal?",
     answer:
-      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
+      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil e também para Portugal, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
   },
   {
     question: "Vocês atendem todos os tipos de pele?",
