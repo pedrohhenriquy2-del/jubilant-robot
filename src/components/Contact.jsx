@@ -47,6 +47,10 @@ export default function Contact() {
               <div>
                 <p className="font-medium text-ink">Endereço</p>
                 <p className="text-ink-soft">{CONTACT.address}</p>
+                <p className="text-xs text-ink-soft/70 mt-1">
+                  Endereço exato enviado pelo WhatsApp ao confirmar o
+                  agendamento
+                </p>
               </div>
             </div>
 
