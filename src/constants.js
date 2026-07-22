@@ -10,7 +10,7 @@ const ASSET_BASE = import.meta.env.BASE_URL;
 
 export const LOGO = `${ASSET_BASE}logo.jpg`;
 
-export const WHATSAPP_NUMBER = "5538999659366";
+export const WHATSAPP_NUMBER = "5538988075909";
 
 // Taxa de conversão aproximada BRL -> EUR, usada só para exibir um valor de
 // referência a clientes de Portugal. A cobrança final acontece em reais no
@@ -59,7 +59,7 @@ export const CONTACT = {
   ],
   instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
   instagramHandle: "@seluneoficialoficial.com.br",
-  whatsappDisplay: "(38) 99965-9366",
+  whatsappDisplay: "(38) 98807-5909",
   mapsEmbedSrc:
     "https://www.google.com/maps?q=Brasil&output=embed",
 };
