@@ -1,7 +1,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ShoppingBag, Lock, QrCode, CreditCard, Barcode, Truck } from "lucide-react";
-import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
+import {
+  ShoppingBag,
+  Lock,
+  QrCode,
+  CreditCard,
+  Barcode,
+  Truck,
+  MessageCircle,
+} from "lucide-react";
+import {
+  PRODUCTS,
+  trackProductClick,
+  trackWhatsAppClick,
+  formatPrice,
+  WHATSAPP_LINK,
+} from "../constants";
 import CurrencyToggle from "./CurrencyToggle";
 
 export default function Products() {
@@ -115,6 +129,16 @@ export default function Products() {
                 >
                   <ShoppingBag size={16} />
                   Comprar
+                </a>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={trackWhatsAppClick}
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs text-ink-soft hover:text-nude-dark transition-colors"
+                >
+                  <MessageCircle size={13} />
+                  Tenho dúvidas antes de comprar
                 </a>
               </div>
             </motion.div>
