@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Sparkles, Heart } from "lucide-react";
-import { TRUST_BADGE } from "../constants";
+import { Sparkles, Heart, MessageCircle } from "lucide-react";
+import { TRUST_BADGE, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
 export default function Hero() {
   return (
@@ -32,7 +32,18 @@ export default function Hero() {
             cuidado e um espaço feito para o seu bem-estar.
           </p>
 
-          <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-nude-dark px-7 py-3.5 text-sm md:text-base font-medium text-cream hover:bg-gold transition-colors"
+          >
+            <MessageCircle size={18} />
+            Agendar minha sessão no WhatsApp
+          </a>
+
+          <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
             <Heart size={15} className="text-nude-dark" />
             <span className="text-xs md:text-sm text-ink-soft font-medium">
               {TRUST_BADGE}

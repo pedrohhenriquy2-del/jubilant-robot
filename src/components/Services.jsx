@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
-import { Sparkles, Droplet, Leaf, Sun, Heart, ShieldCheck } from "lucide-react";
-import { SERVICES } from "../constants";
+import {
+  Sparkles,
+  Droplet,
+  Leaf,
+  Sun,
+  Heart,
+  ShieldCheck,
+  MessageCircle,
+} from "lucide-react";
+import { SERVICES, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
 const ICONS = { Sparkles, Droplet, Leaf, Sun, Heart, ShieldCheck };
 
@@ -47,6 +55,19 @@ export default function Services() {
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="mt-14 text-center">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
+            className="inline-flex items-center gap-2 rounded-full bg-nude-dark px-7 py-3.5 text-sm md:text-base font-medium text-cream hover:bg-gold transition-colors"
+          >
+            <MessageCircle size={18} />
+            Quero agendar meu procedimento
+          </a>
         </div>
       </div>
     </section>

@@ -1,7 +1,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ShoppingBag, Lock, QrCode, CreditCard, Barcode, Truck } from "lucide-react";
-import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
+import {
+  ShoppingBag,
+  Lock,
+  QrCode,
+  CreditCard,
+  Barcode,
+  Truck,
+  MessageCircle,
+} from "lucide-react";
+import {
+  PRODUCTS,
+  trackProductClick,
+  formatPrice,
+  WHATSAPP_LINK,
+  trackWhatsAppClick,
+} from "../constants";
 import CurrencyToggle from "./CurrencyToggle";
 
 export default function Products() {
@@ -119,6 +133,23 @@ export default function Products() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-sm text-ink-soft mb-4">
+            Quer montar um kit personalizado com mais de um produto? Fale com
+            a gente pelo WhatsApp.
+          </p>
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackWhatsAppClick}
+            className="inline-flex items-center gap-2 rounded-full border border-nude-dark px-6 py-3 text-sm font-medium text-nude-dark hover:bg-nude-dark hover:text-cream transition-colors"
+          >
+            <MessageCircle size={16} />
+            Montar meu kit
+          </a>
         </div>
       </div>
     </section>
