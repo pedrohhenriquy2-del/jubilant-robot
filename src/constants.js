@@ -20,11 +20,13 @@ export function formatPrice(value) {
 }
 
 export const WHATSAPP_MESSAGE =
-  "Olá! Vim pelo site e gostaria de agendar uma limpeza de pele na Selune Oficial 🌿";
+  "Olá! Vim pelo site da Selune Oficial e gostaria de saber mais 🌿";
 
-export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  WHATSAPP_MESSAGE
-)}`;
+export function buildWhatsAppLink(message = WHATSAPP_MESSAGE) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+export const WHATSAPP_LINK = buildWhatsAppLink();
 
 // Dispara o evento de conversão do Meta Pixel ao clicar em qualquer
 // botão do WhatsApp (cliques abrem o link normalmente, só registra antes).
