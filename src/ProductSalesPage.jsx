@@ -5,6 +5,7 @@ import {
   Sparkles,
   ShieldCheck,
   Sun,
+  Moon,
   MessageCircle,
   Lock,
   CreditCard,
@@ -24,54 +25,9 @@ import {
 } from "./constants";
 import WhatsAppFloatButton from "./components/WhatsAppFloatButton";
 
-const product = PRODUCTS[0];
-const PRODUCT_WHATSAPP_LINK = buildWhatsAppLink(
-  `Olá! Tenho uma dúvida sobre o ${product.name} 🌿`
-);
+const ICONS = { Droplet, Sparkles, ShieldCheck, Sun, Moon };
 
-const BENEFITS = [
-  {
-    icon: Droplet,
-    title: "Niacinamida 5%",
-    text: "Controla a oleosidade e ajuda a reduzir a aparência dos poros.",
-  },
-  {
-    icon: Sparkles,
-    title: "Ácido Glicólico 4%",
-    text: "Renova a textura da pele e traz mais viço e luminosidade.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Ácido Tranexâmico 3%",
-    text: "Ajuda a uniformizar o tom da pele e atenuar manchas.",
-  },
-  {
-    icon: Sun,
-    title: "Ácido Salicílico 2%",
-    text: "Atua na acne e ajuda a desobstruir os poros.",
-  },
-];
-
-const FAQ = [
-  {
-    q: "Serve para qualquer tipo de pele?",
-    a: "É indicado principalmente para peles oleosas, mistas e com tendência a acne, poros dilatados e textura irregular.",
-  },
-  {
-    q: "Como devo usar?",
-    a: "Aplique algumas gotas no rosto limpo, de preferência à noite. Comece com uso a cada dois dias para avaliar a sensibilidade da sua pele. Use protetor solar durante o dia.",
-  },
-  {
-    q: "Como funciona o pagamento?",
-    a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
-  },
-  {
-    q: "Tenho dúvidas antes de comprar, como falo com vocês?",
-    a: "É só chamar no WhatsApp — respondemos rapidinho.",
-  },
-];
-
-function BuyButton({ className = "", children = "Comprar agora" }) {
+function BuyButton({ product, className = "", children = "Comprar agora" }) {
   return (
     <a
       href={product.paymentLink}
@@ -84,7 +40,12 @@ function BuyButton({ className = "", children = "Comprar agora" }) {
   );
 }
 
-export default function ProductSalesPage() {
+export default function ProductSalesPage({ productId = 1 }) {
+  const product = PRODUCTS.find((p) => p.id === productId);
+  const productWhatsAppLink = buildWhatsAppLink(
+    `Olá! Tenho uma dúvida sobre o ${product.name} 🌿`
+  );
+
   return (
     <div className="bg-cream text-ink">
       <header className="border-b border-beige sticky top-0 z-40 bg-cream/95 backdrop-blur">
@@ -100,7 +61,7 @@ export default function ProductSalesPage() {
             </span>
           </a>
           <a
-            href={PRODUCT_WHATSAPP_LINK}
+            href={productWhatsAppLink}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackWhatsAppClick}
@@ -161,7 +122,7 @@ export default function ProductSalesPage() {
               <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
                 <Sparkles size={14} className="text-nude-dark" />
                 <span className="text-xs text-ink-soft font-medium">
-                  Novidade na Selune Oficial
+                  {product.badge || "Selune Oficial"}
                 </span>
               </div>
 
@@ -170,7 +131,7 @@ export default function ProductSalesPage() {
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row items-center md:items-start gap-4">
-                <BuyButton className="px-10 py-4 text-base w-full sm:w-auto" />
+                <BuyButton product={product} className="px-10 py-4 text-base w-full sm:w-auto" />
               </div>
 
               <div className="mt-5 flex items-center justify-center md:justify-start gap-2 text-ink-soft">
@@ -211,7 +172,7 @@ export default function ProductSalesPage() {
               Veja de perto
             </span>
             <h2 className="text-2xl md:text-3xl font-semibold mb-10">
-              Conheça o Mix-01 em detalhes
+              Conheça o {product.shortName} em detalhes
             </h2>
             <div className="mx-auto max-w-xs rounded-2xl overflow-hidden shadow-xl border border-beige">
               <img
@@ -239,8 +200,8 @@ export default function ProductSalesPage() {
               O que essa fórmula faz pela sua pele
             </h2>
             <div className="grid sm:grid-cols-2 gap-6 text-left">
-              {BENEFITS.map((b) => {
-                const Icon = b.icon;
+              {product.benefits.map((b) => {
+                const Icon = ICONS[b.icon];
                 return (
                   <div
                     key={b.title}
@@ -278,7 +239,7 @@ export default function ProductSalesPage() {
               Perguntas frequentes
             </h2>
             <div className="text-left space-y-6">
-              {FAQ.map((item) => (
+              {product.salesFaq.map((item) => (
                 <div key={item.q} className="border-b border-beige pb-6">
                   <p className="font-medium text-ink mb-2">{item.q}</p>
                   <p className="text-sm text-ink-soft leading-relaxed">
@@ -321,7 +282,7 @@ export default function ProductSalesPage() {
                 Comprar agora
               </a>
               <a
-                href={PRODUCT_WHATSAPP_LINK}
+                href={productWhatsAppLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackWhatsAppClick}
@@ -347,7 +308,7 @@ export default function ProductSalesPage() {
         <span className="text-lg font-semibold text-nude-dark">
           {formatPrice(product.price)}
         </span>
-        <BuyButton className="px-6 py-3 text-sm">Comprar</BuyButton>
+        <BuyButton product={product} className="px-6 py-3 text-sm">Comprar</BuyButton>
       </div>
 
       {/* Escondido no mobile pra não sobrepor a barra fixa de compra */}
