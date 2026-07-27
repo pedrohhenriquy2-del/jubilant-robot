@@ -9,7 +9,7 @@ import {
   Lock,
   CreditCard,
   QrCode,
-  Barcode,
+  Wallet,
   BadgeCheck,
   Truck,
 } from "lucide-react";
@@ -60,7 +60,7 @@ const FAQ = [
   },
   {
     q: "Como funciona o pagamento?",
-    a: "O pagamento é feito em ambiente seguro, com cartão, PIX ou boleto.",
+    a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
   },
   {
     q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -173,8 +173,8 @@ export default function ProductSalesPage() {
               <div className="mt-5 flex items-center justify-center md:justify-start gap-2 text-ink-soft">
                 <QrCode size={18} />
                 <CreditCard size={18} />
-                <Barcode size={18} />
-                <span className="text-xs">Pix, cartão ou boleto</span>
+                <Wallet size={18} />
+                <span className="text-xs">Pix, cartão ou PicPay</span>
               </div>
 
               <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-xs text-ink-soft">
@@ -306,8 +306,8 @@ export default function ProductSalesPage() {
               <div className="flex items-center justify-center gap-2 text-cream/60 mb-6">
                 <QrCode size={16} />
                 <CreditCard size={16} />
-                <Barcode size={16} />
-                <span className="text-xs">Pix, cartão ou boleto</span>
+                <Wallet size={16} />
+                <span className="text-xs">Pix, cartão ou PicPay</span>
               </div>
               <a
                 href={product.paymentLink}

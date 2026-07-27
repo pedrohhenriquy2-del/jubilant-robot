@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShoppingBag, Lock, QrCode, CreditCard, Barcode, Truck } from "lucide-react";
+import { ShoppingBag, Lock, QrCode, CreditCard, Wallet, Truck } from "lucide-react";
 import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
 
 export default function Products() {
@@ -28,8 +28,8 @@ export default function Products() {
             <span className="inline-flex items-center gap-1.5">
               <QrCode size={14} className="text-nude-dark" />
               <CreditCard size={14} className="text-nude-dark" />
-              <Barcode size={14} className="text-nude-dark" />
-              Pix, cartão ou boleto
+              <Wallet size={14} className="text-nude-dark" />
+              Pix, cartão ou PicPay
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Truck size={14} className="text-nude-dark" />

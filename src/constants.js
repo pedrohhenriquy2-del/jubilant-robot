@@ -264,7 +264,7 @@ export const FAQ_ITEMS = [
   {
     question: "Vocês entregam os produtos para todo o Brasil?",
     answer:
-      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
+      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou PicPay direto no checkout do site.",
   },
   {
     question: "Vocês atendem todos os tipos de pele?",
