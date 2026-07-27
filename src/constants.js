@@ -197,7 +197,6 @@ export const PRODUCTS = [
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE87N",
     salesPageUrl: `${ASSET_BASE}protetor-solar-ps-01.html`,
     photo: `${ASSET_BASE}products/protetor-solar-ps-01.jpg`,
-    video: `${ASSET_BASE}products/protetor-solar-ps-01-ugc.mp4`,
     badge: "Toque seco",
     benefits: [
       {
