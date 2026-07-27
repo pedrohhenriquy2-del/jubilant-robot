@@ -103,6 +103,7 @@ export const PRODUCTS = [
     price: 37.9,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE87N",
     photo: `${ASSET_BASE}products/protetor-solar-ps-01.jpg`,
+    video: `${ASSET_BASE}products/protetor-solar-ps-01-ugc.mp4`,
   },
   {
     id: 4,
