@@ -13,8 +13,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        // Página de vendas dedicada do produto Mix-01
+        // Páginas de vendas dedicadas de cada produto
         mix01: resolve(__dirname, 'mix-01.html'),
+        kitAvancado: resolve(__dirname, 'kit-avancado.html'),
+        protetorSolarPs01: resolve(__dirname, 'protetor-solar-ps-01.html'),
+        gelLimpezaGl01: resolve(__dirname, 'gel-limpeza-gl-01.html'),
       },
     },
   },
