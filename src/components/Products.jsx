@@ -46,8 +46,13 @@ export default function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              className="rounded-2xl bg-offwhite border border-beige overflow-hidden flex flex-col text-center items-center"
+              className="relative rounded-2xl bg-offwhite border border-beige overflow-hidden flex flex-col text-center items-center"
             >
+              {product.badge && (
+                <span className="absolute top-4 left-4 z-10 rounded-full bg-nude-dark px-3 py-1 text-[11px] uppercase tracking-wide text-cream font-medium">
+                  {product.badge}
+                </span>
+              )}
               {product.video ? (
                 <div className="aspect-square w-full bg-white flex items-center justify-center p-6">
                   <video

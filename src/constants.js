@@ -82,6 +82,7 @@ export const PRODUCTS = [
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE6SI",
     salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.jpeg`,
+    badge: "Novidade",
     // TROCAR: vídeo removido — mostrava produto de outra marca e pessoas
     // genéricas de IA/banco de imagens. Adicionar de volta só com um vídeo
     // real do Mix-01, sem esses problemas.
@@ -94,6 +95,7 @@ export const PRODUCTS = [
     price: 305,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE85U",
     photo: `${ASSET_BASE}products/kit-avancado-vc-rn.webp`,
+    badge: "Rotina completa",
   },
   {
     id: 3,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import { BRAND, LOGO, NAV_LINKS } from "../constants";
 
 export default function Header() {
@@ -43,6 +43,14 @@ export default function Header() {
           ))}
         </nav>
 
+        <a
+          href="#produtos"
+          className="hidden md:inline-flex items-center gap-2 rounded-full bg-nude-dark px-5 py-2.5 text-sm font-medium text-cream hover:bg-gold transition-colors"
+        >
+          <ShoppingBag size={15} />
+          Comprar
+        </a>
+
         <button
           type="button"
           aria-label="Abrir menu"
@@ -73,6 +81,14 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="#produtos"
+                onClick={() => setIsOpen(false)}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-nude-dark px-5 py-2.5 text-sm font-medium text-cream hover:bg-gold transition-colors"
+              >
+                <ShoppingBag size={15} />
+                Comprar
+              </a>
             </div>
           </motion.nav>
         )}

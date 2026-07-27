@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Heart } from "lucide-react";
+import { Sparkles, Heart, ShoppingBag } from "lucide-react";
 import { TRUST_BADGE } from "../constants";
 
 export default function Hero() {
@@ -32,11 +32,20 @@ export default function Hero() {
             cuidado e um espaço feito para o seu bem-estar.
           </p>
 
-          <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
-            <Heart size={15} className="text-nude-dark" />
-            <span className="text-xs md:text-sm text-ink-soft font-medium">
-              {TRUST_BADGE}
-            </span>
+          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="#produtos"
+              className="inline-flex items-center gap-2 rounded-full bg-nude-dark px-7 py-3.5 text-sm font-medium text-cream hover:bg-gold transition-colors shadow-lg shadow-nude/20"
+            >
+              <ShoppingBag size={17} />
+              Ver produtos
+            </a>
+            <div className="inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
+              <Heart size={15} className="text-nude-dark" />
+              <span className="text-xs md:text-sm text-ink-soft font-medium">
+                {TRUST_BADGE}
+              </span>
+            </div>
           </div>
         </motion.div>
 
