@@ -64,7 +64,7 @@ export default function Hero() {
               controls
               playsInline
               preload="metadata"
-              className="max-w-full max-h-full rounded-2xl"
+              className="w-full h-full object-contain rounded-2xl"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-2xl bg-gold-light/70 -z-10" />
