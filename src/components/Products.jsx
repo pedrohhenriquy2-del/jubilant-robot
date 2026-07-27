@@ -1,12 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { ShoppingBag, Lock, QrCode, CreditCard, Barcode, Truck } from "lucide-react";
+import { ShoppingBag, Lock, QrCode, CreditCard, Wallet, Truck } from "lucide-react";
 import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
-import CurrencyToggle from "./CurrencyToggle";
 
 export default function Products() {
-  const [currency, setCurrency] = useState("BRL");
-
   return (
     <section id="produtos" className="py-20 md:py-28 bg-cream">
       <div className="mx-auto max-w-6xl px-6">
@@ -23,7 +19,6 @@ export default function Products() {
           <h2 className="text-3xl md:text-4xl text-ink font-semibold mb-6">
             Skincare para continuar o cuidado em casa
           </h2>
-          <CurrencyToggle currency={currency} onChange={setCurrency} />
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
             <span className="inline-flex items-center gap-1.5">
@@ -33,12 +28,12 @@ export default function Products() {
             <span className="inline-flex items-center gap-1.5">
               <QrCode size={14} className="text-nude-dark" />
               <CreditCard size={14} className="text-nude-dark" />
-              <Barcode size={14} className="text-nude-dark" />
-              Pix, cartão ou boleto
+              <Wallet size={14} className="text-nude-dark" />
+              Pix, cartão ou PicPay
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Truck size={14} className="text-nude-dark" />
-              Envio para Brasil e Portugal
+              Envio para todo o Brasil
             </span>
           </div>
         </motion.div>
@@ -100,13 +95,8 @@ export default function Products() {
                 )}
                 <div className="mb-5 mt-auto">
                   <p className="text-lg font-semibold text-nude-dark">
-                    {formatPrice(product.price, currency)}
+                    {formatPrice(product.price)}
                   </p>
-                  {currency === "EUR" && (
-                    <p className="text-[11px] text-ink-soft mt-0.5">
-                      Valor aproximado, cobrado em R$ no checkout
-                    </p>
-                  )}
                 </div>
                 <a
                   href={product.salesPageUrl || product.paymentLink}

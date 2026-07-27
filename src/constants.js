@@ -12,18 +12,7 @@ export const LOGO = `${ASSET_BASE}logo.jpg`;
 
 export const WHATSAPP_NUMBER = "5538988075909";
 
-// Taxa de conversão aproximada BRL -> EUR, usada só para exibir um valor de
-// referência a clientes de Portugal. A cobrança final acontece em reais no
-// checkout do Perfect Pay. Atualizar este número periodicamente.
-export const BRL_TO_EUR_RATE = 0.16;
-
-export function formatPrice(value, currency = "BRL") {
-  if (currency === "EUR") {
-    return (value * BRL_TO_EUR_RATE).toLocaleString("pt-PT", {
-      style: "currency",
-      currency: "EUR",
-    });
-  }
+export function formatPrice(value) {
   return value.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL",
@@ -114,6 +103,7 @@ export const PRODUCTS = [
     price: 37.9,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE87N",
     photo: `${ASSET_BASE}products/protetor-solar-ps-01.jpg`,
+    video: `${ASSET_BASE}products/protetor-solar-ps-01-ugc.mp4`,
   },
   {
     id: 4,
@@ -272,9 +262,9 @@ export const FAQ_ITEMS = [
       "Para manter os resultados, o ideal é repetir o procedimento a cada 30 a 45 dias, mas isso pode variar conforme o tipo e a necessidade da sua pele.",
   },
   {
-    question: "Vocês entregam os produtos para todo o Brasil e Portugal?",
+    question: "Vocês entregam os produtos para todo o Brasil?",
     answer:
-      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil e também para Portugal, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
+      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou PicPay direto no checkout do site.",
   },
   {
     question: "Vocês atendem todos os tipos de pele?",
