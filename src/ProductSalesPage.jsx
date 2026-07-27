@@ -16,8 +16,8 @@ import {
 import {
   BRAND,
   LOGO,
-  WHATSAPP_LINK,
   PRODUCTS,
+  buildWhatsAppLink,
   trackWhatsAppClick,
   trackProductClick,
   formatPrice,
@@ -25,6 +25,9 @@ import {
 import WhatsAppFloatButton from "./components/WhatsAppFloatButton";
 
 const product = PRODUCTS[0];
+const PRODUCT_WHATSAPP_LINK = buildWhatsAppLink(
+  `Olá! Tenho uma dúvida sobre o ${product.name} 🌿`
+);
 
 const BENEFITS = [
   {
@@ -97,7 +100,7 @@ export default function ProductSalesPage() {
             </span>
           </a>
           <a
-            href={WHATSAPP_LINK}
+            href={PRODUCT_WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackWhatsAppClick}
@@ -318,7 +321,7 @@ export default function ProductSalesPage() {
                 Comprar agora
               </a>
               <a
-                href={WHATSAPP_LINK}
+                href={PRODUCT_WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackWhatsAppClick}
