@@ -23,13 +23,15 @@ export default function Hero() {
             Estética facial & Skincare
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-ink font-semibold">
-            Sua pele merece cuidado, leveza e{" "}
-            <span className="text-nude-dark italic">renovação de verdade</span>
+            Oleosidade, cravos e poros dilatados?{" "}
+            <span className="text-nude-dark italic">Isso tem solução.</span>
           </h1>
           <p className="mt-6 text-base md:text-lg text-ink-soft max-w-md">
-            Na nossa loja Selune Oficial, cada sessão de limpeza de pele é pensada para
-            devolver o equilíbrio, o viço e a saúde da sua pele — com técnica,
-            cuidado e um espaço feito para o seu bem-estar.
+            Se sua pele fica oleosa ao longo do dia, com cravos, poros
+            dilatados e textura irregular, o problema não é falta de cuidado
+            — é estar com os produtos errados. A linha Principia, vendida
+            pela Selune Oficial, foi pensada pra isso: uma rotina simples,
+            em casa, pra devolver equilíbrio, viço e uniformidade à sua pele.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
