@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ShoppingBag,
@@ -24,7 +23,6 @@ import {
   formatPrice,
 } from "./constants";
 import WhatsAppFloatButton from "./components/WhatsAppFloatButton";
-import CurrencyToggle from "./components/CurrencyToggle";
 
 const product = PRODUCTS[0];
 
@@ -84,8 +82,6 @@ function BuyButton({ className = "", children = "Comprar agora" }) {
 }
 
 export default function ProductSalesPage() {
-  const [currency, setCurrency] = useState("BRL");
-
   return (
     <div className="bg-cream text-ink">
       <header className="border-b border-beige sticky top-0 z-40 bg-cream/95 backdrop-blur">
@@ -166,18 +162,9 @@ export default function ProductSalesPage() {
                 </span>
               </div>
 
-              <div className="mt-6 flex justify-center md:justify-start">
-                <CurrencyToggle currency={currency} onChange={setCurrency} />
-              </div>
-
               <p className="mt-4 text-3xl md:text-4xl font-semibold text-nude-dark">
-                {formatPrice(product.price, currency)}
+                {formatPrice(product.price)}
               </p>
-              {currency === "EUR" && (
-                <p className="text-xs text-ink-soft mt-1">
-                  Valor aproximado, cobrado em R$ no checkout
-                </p>
-              )}
 
               <div className="mt-6 flex flex-col sm:flex-row items-center md:items-start gap-4">
                 <BuyButton className="px-10 py-4 text-base w-full sm:w-auto" />
@@ -201,7 +188,7 @@ export default function ProductSalesPage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Truck size={14} className="text-nude-dark" />
-                  Envio para Brasil e Portugal
+                  Envio para todo o Brasil
                 </span>
               </div>
             </motion.div>
@@ -314,7 +301,7 @@ export default function ProductSalesPage() {
                 Pronta para cuidar da sua pele?
               </h2>
               <p className="text-cream/70 max-w-md mb-2">
-                {formatPrice(product.price, currency)} — pagamento em ambiente seguro.
+                {formatPrice(product.price)} — pagamento em ambiente seguro.
               </p>
               <div className="flex items-center justify-center gap-2 text-cream/60 mb-6">
                 <QrCode size={16} />
@@ -355,7 +342,7 @@ export default function ProductSalesPage() {
       {/* Barra fixa de compra no mobile */}
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-cream/95 backdrop-blur border-t border-beige px-4 py-3 flex items-center justify-between gap-4">
         <span className="text-lg font-semibold text-nude-dark">
-          {formatPrice(product.price, currency)}
+          {formatPrice(product.price)}
         </span>
         <BuyButton className="px-6 py-3 text-sm">Comprar</BuyButton>
       </div>
