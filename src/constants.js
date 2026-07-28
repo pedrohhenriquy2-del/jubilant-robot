@@ -365,7 +365,7 @@ export const SERVICES = [
 export const GALLERY_IMAGES = [
   {
     id: 1,
-    src: `${ASSET_BASE}gallery/limpeza-profunda.png`,
+    src: `${ASSET_BASE}gallery/limpeza-profunda.webp`,
     alt: "Limpeza de pele profunda em andamento na Selune Oficial",
   },
   {
