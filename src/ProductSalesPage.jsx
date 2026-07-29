@@ -178,6 +178,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               <img
                 src={product.photo}
                 alt={product.name}
+                loading="lazy"
                 className="w-full block"
               />
             </div>
