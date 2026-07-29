@@ -60,7 +60,7 @@ export default function Hero() {
           <div className="aspect-[4/5] w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-3">
             <video
               src={`${import.meta.env.BASE_URL}hero-produto-video.mp4`}
-              poster={`${import.meta.env.BASE_URL}hero-produto.jpeg`}
+              poster={`${import.meta.env.BASE_URL}hero-produto.webp`}
               controls
               playsInline
               preload="metadata"
