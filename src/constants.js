@@ -8,7 +8,7 @@
 // (funciona tanto em localhost quanto na subpasta do GitHub Pages)
 const ASSET_BASE = import.meta.env.BASE_URL;
 
-export const LOGO = `${ASSET_BASE}logo.jpg`;
+export const LOGO = `${ASSET_BASE}logo.webp`;
 
 export const WHATSAPP_NUMBER = "5538988075909";
 
@@ -84,7 +84,7 @@ export const PRODUCTS = [
     price: 39.5,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE6SI",
     salesPageUrl: `${ASSET_BASE}mix-01.html`,
-    photo: `${ASSET_BASE}products/mix-01.jpeg`,
+    photo: `${ASSET_BASE}products/mix-01.webp`,
     badge: "Novidade",
     // TROCAR: vídeo removido — mostrava produto de outra marca e pessoas
     // genéricas de IA/banco de imagens. Adicionar de volta só com um vídeo
@@ -196,7 +196,7 @@ export const PRODUCTS = [
     price: 37.9,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE87N",
     salesPageUrl: `${ASSET_BASE}protetor-solar-ps-01.html`,
-    photo: `${ASSET_BASE}products/protetor-solar-ps-01.jpg`,
+    photo: `${ASSET_BASE}products/protetor-solar-ps-01.webp`,
     badge: "Toque seco",
     benefits: [
       {
@@ -248,7 +248,7 @@ export const PRODUCTS = [
     price: 45.5,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE87U",
     salesPageUrl: `${ASSET_BASE}gel-limpeza-gl-01.html`,
-    photo: `${ASSET_BASE}products/gel-limpeza-gl-01.jpg`,
+    photo: `${ASSET_BASE}products/gel-limpeza-gl-01.webp`,
     badge: "Uso diário",
     benefits: [
       {
