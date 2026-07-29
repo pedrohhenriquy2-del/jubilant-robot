@@ -136,7 +136,7 @@ export const PRODUCTS = [
     shortName: "Kit Avançado",
     description:
       "Protetor solar PS-01 (60 FPS), sérum facial RN-0,3 (retinol), gel de limpeza GL-01, sérum facial VC-10 (vitamina C) e sérum facial AH-2 (ácido hialurônico) — rotina completa de skincare.",
-    price: 305,
+    price: 145.5,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE85U",
     salesPageUrl: `${ASSET_BASE}kit-avancado.html`,
     photo: `${ASSET_BASE}products/kit-avancado-vc-rn.webp`,
