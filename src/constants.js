@@ -365,28 +365,28 @@ export const SERVICES = [
 export const GALLERY_IMAGES = [
   {
     id: 1,
-    src: `${ASSET_BASE}gallery/limpeza-profunda.webp`,
-    alt: "Limpeza de pele profunda em andamento na Selune Oficial",
+    src: `${ASSET_BASE}gallery/resultados-acne.webp`,
+    alt: "Antes e depois: redução da aparência de acne",
   },
   {
     id: 2,
-    src: `${ASSET_BASE}gallery/procedimento-laser.webp`,
-    alt: "Procedimento facial com aparelho de luz na Selune Oficial",
+    src: `${ASSET_BASE}gallery/resultados-firmeza.webp`,
+    alt: "Antes e depois: pele mais firme e hidratada",
   },
   {
     id: 3,
-    src: `${ASSET_BASE}gallery/produtos-ambiente.webp`,
-    alt: "Produtos utilizados e ambiente acolhedor da Selune Oficial",
+    src: `${ASSET_BASE}gallery/resultados-uniformidade.webp`,
+    alt: "Antes e depois: pele mais uniforme e luminosa",
   },
   {
     id: 4,
-    src: `${ASSET_BASE}gallery/limpeza-detalhe.webp`,
-    alt: "Detalhe de procedimento de limpeza facial na Selune Oficial",
+    src: `${ASSET_BASE}gallery/resultados-manchas.webp`,
+    alt: "Antes e depois: redução da aparência de manchas",
   },
   {
     id: 5,
-    src: `${ASSET_BASE}gallery/atendimento-mascara.webp`,
-    alt: "Atendimento com máscara facial na Selune Oficial",
+    src: `${ASSET_BASE}gallery/resultados-brilho.webp`,
+    alt: "Pele com viço e luminosidade",
   },
 ];
 
