@@ -19,6 +19,7 @@ export default function Footer() {
           <img
             src={LOGO}
             alt={BRAND.name}
+            loading="lazy"
             className="h-12 w-12 rounded-full object-cover"
           />
           <div>
