@@ -388,6 +388,11 @@ export const GALLERY_IMAGES = [
     src: `${ASSET_BASE}gallery/resultados-brilho.webp`,
     alt: "Pele com viço e luminosidade",
   },
+  {
+    id: 6,
+    src: `${ASSET_BASE}gallery/resultados-vitalidade.webp`,
+    alt: "Antes e depois: mais brilho, vitalidade e hidratação",
+  },
 ];
 
 export const TESTIMONIALS = [
