@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, MapPin, Clock } from "lucide-react";
+import { MessageCircle, Clock } from "lucide-react";
 import InstagramIcon from "./icons/InstagramIcon";
 import { CONTACT, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
@@ -15,12 +15,11 @@ export default function Contact() {
           className="rounded-[2rem] bg-ink text-cream px-8 py-14 md:px-16 md:py-16 text-center mb-14"
         >
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-            Está pronta para dar esse cuidado à sua pele?
+            Pronta para começar sua rotina de skincare?
           </h2>
           <p className="text-cream/70 max-w-lg mx-auto mb-8">
-            Fale agora com a gente e agende sua sessão de limpeza de pele no
-            Brasil. Vagas limitadas por semana para garantir atendimento
-            individualizado.
+            Escolha seus produtos direto na loja, ou fale com a gente no
+            WhatsApp pra tirar dúvidas antes de comprar.
           </p>
           <a
             href={WHATSAPP_LINK}
@@ -34,85 +33,52 @@ export default function Contact() {
           </a>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-start">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6 text-center flex flex-col items-center"
-          >
-            <div className="flex flex-col items-center gap-2">
-              <MapPin size={22} className="text-nude-dark shrink-0" />
-              <div>
-                <p className="font-medium text-ink">Endereço</p>
-                <p className="text-ink-soft">{CONTACT.address}</p>
-                <p className="text-xs text-ink-soft/70 mt-1">
-                  Endereço exato enviado pelo WhatsApp ao confirmar o
-                  agendamento
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-md mx-auto flex flex-col items-center gap-8 text-center"
+        >
+          <div className="flex flex-col items-center gap-2">
+            <Clock size={22} className="text-nude-dark shrink-0" />
+            <div>
+              <p className="font-medium text-ink">Horário de atendimento</p>
+              {CONTACT.hours.map((h) => (
+                <p key={h.day} className="text-ink-soft">
+                  {h.day}: {h.time}
                 </p>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <InstagramIcon size={22} className="text-nude-dark shrink-0" />
+            <div>
+              <p className="font-medium text-ink">Redes sociais</p>
+              <div className="flex justify-center gap-4 mt-1">
+                {/* TROCAR: link real do Instagram em constants.js */}
+                <a
+                  href={CONTACT.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ink-soft hover:text-nude-dark transition-colors"
+                >
+                  {CONTACT.instagramHandle}
+                </a>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={trackWhatsAppClick}
+                  className="text-ink-soft hover:text-nude-dark transition-colors"
+                >
+                  WhatsApp
+                </a>
               </div>
             </div>
-
-            <div className="flex flex-col items-center gap-2">
-              <Clock size={22} className="text-nude-dark shrink-0" />
-              <div>
-                <p className="font-medium text-ink">Horário de atendimento</p>
-                {CONTACT.hours.map((h) => (
-                  <p key={h.day} className="text-ink-soft">
-                    {h.day}: {h.time}
-                  </p>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center gap-2">
-              <InstagramIcon size={22} className="text-nude-dark shrink-0" />
-              <div>
-                <p className="font-medium text-ink">Redes sociais</p>
-                <div className="flex justify-center gap-4 mt-1">
-                  {/* TROCAR: link real do Instagram em constants.js */}
-                  <a
-                    href={CONTACT.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-ink-soft hover:text-nude-dark transition-colors"
-                  >
-                    {CONTACT.instagramHandle}
-                  </a>
-                  <a
-                    href={WHATSAPP_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={trackWhatsAppClick}
-                    className="text-ink-soft hover:text-nude-dark transition-colors"
-                  >
-                    WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="rounded-2xl overflow-hidden border border-beige aspect-[4/3]"
-          >
-            {/* TROCAR: mapsEmbedSrc em constants.js pelas coordenadas reais */}
-            <iframe
-              title="Localização da Selune Oficial no Brasil"
-              src={CONTACT.mapsEmbedSrc}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

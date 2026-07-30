@@ -16,10 +16,10 @@ export default function Services() {
           className="text-center max-w-xl mx-auto mb-14"
         >
           <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
-            Serviços
+            Rotina
           </span>
           <h2 className="text-3xl md:text-4xl text-ink font-semibold">
-            Procedimentos feitos para a saúde da sua pele
+            Uma rotina completa de skincare, em casa
           </h2>
         </motion.div>
 

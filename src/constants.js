@@ -42,7 +42,6 @@ export const BRAND = {
 };
 
 export const CONTACT = {
-  address: "No Brasil",
   hours: [
     { day: "Segunda a Sexta", time: "09h às 19h" },
     { day: "Sábado", time: "09h às 14h" },
@@ -51,8 +50,6 @@ export const CONTACT = {
   instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
   instagramHandle: "@seluneoficialoficial.com.br",
   whatsappDisplay: "(38) 98807-5909",
-  mapsEmbedSrc:
-    "https://www.google.com/maps?q=Brasil&output=embed",
 };
 
 export const NAV_LINKS = [
@@ -403,9 +400,9 @@ export const PRODUCTS = [
 export const SAFETY_BADGES = [
   {
     icon: "ShieldCheck",
-    title: "Boas práticas de biossegurança",
+    title: "Boas práticas de segurança",
     description:
-      "Protocolos de higiene e segurança seguidos em cada etapa do atendimento.",
+      "Protocolos de segurança seguidos em cada etapa, da formulação ao envio do produto.",
   },
   {
     icon: "BadgeCheck",
@@ -415,9 +412,9 @@ export const SAFETY_BADGES = [
   },
   {
     icon: "GraduationCap",
-    title: "Profissionais capacitados",
+    title: "Curadoria especializada",
     description:
-      "Equipe treinada para cuidar da sua pele com técnica e segurança.",
+      "Produtos selecionados com base em ativos eficazes e reconhecidos no skincare.",
   },
   {
     icon: "HeartHandshake",
@@ -430,39 +427,39 @@ export const SAFETY_BADGES = [
 export const SERVICES = [
   {
     icon: "Sparkles",
-    title: "Limpeza de Pele Profunda",
+    title: "Limpeza Facial Diária",
     description:
-      "Higienização completa com extração e remoção de impurezas para uma pele visivelmente mais leve e uniforme.",
+      "Remove impurezas e oleosidade em excesso, preparando a pele pros próximos passos da sua rotina.",
   },
   {
     icon: "Droplet",
-    title: "Extração de Cravos",
+    title: "Hidratação Profunda",
     description:
-      "Técnica cuidadosa para desobstruir os poros sem agredir a pele, prevenindo novas inflamações.",
-  },
-  {
-    icon: "Leaf",
-    title: "Hidratação Facial",
-    description:
-      "Reposição da barreira de hidratação natural da pele, deixando-a macia, viçosa e com aspecto saudável.",
+      "Repõe a barreira de hidratação da pele, deixando-a macia, viçosa e com aspecto saudável.",
   },
   {
     icon: "Sun",
-    title: "Peeling de Renovação",
+    title: "Proteção Solar Diária",
     description:
-      "Esfoliação controlada que estimula a renovação celular e melhora textura, manchas e brilho da pele.",
+      "Protege contra os raios UVA e UVB no dia a dia, sem deixar a pele oleosa ou esbranquiçada.",
+  },
+  {
+    icon: "Leaf",
+    title: "Renovação da Textura",
+    description:
+      "Ácidos que ajudam a renovar a pele, melhorando textura, poros dilatados e uniformidade.",
   },
   {
     icon: "Heart",
     title: "Skincare Personalizado",
     description:
-      "Avaliação individual da pele para indicar a rotina de cuidados ideal para o seu tipo e objetivo.",
+      "Cada rotina é montada de acordo com o tipo e as necessidades da sua pele.",
   },
   {
     icon: "ShieldCheck",
-    title: "Protocolo Anti-idade",
+    title: "Ação Anti-idade",
     description:
-      "Conjunto de técnicas voltadas a prevenir e suavizar linhas finas, devolvendo firmeza ao rosto.",
+      "Ativos que ajudam a suavizar linhas finas e devolver firmeza à pele ao longo do uso.",
   },
 ];
 
@@ -528,24 +525,24 @@ export const TESTIMONIALS = [
 
 export const FAQ_ITEMS = [
   {
-    question: "A limpeza de pele dói?",
+    question: "Como escolho o produto certo para minha pele?",
     answer:
-      "O procedimento é feito com técnicas que priorizam o seu conforto. Pode haver um leve desconforto durante a extração, mas nada que comprometa a experiência — e a sensação após a sessão é de pele renovada e leve.",
+      "Cada produto tem a indicação na própria descrição (acne, oleosidade, textura irregular, manchas, hidratação etc.). Se tiver dúvida, é só chamar no WhatsApp que ajudamos a montar sua rotina.",
   },
   {
-    question: "Quanto tempo dura a sessão?",
+    question: "Quanto tempo leva para ver resultado?",
     answer:
-      "Em média, a limpeza de pele profunda dura entre 1h e 1h30, considerando higienização, extração, hidratação e finalização.",
+      "Varia de pessoa para pessoa e do produto usado, mas o uso constante, seguindo o modo de uso indicado em cada página, é o que traz os melhores resultados.",
   },
   {
-    question: "Quais cuidados devo ter após o procedimento?",
+    question: "Preciso usar protetor solar junto com os produtos?",
     answer:
-      "Recomendamos evitar exposição solar direta nas primeiras 24h, usar protetor solar diariamente e manter a pele hidratada conforme orientação passada durante o atendimento.",
+      "Sim, principalmente com ácidos (como os do Sérum Mix-01 e do Tônico AL-7). Recomendamos usar protetor solar diariamente durante o uso desses produtos.",
   },
   {
-    question: "Com que frequência devo fazer a limpeza de pele?",
+    question: "Com que frequência devo usar os produtos?",
     answer:
-      "Para manter os resultados, o ideal é repetir o procedimento a cada 30 a 45 dias, mas isso pode variar conforme o tipo e a necessidade da sua pele.",
+      "Isso varia por produto — cada página de venda traz o modo de uso recomendado. Em geral, o ideal é seguir uma rotina constante para manter os resultados.",
   },
   {
     question: "Vocês entregam os produtos para todo o Brasil?",
@@ -553,9 +550,9 @@ export const FAQ_ITEMS = [
       "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou PicPay direto no checkout do site.",
   },
   {
-    question: "Vocês atendem todos os tipos de pele?",
+    question: "Os produtos servem para qualquer tipo de pele?",
     answer:
-      "Sim! Cada atendimento começa com uma avaliação da pele para adaptarmos a técnica e os produtos às suas necessidades específicas.",
+      "Cada produto foi formulado com uma indicação específica. Se tiver dúvida sobre qual combina com sua pele, é só chamar no WhatsApp antes de comprar.",
   },
 ];
 
