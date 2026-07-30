@@ -14,7 +14,7 @@ export default function About() {
           <div className="aspect-square w-full rounded-[2rem] overflow-hidden shadow-md">
             <img
               src={`${import.meta.env.BASE_URL}about-clinica.webp`}
-              alt="Profissional realizando procedimento facial no espaço da Selune Oficial"
+              alt="Aplicação de tratamento facial profissional"
               loading="lazy"
               className="w-full h-full object-cover"
             />
@@ -36,16 +36,14 @@ export default function About() {
           </h2>
           <p className="text-ink-soft leading-relaxed mb-4">
             A Selune Oficial nasceu para oferecer um cuidado facial próximo,
-            atencioso e de resultado real. Cada atendimento começa com a
-            escuta da sua pele: entendemos suas necessidades antes de indicar
-            qualquer procedimento.
+            acessível e de resultado real, com produtos Principia pensados
+            para cada tipo de pele.
           </p>
           <p className="text-ink-soft leading-relaxed">
-            Em um ambiente acolhedor e reservado, unimos técnica apurada a um
-            atendimento humano — para que você saia não só com a pele mais
-            limpa, mas com a sensação de ter sido genuinamente cuidada. Já os
-            nossos produtos de skincare, como o Sérum Mix-01, enviamos para
-            todo o Brasil.
+            Selecionamos cada fórmula com cuidado, unindo ativos eficazes a
+            uma experiência de compra simples e transparente — para que você
+            monte, em casa, a rotina de skincare ideal para a sua pele.
+            Enviamos para todo o Brasil.
           </p>
         </motion.div>
       </div>
