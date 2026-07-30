@@ -291,6 +291,58 @@ export const PRODUCTS = [
       },
     ],
   },
+  {
+    id: 5,
+    name: "Principia Creme Hidratante Corporal CH-02 454g",
+    shortName: "Creme Hidratante CH-02",
+    description:
+      "5% óleo de semente de girassol, 5% glicerina e 3% manteiga de abacate. Para peles sensíveis, secas a extra secas, com 72 horas de hidratação.",
+    price: 49.0,
+    paymentLink: "https://go.perfectpay.com.br/PPU38CQEQMQ",
+    salesPageUrl: `${ASSET_BASE}creme-hidratante-ch-02.html`,
+    photo: `${ASSET_BASE}products/creme-hidratante-ch-02.webp`,
+    badge: "72h de hidratação",
+    benefits: [
+      {
+        icon: "Droplet",
+        title: "5% Óleo de Semente de Girassol",
+        text: "Ajuda a nutrir e hidratar a pele do corpo.",
+      },
+      {
+        icon: "Sparkles",
+        title: "5% Glicerina",
+        text: "Mantém a hidratação por até 72 horas.",
+      },
+      {
+        icon: "ShieldCheck",
+        title: "3% Manteiga de Abacate",
+        text: "Ajuda a nutrir e deixar a pele mais macia.",
+      },
+      {
+        icon: "Sun",
+        title: "Pele sensível, seca a extra seca",
+        text: "Formulado pra quem precisa de mais cuidado na hidratação.",
+      },
+    ],
+    salesFaq: [
+      {
+        q: "Como devo usar?",
+        a: "Aplique no corpo após o banho, com a pele ainda levemente úmida, massageando até absorver.",
+      },
+      {
+        q: "Serve para pele muito seca?",
+        a: "Sim, foi formulado para peles sensíveis, secas a extra secas, com até 72 horas de hidratação.",
+      },
+      {
+        q: "Como funciona o pagamento?",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+      },
+      {
+        q: "Tenho dúvidas antes de comprar, como falo com vocês?",
+        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+      },
+    ],
+  },
 ];
 
 // Selos de confiança/segurança. TROCAR: não afirmar registro específico em
