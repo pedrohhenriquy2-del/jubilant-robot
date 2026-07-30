@@ -343,6 +343,18 @@ export const PRODUCTS = [
       },
     ],
   },
+  {
+    id: 6,
+    name: "Tônico Principia AL-7 (7% Ácido Lático + 1% Ácido Salicílico) 120ml",
+    shortName: "Tônico AL-7",
+    description:
+      "7% ácido lático e 1% ácido salicílico. Renova a textura da pele e ajuda a controlar oleosidade e poros dilatados.",
+    price: 39.0,
+    paymentLink: "https://go.perfectpay.com.br/PPU38CQEQMT",
+    // TROCAR: adicionar foto real do produto e criar página de vendas
+    // dedicada (como os outros produtos) assim que a foto chegar.
+    badge: "Ação renovadora",
+  },
 ];
 
 // Selos de confiança/segurança. TROCAR: não afirmar registro específico em
