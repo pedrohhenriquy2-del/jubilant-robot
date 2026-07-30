@@ -13,7 +13,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center md:text-left flex flex-col items-center md:items-start"
+          className="text-center flex flex-col items-center"
         >
           <span className="block font-display text-sm tracking-[0.2em] text-ink mb-2">
             SELUNE OFICIAL

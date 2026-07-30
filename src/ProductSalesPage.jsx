@@ -107,7 +107,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-center md:text-left"
+              className="text-center"
             >
               <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
                 Principia Skincare
@@ -115,7 +115,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                 {product.name}
               </h1>
-              <p className="mt-5 text-ink-soft max-w-md mx-auto md:mx-0">
+              <p className="mt-5 text-ink-soft max-w-md mx-auto">
                 {product.description}
               </p>
 
@@ -130,18 +130,18 @@ export default function ProductSalesPage({ productId = 1 }) {
                 {formatPrice(product.price)}
               </p>
 
-              <div className="mt-6 flex flex-col sm:flex-row items-center md:items-start gap-4">
+              <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
                 <BuyButton product={product} className="px-10 py-4 text-base w-full sm:w-auto" />
               </div>
 
-              <div className="mt-5 flex items-center justify-center md:justify-start gap-2 text-ink-soft">
+              <div className="mt-5 flex items-center justify-center gap-2 text-ink-soft">
                 <QrCode size={18} />
                 <CreditCard size={18} />
                 <Wallet size={18} />
                 <span className="text-xs">Pix, cartão ou PicPay</span>
               </div>
 
-              <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-xs text-ink-soft">
+              <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
                 <span className="inline-flex items-center gap-1.5">
                   <Lock size={14} className="text-nude-dark" />
                   Ambiente seguro
