@@ -348,12 +348,52 @@ export const PRODUCTS = [
     name: "Tônico Principia AL-7 (7% Ácido Lático + 1% Ácido Salicílico) 120ml",
     shortName: "Tônico AL-7",
     description:
-      "7% ácido lático e 1% ácido salicílico. Renova a textura da pele e ajuda a controlar oleosidade e poros dilatados.",
-    price: 39.0,
+      "7% ácido lático e 1% ácido salicílico. Acne, textura irregular, oleosidade, impurezas e poros dilatados.",
+    price: 26.5,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQEQMT",
-    // TROCAR: adicionar foto real do produto e criar página de vendas
-    // dedicada (como os outros produtos) assim que a foto chegar.
+    salesPageUrl: `${ASSET_BASE}tonico-al-7.html`,
+    photo: `${ASSET_BASE}products/tonico-al-7.webp`,
     badge: "Ação renovadora",
+    benefits: [
+      {
+        icon: "Sparkles",
+        title: "7% Ácido Lático",
+        text: "Renova a textura da pele e ajuda a uniformizar o aspecto.",
+      },
+      {
+        icon: "ShieldCheck",
+        title: "1% Ácido Salicílico",
+        text: "Atua na acne e ajuda a desobstruir os poros.",
+      },
+      {
+        icon: "Droplet",
+        title: "Remove impurezas",
+        text: "Completa a limpeza, preparando a pele pros próximos passos da rotina.",
+      },
+      {
+        icon: "Sun",
+        title: "Textura irregular e poros dilatados",
+        text: "Uso frequente ajuda a deixar a pele mais uniforme.",
+      },
+    ],
+    salesFaq: [
+      {
+        q: "Como devo usar?",
+        a: "Aplique com um algodão no rosto limpo, de preferência à noite. Use protetor solar durante o dia.",
+      },
+      {
+        q: "Serve para qualquer tipo de pele?",
+        a: "É indicado principalmente para peles oleosas ou com tendência a acne, textura irregular e poros dilatados.",
+      },
+      {
+        q: "Como funciona o pagamento?",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+      },
+      {
+        q: "Tenho dúvidas antes de comprar, como falo com vocês?",
+        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+      },
+    ],
   },
 ];
 
