@@ -134,6 +134,17 @@ export default function ProductSalesPage({ productId = 1 }) {
                 <BuyButton product={product} className="px-10 py-4 text-base w-full sm:w-auto" />
               </div>
 
+              <a
+                href={productWhatsAppLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={trackWhatsAppClick}
+                className="mt-3 inline-flex items-center gap-2 text-sm text-ink-soft hover:text-nude-dark transition-colors"
+              >
+                <MessageCircle size={15} />
+                Prefiro tirar dúvidas no WhatsApp antes
+              </a>
+
               <div className="mt-5 flex items-center justify-center gap-2 text-ink-soft">
                 <QrCode size={18} />
                 <CreditCard size={18} />

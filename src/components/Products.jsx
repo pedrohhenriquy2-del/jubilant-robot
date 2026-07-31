@@ -1,6 +1,20 @@
 import { motion } from "framer-motion";
-import { ShoppingBag, Lock, QrCode, CreditCard, Wallet, Truck } from "lucide-react";
-import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
+import {
+  ShoppingBag,
+  Lock,
+  QrCode,
+  CreditCard,
+  Wallet,
+  Truck,
+  MessageCircle,
+} from "lucide-react";
+import {
+  PRODUCTS,
+  trackProductClick,
+  trackWhatsAppClick,
+  formatPrice,
+  buildWhatsAppLink,
+} from "../constants";
 
 export default function Products() {
   return (
@@ -110,6 +124,18 @@ export default function Products() {
                 >
                   <ShoppingBag size={16} />
                   Comprar
+                </a>
+                <a
+                  href={buildWhatsAppLink(
+                    `Olá! Tenho uma dúvida sobre o ${product.name} 🌿`
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={trackWhatsAppClick}
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs text-ink-soft hover:text-nude-dark transition-colors"
+                >
+                  <MessageCircle size={13} />
+                  Dúvida antes de comprar? Fale no WhatsApp
                 </a>
               </div>
             </motion.div>
