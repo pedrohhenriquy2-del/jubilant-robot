@@ -20,6 +20,8 @@ export default defineConfig({
         gelLimpezaGl01: resolve(__dirname, 'gel-limpeza-gl-01.html'),
         cremeHidratanteCh02: resolve(__dirname, 'creme-hidratante-ch-02.html'),
         tonicoAl7: resolve(__dirname, 'tonico-al-7.html'),
+        // Página de vendas da Black Friday (Sérum Mix-01)
+        blackFriday: resolve(__dirname, 'black-friday.html'),
       },
     },
   },
