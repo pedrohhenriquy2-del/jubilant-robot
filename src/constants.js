@@ -48,7 +48,7 @@ export const CONTACT = {
     { day: "Domingo", time: "Fechado" },
   ],
   instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
-  instagramHandle: "@seluneoficialoficial.com.br",
+  instagramHandle: "Instagram da Selune",
   whatsappDisplay: "(38) 98807-5909",
 };
 
@@ -57,8 +57,7 @@ export const NAV_LINKS = [
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
   { label: "Produtos", href: "#produtos" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "FAQ", href: "#faq" },
+    { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -402,7 +401,7 @@ export const SAFETY_BADGES = [
     icon: "ShieldCheck",
     title: "Boas práticas de segurança",
     description:
-      "Protocolos de segurança seguidos em cada etapa, da formulação ao envio do produto.",
+      "Compromisso com boas práticas e cuidado no atendimento e no envio dos produtos.",
   },
   {
     icon: "BadgeCheck",
@@ -556,6 +555,6 @@ export const FAQ_ITEMS = [
   },
 ];
 
-export const TRUST_BADGE = "Cuidado de pele com resultado real";
+export const TRUST_BADGE = "Cuidado de pele para o dia a dia";
 
 export const FOOTER_LINKS = NAV_LINKS;

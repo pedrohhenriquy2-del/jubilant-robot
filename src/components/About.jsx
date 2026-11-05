@@ -36,7 +36,7 @@ export default function About() {
           </h2>
           <p className="text-ink-soft leading-relaxed mb-4">
             A Selune Oficial nasceu para oferecer um cuidado facial próximo,
-            acessível e de resultado real, com produtos Principia pensados
+            acessível e de qualidade, com produtos Principia pensados
             para cada tipo de pele.
           </p>
           <p className="text-ink-soft leading-relaxed">
