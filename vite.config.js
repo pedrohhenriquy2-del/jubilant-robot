@@ -22,6 +22,8 @@ export default defineConfig({
         tonicoAl7: resolve(__dirname, 'tonico-al-7.html'),
         // Página de vendas da Black Friday (Sérum Mix-01)
         blackFriday: resolve(__dirname, 'black-friday.html'),
+        // Loja completa (antiga página inicial)
+        loja: resolve(__dirname, 'loja.html'),
       },
     },
   },

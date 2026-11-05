@@ -50,7 +50,7 @@ export default function ProductSalesPage({ productId = 1 }) {
     <div className="bg-cream text-ink">
       <header className="border-b border-beige sticky top-0 z-40 bg-cream/95 backdrop-blur">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2.5">
+          <a href={`${import.meta.env.BASE_URL}loja.html`} className="flex items-center gap-2.5">
             <img
               src={LOGO}
               alt={BRAND.name}
