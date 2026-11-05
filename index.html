@@ -396,6 +396,19 @@ h1, h2, h3, .brand, .big, .pct, .price { font-weight: 600; }
   tick();
   setInterval(tick, 60000);
 })();
+
+// Meta Pixel: mesmos eventos do restante do site.
+// Contact ao clicar no WhatsApp; InitiateCheckout ao clicar em comprar.
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a');
+  if (!a || typeof window.fbq !== 'function') return;
+  var href = a.getAttribute('href') || '';
+  if (href.indexOf('wa.me') !== -1) {
+    window.fbq('track', 'Contact');
+  } else if (/mix-01\.html|perfectpay\.com\.br/.test(href)) {
+    window.fbq('track', 'InitiateCheckout', { content_name: 'Principia Sérum Mix-01', content_type: 'product', currency: 'BRL' });
+  }
+});
 </script>
   </body>
 </html>
