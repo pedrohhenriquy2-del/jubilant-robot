@@ -209,6 +209,10 @@ h1, h2, h3, .brand, .big, .pct, .price { font-weight: 600; }
 .active .pct { font-size: 34px; }
 .brand { font-size: 19px; }
 .shot { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 16px; border: 1px solid var(--line); background: #FFFFFF; object-fit: contain; }
+.video-sec .wrap { display: grid; justify-items: center; gap: 22px; text-align: center; }
+.video-sec .head { margin: 0; }
+.video-frame { width: min(100%, 340px); border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: #24303A; }
+.video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; }
 </style>
   </head>
   <body>
@@ -265,6 +269,21 @@ h1, h2, h3, .brand, .big, .pct, .price { font-weight: 600; }
     </aside>
   </div>
 </div>
+
+<section class="video-sec" id="video">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Em vídeo</p>
+      <h2>O Sérum Mix-01 em 18 segundos</h2>
+    </div>
+    <div class="video-frame">
+      <video controls muted loop playsinline preload="metadata" poster="%BASE_URL%black-friday-poster.jpg" aria-label="Vídeo do Principia Sérum Mix-01 com a oferta da Black Friday">
+        <source src="%BASE_URL%black-friday-mix-01.mp4" type="video/mp4">
+      </video>
+    </div>
+    <a class="btn" href="mix-01.html">Quero aproveitar</a>
+  </div>
+</section>
 
 <section class="alt" id="formula">
   <div class="wrap">
