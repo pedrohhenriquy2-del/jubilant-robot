@@ -81,6 +81,11 @@
       .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
       .active { background: #fff; border-radius: 16px; padding: 18px 20px; display: flex; align-items: baseline; gap: 12px; font-weight: 500; }
       .active b { font-size: 26px; font-weight: 700; color: var(--teal); }
+      .active span { display: flex; flex-direction: column; gap: 2px; }
+      .active small { font-size: 13px; font-weight: 400; color: var(--muted); line-height: 1.35; }
+      .bf-tag { display: inline-flex; align-self: flex-start; align-items: center; gap: 6px; background: var(--ink); color: #F2C9B6; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+      .final .bf-tag { align-self: center; }
+      .trust { font-size: 13px; color: var(--teal); font-weight: 600; }
 
       .reviews { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
       .review { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; display: flex; gap: 14px; align-items: center; }
@@ -132,11 +137,13 @@
         <div class="wrap">
           <div class="hero-text">
             <p class="eyebrow">Principia Sérum Mix-01 · 30 ml</p>
-            <h1>4 ativos pra pele oleosa num frasco só.</h1>
-            <p class="lead">Para oleosidade, cravos e poros dilatados. Algumas gotas à noite.</p>
+            <h1>Pele oleosa, cravos e poros abertos? 4 ativos num frasco só.</h1>
+            <p class="lead">Controla o brilho, ajuda a desentupir os poros e a clarear manchas. Algumas gotas à noite.</p>
+            <span class="bf-tag">Oferta de Black Friday · até 01/12</span>
             <div class="price"><s>R$ 39,50</s><strong>R$ 34,50</strong></div>
             <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Quero meu Mix-01
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="trust">7 dias para desistir · Compra segura</p>
             <p class="muted">Frete grátis · Chega em 3 a 7 dias úteis · Pix, cartão ou PicPay</p>
           </div>
           <div class="hero-media">
@@ -152,10 +159,10 @@
         <div class="wrap">
           <h2>O que tem no frasco</h2>
           <div class="grid">
-            <div class="active"><b>5%</b>Niacinamida</div>
-            <div class="active"><b>4%</b>Ácido glicólico</div>
-            <div class="active"><b>3%</b>Ácido tranexâmico</div>
-            <div class="active"><b>2%</b>Ácido salicílico</div>
+            <div class="active"><b>5%</b><span>Niacinamida<small>Controla o brilho e a oleosidade</small></span></div>
+            <div class="active"><b>4%</b><span>Ácido glicólico<small>Renova a textura e traz viço</small></span></div>
+            <div class="active"><b>3%</b><span>Ácido tranexâmico<small>Ajuda a uniformizar o tom e atenuar manchas</small></span></div>
+            <div class="active"><b>2%</b><span>Ácido salicílico<small>Ajuda a desobstruir os poros e atua nos cravos</small></span></div>
           </div>
         </div>
       </section>
@@ -195,9 +202,11 @@
 
       <section class="final">
         <div class="wrap">
+          <span class="bf-tag">Oferta de Black Friday · até 01/12</span>
           <h2>Sérum Mix-01</h2>
           <div class="price"><s>R$ 39,50</s><strong>R$ 34,50</strong></div>
           <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Comprar agora</a>
+          <p class="trust">7 dias para desistir · Compra segura</p>
           <p class="muted">Frete grátis até 01/12 · Pix, cartão ou PicPay</p>
           <a class="link" href="https://wa.me/5538988075909?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01">Dúvida? Fale no WhatsApp</a>
         </div>
@@ -213,7 +222,7 @@
     </footer>
 
     <div class="sticky">
-      <div><b>R$ 34,50</b><small>Frete grátis até 01/12</small></div>
+      <div><b>R$ 34,50</b><small>Black Friday · frete grátis até 01/12</small></div>
       <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Comprar</a>
     </div>
 
