@@ -5,31 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Selune Oficial | Black Friday: Sérum Mix-01 com frete grátis</title>
-    <meta
-      name="description"
-      content="Black Friday da Selune Oficial: Principia Sérum Mix-01 (Niacinamida, Ácido Glicólico, Ácido Tranexâmico e Ácido Salicílico) com frete grátis para todo o Brasil até 01/12."
-    />
+    <title>Principia Sérum Mix-01 | Selune Oficial</title>
+    <meta name="description" content="Sérum Principia Mix-01: niacinamida, ácido glicólico, tranexâmico e salicílico num frasco só. R$ 34,50 com frete grátis." />
     <meta name="author" content="Selune Oficial" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Selune Oficial | Black Friday: Sérum Mix-01 com frete grátis" />
-    <meta
-      property="og:description"
-      content="Sérum Mix-01 com frete grátis para todo o Brasil até 01/12. Pix, cartão ou PicPay."
-    />
+    <meta property="og:type" content="product" />
+    <meta property="og:title" content="Principia Sérum Mix-01 | Selune Oficial" />
+    <meta property="og:description" content="4 ativos pra pele oleosa num frasco só. R$ 34,50 com frete grátis." />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:url" content="https://selune-oficial.com.br/" />
+    <link rel="canonical" href="https://selune-oficial.com.br/" />
     <meta property="og:image" content="https://selune-oficial.com.br/products/mix-01.webp" />
-
-    <link rel="preload" as="image" href="%BASE_URL%products/mix-01.webp" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Meta Pixel Code -->
     <script>
@@ -43,409 +32,213 @@
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '792765023001456');
       fbq('track', 'PageView');
-      fbq('track', 'ViewContent');
+      fbq('track', 'ViewContent', {content_name: 'Principia Sérum Mix-01', value: 34.50, currency: 'BRL'});
     </script>
     <!-- End Meta Pixel Code -->
 
     <style>
-/* Layout: faixa de oferta, abertura em duas colunas (promessa + caixa de compra do Sérum Mix-01), fórmula em 4 ativos, uso, dúvidas e WhatsApp. Identidade do site atual: fundo azul-acinzentado frio, terracota como única cor de destaque, Montserrat em todo o texto. */
-:root {
-  --bg: #F2F5F8;
-  --surface: #FFFFFF;
-  --ink: #24303A;
-  --muted: #55636E;
-  --line: #DCE3E9;
-  --accent: #A36A52;
-  --accent-soft: #F3E6E0;
-  --btn-bg: #A36A52;
-  --btn-fg: #FFFFFF;
-  --band: #24303A;
-  --band-fg: #F2F5F8;
-  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #151B21;
-    --surface: #1E262D;
-    --ink: #E8EDF1;
-    --muted: #9FACB6;
-    --line: #2C3741;
-    --accent: #D9A18A;
-    --accent-soft: #2B2420;
-    --btn-bg: #C98F76;
-    --btn-fg: #1A1410;
-    --band: #0E1317;
-    --band-fg: #E8EDF1;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #151B21;
-  --surface: #1E262D;
-  --ink: #E8EDF1;
-  --muted: #9FACB6;
-  --line: #2C3741;
-  --accent: #D9A18A;
-  --accent-soft: #2B2420;
-  --btn-bg: #C98F76;
-  --btn-fg: #1A1410;
-  --band: #0E1317;
-  --band-fg: #E8EDF1;
-  color-scheme: dark;
-}
+      :root { --bg: #FBF8F5; --soft: #F3EAE3; --ink: #2A2320; --muted: #5A4D46; --accent: #A35B45; --teal: #2F7A6E; --line: #E5D9CF; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 Montserrat, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+      a { color: #8E4C38; }
+      h1, h2, p, figure, blockquote { margin: 0; }
+      img { display: block; max-width: 100%; }
+      .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+      .btn { background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
+      .btn:hover { background: #8E4C38; color: #fff; }
+      .muted { font-size: 13px; color: var(--muted); }
+      h2 { font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+      section { padding: 40px 0; }
+      .soft { background: var(--soft); }
 
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-.wrap { max-width: 1040px; margin: 0 auto; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.12; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
-p { margin: 0; }
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+      .promo-bar { background: var(--ink); color: var(--bg); text-align: center; padding: 9px 16px; font-size: 13px; }
+      .promo-bar strong { color: #F2C9B6; font-weight: 600; }
+      #countdown { font-variant-numeric: tabular-nums; }
 
-.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 14px 24px; border-radius: 999px; font-weight: 600; font-size: 16px;
-  text-decoration: none; border: 1.5px solid transparent; cursor: pointer; min-height: 48px;
-  background: var(--btn-bg); color: var(--btn-fg);
-  transition: transform .15s ease, filter .15s ease;
-}
-.btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
-.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
-.btn.ghost:hover { border-color: var(--accent); }
-.btn.block { width: 100%; }
+      header { border-bottom: 1px solid #EADFD6; }
+      header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
+      .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 500; font-size: 17px; color: var(--ink); text-decoration: none; }
+      .brand img { width: 42px; height: 42px; border-radius: 999px; object-fit: cover; }
+      header .btn { font-size: 14px; padding: 11px 20px; min-height: 44px; }
 
-.promo { background: var(--band); color: var(--band-fg); margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.promo .wrap { display: flex; flex-wrap: wrap; gap: 4px 20px; align-items: center; justify-content: center; padding-block: 10px; font-size: 14px; text-align: center; }
-.promo strong { font-weight: 600; }
-.promo .count { font-variant-numeric: tabular-nums; opacity: .85; }
+      .hero .wrap { display: flex; flex-wrap: wrap; gap: 36px; align-items: center; }
+      .hero-text { flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+      .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #8E4C38; }
+      .hero h1 { font-size: clamp(26px, 3vw, 34px); font-weight: 700; line-height: 1.15; }
+      .lead { font-size: 16px; color: var(--muted); max-width: 460px; }
+      .price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+      .price s { font-size: 15px; color: var(--muted); }
+      .price strong { font-size: 36px; font-weight: 700; }
+      .hero .btn { align-self: flex-start; font-size: 16px; padding: 15px 34px; min-height: 52px; }
+      .hero-media { flex: 1 1 340px; min-width: 0; display: flex; justify-content: center; }
+      .promo-wrap { position: relative; width: 100%; max-width: 400px; }
+      .promo { width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 22px; display: block; background: var(--soft); box-shadow: 0 14px 36px rgba(90,60,45,.12); }
+      .sound { position: absolute; right: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px; border: 0; border-radius: 999px; background: rgba(42,35,32,.78); color: #fff; font: 600 13px Montserrat, system-ui, sans-serif; cursor: pointer; }
+      .sound .on { display: none; }
+      .sound[aria-pressed="true"] .on { display: inline; }
+      .sound[aria-pressed="true"] .off { display: none; }
 
-header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 20px; }
-.brand { font-family: var(--font-display); font-size: 21px; font-weight: 500; letter-spacing: 0.02em; text-decoration: none; }
-.brand small { display: block; font-family: var(--font-body); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
-.nav-link { font-size: 14px; color: var(--muted); text-decoration: none; }
-.nav-link:hover { color: var(--ink); }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+      .active { background: #fff; border-radius: 16px; padding: 18px 20px; display: flex; align-items: baseline; gap: 12px; font-weight: 500; }
+      .active b { font-size: 26px; font-weight: 700; color: var(--teal); }
 
-.hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; padding-block: 36px 56px; }
-.hero h1 { font-size: clamp(34px, 6vw, 56px); margin-top: 14px; }
-.hero h1 em { font-style: normal; color: var(--accent); }
-.hero .lead { margin-top: 18px; color: var(--muted); font-size: 17px; max-width: 54ch; }
-.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.hero .assure { margin-top: 18px; font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
-.hero .assure span::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 8px; vertical-align: 1px; }
+      .reviews { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+      .review { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; display: flex; gap: 14px; align-items: center; }
+      .review img { width: 52px; height: 52px; border-radius: 999px; object-fit: cover; flex: none; }
+      .review blockquote { font-size: 14px; line-height: 1.45; }
+      .review figcaption { font-size: 12px; font-weight: 600; color: var(--muted); margin-top: 4px; }
 
-.buybox { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 28px; display: grid; gap: 14px; }
-.buybox .tag { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
-.buybox h2 { font-size: 24px; }
-.buybox .for { font-size: 14.5px; color: var(--muted); }
-.buybox .big { font-family: var(--font-display); font-size: clamp(46px, 9vw, 62px); font-weight: 500; line-height: 1; font-variant-numeric: tabular-nums; }
-.buybox .big small { font-size: 0.4em; font-weight: 400; color: var(--muted); margin-right: 4px; }
-.buybox .perks { list-style: none; margin: 0; padding: 0; display: grid; }
-.buybox .perks li { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 14px; }
-.buybox .perks li span:last-child { color: var(--muted); text-align: right; }
-.buybox .small { font-size: 12.5px; color: var(--muted); text-align: center; }
+      .faq { max-width: 720px; }
+      .faq h2 { margin-bottom: 16px; }
+      .faq details { background: #fff; border-radius: 14px; padding: 0 18px; margin-top: 10px; }
+      .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 0; font-weight: 600; min-height: 44px; }
+      .faq summary::-webkit-details-marker { display: none; }
+      .faq summary svg { flex: none; transition: transform .2s; }
+      .faq details[open] summary svg { transform: rotate(180deg); }
+      .faq details p { padding-bottom: 15px; font-size: 14px; color: var(--muted); }
 
-section { padding-block: 56px; }
-section.alt { background: var(--surface); margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.head { max-width: 62ch; margin-bottom: 32px; }
-.head h2 { font-size: clamp(28px, 4.6vw, 40px); margin-top: 10px; }
-.head p { margin-top: 12px; color: var(--muted); }
+      .final { text-align: center; padding: 48px 0 56px; }
+      .final .wrap { max-width: 560px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+      .final h2 { font-size: 24px; margin: 0; }
+      .final .btn { font-size: 16px; padding: 15px 38px; min-height: 52px; }
+      .final .link { font-size: 14px; font-weight: 500; padding: 10px; min-height: 44px; display: inline-flex; align-items: center; }
 
-.actives { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 16px; }
-.active { background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.active .pct { font-family: var(--font-display); font-size: 40px; font-weight: 500; color: var(--accent); line-height: 1; font-variant-numeric: tabular-nums; }
-.active h3 { font-size: 20px; }
-.active p { color: var(--muted); font-size: 14.5px; }
+      footer { border-top: 1px solid #EADFD6; padding: 20px 0 96px; }
+      footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; font-size: 12px; color: var(--muted); }
 
-.use { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
-.use div { border-top: 2px solid var(--accent); padding-top: 14px; }
-.use h3 { font-size: 20px; }
-.use p { margin-top: 6px; color: var(--muted); font-size: 14.5px; }
-
-details { border-top: 1px solid var(--line); padding: 16px 0; }
-details:last-of-type { border-bottom: 1px solid var(--line); }
-summary { cursor: pointer; font-weight: 500; font-size: 16.5px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
-summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--accent); }
-details[open] summary::after { content: "–"; }
-details p { margin-top: 10px; color: var(--muted); font-size: 15px; max-width: 64ch; }
-
-.final { text-align: center; }
-.final .wrap { background: var(--accent-soft); border-radius: 26px; padding: 44px 24px; }
-.final h2 { font-size: clamp(28px, 4.6vw, 40px); max-width: 20ch; margin: 10px auto 0; }
-.final p { color: var(--muted); margin: 14px auto 0; max-width: 52ch; }
-.final .cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
-.final .num { margin-top: 14px; font-size: 14px; color: var(--muted); user-select: all; }
-
-footer { padding-block: 36px 48px; font-size: 13.5px; color: var(--muted); }
-footer a { color: var(--accent); }
-footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; }
-footer .legal { flex-basis: 100%; font-size: 12.5px; opacity: .85; max-width: 80ch; }
-footer .company { flex-basis: 100%; font-size: 12.5px; }
-
-@media (max-width: 820px) {
-  .hero .wrap { grid-template-columns: 1fr; gap: 28px; padding-block: 24px 40px; }
-  section { padding-block: 44px; }
-}
-@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
-
-/* ajustes: Montserrat é mais larga, então títulos um pouco menores e mais firmes */
-h1, h2, h3, .brand, .big, .pct, .price { font-weight: 600; }
-.hero h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.15; }
-.head h2, .final h2 { font-size: clamp(25px, 4.2vw, 35px); line-height: 1.2; }
-.buybox h2 { font-size: 19px; line-height: 1.3; }
-.buybox .big { font-size: clamp(42px, 8vw, 54px); }
-.active h3, .use h3 { font-size: 17px; line-height: 1.3; }
-.active .pct { font-size: 34px; }
-.brand { font-size: 19px; }
-.shot { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 16px; border: 1px solid var(--line); background: #FFFFFF; object-fit: contain; }
-.video-sec .wrap { display: grid; justify-items: center; gap: 22px; text-align: center; }
-.video-sec .head { margin: 0; }
-.video-frame { width: min(100%, 340px); border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: #24303A; }
-.video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; }
-
-.sticky-buy { display: none; }
-@media (max-width: 820px) {
-  .sticky-buy { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: var(--bg); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform .25s ease; }
-  .sticky-buy.show { transform: none; }
-  .sticky-buy .sp { display: flex; flex-direction: column; line-height: 1.2; font-size: 12px; color: var(--muted); }
-  .sticky-buy .sp b { font-size: 20px; color: var(--ink); font-weight: 700; }
-  .sticky-buy .btn { padding: 12px 22px; }
-  body { padding-bottom: 72px; }
-}
-@media (prefers-reduced-motion: reduce) { .sticky-buy { transition: none; } }
-</style>
+      .sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #fff; border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); display: none; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 -8px 24px rgba(42,35,32,.08); }
+      .sticky b { font-size: 20px; }
+      .sticky small { display: block; font-size: 11px; color: var(--muted); }
+      .sticky .btn { font-size: 15px; padding: 13px 22px; min-height: 48px; }
+      @media (max-width: 760px) { .sticky { display: flex; } header .btn { display: none; } footer { padding-bottom: 110px; } }
+    </style>
   </head>
   <body>
     <noscript>
-      <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=792765023001456&ev=PageView&noscript=1"
-      />
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=792765023001456&ev=PageView&noscript=1" />
     </noscript>
-<div class="promo">
-  <div class="wrap">
-    <strong>Black Friday: frete grátis para todo o Brasil até 01/12</strong>
-    <span class="count" id="count">Entrega em 3 a 7 dias úteis</span>
-  </div>
-</div>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="./">Selune Oficial<small>Estética facial &amp; skincare</small></a>
-    <a class="nav-link" href="loja.html">Todos os produtos</a>
-  </div>
-</header>
+    <div class="promo-bar" id="promo"><strong>Frete grátis até 01/12</strong> · <span id="countdown">por tempo limitado</span></div>
 
-<main>
-<div class="hero">
-  <div class="wrap">
-    <div>
-      <p class="eyebrow">Black Friday Selune · só até 01/12</p>
-      <h1>Brilho demais, poros aparentes e cravos? <em>Conheça o sérum da Black Friday.</em></h1>
-      <p class="lead">O Sérum Mix-01 reúne 4 ativos para pele oleosa, mista ou com tendência a acne: controla o brilho, desobstrui os poros e ajuda a uniformizar manchas. Só até 01/12, com frete grátis para todo o Brasil.</p>
-      <div class="cta">
-        <a class="btn" href="https://go.perfectpay.com.br/PPU38CQE6SI">Quero aproveitar</a>
-        <a class="btn ghost" href="https://wa.me/5538988075909?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Black%20Friday%20da%20Selune%20Oficial%20e%20quero%20aproveitar%20a%20oferta%20do%20S%C3%A9rum%20Mix-01%20%F0%9F%8C%BF" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="%BASE_URL%"><img src="%BASE_URL%logo.webp" alt="" width="42" height="42" />Selune Oficial</a>
+        <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQE6SI">Comprar</a>
       </div>
-      <div class="assure">
-        <span>Pix, cartão ou PicPay</span>
-        <span>Pagamento em ambiente seguro</span>
-        <span>7 dias para desistir</span>
-        <span>Envio para todo o Brasil</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-text">
+            <p class="eyebrow">Principia Sérum Mix-01 · 30 ml</p>
+            <h1>4 ativos pra pele oleosa num frasco só.</h1>
+            <p class="lead">Para oleosidade, cravos e poros dilatados. Algumas gotas à noite.</p>
+            <div class="price"><s>R$ 39,50</s><strong>R$ 34,50</strong></div>
+            <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQE6SI">Quero meu Mix-01
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="muted">Frete grátis · Chega em 3 a 7 dias úteis · Pix, cartão ou PicPay</p>
+          </div>
+          <div class="hero-media">
+            <div class="promo-wrap">
+              <video id="mix-video" class="promo" src="%BASE_URL%products/mix-01-video.mp4" poster="%BASE_URL%products/mix-01-video-poster.jpg" width="720" height="720" autoplay muted loop playsinline preload="metadata" aria-label="Vídeo do Principia Sérum Mix-01 mostrando o frasco e os quatro ativos da fórmula"></video>
+              <button type="button" class="sound" id="sound-btn" aria-pressed="false"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/><path class="off" d="m22 9-6 6M16 9l6 6"/></svg><span>Ativar som</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="soft">
+        <div class="wrap">
+          <h2>O que tem no frasco</h2>
+          <div class="grid">
+            <div class="active"><b>5%</b>Niacinamida</div>
+            <div class="active"><b>4%</b>Ácido glicólico</div>
+            <div class="active"><b>3%</b>Ácido tranexâmico</div>
+            <div class="active"><b>2%</b>Ácido salicílico</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Quem já usa</h2>
+          <div class="grid reviews">
+            <figure class="review"><img src="%BASE_URL%products/cliente-ingrid.jpg" alt="Foto de Ingrid Freitas" width="52" height="52" loading="lazy" /><span><blockquote>“Vi diferença já nos três primeiros dias de uso.”</blockquote><figcaption>Ingrid Freitas</figcaption></span></figure>
+            <figure class="review"><img src="%BASE_URL%products/cliente-lauane.jpg" alt="Foto de Lauane Aparecida" width="52" height="52" loading="lazy" /><span><blockquote>“Acabou com a minha oleosidade. Achei o máximo!”</blockquote><figcaption>Lauane Aparecida</figcaption></span></figure>
+            <figure class="review"><img src="%BASE_URL%products/cliente-rosemire.jpg" alt="Foto de Rosemire" width="52" height="52" loading="lazy" /><span><blockquote>“É bom e funciona.”</blockquote><figcaption>Rosemire</figcaption></span></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="soft">
+        <div class="wrap faq">
+          <h2>Dúvidas</h2>
+          <details>
+            <summary>Como usar?<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8E4C38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p>Algumas gotas no rosto limpo, à noite. Comece dia sim, dia não. De dia, use protetor solar.</p>
+          </details>
+          <details>
+            <summary>Quando chega?<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8E4C38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p>Em 3 a 7 dias úteis, pra todo o Brasil. Frete grátis até 01/12.</p>
+          </details>
+          <details>
+            <summary>E se eu me arrepender?<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8E4C38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p>Você tem 7 dias pra desistir da compra. É só chamar no WhatsApp.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final">
+        <div class="wrap">
+          <h2>Sérum Mix-01</h2>
+          <div class="price"><s>R$ 39,50</s><strong>R$ 34,50</strong></div>
+          <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQE6SI">Comprar agora</a>
+          <p class="muted">Frete grátis até 01/12 · Pix, cartão ou PicPay</p>
+          <a class="link" href="https://wa.me/5538988075909?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01">Dúvida? Fale no WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>Selune Oficial · Revendedora Principia</span>
+        <span>Atendimento: seg a sex 9h–19h · sáb 9h–14h</span>
       </div>
+    </footer>
+
+    <div class="sticky">
+      <div><b>R$ 34,50</b><small>Frete grátis até 01/12</small></div>
+      <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQE6SI">Comprar</a>
     </div>
 
-    <aside class="buybox" aria-label="Comprar o Sérum Mix-01">
-      <img class="shot" src="/products/mix-01.webp" width="480" height="480" alt="Frasco com conta-gotas e caixa do Principia Sérum Mix-01, 30 ml">
-      <span class="tag">Oferta Black Friday · até 01/12</span>
-      <h2>Principia Sérum Mix-01, 30 ml</h2>
-      <p class="for">4 ativos: niacinamida, ácido glicólico, ácido tranexâmico e ácido salicílico. Para acne, oleosidade, manchas, poros dilatados e textura irregular.</p>
-      <!-- PREÇO ÂNCORA: só use se for um preço que você realmente pratica fora da promoção.
-           Para ativar, apague as marcações de comentário da linha abaixo e troque o valor.
-      <p class="for" style="margin-bottom:-8px">De <s>R$ 00,00</s> por</p>
-      -->
-      <p class="big"><small>R$</small>34,50</p>
-      <ul class="perks">
-        <li><span>Frete</span><span>Grátis até 01/12</span></li>
-        <li><span>Entrega</span><span>3 a 7 dias úteis</span></li>
-        <li><span>Pagamento</span><span>Pix, cartão ou PicPay</span></li>
-        <li><span>Garantia</span><span>7 dias para desistir</span></li>
-        <!-- SÓ SE FOR VERDADE: apague as marcações de comentário para mostrar.
-        <li><span>Procedência</span><span>Produto original, lacrado, com nota fiscal</span></li>
-        -->
-      </ul>
-      <a class="btn block" href="https://go.perfectpay.com.br/PPU38CQE6SI">Comprar agora</a>
-      <p class="small">Pagamento processado em ambiente seguro.</p>
-    </aside>
-  </div>
-</div>
-
-<section class="video-sec" id="video">
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">Em vídeo</p>
-      <h2>O Sérum Mix-01 em 18 segundos</h2>
-    </div>
-    <div class="video-frame">
-      <video controls muted loop playsinline preload="metadata" poster="%BASE_URL%black-friday-poster.jpg" aria-label="Vídeo do Principia Sérum Mix-01 com a oferta da Black Friday">
-        <source src="%BASE_URL%black-friday-mix-01.mp4" type="video/mp4">
-      </video>
-    </div>
-    <a class="btn" href="https://go.perfectpay.com.br/PPU38CQE6SI">Quero aproveitar</a>
-  </div>
-</section>
-
-<section class="alt" id="formula">
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">A fórmula</p>
-      <h2>O que o Mix-01 faz pela sua pele</h2>
-      <p>Quatro ativos em uma só fórmula, cada um com uma função.</p>
-    </div>
-    <div class="actives">
-      <article class="active">
-        <span class="pct">5%</span>
-        <h3>Niacinamida</h3>
-        <p>Controla a oleosidade e ajuda a reduzir a aparência dos poros.</p>
-      </article>
-      <article class="active">
-        <span class="pct">4%</span>
-        <h3>Ácido Glicólico</h3>
-        <p>Renova a textura da pele e traz mais viço e luminosidade.</p>
-      </article>
-      <article class="active">
-        <span class="pct">3%</span>
-        <h3>Ácido Tranexâmico</h3>
-        <p>Ajuda a uniformizar o tom da pele e atenuar manchas.</p>
-      </article>
-      <article class="active">
-        <span class="pct">2%</span>
-        <h3>Ácido Salicílico</h3>
-        <p>Atua na acne e ajuda a desobstruir os poros.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">Como usar</p>
-      <h2>Comece devagar e proteja do sol</h2>
-    </div>
-    <div class="use">
-      <div><h3>Rosto limpo, de preferência à noite</h3><p>Aplique algumas gotas no rosto limpo.</p></div>
-      <div><h3>Uso a cada dois dias no início</h3><p>Assim você avalia a sensibilidade da sua pele antes de aumentar a frequência.</p></div>
-      <div><h3>Protetor solar de dia</h3><p>Use protetor solar durante o dia, todos os dias.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROVA SOCIAL: quando tiver depoimentos reais (com autorização das clientes), coloque aqui
-     uma seção com 3 a 4 prints ou frases curtas + primeiro nome e cidade. -->
-
-<section class="alt">
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">Dúvidas frequentes</p>
-      <h2>Antes de comprar</h2>
-    </div>
-    <details>
-      <summary>Serve para qualquer tipo de pele?</summary>
-      <p>É indicado principalmente para peles oleosas, mistas e com tendência a acne, poros dilatados e textura irregular.</p>
-    </details>
-    <details>
-      <summary>Como devo usar?</summary>
-      <p>Aplique algumas gotas no rosto limpo, de preferência à noite. Comece com uso a cada dois dias para avaliar a sensibilidade da sua pele. Use protetor solar durante o dia.</p>
-    </details>
-    <details>
-      <summary>Tenho a pele sensível ou estou grávida. Posso usar?</summary>
-      <p>O sérum contém ácidos. Se sua pele é sensível, se você está grávida ou tem alguma condição de pele, converse antes com seu dermatologista.</p>
-    </details>
-    <details>
-      <summary>Quem vende e envia o produto?</summary>
-      <p>A venda e o envio são feitos pela Selune Oficial, CNPJ 56.996.633/0001-56. Você recebe o código de rastreio após a postagem. Qualquer dúvida, é só chamar no WhatsApp.</p>
-    </details>
-    <details>
-      <summary>Como funciona o pagamento?</summary>
-      <p>O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.</p>
-    </details>
-    <details>
-      <summary>Posso desistir da compra?</summary>
-      <p>Sim. Por ser compra pela internet, você tem 7 dias após o recebimento para desistir (direito de arrependimento). Se precisar, chame no WhatsApp.</p>
-    </details>
-    <details>
-      <summary>O frete é grátis e quando chega?</summary>
-      <p>Na Black Friday o frete é grátis para todo o Brasil até 01/12. Os pedidos chegam em 3 a 7 dias úteis.</p>
-    </details>
-  </div>
-</section>
-
-<section class="final">
-  <div class="wrap">
-    <p class="eyebrow">Black Friday até 01/12</p>
-    <h2>Pronta para cuidar da sua pele?</h2>
-    <p>R$ 34,50 com frete grátis para todo o Brasil. Se tiver dúvidas, chame no WhatsApp, de segunda a sexta das 09h às 19h e sábado das 09h às 14h.</p>
-    <div class="cta">
-      <a class="btn" href="https://go.perfectpay.com.br/PPU38CQE6SI">Comprar agora</a>
-      <a class="btn ghost" href="https://wa.me/5538988075909?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01%20%F0%9F%8C%BF" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
-    </div>
-    <p class="num">WhatsApp: (38) 98807-5909</p>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <span>Selune Oficial · Envio para todo o Brasil · <a href="loja.html">Ver a loja completa</a></span>
-    <span>Atendimento: seg a sex 09h às 19h · sáb 09h às 14h · dom fechado</span>
-    <p class="company">Selune Oficial · CNPJ 56.996.633/0001-56 · WhatsApp (38) 98807-5909</p>
-    <p class="legal">Os produtos da linha Principia são vendidos pela Selune Oficial. As indicações seguem a descrição do produto e não substituem a orientação de um profissional de saúde. Os resultados variam de pessoa para pessoa. Compra com direito de arrependimento de 7 dias após o recebimento. Seus dados de pagamento são processados pela plataforma de pagamento e não ficam armazenados neste site.</p>
-  </div>
-</footer>
-
-<div class="sticky-buy" id="sticky" aria-hidden="true"><div class="sp"><span>Black Friday · frete grátis</span><b>R$ 34,50</b></div><a class="btn" href="https://go.perfectpay.com.br/PPU38CQE6SI" tabindex="-1">Comprar agora</a></div>
-<script>
-(function(){var b=document.getElementById('sticky');if(!b)return;function f(){var on=window.scrollY>520;b.classList.toggle('show',on);b.setAttribute('aria-hidden',on?'false':'true');var a=b.querySelector('a');a.tabIndex=on?0:-1;}window.addEventListener('scroll',f,{passive:true});f();})();
-</script>
-<script>
-(function () {
-  var el = document.getElementById('count');
-  var end = new Date('2026-12-01T23:59:59-03:00').getTime();
-  function tick() {
-    var ms = end - Date.now();
-    if (ms <= 0) { el.textContent = 'Oferta encerrada'; return; }
-    var d = Math.floor(ms / 86400000);
-    var h = Math.floor((ms % 86400000) / 3600000);
-    el.textContent = 'Termina em ' + d + (d === 1 ? ' dia' : ' dias') + ' e ' + h + ' h · entrega em 3 a 7 dias úteis';
-  }
-  tick();
-  setInterval(tick, 60000);
-})();
-
-// Meta Pixel: mesmos eventos do restante do site.
-// Contact ao clicar no WhatsApp; InitiateCheckout ao clicar em comprar.
-document.addEventListener('click', function (e) {
-  var a = e.target.closest && e.target.closest('a');
-  if (!a || typeof window.fbq !== 'function') return;
-  var href = a.getAttribute('href') || '';
-  if (href.indexOf('wa.me') !== -1) {
-    window.fbq('track', 'Contact');
-  } else if (/mix-01\.html|perfectpay\.com\.br/.test(href)) {
-    window.fbq('track', 'InitiateCheckout', { content_name: 'Principia Sérum Mix-01', content_type: 'product', currency: 'BRL' });
-  }
-});
-</script>
+    <script>
+      (function () {
+        var end = new Date('2026-12-01T23:59:59-03:00').getTime();
+        var bar = document.getElementById('promo'), el = document.getElementById('countdown');
+        function tick() {
+          var ms = end - Date.now();
+          if (ms <= 0) { bar.style.display = 'none'; return; }
+          var d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
+          el.textContent = 'termina em ' + (d > 0 ? d + 'd ' : '') + h + 'h ' + m + 'min';
+        }
+        tick(); setInterval(tick, 30000);
+      })();
+      (function () {
+        var v = document.getElementById('mix-video'), b = document.getElementById('sound-btn');
+        if (!v || !b) return;
+        b.addEventListener('click', function () {
+          v.muted = !v.muted;
+          if (!v.muted) { v.currentTime = 0; v.play(); }
+          b.setAttribute('aria-pressed', String(!v.muted));
+          b.querySelector('span').textContent = v.muted ? 'Ativar som' : 'Som ligado';
+        });
+      })();
+      document.querySelectorAll('.buy').forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: 'Principia Sérum Mix-01', value: 34.50, currency: 'BRL'});
+        });
+      });
+    </script>
   </body>
 </html>
