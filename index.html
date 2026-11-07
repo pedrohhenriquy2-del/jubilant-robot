@@ -179,7 +179,7 @@
 
       .final { background: radial-gradient(100% 120% at 50% 0%, var(--blush) 0%, var(--soft) 60%); }
       .final-card { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 28px; padding: 32px; display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: center; box-shadow: 0 24px 50px rgba(90,60,45,.14); }
-      .final-card img { border-radius: 20px; mix-blend-mode: multiply; }
+      .final-video { width: 100%; height: auto; aspect-ratio: 9 / 16; max-width: 100%; border-radius: 22px; background: var(--ink); object-fit: cover; display: block; box-shadow: 0 18px 40px rgba(42,35,32,.18); }
       .final-card .offer { box-shadow: none; border: 0; padding: 0; max-width: none; }
       .final-card h2 { font-size: 26px; }
       .wa-link { font-size: 14px; font-weight: 600; color: var(--teal); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; }
@@ -206,7 +206,7 @@
         .strip .wrap { grid-template-columns: 1fr 1fr; }
         .strip div { justify-content: flex-start; }
         .final-card { grid-template-columns: 1fr; padding: 24px; gap: 18px; }
-        .final-card img { max-width: 220px; margin: 0 auto; }
+        .final-video { max-width: 260px; margin: 0 auto; }
       }
       @media (max-width: 760px) {
         section { padding: 48px 0; }
@@ -375,7 +375,7 @@
       <section class="final">
         <div class="wrap">
           <div class="final-card">
-            <img src="%BASE_URL%products/mix-01.webp" alt="Principia Sérum Mix-01" width="600" height="600" loading="lazy" />
+            <video class="final-video" id="bf-video" src="%BASE_URL%products/mix-01-black-friday.mp4" poster="%BASE_URL%products/mix-01-black-friday-poster.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-label="Vídeo da oferta Black Friday do Principia Sérum Mix-01: os 4 ativos, fotos do produto e o preço de R$ 64,50"></video>
             <div class="offer">
               <div class="offer-top">
                 <span class="bf-tag">Oferta Black Friday</span>
@@ -444,6 +444,14 @@
         track.addEventListener('touchstart', function () { clearInterval(timer); }, { passive: true });
         function restart() { clearInterval(timer); timer = setInterval(function () { go(cur + 1); }, 3500); }
         mark(); restart();
+      })();
+      (function () {
+        var v = document.getElementById('bf-video');
+        if (!v) return;
+        if (!('IntersectionObserver' in window)) { v.preload = 'auto'; v.play().catch(function () {}); return; }
+        new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } });
+        }, { rootMargin: '200px' }).observe(v);
       })();
       document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
         a.addEventListener('click', function () { if (window.fbq) fbq('track', 'Contact'); });
