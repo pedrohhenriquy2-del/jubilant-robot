@@ -95,7 +95,7 @@
 
       .faq { max-width: 720px; }
       .faq h2 { margin-bottom: 16px; }
-      .faq details { background: #fff; border-radius: 14px; padding: 0 18px; margin-top: 10px; }
+      .faq details { background: var(--soft); border-radius: 14px; padding: 0 18px; margin-top: 10px; }
       .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 0; font-weight: 600; min-height: 44px; }
       .faq summary::-webkit-details-marker { display: none; }
       .faq summary svg { flex: none; transition: transform .2s; }
@@ -115,7 +115,23 @@
       .sticky b { font-size: 20px; }
       .sticky small { display: block; font-size: 11px; color: var(--muted); }
       .sticky .btn { font-size: 15px; padding: 13px 22px; min-height: 48px; }
-      @media (max-width: 760px) { .sticky { display: flex; } header .btn { display: none; } footer { padding-bottom: 110px; } }
+      .hero-head, .hero-body { display: flex; flex-direction: column; gap: 16px; }
+      .wa-hero { font-size: 14px; font-weight: 600; color: var(--teal); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; align-self: flex-start; }
+      .forwho { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+      .forwho div { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+      .forwho h3 { margin: 0 0 10px; font-size: 15px; }
+      .forwho ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+      .wa-float { position: fixed; right: 16px; bottom: 20px; z-index: 51; width: 56px; height: 56px; border-radius: 999px; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+      @media (max-width: 760px) {
+        .sticky { display: flex; } header .btn { display: none; } footer { padding-bottom: 110px; }
+        .wa-float { bottom: calc(86px + env(safe-area-inset-bottom)); width: 50px; height: 50px; }
+        section.hero { padding-top: 22px; }
+        .hero .wrap { flex-direction: column; align-items: stretch; gap: 18px; }
+        .hero-text { display: contents; }
+        .hero-head { order: 1; } .hero-media { order: 2; } .hero-body { order: 3; }
+        .promo-wrap { max-width: 300px; }
+        .hero .btn { align-self: stretch; }
+      }
     </style>
   </head>
   <body>
@@ -136,15 +152,20 @@
       <section class="hero">
         <div class="wrap">
           <div class="hero-text">
+            <div class="hero-head">
             <p class="eyebrow">Principia Sérum Mix-01 · 30 ml</p>
             <h1>Pele oleosa, cravos e poros abertos? 4 ativos num frasco só.</h1>
+            </div>
+            <div class="hero-body">
             <p class="lead">Controla o brilho, ajuda a desentupir os poros e a clarear manchas. Algumas gotas à noite.</p>
             <span class="bf-tag">Oferta de Black Friday · até 01/12</span>
             <div class="price"><s>R$ 39,50</s><strong>R$ 34,50</strong></div>
-            <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Quero meu Mix-01
+            <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Comprar por R$ 34,50
               <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <p class="trust">7 dias para desistir · Compra segura</p>
+            <p class="trust">7 dias para desistir · Loja com CNPJ · Pagamento seguro pela Perfect Pay</p>
             <p class="muted">Frete grátis · Chega em 3 a 7 dias úteis · Pix, cartão ou PicPay</p>
+            <a class="wa-hero" href="https://wa.me/5538988075909?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>Ficou com dúvida? Fale com a gente no WhatsApp</a>
+            </div>
           </div>
           <div class="hero-media">
             <div class="promo-wrap">
@@ -169,6 +190,16 @@
 
       <section>
         <div class="wrap">
+          <h2>É pra você?</h2>
+          <div class="forwho">
+            <div><h3>Indicado se você tem</h3><ul><li>Pele oleosa ou mista, com brilho ao longo do dia</li><li>Cravos e poros dilatados</li><li>Manchinhas e tom irregular</li></ul></div>
+            <div><h3>Fale antes com seu dermatologista se</h3><ul><li>Sua pele é muito sensível</li><li>Você está grávida ou amamentando</li><li>Tem alguma condição de pele em tratamento</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="soft">
+        <div class="wrap">
           <h2>Quem já usa</h2>
           <div class="grid reviews">
             <figure class="review"><img src="%BASE_URL%products/cliente-ingrid.jpg" alt="Foto de Ingrid Freitas" width="52" height="52" loading="lazy" /><span><blockquote>“Vi diferença já nos três primeiros dias de uso.”</blockquote><figcaption>Ingrid Freitas</figcaption></span></figure>
@@ -178,7 +209,7 @@
         </div>
       </section>
 
-      <section class="soft">
+      <section>
         <div class="wrap faq">
           <h2>Dúvidas</h2>
           <details>
@@ -205,8 +236,8 @@
           <span class="bf-tag">Oferta de Black Friday · até 01/12</span>
           <h2>Sérum Mix-01</h2>
           <div class="price"><s>R$ 39,50</s><strong>R$ 34,50</strong></div>
-          <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Comprar agora</a>
-          <p class="trust">7 dias para desistir · Compra segura</p>
+          <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Comprar por R$ 34,50</a>
+          <p class="trust">7 dias para desistir · Loja com CNPJ · Pagamento seguro pela Perfect Pay</p>
           <p class="muted">Frete grátis até 01/12 · Pix, cartão ou PicPay</p>
           <a class="link" href="https://wa.me/5538988075909?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01">Dúvida? Fale no WhatsApp</a>
         </div>
@@ -220,6 +251,8 @@
         <span>CNPJ 56.996.633/0001-56 · WhatsApp (38) 98807-5909</span>
       </div>
     </footer>
+
+    <a class="wa-float" href="https://wa.me/5538988075909?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01" aria-label="Falar no WhatsApp"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
 
     <div class="sticky">
       <div><b>R$ 34,50</b><small>Black Friday · frete grátis até 01/12</small></div>
@@ -248,6 +281,9 @@
           b.querySelector('span').textContent = v.muted ? 'Ativar som' : 'Som ligado';
         });
       })();
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+        a.addEventListener('click', function () { if (window.fbq) fbq('track', 'Contact'); });
+      });
       document.querySelectorAll('.buy').forEach(function (a) {
         a.addEventListener('click', function () {
           if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: 'Principia Sérum Mix-01', value: 34.50, currency: 'BRL'});
