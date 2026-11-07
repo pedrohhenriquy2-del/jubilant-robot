@@ -109,6 +109,15 @@
       .strip div { display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; justify-content: center; }
       .strip svg { color: #F2C9B6; flex: none; }
 
+      .real { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; }
+      .real-copy { display: flex; flex-direction: column; gap: 14px; }
+      .real-copy p { color: var(--muted); font-size: 16px; }
+      .real-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .real-photos img { width: 100%; aspect-ratio: 335 / 597; object-fit: cover; border-radius: 22px; box-shadow: 0 18px 40px rgba(90,60,45,.16); }
+      .real-photos img:nth-child(2) { margin-top: 36px; }
+      .real-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-weight: 500; }
+      .real-list li { display: flex; gap: 10px; align-items: flex-start; }
+
       .pains { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
       .pain { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; display: flex; flex-direction: column; gap: 8px; }
       .pain .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--soft); color: var(--accent); display: flex; align-items: center; justify-content: center; }
@@ -186,6 +195,8 @@
         .offer { max-width: none; }
         .pains, .actives { grid-template-columns: 1fr 1fr; }
         .steps, .reviews { grid-template-columns: 1fr; }
+        .real { grid-template-columns: 1fr; gap: 24px; }
+        .real-photos img:nth-child(2) { margin-top: 24px; }
         .strip .wrap { grid-template-columns: 1fr 1fr; }
         .strip div { justify-content: flex-start; }
         .final-card { grid-template-columns: 1fr; padding: 24px; gap: 18px; }
@@ -278,6 +289,25 @@
       </div>
 
       <section>
+        <div class="wrap real">
+          <div class="real-copy">
+            <span class="kicker">Produto original</span>
+            <h2>Veja o Mix-01 de perto</h2>
+            <p>Frasco âmbar de 30 ml com conta-gotas, direto da Principia. As concentrações dos 4 ativos vêm escritas no rótulo e na caixa.</p>
+            <ul class="real-list">
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Sérum facial original Principia</li>
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Conta-gotas para dosar a quantidade certa</li>
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Enviado na caixa, para todo o Brasil</li>
+            </ul>
+          </div>
+          <div class="real-photos">
+            <img src="%BASE_URL%products/mix-01-mao-1.webp" alt="Frasco do Principia Sérum Mix-01 segurado na mão, ao ar livre" width="335" height="597" loading="lazy" />
+            <img src="%BASE_URL%products/mix-01-mao-2.webp" alt="Caixa e frasco do Principia Sérum Mix-01 lado a lado" width="335" height="597" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="soft">
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Você se identifica?</span>
@@ -293,7 +323,7 @@
         </div>
       </section>
 
-      <section class="soft">
+      <section>
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Fórmula</span>
@@ -309,7 +339,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="soft">
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Rotina simples</span>
@@ -323,7 +353,7 @@
         </div>
       </section>
 
-      <section class="soft">
+      <section>
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Indicação</span>
@@ -351,7 +381,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="soft">
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Clientes Selune</span>
@@ -377,7 +407,7 @@
         </div>
       </section>
 
-      <section class="soft">
+      <section>
         <div class="wrap">
           <div class="guarantee">
             <div class="seal"><b>7</b><span>dias para<br />desistir</span></div>
@@ -389,7 +419,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="soft">
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Dúvidas</span>
