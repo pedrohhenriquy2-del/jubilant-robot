@@ -112,9 +112,16 @@
       .real { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; }
       .real-copy { display: flex; flex-direction: column; gap: 14px; }
       .real-copy p { color: var(--muted); font-size: 16px; }
-      .real-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-      .real-photos img { width: 100%; aspect-ratio: 335 / 597; object-fit: cover; border-radius: 22px; box-shadow: 0 18px 40px rgba(90,60,45,.16); }
-      .real-photos img:nth-child(2) { margin-top: 36px; }
+      .slider { position: relative; width: 100%; max-width: 340px; margin: 0 auto; }
+      .slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; border-radius: 24px; box-shadow: 0 18px 40px rgba(90,60,45,.16); scrollbar-width: none; }
+      .slides::-webkit-scrollbar { display: none; }
+      .slides img { flex: 0 0 100%; width: 100%; aspect-ratio: 335 / 597; object-fit: cover; scroll-snap-align: center; }
+      .sl-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 999px; border: 0; background: rgba(255,255,255,.92); color: var(--ink); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 16px rgba(42,35,32,.18); }
+      .sl-prev { left: 10px; } .sl-next { right: 10px; }
+      .dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
+      .dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; background: var(--line); cursor: pointer; transition: width .2s, background .2s; }
+      .dots button[aria-current="true"] { width: 26px; background: var(--accent); }
+      .dots button::before { content: ""; display: block; margin: -17px; width: 44px; height: 44px; }
       .real-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-weight: 500; }
       .real-list li { display: flex; gap: 10px; align-items: flex-start; }
 
@@ -196,7 +203,6 @@
         .pains, .actives { grid-template-columns: 1fr 1fr; }
         .steps, .reviews { grid-template-columns: 1fr; }
         .real { grid-template-columns: 1fr; gap: 24px; }
-        .real-photos img:nth-child(2) { margin-top: 24px; }
         .strip .wrap { grid-template-columns: 1fr 1fr; }
         .strip div { justify-content: flex-start; }
         .final-card { grid-template-columns: 1fr; padding: 24px; gap: 18px; }
@@ -300,9 +306,14 @@
               <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Enviado na caixa, para todo o Brasil</li>
             </ul>
           </div>
-          <div class="real-photos">
-            <img src="%BASE_URL%products/mix-01-mao-1.webp" alt="Frasco do Principia Sérum Mix-01 segurado na mão, ao ar livre" width="335" height="597" loading="lazy" />
-            <img src="%BASE_URL%products/mix-01-mao-2.webp" alt="Caixa e frasco do Principia Sérum Mix-01 lado a lado" width="335" height="597" loading="lazy" />
+          <div class="slider" aria-roledescription="carrossel" aria-label="Fotos do produto">
+            <div class="slides" id="slides">
+              <img src="%BASE_URL%products/mix-01-mao-1.webp" alt="Frasco do Principia Sérum Mix-01 segurado na mão, ao ar livre" width="335" height="597" loading="lazy" />
+              <img src="%BASE_URL%products/mix-01-mao-2.webp" alt="Caixa e frasco do Principia Sérum Mix-01 lado a lado" width="335" height="597" loading="lazy" />
+            </div>
+            <button type="button" class="sl-btn sl-prev" aria-label="Foto anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button type="button" class="sl-btn sl-next" aria-label="Próxima foto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+            <div class="dots" id="dots"></div>
           </div>
         </div>
       </section>
@@ -509,6 +520,23 @@
           el.textContent = 'termina em ' + (d > 0 ? d + 'd ' : '') + h + 'h ' + m + 'min';
         }
         tick(); setInterval(tick, 30000);
+      })();
+      (function () {
+        var track = document.getElementById('slides'), dots = document.getElementById('dots');
+        if (!track) return;
+        var imgs = track.querySelectorAll('img'), n = imgs.length, cur = 0, timer;
+        imgs.forEach(function (_, i) {
+          var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Foto ' + (i + 1));
+          b.addEventListener('click', function () { go(i); restart(); }); dots.appendChild(b);
+        });
+        function mark() { dots.querySelectorAll('button').forEach(function (b, i) { b.setAttribute('aria-current', String(i === cur)); }); }
+        function go(i) { cur = (i + n) % n; track.scrollTo({ left: cur * track.clientWidth }); mark(); }
+        track.addEventListener('scroll', function () { var i = Math.round(track.scrollLeft / track.clientWidth); if (i !== cur) { cur = i; mark(); } }, { passive: true });
+        document.querySelector('.sl-prev').addEventListener('click', function () { go(cur - 1); restart(); });
+        document.querySelector('.sl-next').addEventListener('click', function () { go(cur + 1); restart(); });
+        track.addEventListener('touchstart', function () { clearInterval(timer); }, { passive: true });
+        function restart() { clearInterval(timer); timer = setInterval(function () { go(cur + 1); }, 3500); }
+        mark(); restart();
       })();
       document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
         a.addEventListener('click', function () { if (window.fbq) fbq('track', 'Contact'); });
