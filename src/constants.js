@@ -10,7 +10,7 @@ const ASSET_BASE = import.meta.env.BASE_URL;
 
 export const LOGO = `${ASSET_BASE}logo.webp`;
 
-export const WHATSAPP_NUMBER = "5538988075909";
+export const WHATSAPP_NUMBER = "5538999659366";
 
 export function formatPrice(value) {
   return value.toLocaleString("pt-BR", {
@@ -49,7 +49,7 @@ export const CONTACT = {
   ],
   instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
   instagramHandle: "Instagram da Selune",
-  whatsappDisplay: "(38) 98807-5909",
+  whatsappDisplay: "(38) 99965-9366",
 };
 
 export const NAV_LINKS = [
