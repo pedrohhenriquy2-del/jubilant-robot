@@ -39,14 +39,15 @@
 
     <style>
       :root {
-        --bg: #FBF8F5; --soft: #F3EAE3; --blush: #EED9CD; --ink: #2A2320; --muted: #5A4D46;
+        --bg: #FBF8F5; --soft: #F3EAE3; --blush: #EED9CD; --ink: #2A2320; --muted: #463B35;
         --accent: #A35B45; --accent-dk: #8E4C38; --teal: #2F7A6E; --line: #E5D9CF;
         --green: #1E8449; --green-bg: #E6F4EA;
       }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 Montserrat, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
       a { color: var(--accent-dk); }
+      button, input, select, textarea { font-family: inherit; }
       h1, h2, h3, p, figure, blockquote, ul { margin: 0; }
       img { display: block; max-width: 100%; height: auto; }
       .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
@@ -85,24 +86,22 @@
       .bf-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--ink); color: #F2C9B6; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
       .save { background: var(--green-bg); color: var(--green); font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 999px; }
       .price { display: flex; flex-direction: column; gap: 2px; }
-      .price .from { font-size: 14px; color: var(--muted); }
+      .price .from { font-size: 15px; color: var(--muted); }
       .price .from s { font-weight: 600; }
       .price .now { font-size: 46px; font-weight: 800; color: var(--green); line-height: 1.05; letter-spacing: -.02em; }
       .price .now small { font-size: 18px; font-weight: 700; margin-right: 4px; }
-      .price .pay { font-size: 13px; color: var(--muted); }
-      .mini-trust { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; font-size: 12.5px; color: var(--muted); font-weight: 500; }
+      .price .pay { font-size: 14px; color: var(--muted); }
+      .mini-trust { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; font-size: 13.5px; color: var(--muted); font-weight: 500; }
       .mini-trust span { display: flex; align-items: center; gap: 7px; }
       .mini-trust svg { color: var(--teal); flex: none; }
 
       .hero-media { position: relative; display: flex; justify-content: center; min-width: 0; }
-      .stage { position: relative; width: 100%; max-width: 480px; aspect-ratio: 1 / 1; border-radius: 32px; background: linear-gradient(160deg, #fff 0%, var(--soft) 100%); box-shadow: 0 30px 60px rgba(90,60,45,.16), inset 0 0 0 1px rgba(229,217,207,.8); display: flex; align-items: center; justify-content: center; }
-      .stage::before { content: ""; position: absolute; width: 74%; aspect-ratio: 1; border-radius: 999px; background: radial-gradient(circle, rgba(47,122,110,.14) 0%, rgba(47,122,110,0) 70%); }
-      .stage img { position: relative; width: 86%; border-radius: 24px; mix-blend-mode: multiply; }
-      .chip { position: absolute; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; font-size: 12.5px; font-weight: 600; box-shadow: 0 10px 24px rgba(42,35,32,.10); display: flex; align-items: center; gap: 8px; }
-      .chip b { color: var(--teal); font-size: 15px; }
-      .chip-1 { top: 8%; left: -4%; }
-      .chip-2 { bottom: 10%; right: -4%; }
-      .chip-3 { bottom: 24%; left: -6%; }
+      .stage { position: relative; width: 100%; max-width: 500px; aspect-ratio: 1 / 1; border-radius: 32px; background: #fff; box-shadow: 0 30px 60px rgba(90,60,45,.16), inset 0 0 0 1px rgba(229,217,207,.8); display: flex; align-items: center; justify-content: center; }
+      .stage img { position: relative; width: 94%; border-radius: 24px; }
+      .hero-media { flex-direction: column; align-items: center; gap: 16px; }
+      .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+      .chip { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+      .chip b { color: var(--teal); }
 
       .strip { background: var(--ink); color: var(--bg); padding: 18px 0; }
       .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
@@ -150,7 +149,7 @@
       .forwho { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 900px; margin: 0 auto; }
       .forwho > div { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
       .forwho h3 { margin-bottom: 14px; font-size: 16px; display: flex; align-items: center; gap: 10px; }
-      .forwho ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; color: var(--muted); }
+      .forwho ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15.5px; color: var(--muted); }
       .forwho li { display: flex; gap: 10px; align-items: flex-start; }
       .warn-ic { flex: none; width: 22px; height: 22px; border-radius: 999px; background: #FBEDE6; color: var(--accent); display: inline-flex; align-items: center; justify-content: center; }
 
@@ -159,7 +158,7 @@
       .review blockquote { font-size: 15px; line-height: 1.5; font-weight: 500; }
       .review figcaption { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; margin-top: auto; }
       .review figcaption img { width: 44px; height: 44px; border-radius: 999px; object-fit: cover; }
-      .review figcaption small { display: block; font-weight: 500; color: var(--teal); font-size: 12px; }
+      .review figcaption small { display: block; font-weight: 500; color: var(--teal); font-size: 13px; }
       .qmark { font-size: 44px; line-height: .6; color: var(--blush); font-weight: 800; font-family: Georgia, serif; }
 
       .guarantee { display: flex; gap: 28px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 32px; max-width: 860px; margin: 0 auto; }
@@ -187,10 +186,10 @@
       .wa-link { font-size: 14px; font-weight: 600; color: var(--teal); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; }
 
       footer { border-top: 1px solid #EADFD6; padding: 24px 0 100px; }
-      footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; font-size: 12px; color: var(--muted); }
+      footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; font-size: 13px; color: var(--muted); }
 
       .sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #fff; border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); display: none; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 -8px 24px rgba(42,35,32,.08); }
-      .sticky .p s { font-size: 12px; color: var(--muted); }
+      .sticky .p s { font-size: 13px; color: var(--muted); }
       .sticky .p b { display: block; font-size: 22px; font-weight: 800; color: var(--green); line-height: 1.1; }
       .sticky .btn { font-size: 15px; padding: 14px 22px; min-height: 50px; border-radius: 12px; }
       .wa-float { position: fixed; right: 18px; bottom: 22px; z-index: 51; width: 56px; height: 56px; border-radius: 999px; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
@@ -198,9 +197,8 @@
       @media (max-width: 900px) {
         .hero .wrap { grid-template-columns: 1fr; gap: 24px; }
         .hero-media { order: -1; }
-        .stage { max-width: 290px; border-radius: 26px; }
-        .chip { font-size: 11.5px; padding: 8px 11px; }
-        .chip-1 { left: -2%; } .chip-2 { right: -2%; } .chip-3 { display: none; }
+        .stage { max-width: 360px; border-radius: 26px; }
+        .chip { font-size: 13px; padding: 7px 12px; }
         .offer { max-width: none; }
         .pains, .actives { grid-template-columns: 1fr 1fr; }
         .steps, .reviews { grid-template-columns: 1fr; }
@@ -279,10 +277,8 @@
           <div class="hero-media">
             <div class="stage">
               <img src="%BASE_URL%products/mix-01.webp" alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" width="600" height="600" fetchpriority="high" />
-              <div class="chip chip-1"><b>4</b> ativos em 1</div>
-              <div class="chip chip-3"><b>pH</b> 3,5–4,0</div>
-              <div class="chip chip-2"><b>30 ml</b> · uso noturno</div>
             </div>
+            <div class="chips"><span class="chip"><b>4</b> ativos em 1</span><span class="chip"><b>30 ml</b></span><span class="chip">Uso noturno</span></div>
           </div>
         </div>
       </section>
