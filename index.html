@@ -105,6 +105,9 @@
       .stage { overflow: hidden; }
       .stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s; }
       .stage img.contain { object-fit: contain; padding: 4%; }
+      .seals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; width: 100%; max-width: 500px; }
+      .seals span { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+      .seals svg { flex: none; color: var(--teal); }
       .thumbs { display: flex; justify-content: center; gap: 10px; }
       .thumb { width: 64px; height: 64px; padding: 0; border-radius: 14px; border: 2px solid var(--line); background: #fff; overflow: hidden; cursor: pointer; flex: none; }
       .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -299,7 +302,7 @@
             <div class="offer" id="oferta">
               <div class="offer-top">
                 <span class="bf-tag">Oferta Black Friday</span>
-                <span class="save promo-only">Mais de R$ 50 abaixo do site oficial</span>
+                <span class="save promo-only">Você economiza R$ 50,01</span>
               </div>
               <div class="price">
                 <span class="from promo-only">No site oficial da marca: <s>R$ 74,00</s> · aqui:</span>
@@ -309,7 +312,7 @@
               <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Quero meu Mix-01 agora
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento no checkout seguro da Perfect Pay</p>
+              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Checkout seguro Perfect Pay · Pix aprovado na hora</p>
               <div class="mini-trust">
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Compra segura</span>
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>3 a 7 dias úteis</span>
@@ -324,6 +327,7 @@
               <img id="hero-img" src="%BASE_URL%products/mix-01-hero-mao.webp" alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" width="960" height="960" fetchpriority="high" />
             </div>
             <div class="thumbs" role="group" aria-label="Fotos do produto"><button type="button" class="thumb" aria-pressed="true" aria-label="Ver foto 1" data-src="%BASE_URL%products/mix-01-hero-mao.webp" data-alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" data-fit=""><img src="%BASE_URL%products/thumb-mao.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 2" data-src="%BASE_URL%products/mix-01.webp" data-alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" data-fit="contain"><img src="%BASE_URL%products/thumb-mix-01.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 3" data-src="%BASE_URL%products/mix-01-caixa-frasco.webp" data-alt="Caixa e frasco do Mix-01 lado a lado" data-fit="contain"><img src="%BASE_URL%products/thumb-caixa-frasco.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 4" data-src="%BASE_URL%products/mix-01-lateral.webp" data-alt="Lateral da caixa: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten" data-fit="contain"><img src="%BASE_URL%products/thumb-lateral.webp" alt="" width="64" height="64" loading="lazy" /></button></div>
+            <div class="seals" aria-label="Informações da embalagem"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Dermatologicamente testado</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Não testado em animais</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem parabenos e sulfatos</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem fragrância e corantes</span></div>
             <div class="chips"><span class="chip"><b>4</b> ativos em 1</span><span class="chip"><b>30 ml</b></span><span class="chip">Uso noturno</span></div>
           </div>
         </div>
@@ -465,7 +469,7 @@
             <div class="offer">
               <div class="offer-top">
                 <span class="bf-tag">Oferta Black Friday</span>
-                <span class="save promo-only">Mais de R$ 50 abaixo do site oficial</span>
+                <span class="save promo-only">Você economiza R$ 50,01</span>
               </div>
               <h2>Principia Sérum Mix-01</h2>
               <div class="price">
@@ -476,7 +480,7 @@
               <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Garantir meu Mix-01
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento no checkout seguro da Perfect Pay</p>
+              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Checkout seguro Perfect Pay · Pix aprovado na hora</p>
               <a class="wa-link" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>Ficou com dúvida? Fale no WhatsApp</a>
             </div>
           </div>
