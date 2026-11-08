@@ -137,13 +137,17 @@
       .nw { white-space: nowrap; }
       .why { font-size: 13.5px; color: var(--muted); background: var(--soft); border-radius: 12px; padding: 10px 12px; }
       .why b { color: var(--ink); }
-      .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
       .trust-item { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
       .trust-item .ic { width: 42px; height: 42px; border-radius: 12px; background: var(--soft); color: var(--teal); display: flex; align-items: center; justify-content: center; }
       .trust-item h3 { font-size: 15.5px; font-weight: 700; }
       .trust-item p { font-size: 14px; color: var(--muted); }
+      .trust-item a, .policy-links a { color: var(--accent-dk); font-weight: 600; }
+      .redirect { font-size: 13px; color: var(--muted); text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
+      .redirect svg { color: var(--teal); flex: none; }
+      .policy-links { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; }
       @media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr 1fr; } }
-      @media (max-width: 480px) { .trust-grid { grid-template-columns: 1fr; } }
+      @media (max-width: 480px) { .trust-grid, .steps { grid-template-columns: 1fr; } }
 
       .pains { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
       .pain { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; display: flex; flex-direction: column; gap: 8px; }
@@ -160,7 +164,7 @@
       .active p { font-size: 13.5px; color: var(--muted); }
       .active .tag { align-self: flex-start; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-dk); background: var(--soft); padding: 4px 9px; border-radius: 999px; }
 
-      .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
       .step { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 8px; }
       .step .n { width: 36px; height: 36px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
       .step h3 { font-size: 16px; font-weight: 700; }
@@ -224,7 +228,8 @@
         .chip { font-size: 13px; padding: 7px 12px; }
         .offer { max-width: none; }
         .pains, .actives { grid-template-columns: 1fr 1fr; }
-        .steps, .reviews { grid-template-columns: 1fr; }
+        .steps { grid-template-columns: 1fr 1fr; }
+        .reviews { grid-template-columns: 1fr; }
         .real { grid-template-columns: 1fr; gap: 24px; }
         .strip .wrap { grid-template-columns: 1fr 1fr; }
         .strip div { justify-content: flex-start; }
@@ -246,6 +251,9 @@
         footer { padding-bottom: 120px; }
       }
       @media (max-width: 420px) {
+        .steps { grid-template-columns: 1fr; }
+        .step { display: grid; grid-template-columns: 36px 1fr; column-gap: 14px; row-gap: 2px; padding: 18px; }
+        .step .n { grid-row: span 2; }
         .pains, .actives { grid-template-columns: 1fr; }
         .price .now { font-size: 42px; }
       }
@@ -292,6 +300,7 @@
               <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Quero meu Mix-01 agora
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento no checkout seguro da Perfect Pay</p>
               <div class="mini-trust">
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Compra segura</span>
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>3 a 7 dias úteis</span>
@@ -406,6 +415,22 @@
       <section class="soft">
         <div class="wrap">
           <div class="sec-head">
+            <span class="kicker">Passo a passo</span>
+            <h2>Como comprar</h2>
+            <p>Leva menos de 2 minutos.</p>
+          </div>
+          <div class="steps">
+            <div class="step"><span class="n">1</span><h3>Toque em comprar</h3><p>Clique em "Quero meu Mix-01" ou "Comprar agora" em qualquer parte da página.</p></div>
+            <div class="step"><span class="n">2</span><h3>Preencha seus dados</h3><p>No checkout seguro da Perfect Pay, informe nome, e-mail, CPF e endereço de entrega.</p></div>
+            <div class="step"><span class="n">3</span><h3>Escolha como pagar</h3><p>Pix, cartão de crédito ou PicPay. No Pix, o pagamento é aprovado na hora.</p></div>
+            <div class="step"><span class="n">4</span><h3>Receba em casa</h3><p>Frete grátis para todo o Brasil, em 3 a 7 dias úteis depois do pagamento.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
             <span class="kicker">Compra segura</span>
             <h2>Por que comprar na Selune</h2>
           </div>
@@ -414,6 +439,8 @@
             <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3>Pagamento protegido</h3><p>O pagamento é feito na Perfect Pay, por Pix, cartão ou PicPay. Seus dados não passam pela loja.</p></div>
             <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>7 dias para desistir</h3><p>Se não gostar, você pode desistir em até 7 dias após receber, como garante o Código de Defesa do Consumidor.</p></div>
             <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span><h3>Atendimento de verdade</h3><p>Fale com a gente no WhatsApp <span class="nw">(38) 99965-9366</span>. Seg a sex 9h–19h, sáb 9h–14h.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/></svg></span><h3>Garantia de procedência</h3><p>Enviado lacrado, com lote e validade. Chegou violado, vencido ou diferente? Seu dinheiro de volta. <a href="%BASE_URL%politicas.html#procedencia">Ver garantia</a></p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></span><h3>Trocas e devoluções</h3><p>Defeito ou arrependimento? A devolução é simples e o frete é por nossa conta. <a href="%BASE_URL%politicas.html#trocas">Ver política</a></p></div>
           </div>
         </div>
       </section>
@@ -439,6 +466,7 @@
               <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Garantir meu Mix-01
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento no checkout seguro da Perfect Pay</p>
               <a class="wa-link" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>Ficou com dúvida? Fale no WhatsApp</a>
             </div>
           </div>
@@ -451,6 +479,7 @@
         <span>Selune Oficial · Loja online de skincare · <a href="https://www.instagram.com/seluneoficial.com.br/" target="_blank" rel="noopener">Instagram @seluneoficial.com.br</a></span>
         <span>Atendimento: seg a sex 9h–19h · sáb 9h–14h</span>
         <span>CNPJ 56.996.633/0001-56 · WhatsApp <span class="nw">(38) 99965-9366</span></span>
+        <nav class="policy-links" aria-label="Políticas"><a href="%BASE_URL%politicas.html#trocas">Trocas e devoluções</a><a href="%BASE_URL%politicas.html#procedencia">Garantia de procedência</a><a href="%BASE_URL%politicas.html#entrega">Entrega</a><a href="%BASE_URL%politicas.html#privacidade">Política de privacidade</a></nav>
       </div>
     </footer>
 

@@ -24,6 +24,8 @@ export default defineConfig({
         blackFriday: resolve(__dirname, 'black-friday.html'),
         // Loja completa (antiga página inicial)
         loja: resolve(__dirname, 'loja.html'),
+        // Trocas, devoluções, procedência e privacidade
+        politicas: resolve(__dirname, 'politicas.html'),
       },
     },
   },
