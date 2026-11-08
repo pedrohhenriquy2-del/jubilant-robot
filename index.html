@@ -18,7 +18,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preload" as="image" href="%BASE_URL%products/mix-01.webp" />
+    <link rel="preload" as="image" href="%BASE_URL%products/mix-01-hero-mao.webp" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,7 +102,14 @@
 
       .hero-media { position: relative; display: flex; justify-content: center; min-width: 0; }
       .stage { position: relative; width: 100%; max-width: 500px; aspect-ratio: 1 / 1; border-radius: 32px; background: #fff; box-shadow: 0 30px 60px rgba(21,33,31,.12), inset 0 0 0 1px rgba(220,231,228,.9); display: flex; align-items: center; justify-content: center; }
-      .stage img { position: relative; width: 94%; border-radius: 24px; }
+      .stage { overflow: hidden; }
+      .stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s; }
+      .stage img.contain { object-fit: contain; padding: 4%; }
+      .thumbs { display: flex; justify-content: center; gap: 10px; }
+      .thumb { width: 64px; height: 64px; padding: 0; border-radius: 14px; border: 2px solid var(--line); background: #fff; overflow: hidden; cursor: pointer; flex: none; }
+      .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .thumb[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--green-bg); }
+      .thumb:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
       .hero-media { flex-direction: column; align-items: center; gap: 16px; }
       .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
       .chip { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
@@ -224,7 +231,9 @@
       @media (max-width: 900px) {
         .hero .wrap { grid-template-columns: 1fr; gap: 24px; }
         .hero-media { order: -1; }
-        .stage { max-width: 270px; border-radius: 22px; }
+        .stage { max-width: 340px; border-radius: 22px; }
+        .hero-media .chips { display: none; }
+        .thumb { width: 56px; height: 56px; }
         .chip { font-size: 13px; padding: 7px 12px; }
         .offer { max-width: none; }
         .pains, .actives { grid-template-columns: 1fr 1fr; }
@@ -312,8 +321,9 @@
 
           <div class="hero-media">
             <div class="stage">
-              <img src="%BASE_URL%products/mix-01.webp" alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" width="600" height="600" fetchpriority="high" />
+              <img id="hero-img" src="%BASE_URL%products/mix-01-hero-mao.webp" alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" width="960" height="960" fetchpriority="high" />
             </div>
+            <div class="thumbs" role="group" aria-label="Fotos do produto"><button type="button" class="thumb" aria-pressed="true" aria-label="Ver foto 1" data-src="%BASE_URL%products/mix-01-hero-mao.webp" data-alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" data-fit=""><img src="%BASE_URL%products/thumb-mao.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 2" data-src="%BASE_URL%products/mix-01.webp" data-alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" data-fit="contain"><img src="%BASE_URL%products/thumb-mix-01.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 3" data-src="%BASE_URL%products/mix-01-caixa-frasco.webp" data-alt="Caixa e frasco do Mix-01 lado a lado" data-fit="contain"><img src="%BASE_URL%products/thumb-caixa-frasco.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 4" data-src="%BASE_URL%products/mix-01-lateral.webp" data-alt="Lateral da caixa: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten" data-fit="contain"><img src="%BASE_URL%products/thumb-lateral.webp" alt="" width="64" height="64" loading="lazy" /></button></div>
             <div class="chips"><span class="chip"><b>4</b> ativos em 1</span><span class="chip"><b>30 ml</b></span><span class="chip">Uso noturno</span></div>
           </div>
         </div>
@@ -506,6 +516,18 @@
           el.textContent = d >= 3 ? 'oferta válida até 01/12' : 'termina em ' + (d > 0 ? d + 'd ' : '') + h + 'h ' + m + 'min';
         }
         tick(); setInterval(tick, 30000);
+      })();
+      (function () {
+        var img = document.getElementById('hero-img');
+        if (!img) return;
+        document.querySelectorAll('.thumb').forEach(function (b) {
+          b.addEventListener('click', function () {
+            document.querySelectorAll('.thumb').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+            b.setAttribute('aria-pressed', 'true');
+            img.src = b.dataset.src; img.alt = b.dataset.alt;
+            img.className = b.dataset.fit || '';
+          });
+        });
       })();
       (function () {
         var track = document.getElementById('slides'), dots = document.getElementById('dots');
