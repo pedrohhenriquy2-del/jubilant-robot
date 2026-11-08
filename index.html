@@ -123,6 +123,16 @@
       .dots button::before { content: ""; display: block; margin: -17px; width: 44px; height: 44px; }
       .real-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-weight: 500; }
       .real-list li { display: flex; gap: 10px; align-items: flex-start; }
+      .real-list a { color: var(--teal); font-weight: 600; }
+      .why { font-size: 13.5px; color: var(--muted); background: var(--soft); border-radius: 12px; padding: 10px 12px; }
+      .why b { color: var(--ink); }
+      .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .trust-item { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+      .trust-item .ic { width: 42px; height: 42px; border-radius: 12px; background: var(--soft); color: var(--teal); display: flex; align-items: center; justify-content: center; }
+      .trust-item h3 { font-size: 15.5px; font-weight: 700; }
+      .trust-item p { font-size: 14px; color: var(--muted); }
+      @media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 480px) { .trust-grid { grid-template-columns: 1fr; } }
 
       .pains { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
       .pain { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; display: flex; flex-direction: column; gap: 8px; }
@@ -263,6 +273,7 @@
                 <span class="now"><small>R$</small>23,99</span>
                 <span class="pay">Pix, cartão ou PicPay · frete grátis</span>
               </div>
+              <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Quero meu Mix-01 agora
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               <div class="mini-trust">
@@ -297,11 +308,12 @@
           <div class="real-copy">
             <span class="kicker">Produto original</span>
             <h2>Veja o Mix-01 de perto</h2>
-            <p>Frasco âmbar de 30 ml com conta-gotas, direto da Principia. As concentrações dos 4 ativos vêm escritas no rótulo e na caixa.</p>
+            <p>Frasco âmbar de 30 ml com conta-gotas. As concentrações dos 4 ativos vêm escritas no rótulo e na caixa, junto com lote e validade.</p>
             <ul class="real-list">
               <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Sérum facial original Principia</li>
               <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Conta-gotas para dosar a quantidade certa</li>
               <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Enviado na caixa, para todo o Brasil</li>
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Quer conferir antes? <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Pode%20me%20mandar%20uma%20foto%20do%20lote%20e%20da%20validade%20do%20Mix-01%3F">Peça no WhatsApp uma foto do lote e da validade</a></span></li>
             </ul>
           </div>
           <div class="slider" aria-roledescription="carrossel" aria-label="Fotos do produto">
@@ -353,19 +365,34 @@
           <div class="reviews">
             <figure class="review">
               <span class="qmark" aria-hidden="true">“</span>
-              <blockquote>Vi diferença já nos três primeiros dias de uso.</blockquote>
-              <figcaption><img src="%BASE_URL%products/cliente-ingrid.jpg" alt="" width="44" height="44" loading="lazy" /><span>Ingrid Freitas<small>Cliente Selune</small></span></figcaption>
+              <blockquote>Acabou com a minha oleosidade. Achei o máximo!</blockquote>
+              <figcaption><img src="%BASE_URL%products/cliente-lauane.jpg" alt="" width="44" height="44" loading="lazy" /><span>Lauane Aparecida<small>Cliente Selune</small></span></figcaption>
             </figure>
             <figure class="review">
               <span class="qmark" aria-hidden="true">“</span>
-              <blockquote>Acabou com a minha oleosidade. Achei o máximo!</blockquote>
-              <figcaption><img src="%BASE_URL%products/cliente-lauane.jpg" alt="" width="44" height="44" loading="lazy" /><span>Lauane Aparecida<small>Cliente Selune</small></span></figcaption>
+              <blockquote>Vi diferença já nos três primeiros dias de uso.</blockquote>
+              <figcaption><img src="%BASE_URL%products/cliente-ingrid.jpg" alt="" width="44" height="44" loading="lazy" /><span>Ingrid Freitas<small>Cliente Selune</small></span></figcaption>
             </figure>
             <figure class="review">
               <span class="qmark" aria-hidden="true">“</span>
               <blockquote>É bom e funciona.</blockquote>
               <figcaption><img src="%BASE_URL%products/cliente-rosemire.jpg" alt="" width="44" height="44" loading="lazy" /><span>Rosemire<small>Cliente Selune</small></span></figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="soft">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Compra segura</span>
+            <h2>Por que comprar na Selune</h2>
+          </div>
+          <div class="trust-grid">
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span><h3>Empresa com CNPJ</h3><p>CNPJ 56.996.633/0001-56. Você pode consultar no site da Receita Federal.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3>Pagamento protegido</h3><p>O pagamento é feito na Perfect Pay, por Pix, cartão ou PicPay. Seus dados não passam pela loja.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>7 dias para desistir</h3><p>Se não gostar, você pode desistir em até 7 dias após receber, como garante o Código de Defesa do Consumidor.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span><h3>Atendimento de verdade</h3><p>Fale com a gente no WhatsApp (38) 99965-9366. Seg a sex 9h–19h, sáb 9h–14h.</p></div>
           </div>
         </div>
       </section>
@@ -388,6 +415,7 @@
                 <span class="now"><small>R$</small>23,99</span>
                 <span class="pay">Pix, cartão ou PicPay · frete grátis</span>
               </div>
+              <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Garantir meu Mix-01
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               <a class="wa-link" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>Ficou com dúvida? Fale no WhatsApp</a>
@@ -399,7 +427,7 @@
 
     <footer>
       <div class="wrap">
-        <span>Selune Oficial · Revendedora Principia</span>
+        <span>Selune Oficial · Loja online de skincare</span>
         <span>Atendimento: seg a sex 9h–19h · sáb 9h–14h</span>
         <span>CNPJ 56.996.633/0001-56 · WhatsApp (38) 99965-9366</span>
       </div>
