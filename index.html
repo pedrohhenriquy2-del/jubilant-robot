@@ -124,6 +124,11 @@
       .real-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-weight: 500; }
       .real-list li { display: flex; gap: 10px; align-items: flex-start; }
       .real-list a { color: var(--teal); font-weight: 600; }
+      .ig-btn { align-self: center; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 22px; border-radius: 999px; border: 1.5px solid var(--ink); color: var(--ink); font-weight: 700; font-size: 15px; text-decoration: none; }
+      .ig-btn:hover { background: var(--ink); color: #fff; }
+      .ig-row { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 24px; text-align: center; }
+      .ig-row p { font-size: 14px; color: var(--muted); }
+      footer a { color: var(--muted); }
       .why { font-size: 13.5px; color: var(--muted); background: var(--soft); border-radius: 12px; padding: 10px 12px; }
       .why b { color: var(--ink); }
       .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
@@ -379,6 +384,10 @@
               <figcaption><img src="%BASE_URL%products/cliente-rosemire.jpg" alt="" width="44" height="44" loading="lazy" /><span>Rosemire<small>Cliente Selune</small></span></figcaption>
             </figure>
           </div>
+          <div class="ig-row">
+            <a class="ig-btn" href="https://www.instagram.com/seluneoficial.com.br/" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>Veja mais no Instagram @seluneoficial.com.br</a>
+            <p>Fotos dos produtos, novidades e clientes Selune</p>
+          </div>
         </div>
       </section>
 
@@ -427,7 +436,7 @@
 
     <footer>
       <div class="wrap">
-        <span>Selune Oficial · Loja online de skincare</span>
+        <span>Selune Oficial · Loja online de skincare · <a href="https://www.instagram.com/seluneoficial.com.br/" target="_blank" rel="noopener">Instagram @seluneoficial.com.br</a></span>
         <span>Atendimento: seg a sex 9h–19h · sáb 9h–14h</span>
         <span>CNPJ 56.996.633/0001-56 · WhatsApp (38) 99965-9366</span>
       </div>
