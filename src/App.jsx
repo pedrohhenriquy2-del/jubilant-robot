@@ -4,7 +4,6 @@ import About from "./components/About";
 import TrustBadges from "./components/TrustBadges";
 import Services from "./components/Services";
 import Products from "./components/Products";
-import Gallery from "./components/Gallery";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -26,7 +25,6 @@ function App() {
         <TrustBadges />
         <Services />
         <Products />
-        <Gallery />
         <FAQ />
         <Contact />
       </main>
