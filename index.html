@@ -325,6 +325,34 @@
         .pains, .actives { grid-template-columns: 1fr; }
         .price .now { font-size: 42px; }
       }
+
+      /* Celular: página mais enxuta, sem tirar conteúdo importante */
+      @media (max-width: 760px) {
+        section { padding: 36px 0; }
+        .sec-head { margin-bottom: 22px; }
+        .hero-copy .lead { display: none; }
+        .seals { gap: 6px 10px; }
+        .seals span { font-size: 12.5px; }
+        .slider { max-width: 240px; }
+        .reviews { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; gap: 12px; padding: 4px 20px 12px; margin: 0 -20px; scrollbar-width: none; }
+        .reviews::-webkit-scrollbar { display: none; }
+        .review { flex: 0 0 82%; scroll-snap-align: start; }
+        .steps { grid-template-columns: 1fr 1fr; gap: 10px; }
+        .step { display: flex; padding: 14px; gap: 6px; }
+        .step .n { width: 28px; height: 28px; font-size: 14px; }
+        .step h3 { font-size: 14.5px; }
+        .step p { font-size: 12.5px; }
+        .trust-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+        .trust-item { padding: 14px; gap: 6px; }
+        .trust-item .ic { width: 34px; height: 34px; }
+        .trust-item h3 { font-size: 14px; }
+        .trust-item p { display: none; }
+        .rcol { padding: 14px; gap: 6px; }
+        .rstep { grid-template-columns: 44px 1fr; gap: 10px; padding: 6px; }
+        .rstep img { width: 44px; height: 44px; }
+        .rstep span:not(.n) { font-size: 12.5px; }
+        .final-img { display: none; }
+      }
     </style>
   </head>
   <body>
