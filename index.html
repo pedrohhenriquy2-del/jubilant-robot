@@ -172,6 +172,26 @@
       .xsell .btn { font-size: 16px; padding: 14px 26px; min-height: 50px; }
       .xsell .more { font-weight: 600; font-size: 14px; min-height: 44px; display: inline-flex; align-items: center; }
       @media (max-width: 760px) { .xsell { grid-template-columns: 1fr; padding: 18px; gap: 16px; } .xsell img { max-width: 240px; margin: 0 auto; } .xsell .btn { width: 100%; } }
+      .pgrid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+      .pcard { background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+      .pcard:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(21,33,31,.10); }
+      .pimg { position: relative; display: block; aspect-ratio: 1; background: #fff; border-bottom: 1px solid var(--line); }
+      .pimg img { width: 100%; height: 100%; object-fit: contain; padding: 10%; }
+      .pbadge { position: absolute; top: 12px; left: 12px; background: var(--ink); color: var(--mint); font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 5px 10px; border-radius: 999px; }
+      .pbody { display: flex; flex-direction: column; gap: 8px; padding: 18px 18px 20px; flex: 1; }
+      .pbody h3 { font-size: 16px; line-height: 1.3; margin: 0; }
+      .pbody p { font-size: 13.5px; color: var(--muted); margin: 0; flex: 1; }
+      .pprice { font-size: 26px; font-weight: 800; color: var(--accent); line-height: 1.1; margin-top: 4px; }
+      .pprice small { font-size: 14px; margin-right: 3px; }
+      .pbuy { font-size: 15px; padding: 12px 16px; min-height: 48px; width: 100%; border-radius: 12px; }
+      .pmore { align-self: center; font-size: 13.5px; font-weight: 600; min-height: 40px; display: inline-flex; align-items: center; }
+      @media (max-width: 1080px) {
+        .pgrid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; gap: 14px; padding: 4px 20px 16px; margin: 0 -20px; scrollbar-width: none; }
+        .pgrid::-webkit-scrollbar { display: none; }
+        .pcard { flex: 0 0 240px; scroll-snap-align: start; }
+        .pcard:hover { transform: none; }
+      }
+      @media (max-width: 480px) { .pcard { flex-basis: 74%; } }
       .redirect { font-size: 13px; color: var(--muted); text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
       .redirect svg { color: var(--teal); flex: none; }
       .policy-links { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; }
@@ -485,21 +505,60 @@
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Complete sua rotina</span>
-            <h2>Use junto com o Mix-01</h2>
-            <p>Quem usa ácidos à noite precisa de protetor solar de dia.</p>
+            <h2>Mais cuidados Principia</h2>
+            <p>Produtos que combinam com o Mix-01, do gel de limpeza ao protetor solar.</p>
           </div>
-          <div class="xsell">
-            <img src="%BASE_URL%products/protetor-solar-ps-01.webp" alt="Principia Protetor Solar Facial PS-01 FPS 60" width="300" height="300" loading="lazy" />
-            <div class="xsell-body">
-              <h3>Principia Protetor Solar Facial PS-01 FPS 60</h3>
-              <p class="desc">16,5% de mix de filtros UV com 5% de niacinamida. Toque seco, ajuda a controlar a oleosidade e protege contra raios UVA e UVB.</p>
-              <div class="tags"><span>FPS 60</span><span>Toque seco</span><span>5% niacinamida</span></div>
-              <span class="xprice"><small>R$</small>29,90</span>
-              <div class="actions">
-                <a class="btn buy-ps" href="https://go.perfectpay.com.br/PPU38CQE87N">Comprar protetor</a>
-                <a class="more" href="%BASE_URL%protetor-solar-ps-01.html">Ver detalhes</a>
+          <div class="pgrid" role="list">
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%protetor-solar-ps-01.html" aria-label="Ver detalhes: Protetor Solar PS-01 FPS 60"><img src="%BASE_URL%products/protetor-solar-ps-01.webp" alt="Protetor Solar PS-01 FPS 60" width="300" height="300" loading="lazy" /><span class="pbadge">Toque seco</span></a>
+              <div class="pbody">
+                <h3>Protetor Solar <span class="nw">PS-01</span> FPS 60</h3>
+                <p>16,5% de filtros UV e 5% de niacinamida. Toque seco, proteção UVA e UVB.</p>
+                <span class="pprice"><small>R$</small>29,90</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQE87N" data-name="Protetor Solar PS-01 FPS 60" data-value="29.90">Comprar</a>
+                <a class="pmore" href="%BASE_URL%protetor-solar-ps-01.html">Ver detalhes</a>
               </div>
-            </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%tonico-al-7.html" aria-label="Ver detalhes: Tônico AL-7 · 120 ml"><img src="%BASE_URL%products/tonico-al-7.webp" alt="Tônico AL-7 · 120 ml" width="300" height="300" loading="lazy" /><span class="pbadge">Renovador</span></a>
+              <div class="pbody">
+                <h3>Tônico <span class="nw">AL-7</span> · 120 ml</h3>
+                <p>7% ácido lático e 1% ácido salicílico. Para textura, oleosidade e poros.</p>
+                <span class="pprice"><small>R$</small>26,50</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQEQMT" data-name="Tônico AL-7 · 120 ml" data-value="26.50">Comprar</a>
+                <a class="pmore" href="%BASE_URL%tonico-al-7.html">Ver detalhes</a>
+              </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%gel-limpeza-gl-01.html" aria-label="Ver detalhes: Gel de Limpeza GL-01 · 200 g"><img src="%BASE_URL%products/gel-limpeza-gl-01.webp" alt="Gel de Limpeza GL-01 · 200 g" width="300" height="300" loading="lazy" /><span class="pbadge">Uso diário</span></a>
+              <div class="pbody">
+                <h3>Gel de Limpeza <span class="nw">GL-01</span> · 200 g</h3>
+                <p>2% ácido salicílico e glicerina. Limpa, reduz a oleosidade e deixa a pele macia.</p>
+                <span class="pprice"><small>R$</small>45,50</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQE87U" data-name="Gel de Limpeza GL-01 · 200 g" data-value="45.50">Comprar</a>
+                <a class="pmore" href="%BASE_URL%gel-limpeza-gl-01.html">Ver detalhes</a>
+              </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%creme-hidratante-ch-02.html" aria-label="Ver detalhes: Creme Hidratante CH-02 · 454 g"><img src="%BASE_URL%products/creme-hidratante-ch-02.webp" alt="Creme Hidratante CH-02 · 454 g" width="300" height="300" loading="lazy" /><span class="pbadge">Corpo · 72h</span></a>
+              <div class="pbody">
+                <h3>Creme Hidratante <span class="nw">CH-02</span> · 454 g</h3>
+                <p>Girassol, glicerina e manteiga de abacate. Hidratação de 72 horas para o corpo.</p>
+                <span class="pprice"><small>R$</small>49,00</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQEQMQ" data-name="Creme Hidratante CH-02 · 454 g" data-value="49.00">Comprar</a>
+                <a class="pmore" href="%BASE_URL%creme-hidratante-ch-02.html">Ver detalhes</a>
+              </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%kit-avancado.html" aria-label="Ver detalhes: Kit Avançado VC + RN"><img src="%BASE_URL%products/kit-avancado-vc-rn.webp" alt="Kit Avançado VC + RN" width="300" height="300" loading="lazy" /><span class="pbadge">Rotina completa</span></a>
+              <div class="pbody">
+                <h3>Kit Avançado VC + RN</h3>
+                <p>Protetor <span class="nw">PS-01</span>, gel <span class="nw">GL-01</span>, vitamina C, retinol e ácido hialurônico. A rotina completa.</p>
+                <span class="pprice"><small>R$</small>145,50</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQE85U" data-name="Kit Avançado VC + RN" data-value="145.50">Comprar</a>
+                <a class="pmore" href="%BASE_URL%kit-avancado.html">Ver detalhes</a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -610,9 +669,9 @@
       document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
         a.addEventListener('click', function () { if (window.fbq) fbq('track', 'Contact'); });
       });
-      document.querySelectorAll('.buy-ps').forEach(function (a) {
+      document.querySelectorAll('.pbuy').forEach(function (a) {
         a.addEventListener('click', function () {
-          if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: 'Protetor Solar PS-01', value: 29.90, currency: 'BRL'});
+          if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: a.dataset.name, value: parseFloat(a.dataset.value), currency: 'BRL'});
         });
       });
       document.querySelectorAll('.buy').forEach(function (a) {
