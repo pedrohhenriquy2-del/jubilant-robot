@@ -189,7 +189,7 @@ export const PRODUCTS = [
     shortName: "Protetor Solar PS-01",
     description:
       "16,5% mix de filtros UV + 5% niacinamida. Toque seco, antioleosidade, proteção UVA e UVB.",
-    price: 37.9,
+    price: 29.9,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQE87N",
     salesPageUrl: `${ASSET_BASE}protetor-solar-ps-01.html`,
     photo: `${ASSET_BASE}products/protetor-solar-ps-01.webp`,
