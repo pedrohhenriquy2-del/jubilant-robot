@@ -47,8 +47,8 @@ export const CONTACT = {
     { day: "Sábado", time: "09h às 14h" },
     { day: "Domingo", time: "Fechado" },
   ],
-  instagram: "https://www.instagram.com/seluneoficialoficial.com.br/",
-  instagramHandle: "Instagram da Selune",
+  instagram: "https://www.instagram.com/seluneoficial.com.br/",
+  instagramHandle: "@seluneoficial.com.br",
   whatsappDisplay: "(38) 99965-9366",
 };
 
