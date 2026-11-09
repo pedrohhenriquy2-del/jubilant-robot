@@ -215,8 +215,8 @@ def s5(t):  # 14.5-18.5s oferta
     ps = eback(prog(t, 0.85, 1.35))
     if ps > 0:
         fz = int(185 * ps)
-        draw_rich(c, [('R$ ', GREEN)], F('Bold', max(10, int(80 * ps))), W // 2 - text_w('23,99', F('Bold', max(10, fz))) / 2 - 10, 1140, 1.0) if False else None
-        draw_text(c, 'R$ 23,99', F('Bold', max(10, fz)), W // 2, 1135, GREEN, clamp(ps))
+        draw_rich(c, [('R$ ', GREEN)], F('Bold', max(10, int(80 * ps))), W // 2 - text_w('37,50', F('Bold', max(10, fz))) / 2 - 10, 1140, 1.0) if False else None
+        draw_text(c, 'R$ 37,50', F('Bold', max(10, fz)), W // 2, 1135, GREEN, clamp(ps))
     q3 = eo(prog(t, 1.3, 1.7))
     draw_text(c, 'Frete grátis para todo o Brasil', F('Bold', 46), W // 2, 1290, INK, q3, dy=int(20 * (1 - q3)))
     q4 = eo(prog(t, 1.6, 2.0))
