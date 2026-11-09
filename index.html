@@ -236,6 +236,7 @@
       .final-card { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 28px; padding: 32px; display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: center; box-shadow: 0 24px 50px rgba(21,33,31,.10); }
       .vwrap { position: relative; width: 100%; }
       .sound { position: absolute; right: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px; border: 0; border-radius: 999px; background: rgba(21,33,31,.82); color: #fff; font: 600 13px Montserrat, system-ui, sans-serif; cursor: pointer; }
+      .final-img { width: 100%; max-width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 20px; }
       .final-video { width: 100%; height: auto; aspect-ratio: 9 / 16; max-width: 100%; border-radius: 22px; background: var(--ink); object-fit: cover; display: block; box-shadow: 0 18px 40px rgba(21,33,31,.16); }
       .final-card .offer { box-shadow: none; border: 0; padding: 0; max-width: none; }
       .final-card h2 { font-size: 26px; }
@@ -266,6 +267,7 @@
         .strip div { justify-content: flex-start; }
         .final-card { grid-template-columns: 1fr; padding: 24px; gap: 18px; }
         .vwrap { max-width: 260px; margin: 0 auto; }
+        .final-img { max-width: 260px; margin: 0 auto; }
       }
       @media (max-width: 760px) {
         section { padding: 48px 0; }
@@ -505,10 +507,7 @@
       <section class="final">
         <div class="wrap">
           <div class="final-card">
-            <div class="vwrap">
-              <video class="final-video" id="bf-video" src="%BASE_URL%products/mix-01-black-friday.mp4" poster="%BASE_URL%products/mix-01-black-friday-poster.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-label="Vídeo da oferta Black Friday do Principia Sérum Mix-01: os 4 ativos, fotos do produto e o preço de R$ 23,99"></video>
-              <button type="button" class="sound" id="bf-sound" aria-pressed="false"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg><span>Ativar som</span></button>
-            </div>
+            <img class="final-img" src="%BASE_URL%products/mix-01-hero-mao.webp" alt="Principia Sérum Mix-01 na mão" width="960" height="960" loading="lazy" />
             <div class="offer">
               <div class="offer-top">
                 <span class="bf-tag">Oferta Black Friday</span>
