@@ -108,6 +108,8 @@
       .seals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; width: 100%; max-width: 500px; }
       .seals span { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
       .seals svg { flex: none; color: var(--teal); }
+      .lotline { font-size: 13.5px; color: var(--muted); text-align: center; margin: 0; }
+      .lotline a { color: var(--accent-dk); font-weight: 600; }
       .thumbs { display: flex; justify-content: center; gap: 10px; }
       .thumb { width: 64px; height: 64px; padding: 0; border-radius: 14px; border: 2px solid var(--line); background: #fff; overflow: hidden; cursor: pointer; flex: none; }
       .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -337,10 +339,11 @@
         .reviews { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; gap: 12px; padding: 4px 20px 12px; margin: 0 -20px; scrollbar-width: none; }
         .reviews::-webkit-scrollbar { display: none; }
         .review { flex: 0 0 82%; scroll-snap-align: start; }
-        .steps { grid-template-columns: 1fr 1fr; gap: 10px; }
-        .step { display: flex; padding: 14px; gap: 6px; }
+        .steps { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+        .step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 12px 6px; gap: 6px; border-radius: 14px; }
+        .step p { display: none; }
         .step .n { width: 28px; height: 28px; font-size: 14px; }
-        .step h3 { font-size: 14.5px; }
+        .step h3 { font-size: 12.5px; line-height: 1.25; }
         .step p { font-size: 12.5px; }
         .trust-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
         .trust-item { padding: 14px; gap: 6px; }
@@ -411,8 +414,9 @@
             <div class="stage">
               <img id="hero-img" src="%BASE_URL%products/mix-01-hero-mao.webp" alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" width="960" height="960" fetchpriority="high" />
             </div>
-            <div class="thumbs" role="group" aria-label="Fotos do produto"><button type="button" class="thumb" aria-pressed="true" aria-label="Ver foto 1" data-src="%BASE_URL%products/mix-01-hero-mao.webp" data-alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" data-fit=""><img src="%BASE_URL%products/thumb-mao.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 2" data-src="%BASE_URL%products/mix-01.webp" data-alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" data-fit="contain"><img src="%BASE_URL%products/thumb-mix-01.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 3" data-src="%BASE_URL%products/mix-01-caixa-frasco.webp" data-alt="Caixa e frasco do Mix-01 lado a lado" data-fit="contain"><img src="%BASE_URL%products/thumb-caixa-frasco.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 4" data-src="%BASE_URL%products/mix-01-lateral.webp" data-alt="Lateral da caixa: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten" data-fit="contain"><img src="%BASE_URL%products/thumb-lateral.webp" alt="" width="64" height="64" loading="lazy" /></button></div>
+            <div class="thumbs" role="group" aria-label="Fotos do produto"><button type="button" class="thumb" aria-pressed="true" aria-label="Ver foto 1" data-src="%BASE_URL%products/mix-01-hero-mao.webp" data-alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" data-fit=""><img src="%BASE_URL%products/thumb-mao.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 5" data-src="%BASE_URL%products/mix-01-mao-1.webp" data-alt="Frasco do Principia Sérum Mix-01 segurado na mão, ao ar livre" data-fit=""><img src="%BASE_URL%products/thumb-mao-1.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 2" data-src="%BASE_URL%products/mix-01.webp" data-alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" data-fit="contain"><img src="%BASE_URL%products/thumb-mix-01.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 3" data-src="%BASE_URL%products/mix-01-caixa-frasco.webp" data-alt="Caixa e frasco do Mix-01 lado a lado" data-fit="contain"><img src="%BASE_URL%products/thumb-caixa-frasco.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 4" data-src="%BASE_URL%products/mix-01-lateral.webp" data-alt="Lateral da caixa: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten" data-fit="contain"><img src="%BASE_URL%products/thumb-lateral.webp" alt="" width="64" height="64" loading="lazy" /></button></div>
             <div class="seals" aria-label="Informações da embalagem"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Dermatologicamente testado</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Não testado em animais</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem parabenos e sulfatos</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem fragrância e corantes</span></div>
+            <p class="lotline">Quer conferir antes? <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Pode%20me%20mandar%20uma%20foto%20do%20lote%20e%20da%20validade%20do%20Mix-01%3F">Peça no WhatsApp a foto do lote e da validade</a></p>
             <div class="chips"><span class="chip"><b>4</b> ativos em 1</span><span class="chip"><b>30 ml</b></span><span class="chip">Uso noturno</span></div>
           </div>
         </div>
@@ -428,31 +432,6 @@
       </div>
 
       <section>
-        <div class="wrap real">
-          <div class="real-copy">
-            <span class="kicker">Produto original</span>
-            <h2>Veja o Mix-01 de perto</h2>
-            <p>Frasco âmbar de 30 ml com conta-gotas. As concentrações dos 4 ativos vêm escritas no rótulo e na caixa, junto com lote e validade.</p>
-            <ul class="real-list">
-              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Sérum facial original Principia</li>
-              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Conta-gotas para dosar a quantidade certa</li>
-              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Enviado na caixa, para todo o Brasil</li>
-              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Quer conferir antes? <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Pode%20me%20mandar%20uma%20foto%20do%20lote%20e%20da%20validade%20do%20Mix-01%3F">Peça no WhatsApp uma foto do lote e da validade</a></span></li>
-            </ul>
-          </div>
-          <div class="slider" aria-roledescription="carrossel" aria-label="Fotos do produto">
-            <div class="slides" id="slides">
-              <img src="%BASE_URL%products/mix-01-mao-1.webp" alt="Frasco do Principia Sérum Mix-01 segurado na mão, ao ar livre" width="335" height="597" loading="lazy" />
-              <img src="%BASE_URL%products/mix-01-mao-2.webp" alt="Caixa e frasco do Principia Sérum Mix-01 lado a lado" width="335" height="597" loading="lazy" />
-            </div>
-            <button type="button" class="sl-btn sl-prev" aria-label="Foto anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-            <button type="button" class="sl-btn sl-next" aria-label="Próxima foto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-            <div class="dots" id="dots"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="soft">
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Indicação</span>
@@ -480,7 +459,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="soft">
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Clientes Selune</span>
@@ -511,7 +490,7 @@
         </div>
       </section>
 
-      <section class="soft">
+      <section>
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Passo a passo</span>
@@ -527,7 +506,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="soft">
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Compra segura</span>
@@ -544,31 +523,7 @@
         </div>
       </section>
 
-      <section class="soft" style="border-bottom: 1px solid var(--line)">
-        <div class="wrap">
-          <div class="sec-head">
-            <span class="kicker">Rotina Selune</span>
-            <h2>Sua rotina para pele oleosa</h2>
-            <p>Poucos passos, feitos todo dia. É a constância que traz resultado.</p>
-          </div>
-          <div class="routine">
-            <div class="rcol">
-              <div class="rhead"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/><circle cx="12" cy="12" r="4"/></svg></span><h3>De manhã<small>Limpar e proteger</small></h3></div>
-              <a class="rstep" href="%BASE_URL%gel-limpeza-gl-01.html"><img src="%BASE_URL%products/gel-limpeza-gl-01.webp" alt="" width="56" height="56" loading="lazy" /><div><span class="n">Passo 1</span><b>Gel de Limpeza <span class="nw">GL-01</span></b><span>Lave o rosto e seque bem.</span></div></a>
-              <a class="rstep" href="%BASE_URL%protetor-solar-ps-01.html"><img src="%BASE_URL%products/protetor-solar-ps-01.webp" alt="" width="56" height="56" loading="lazy" /><div><span class="n">Passo 2</span><b>Protetor Solar <span class="nw">PS-01</span> FPS 60</b><span>Essencial para quem usa ácidos. Reaplique ao longo do dia.</span></div></a>
-            </div>
-            <div class="rcol">
-              <div class="rhead"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><h3>À noite<small>Limpar e tratar</small></h3></div>
-              <a class="rstep" href="%BASE_URL%gel-limpeza-gl-01.html"><img src="%BASE_URL%products/gel-limpeza-gl-01.webp" alt="" width="56" height="56" loading="lazy" /><div><span class="n">Passo 1</span><b>Gel de Limpeza <span class="nw">GL-01</span></b><span>Tire a oleosidade e as impurezas do dia.</span></div></a>
-              <a class="rstep" href="#oferta"><img src="%BASE_URL%products/mix-01.webp" alt="" width="56" height="56" loading="lazy" /><div><span class="n">Passo 2</span><b>Sérum Mix-01</b><span>Algumas gotas no rosto seco. Comece dia sim, dia não.</span></div></a>
-              <a class="rstep" href="%BASE_URL%tonico-al-7.html"><img src="%BASE_URL%products/tonico-al-7.webp" alt="" width="56" height="56" loading="lazy" /><div><span class="n">Passo 3</span><b>Tônico <span class="nw">AL-7</span>, se quiser</b><span>Use nas noites em que não usar o Mix-01, para não exagerar nos ácidos.</span></div></a>
-            </div>
-          </div>
-          <p class="rnote">Pele sensível, gestação ou tratamento com receita? Fale antes com seu dermatologista.</p>
-        </div>
-      </section>
-
-      <section class="soft">
+      <section>
         <div class="wrap">
           <div class="sec-head">
             <span class="kicker">Complete sua rotina</span>
