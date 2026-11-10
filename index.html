@@ -356,6 +356,21 @@
         .rstep span:not(.n) { font-size: 12.5px; }
         .final-img { display: none; }
       }
+
+      /* Celular: título antes da foto e botão do WhatsApp menor */
+      @media (max-width: 760px) {
+        .hero .wrap { display: flex; flex-direction: column; gap: 16px; }
+        .hero-copy { display: contents; }
+        .hero-copy .kicker { order: 1; }
+        .hero-copy h1 { order: 2; font-size: 28px; }
+        .hero-media { order: 3; }
+        .hero-copy .offer { order: 4; }
+        .hero-copy .benefits { order: 5; }
+        .hero-copy .lead { order: 6; }
+        .stage { max-width: 280px; }
+        .wa-float { width: 44px; height: 44px; right: 12px; }
+        .wa-float svg { width: 22px; height: 22px; }
+      }
     </style>
   </head>
   <body>
@@ -396,8 +411,6 @@
                 <span class="now"><small>R$</small>37,50</span>
                 <span class="pay">Pix, cartão ou PicPay · frete grátis</span>
               </div>
-              <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
-              <div class="bump"><img src="%BASE_URL%products/protetor-solar-ps-01.webp" alt="Protetor Solar Principia PS-01 FPS 60" width="52" height="52" loading="lazy" /><p><b>No checkout, adicione o Protetor Solar PS-01 FPS 60</b> por apenas <span class="bp">R$ 29,90</span>, com um clique. Quem usa ácidos precisa de protetor todo dia.</p></div>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Quero meu Mix-01 agora
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Checkout seguro Perfect Pay · Pix aprovado na hora</p>
@@ -407,6 +420,7 @@
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>7 dias para desistir</span>
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Loja com CNPJ</span>
               </div>
+              <p class="why why-after"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
             </div>
           </div>
 
@@ -600,11 +614,10 @@
                 <span class="now"><small>R$</small>37,50</span>
                 <span class="pay">Pix, cartão ou PicPay · frete grátis</span>
               </div>
-              <p class="why"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
-              <div class="bump"><img src="%BASE_URL%products/protetor-solar-ps-01.webp" alt="Protetor Solar Principia PS-01 FPS 60" width="52" height="52" loading="lazy" /><p><b>No checkout, adicione o Protetor Solar PS-01 FPS 60</b> por apenas <span class="bp">R$ 29,90</span>, com um clique. Quem usa ácidos precisa de protetor todo dia.</p></div>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHIMI">Garantir meu Mix-01
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Checkout seguro Perfect Pay · Pix aprovado na hora</p>
+              <p class="why why-after"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
               <a class="wa-link" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>Ficou com dúvida? Fale no WhatsApp</a>
             </div>
           </div>
