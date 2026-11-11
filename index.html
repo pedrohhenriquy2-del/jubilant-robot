@@ -68,9 +68,10 @@
       .btn-lg { font-size: 17px; padding: 18px 32px; min-height: 58px; width: 100%; }
       .check { flex: none; width: 22px; height: 22px; border-radius: 999px; background: var(--green-bg); color: var(--green); display: inline-flex; align-items: center; justify-content: center; }
 
-      .promo-bar { background: var(--ink); color: var(--bg); text-align: center; padding: 9px 12px; font-size: 12.5px; }
+      .promo-bar { display: block; background: var(--ink); color: var(--bg); text-align: center; padding: 9px 12px; font-size: 12.5px; text-decoration: none; }
       .promo-bar strong { color: var(--mint); font-weight: 700; }
-      #countdown { font-variant-numeric: tabular-nums; }
+      .promo-bar s { opacity: .7; }
+      .promo-bar b { color: var(--gold); font-weight: 800; }
       header { background: rgba(247,250,249,.94); backdrop-filter: blur(8px); border-bottom: 1px solid #DCE7E4; position: sticky; top: 0; z-index: 40; }
       header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
       .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; color: var(--ink); text-decoration: none; }
@@ -388,7 +389,7 @@
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=792765023001456&ev=PageView&noscript=1" />
     </noscript>
 
-    <div class="promo-bar" id="promo"><strong>Black Friday · Frete grátis</strong> · <span id="countdown">por tempo limitado</span></div>
+    <a class="promo-bar" id="promo" href="#oferta"><strong>Black Friday · Frete grátis</strong> · Mix-01 de <s>R$ 74</s> por <b>R$ 27,75</b> →</a>
 
     <header>
       <div class="wrap">
@@ -655,18 +656,13 @@
       (function () {
         // Fim da promoção: depois desta data o preço riscado, o "economize" e o contador somem sozinhos.
         var end = new Date('2026-12-01T23:59:59-03:00').getTime();
-        var bar = document.getElementById('promo'), el = document.getElementById('countdown');
+        var bar = document.getElementById('promo');
         function tick() {
-          var ms = end - Date.now();
-          if (ms <= 0) {
-            bar.style.display = 'none';
-            document.querySelectorAll('.promo-only, .bf-tag').forEach(function (n) { n.style.display = 'none'; });
-            return;
-          }
-          var d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
-          el.textContent = d >= 3 ? 'oferta válida até 01/12' : 'termina em ' + (d > 0 ? d + 'd ' : '') + h + 'h ' + m + 'min';
+          if (end - Date.now() > 0) return;
+          bar.style.display = 'none';
+          document.querySelectorAll('.promo-only, .bf-tag').forEach(function (n) { n.style.display = 'none'; });
         }
-        tick(); setInterval(tick, 30000);
+        tick(); setInterval(tick, 60000);
       })();
       (function () {
         var img = document.getElementById('hero-img');
