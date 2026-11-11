@@ -226,6 +226,10 @@
       .paybadges .visa { color: #1A1F71; font-style: italic; }
       .paybadges .mc { color: #C2410C; }
       .paybadges small { width: 100%; text-align: center; font-size: 12px; color: var(--muted); font-weight: 500; }
+      .ship { display: grid; gap: 2px; padding: 12px 14px; border-radius: 14px; background: var(--soft); font-size: 13.5px; color: var(--muted); text-align: left; }
+      .ship b { color: var(--ink); }
+      .origin { font-size: 13px; color: var(--muted); background: var(--soft); border-radius: 12px; padding: 10px 12px; }
+      .origin b { color: var(--ink); }
       .redirect { font-size: 13px; color: var(--muted); text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
       .redirect svg { color: var(--teal); flex: none; }
       .policy-links { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; }
@@ -413,12 +417,12 @@
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=792765023001456&ev=PageView&noscript=1" />
     </noscript>
 
-    <a class="promo-bar" id="promo" href="#oferta"><strong>Black Friday · Frete grátis</strong> · Mix-01 de <s>R$ 74</s> por <b>R$ 27,75</b> →</a>
+    <a class="promo-bar" id="promo" href="#oferta"><strong>Black Friday · Frete grátis</strong> · Mix-01 por <b>R$ 27,75</b> · entrega em 3 a 7 dias úteis →</a>
 
     <header>
       <div class="wrap">
         <a class="brand" href="%BASE_URL%" aria-label="Selune Oficial, página inicial"><img src="%BASE_URL%logo-selune.svg" alt="Selune Skincare" width="117" height="38" /></a>
-        <span class="hdr-trust"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Loja oficial · CNPJ</span>
+        <span class="hdr-trust"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Loja com CNPJ</span>
         <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHM7L">Comprar agora</a>
       </div>
     </header>
@@ -429,7 +433,7 @@
           <div class="hero-copy">
             <span class="kicker">Principia Sérum Mix-01 · 30 ml</span>
             <h1>Menos brilho, menos cravos e <em>uma pele mais uniforme</em> com um único sérum.</h1>
-            <a class="qprice" href="#oferta"><span class="promo-only"><s>R$ 74,00</s></span> <b>R$ 27,75</b> <span class="qsep">·</span> Frete grátis</a>
+            <a class="qprice" href="#oferta"><b>R$ 27,75</b> <span class="qsep">·</span> Frete grátis <span class="qsep">·</span> Pix ou cartão</a>
             <p class="lead">4 ativos em concentrações reais para quem tem pele oleosa, poros aparentes e manchinhas. Algumas gotas à noite e pronto.</p>
             <ul class="benefits">
               <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Controla a oleosidade e o brilho do dia a dia</li>
@@ -441,16 +445,16 @@
             <div class="offer" id="oferta">
               <div class="offer-top">
                 <span class="bf-tag">Oferta Black Friday</span>
-                <span class="save promo-only">Você economiza R$ 46,25</span>
               </div>
               <div class="price">
-                <span class="from promo-only">No site oficial da marca: <s>R$ 74,00</s> · aqui:</span>
+                <span class="from">Preço final, já com frete grátis:</span>
                 <span class="now"><small>R$</small>27,75</span>
                 <span class="pay">Pix ou cartão · frete grátis</span>
               </div>
               <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHM7L">Quero meu Mix-01 agora
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro · Pix aprovado na hora</p>
+              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Site seguro (SSL) · Pix aprovado na hora</p>
+              <div class="ship"><b>Prazo de entrega</b><span>Entrega em <b>3 a 7 dias úteis</b> após a confirmação do pagamento, para todo o Brasil. Você recebe o <b>código de rastreio</b> por e-mail e WhatsApp.</span></div>
 <div class="paybadges" aria-label="Formas de pagamento"><span class="pix">PIX</span><span class="visa">VISA</span><span class="mc">Mastercard</span><span>Elo</span><span>Boleto</span><small>Pagamento processado pela Perfect Pay, com criptografia</small></div>
               <div class="mini-trust">
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Compra segura</span>
@@ -458,7 +462,7 @@
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>7 dias para desistir</span>
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Loja com CNPJ</span>
               </div>
-              <p class="why why-after"><b>Por que é mais barato?</b> Somos uma loja 100% online, sem os custos de uma farmácia ou loja física, e repassamos essa economia para você.</p>
+              <p class="why why-after"><b>Por que R$ 27,75?</b> A Selune é uma loja independente e 100% online: não pagamos aluguel de loja física e trabalhamos com margem pequena para você experimentar e voltar a comprar. O produto é o mesmo Principia original, lacrado, com lote e validade.</p>
             </div>
           </div>
 
@@ -468,6 +472,7 @@
             </div>
             <div class="thumbs" role="group" aria-label="Fotos do produto"><button type="button" class="thumb" aria-pressed="true" aria-label="Ver foto 1" data-src="%BASE_URL%products/mix-01-hero-mao.webp" data-alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" data-fit=""><img src="%BASE_URL%products/thumb-mao.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 5" data-src="%BASE_URL%products/mix-01-mao-1.webp" data-alt="Frasco do Principia Sérum Mix-01 segurado na mão, ao ar livre" data-fit=""><img src="%BASE_URL%products/thumb-mao-1.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 2" data-src="%BASE_URL%products/mix-01.webp" data-alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" data-fit="contain"><img src="%BASE_URL%products/thumb-mix-01.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 3" data-src="%BASE_URL%products/mix-01-caixa-frasco.webp" data-alt="Caixa e frasco do Mix-01 lado a lado" data-fit="contain"><img src="%BASE_URL%products/thumb-caixa-frasco.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 4" data-src="%BASE_URL%products/mix-01-lateral.webp" data-alt="Lateral da caixa: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten" data-fit="contain"><img src="%BASE_URL%products/thumb-lateral.webp" alt="" width="64" height="64" loading="lazy" /></button></div>
             <div class="seals" aria-label="Informações da embalagem"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Dermatologicamente testado</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Não testado em animais</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem parabenos e sulfatos</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem fragrância e corantes</span></div>
+            <p class="origin"><b>Transparência:</b> a Selune não é a Principia. Somos uma loja independente (CNPJ 56.996.633/0001-56) que revende produtos Principia originais e lacrados.</p>
             <p class="lotline">Quer conferir antes? <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Pode%20me%20mandar%20uma%20foto%20do%20lote%20e%20da%20validade%20do%20Mix-01%3F">Peça no WhatsApp a foto do lote e da validade</a></p>
             <div class="chips"><span class="chip"><b>4</b> ativos em 1</span><span class="chip"><b>30 ml</b></span><span class="chip">Uso noturno</span></div>
           </div>
@@ -568,8 +573,8 @@
             <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span><h3>Empresa com CNPJ</h3><p>CNPJ 56.996.633/0001-56. Você pode consultar no site da Receita Federal.</p></div>
             <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3>Pagamento protegido</h3><p>O pagamento é feito em checkout seguro, por Pix ou cartão. Os dados do seu cartão não passam pela loja.</p></div>
             <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>7 dias para desistir</h3><p>Se não gostar, você pode desistir em até 7 dias após receber, como garante o Código de Defesa do Consumidor.</p></div>
-            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span><h3>Atendimento 24 horas</h3><p>Fale com a gente no WhatsApp <span class="nw">(38) 99965-9366</span>. Seg a sex 9h–19h, sáb 9h–14h.</p></div>
-            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/></svg></span><h3>Garantia de procedência</h3><p>Enviado lacrado, com lote e validade. Chegou violado, vencido ou diferente? Seu dinheiro de volta. <a href="%BASE_URL%politicas.html#procedencia">Ver garantia</a></p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span><h3>Atendimento 24 horas</h3><p>Fale com a gente no WhatsApp <span class="nw">(38) 99965-9366</span>, a qualquer hora, todos os dias.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/></svg></span><h3>Procedência transparente</h3><p>Revendemos Principia original, enviado lacrado, com lote e validade. Peça a foto antes de comprar. Chegou violado, vencido ou diferente? Seu dinheiro de volta. <a href="%BASE_URL%politicas.html#procedencia">Ver garantia</a></p></div>
             <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></span><h3>Trocas e devoluções</h3><p>Defeito ou arrependimento? A devolução é simples e o frete é por nossa conta. <a href="%BASE_URL%politicas.html#trocas">Ver política</a></p></div>
           </div>
         </div>
@@ -577,7 +582,7 @@
 
       <section class="bnr promo-only" aria-label="Oferta Black Friday">
         <div class="wrap">
-          <a href="#oferta"><picture><source media="(max-width: 760px)" srcset="%BASE_URL%banners/black-friday-1080.webp" width="1080" height="1080" /><img src="%BASE_URL%banners/black-friday-1600.webp" alt="Black Friday Selune: Principia Sérum Mix-01 de R$ 74,00 por R$ 27,75, frete grátis, Pix ou cartão" width="1600" height="640" loading="lazy" /></picture></a>
+          <a href="#oferta"><picture><source media="(max-width: 760px)" srcset="%BASE_URL%banners/black-friday-1080.webp" width="1080" height="1080" /><img src="%BASE_URL%banners/black-friday-1600.webp" alt="Black Friday Selune: Principia Sérum Mix-01 por R$ 27,75, frete grátis, Pix ou cartão" width="1600" height="640" loading="lazy" /></picture></a>
         </div>
       </section>
 
@@ -646,7 +651,7 @@
 
     <footer>
       <div class="wrap">
-        <div class="flogo"><img src="%BASE_URL%logo-selune-white.svg" alt="Selune Skincare" width="123" height="40" /><p>Loja online de skincare com produtos originais Principia, frete grátis e atendimento 24 horas no WhatsApp.</p></div>
+        <div class="flogo"><img src="%BASE_URL%logo-selune-white.svg" alt="Selune Skincare" width="123" height="40" /><p>Loja independente de skincare. Revendemos produtos originais Principia, com frete grátis e atendimento 24 horas no WhatsApp.</p></div>
         <span>Selune Oficial · Loja online de skincare · <a href="https://www.instagram.com/seluneoficial.com.br/" target="_blank" rel="noopener">Instagram @seluneoficial.com.br</a></span>
         <span>Atendimento 24 horas no WhatsApp · aberto sempre</span>
         <span>CNPJ 56.996.633/0001-56 · WhatsApp <span class="nw">(38) 99965-9366</span></span>
@@ -657,7 +662,7 @@
     <a class="wa-float" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01" aria-label="Falar no WhatsApp"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
 
     <div class="sticky">
-      <div class="p"><span class="promo-only">Na marca <s>R$ 74,00</s></span><b>R$ 27,75</b></div>
+      <div class="p"><span>Frete grátis</span><b>R$ 27,75</b></div>
       <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHM7L">Comprar agora</a>
     </div>
 
