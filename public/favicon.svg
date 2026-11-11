@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="32" fill="#2b2621" />
-  <text
-    x="32"
-    y="34"
-    text-anchor="middle"
-    dominant-baseline="central"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="34"
-    font-style="italic"
-    fill="#d8bd8f"
-  >S</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="32" fill="#0E7C70"/><mask id="m3034"><rect x="9" y="13" width="42" height="42" fill="#fff"/><circle cx="37.98" cy="28.3" r="16.34" fill="#000"/></mask><circle cx="30" cy="34" r="19" fill="#FFFFFF" mask="url(#m3034)"/><polygon points="43.00,12.00 41.61,17.61 36.00,19.00 41.61,20.39 43.00,26.00 44.39,20.39 50.00,19.00 44.39,17.61" fill="#F2C14E"/></svg>
