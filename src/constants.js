@@ -45,9 +45,7 @@ export const BRAND = {
 
 export const CONTACT = {
   hours: [
-    { day: "Segunda a Sexta", time: "09h às 19h" },
-    { day: "Sábado", time: "09h às 14h" },
-    { day: "Domingo", time: "Fechado" },
+    { day: "Atendimento", time: "24 horas no WhatsApp · aberto sempre" },
   ],
   instagram: "https://www.instagram.com/seluneoficial.com.br/",
   instagramHandle: "@seluneoficial.com.br",
