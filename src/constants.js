@@ -122,7 +122,7 @@ export const PRODUCTS = [
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
-        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+        a: "É só chamar no WhatsApp (38) 99965-9366. O atendimento é 24 horas, todos os dias.",
       },
     ],
   },
@@ -179,7 +179,7 @@ export const PRODUCTS = [
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
-        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+        a: "É só chamar no WhatsApp (38) 99965-9366. O atendimento é 24 horas, todos os dias.",
       },
     ],
   },
@@ -231,7 +231,7 @@ export const PRODUCTS = [
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
-        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+        a: "É só chamar no WhatsApp (38) 99965-9366. O atendimento é 24 horas, todos os dias.",
       },
     ],
   },
@@ -283,7 +283,7 @@ export const PRODUCTS = [
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
-        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+        a: "É só chamar no WhatsApp (38) 99965-9366. O atendimento é 24 horas, todos os dias.",
       },
     ],
   },
@@ -335,7 +335,7 @@ export const PRODUCTS = [
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
-        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+        a: "É só chamar no WhatsApp (38) 99965-9366. O atendimento é 24 horas, todos os dias.",
       },
     ],
   },
@@ -387,7 +387,7 @@ export const PRODUCTS = [
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
-        a: "É só chamar no WhatsApp — respondemos rapidinho.",
+        a: "É só chamar no WhatsApp (38) 99965-9366. O atendimento é 24 horas, todos os dias.",
       },
     ],
   },

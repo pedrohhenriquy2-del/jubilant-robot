@@ -152,15 +152,15 @@ export default function ProductSalesPage({ productId = 1 }) {
               <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
                 <span className="inline-flex items-center gap-1.5">
                   <Lock size={14} className="text-nude-dark" />
-                  Ambiente seguro
+                  Compra segura · 7 dias para desistir
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <BadgeCheck size={14} className="text-nude-dark" />
-                  Pagamento processado em ambiente seguro
+                  Nota fiscal em todo pedido
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Truck size={14} className="text-nude-dark" />
-                  Envio para todo o Brasil
+                  Frete grátis · entrega em 3 a 7 dias úteis
                 </span>
               </div>
             </motion.div>
@@ -274,7 +274,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                 Pronta para cuidar da sua pele?
               </h2>
               <p className="text-cream/70 max-w-md mb-2">
-                {formatPrice(product.price)} — pagamento em ambiente seguro.
+                {formatPrice(product.price)} com frete grátis e nota fiscal.
               </p>
               <div className="flex items-center justify-center gap-2 text-cream/60 mb-6">
                 <QrCode size={16} />

@@ -47,7 +47,7 @@ export default function Products() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Truck size={14} className="text-nude-dark" />
-              Envio para todo o Brasil
+              Frete grátis para todo o Brasil
             </span>
           </div>
         </motion.div>
