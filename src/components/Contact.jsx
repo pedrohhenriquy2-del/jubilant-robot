@@ -26,7 +26,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackWhatsAppClick}
-            className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-gold transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-cream transition-colors"
           >
             <MessageCircle size={20} />
             Fale agora no WhatsApp

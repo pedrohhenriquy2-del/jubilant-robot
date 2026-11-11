@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import InstagramIcon from "./icons/InstagramIcon";
 import {
   BRAND,
-  LOGO,
+  LOGO_WORDMARK_WHITE,
   FOOTER_LINKS,
   CONTACT,
   WHATSAPP_LINK,
@@ -16,14 +16,13 @@ export default function Footer() {
     <footer className="bg-ink text-cream/80 pt-12 pb-24 md:pb-12">
       <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center md:flex-row md:items-center md:justify-between gap-8">
         <div className="flex items-center gap-3">
-          <img
-            src={LOGO}
-            alt={BRAND.name}
-            loading="lazy"
-            className="h-12 w-12 rounded-full object-cover"
-          />
           <div>
-            <p className="font-display text-xl text-cream">{BRAND.name}</p>
+            <img
+              src={LOGO_WORDMARK_WHITE}
+              alt={BRAND.name}
+              loading="lazy"
+              className="h-11 w-auto"
+            />
             <p className="text-sm text-cream/60 mt-1">{BRAND.tagline}</p>
           </div>
         </div>

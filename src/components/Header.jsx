@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ShoppingBag } from "lucide-react";
-import { BRAND, LOGO, NAV_LINKS } from "../constants";
+import { BRAND, LOGO_WORDMARK, NAV_LINKS } from "../constants";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,13 +22,10 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2.5">
           <img
-            src={LOGO}
+            src={LOGO_WORDMARK}
             alt={BRAND.name}
-            className="h-11 w-11 rounded-full object-cover shadow-sm"
+            className="h-10 w-auto"
           />
-          <span className="font-display text-xl tracking-wide text-ink hidden sm:inline">
-            {BRAND.name}
-          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

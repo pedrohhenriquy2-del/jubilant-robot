@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import {
   BRAND,
-  LOGO,
+  LOGO_WORDMARK,
   PRODUCTS,
   buildWhatsAppLink,
   trackWhatsAppClick,
@@ -52,13 +52,10 @@ export default function ProductSalesPage({ productId = 1 }) {
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
           <a href={`${import.meta.env.BASE_URL}loja.html`} className="flex items-center gap-2.5">
             <img
-              src={LOGO}
+              src={LOGO_WORDMARK}
               alt={BRAND.name}
-              className="h-9 w-9 rounded-full object-cover"
+              className="h-9 w-auto"
             />
-            <span className="font-display text-xl text-ink hidden sm:inline">
-              {BRAND.name}
-            </span>
           </a>
           <a
             href={productWhatsAppLink}
@@ -149,7 +146,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                 <QrCode size={18} />
                 <CreditCard size={18} />
                 <Wallet size={18} />
-                <span className="text-xs">Pix, cartão ou PicPay</span>
+                <span className="text-xs">Pix, cartão ou boleto</span>
               </div>
 
               <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
@@ -283,12 +280,12 @@ export default function ProductSalesPage({ productId = 1 }) {
                 <QrCode size={16} />
                 <CreditCard size={16} />
                 <Wallet size={16} />
-                <span className="text-xs">Pix, cartão ou PicPay</span>
+                <span className="text-xs">Pix, cartão ou boleto</span>
               </div>
               <a
                 href={product.paymentLink}
                 onClick={trackProductClick}
-                className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-gold transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-cream transition-colors"
               >
                 <ShoppingBag size={20} />
                 Comprar agora

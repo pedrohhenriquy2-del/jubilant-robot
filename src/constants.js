@@ -9,6 +9,8 @@
 const ASSET_BASE = import.meta.env.BASE_URL;
 
 export const LOGO = `${ASSET_BASE}logo.webp`;
+export const LOGO_WORDMARK = `${ASSET_BASE}logo-selune.svg`;
+export const LOGO_WORDMARK_WHITE = `${ASSET_BASE}logo-selune-white.svg`;
 
 export const WHATSAPP_NUMBER = "5538999659366";
 
@@ -118,7 +120,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -175,7 +177,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -227,7 +229,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -279,7 +281,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -293,7 +295,7 @@ export const PRODUCTS = [
     shortName: "Creme Hidratante CH-02",
     description:
       "5% óleo de semente de girassol, 5% glicerina e 3% manteiga de abacate. Para peles sensíveis, secas a extra secas, com 72 horas de hidratação.",
-    price: 49.0,
+    price: 49.9,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQEQMQ",
     salesPageUrl: `${ASSET_BASE}creme-hidratante-ch-02.html`,
     photo: `${ASSET_BASE}products/creme-hidratante-ch-02.webp`,
@@ -331,7 +333,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -383,7 +385,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou PicPay.",
+        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -546,7 +548,7 @@ export const FAQ_ITEMS = [
   {
     question: "Vocês entregam os produtos para todo o Brasil?",
     answer:
-      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou PicPay direto no checkout do site.",
+      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
   },
   {
     question: "Os produtos servem para qualquer tipo de pele?",

@@ -43,7 +43,7 @@ export default function Products() {
               <QrCode size={14} className="text-nude-dark" />
               <CreditCard size={14} className="text-nude-dark" />
               <Wallet size={14} className="text-nude-dark" />
-              Pix, cartão ou PicPay
+              Pix, cartão ou boleto
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Truck size={14} className="text-nude-dark" />
