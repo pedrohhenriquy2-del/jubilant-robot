@@ -35,7 +35,7 @@
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         handle: HANDLE,
-        items: [{ description: prod.d, price: prod.p, quantity: 1 }],
+        items: [{ description: prod.d + ' · Frete grátis', price: prod.p, quantity: 1 }],
         order_nsu: pedido,
         redirect_url: SITE + '?compra=ok'
       })
