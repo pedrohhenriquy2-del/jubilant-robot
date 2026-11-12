@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import {
   BRAND,
+  LEGAL,
+  CONTACT,
   LOGO_WORDMARK,
   PRODUCTS,
   buildWhatsAppLink,
@@ -305,10 +307,17 @@ export default function ProductSalesPage({ productId = 1 }) {
         </motion.section>
       </main>
 
-      <footer className="border-t border-beige py-8 text-center pb-24 md:pb-8">
+      <footer className="border-t border-beige py-8 text-center pb-24 md:pb-8 px-6 space-y-3">
+        <p className="text-xs text-ink-soft max-w-2xl mx-auto">{LEGAL.about}</p>
+        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1">
+          {LEGAL.policies.map((l) => (
+            <a key={l.href} href={l.href} className="text-xs text-ink-soft underline hover:text-ink">
+              {l.label}
+            </a>
+          ))}
+        </nav>
         <p className="text-xs text-ink-soft">
-          © {new Date().getFullYear()} {BRAND.name}. Todos os direitos
-          reservados.
+          © {new Date().getFullYear()} {BRAND.name} · CNPJ {LEGAL.cnpj} · WhatsApp {CONTACT.whatsappDisplay}
         </p>
       </footer>
 

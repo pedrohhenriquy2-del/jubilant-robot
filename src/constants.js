@@ -43,6 +43,18 @@ export const BRAND = {
   tagline: "Beleza, autocuidado e confiança",
 };
 
+export const LEGAL = {
+  cnpj: "56.996.633/0001-56",
+  about:
+    "Loja independente de skincare. Revendemos produtos Principia originais e lacrados, com nota fiscal em todo pedido.",
+  policies: [
+    { label: "Trocas e devoluções", href: `${ASSET_BASE}politicas.html#trocas` },
+    { label: "Garantia de procedência", href: `${ASSET_BASE}politicas.html#procedencia` },
+    { label: "Entrega", href: `${ASSET_BASE}politicas.html#entrega` },
+    { label: "Privacidade", href: `${ASSET_BASE}politicas.html#privacidade` },
+  ],
+};
+
 export const CONTACT = {
   hours: [
     { day: "Atendimento", time: "24 horas no WhatsApp · aberto sempre" },
@@ -55,7 +67,7 @@ export const CONTACT = {
 export const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
+  { label: "Rotina", href: "#servicos" },
   { label: "Produtos", href: "#produtos" },
     { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
@@ -450,15 +462,15 @@ export const SERVICES = [
   },
   {
     icon: "Heart",
-    title: "Skincare Personalizado",
+    title: "Ajuda para escolher",
     description:
-      "Cada rotina é montada de acordo com o tipo e as necessidades da sua pele.",
+      "Não sabe por onde começar? Chame no WhatsApp e indicamos os produtos certos para o seu tipo de pele.",
   },
   {
     icon: "ShieldCheck",
     title: "Ação Anti-idade",
     description:
-      "Ativos que ajudam a suavizar linhas finas e devolver firmeza à pele ao longo do uso.",
+      "No Kit Avançado, retinol e vitamina C ajudam a suavizar linhas finas com o uso contínuo.",
   },
 ];
 

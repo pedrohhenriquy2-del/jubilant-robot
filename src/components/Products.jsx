@@ -37,7 +37,7 @@ export default function Products() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
             <span className="inline-flex items-center gap-1.5">
               <Lock size={14} className="text-nude-dark" />
-              Pagamento em ambiente seguro
+              Compra segura
             </span>
             <span className="inline-flex items-center gap-1.5">
               <QrCode size={14} className="text-nude-dark" />
@@ -48,6 +48,10 @@ export default function Products() {
             <span className="inline-flex items-center gap-1.5">
               <Truck size={14} className="text-nude-dark" />
               Frete grátis para todo o Brasil
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Lock size={14} className="text-nude-dark" />
+              Nota fiscal · 7 dias para desistir
             </span>
           </div>
         </motion.div>

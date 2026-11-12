@@ -5,6 +5,7 @@ import {
   LOGO_WORDMARK_WHITE,
   FOOTER_LINKS,
   CONTACT,
+  LEGAL,
   WHATSAPP_LINK,
   trackWhatsAppClick,
 } from "../constants";
@@ -62,9 +63,17 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 mt-8 pt-6 border-t border-cream/10 text-center">
+      <div className="mx-auto max-w-6xl px-6 mt-8 pt-6 border-t border-cream/10 text-center space-y-3">
+        <p className="text-xs text-cream/70 max-w-2xl mx-auto">{LEGAL.about}</p>
+        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1">
+          {LEGAL.policies.map((l) => (
+            <a key={l.href} href={l.href} className="text-xs text-cream/70 underline hover:text-cream">
+              {l.label}
+            </a>
+          ))}
+        </nav>
         <p className="text-xs text-cream/50">
-          © {year} {BRAND.name}. Todos os direitos reservados. Brasil.
+          © {year} {BRAND.name} · CNPJ {LEGAL.cnpj} · WhatsApp {CONTACT.whatsappDisplay}
         </p>
       </div>
     </footer>

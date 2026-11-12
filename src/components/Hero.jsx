@@ -20,7 +20,7 @@ export default function Hero() {
           </span>
           <span className="inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-5">
             <Sparkles size={13} />
-            Estética facial & Skincare
+            Loja de skincare · Produtos Principia
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-ink font-semibold">
             Oleosidade, cravos e poros dilatados?{" "}
