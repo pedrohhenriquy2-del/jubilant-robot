@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -19,8 +19,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-artifact@v4
-        with:
-          name: site-previa
-          path: dist
-          retention-days: 3
+      # Guarda o site montado no ramo "previa-dist" (só para conferência; não vai ao ar).
+      - run: |
+          cd dist
+          git init -q
+          git checkout -q -b previa-dist
+          git add -A
+          git -c user.name="previa-bot" -c user.email="previa-bot@users.noreply.github.com" commit -qm "Prévia de ${GITHUB_SHA}"
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" previa-dist
