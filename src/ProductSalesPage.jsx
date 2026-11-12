@@ -148,7 +148,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                 <QrCode size={18} />
                 <CreditCard size={18} />
                 <Wallet size={18} />
-                <span className="text-xs">Pix, cartão ou boleto</span>
+                <span className="text-xs">Pix ou cartão</span>
               </div>
 
               <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
@@ -282,7 +282,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                 <QrCode size={16} />
                 <CreditCard size={16} />
                 <Wallet size={16} />
-                <span className="text-xs">Pix, cartão ou boleto</span>
+                <span className="text-xs">Pix ou cartão</span>
               </div>
               <a
                 href={product.paymentLink}

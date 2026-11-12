@@ -130,7 +130,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
+        a: "O pagamento é feito em ambiente seguro, com Pix ou cartão.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -187,7 +187,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
+        a: "O pagamento é feito em ambiente seguro, com Pix ou cartão.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -239,7 +239,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
+        a: "O pagamento é feito em ambiente seguro, com Pix ou cartão.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -291,7 +291,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
+        a: "O pagamento é feito em ambiente seguro, com Pix ou cartão.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -343,7 +343,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
+        a: "O pagamento é feito em ambiente seguro, com Pix ou cartão.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -395,7 +395,7 @@ export const PRODUCTS = [
       },
       {
         q: "Como funciona o pagamento?",
-        a: "O pagamento é feito em ambiente seguro, com cartão, Pix ou boleto.",
+        a: "O pagamento é feito em ambiente seguro, com Pix ou cartão.",
       },
       {
         q: "Tenho dúvidas antes de comprar, como falo com vocês?",
@@ -558,7 +558,7 @@ export const FAQ_ITEMS = [
   {
     question: "Vocês entregam os produtos para todo o Brasil?",
     answer:
-      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por cartão, Pix ou boleto direto no checkout do site.",
+      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por Pix ou cartão direto no checkout do site.",
   },
   {
     question: "Os produtos servem para qualquer tipo de pele?",

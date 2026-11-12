@@ -2,7 +2,7 @@
    InfinitePay e leva o cliente para lá. Se a InfinitePay não responder,
    segue para o checkout antigo (Perfect Pay), então nenhuma venda se perde. */
 (function () {
-  var HANDLE = 'pedro-henrique-pa6';
+  var HANDLE = 'pedro-henrique-ps6';
   var SITE = 'https://selune-oficial.com.br/';
   var PRODUTOS = {
     PPU38CQHM7L: { d: 'Principia Sérum Mix-01 · 30 ml', p: 4990 },
