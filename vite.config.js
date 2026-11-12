@@ -26,6 +26,8 @@ export default defineConfig({
         loja: resolve(__dirname, 'loja.html'),
         // Trocas, devoluções, procedência e privacidade
         politicas: resolve(__dirname, 'politicas.html'),
+        // Página de links para a bio do Instagram/TikTok
+        links: resolve(__dirname, 'links.html'),
       },
     },
   },
