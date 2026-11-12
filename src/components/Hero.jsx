@@ -79,7 +79,6 @@ export default function Hero() {
                 aria-label={`Foto ${i + 1} de ${slides.length}: ${s.alt}`}
               >
                 <picture>
-                  <source media="(max-width: 767px)" srcSet={`${base}${s.mob}?v=3790`} width="1080" height="1080" />
                   <img
                     src={`${base}${s.wide}?v=3790`}
                     alt={s.alt}
