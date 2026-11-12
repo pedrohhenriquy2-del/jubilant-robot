@@ -1,148 +1,110 @@
-import { motion } from "framer-motion";
-import {
-  ShoppingBag,
-  Lock,
-  QrCode,
-  CreditCard,
-  Wallet,
-  Truck,
-  MessageCircle,
-} from "lucide-react";
-import {
-  PRODUCTS,
-  trackProductClick,
-  trackWhatsAppClick,
-  formatPrice,
-  buildWhatsAppLink,
-} from "../constants";
+import { useState } from "react";
+import { Truck, ShieldCheck, BadgeCheck } from "lucide-react";
+import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
+
+// Filtros por categoria, como nas grandes lojas de beleza.
+const CATEGORIES = ["Todos", ...Array.from(new Set(PRODUCTS.map((p) => p.category)))];
 
 export default function Products() {
+  const [cat, setCat] = useState("Todos");
+  const list = cat === "Todos" ? PRODUCTS : PRODUCTS.filter((p) => p.category === cat);
+
   return (
-    <section id="produtos" className="py-10 md:py-20 bg-cream">
+    <section id="produtos" className="py-8 md:py-14 bg-cream">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-xl mx-auto mb-8 md:mb-12"
-        >
-          <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
-            Produtos
-          </span>
-          <h2 className="text-2xl md:text-4xl text-ink font-semibold mb-2">
-            Nossos produtos
-          </h2>
-
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs text-ink-soft">
-            <span className="inline-flex items-center gap-1.5">
-              <Lock size={14} className="text-nude-dark" />
-              Compra segura
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <QrCode size={14} className="text-nude-dark" />
-              <CreditCard size={14} className="text-nude-dark" />
-              <Wallet size={14} className="text-nude-dark" />
-              Pix ou cartão
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <Truck size={14} className="text-nude-dark" />
-              Frete grátis para todo o Brasil
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <Lock size={14} className="text-nude-dark" />
-              Nota fiscal · 7 dias para desistir
-            </span>
+        <div className="flex items-end justify-between gap-4 mb-4 md:mb-6">
+          <div>
+            <h2 className="text-xl md:text-3xl text-ink font-bold tracking-tight">
+              Skincare Principia
+            </h2>
+            <p className="text-sm text-ink-soft mt-1">
+              {PRODUCTS.length} produtos originais · frete grátis
+            </p>
           </div>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-          {PRODUCTS.map((product, i) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              className="relative rounded-2xl bg-offwhite border border-beige overflow-hidden flex flex-col text-center items-center"
+        {/* Filtros */}
+        <div
+          role="tablist"
+          aria-label="Filtrar por categoria"
+          className="-mx-4 px-4 md:mx-0 md:px-0 flex gap-2 overflow-x-auto pb-1 mb-5 md:mb-8 [scrollbar-width:none]"
+        >
+          {CATEGORIES.map((c) => (
+            <button
+              key={c}
+              type="button"
+              role="tab"
+              aria-selected={cat === c}
+              onClick={() => setCat(c)}
+              className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                cat === c
+                  ? "bg-ink text-cream border-ink"
+                  : "bg-white text-ink border-beige-dark hover:border-ink"
+              }`}
             >
-              {product.badge && (
-                <span className="absolute top-2 left-2 md:top-4 md:left-4 z-10 rounded-full bg-nude-dark px-2 py-0.5 md:px-3 md:py-1 text-[9px] md:text-[11px] uppercase tracking-wide text-cream font-medium">
-                  {product.badge}
-                </span>
-              )}
-              {product.video ? (
-                <div className="aspect-square w-full bg-white flex items-center justify-center p-6">
-                  <video
-                    src={product.video}
-                    poster={product.photo}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              ) : product.photo ? (
-                <div className="aspect-square w-full bg-white flex items-center justify-center p-3 md:p-6">
+              {c}
+            </button>
+          ))}
+        </div>
+
+        {/* Grade de produtos */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-10">
+          {list.map((product) => {
+            const href = product.salesPageUrl || product.paymentLink;
+            return (
+              <article key={product.id} className="group flex flex-col">
+                <a href={href} className="relative block aspect-square w-full bg-white border border-beige rounded-md overflow-hidden">
+                  {product.badge && (
+                    <span className="absolute top-2 left-2 z-10 bg-ink px-2 py-0.5 text-[10px] md:text-[11px] uppercase tracking-wide text-cream font-semibold">
+                      {product.badge}
+                    </span>
+                  )}
                   <img
                     src={product.photo}
                     alt={product.name}
                     loading="lazy"
-                    className="max-w-full max-h-full object-contain"
+                    className="w-full h-full object-contain p-3 md:p-5 transition-transform duration-300 group-hover:scale-[1.03]"
                   />
-                </div>
-              ) : (
-                // TROCAR: substituir pelo placeholder pela foto real do produto
-                <div className="aspect-square w-full bg-gradient-to-br from-beige to-beige-dark/70 flex items-center justify-center">
-                  <span className="text-ink-soft/50 text-xs text-center px-6">
-                    [ Foto do produto ]
-                  </span>
-                </div>
-              )}
-              <div className="p-3 md:p-6 flex flex-col items-center flex-1 w-full">
-                <h3 className="text-sm md:text-base font-medium text-ink mb-1 md:mb-2 leading-snug line-clamp-2">
-                  {product.name}
-                </h3>
-                {product.description && (
-                  <p className="hidden md:block text-sm text-ink-soft mb-4">
-                    {product.description}
+                </a>
+                <div className="pt-3 flex flex-col flex-1">
+                  <p className="text-[11px] md:text-xs font-bold uppercase tracking-[0.12em] text-ink">
+                    Principia
                   </p>
-                )}
-                {product.video && product.photo && (
-                  <img
-                    src={product.photo}
-                    alt={product.name}
-                    loading="lazy"
-                    className="w-full rounded-xl mb-5 max-h-72 object-contain"
-                  />
-                )}
-                <div className="mb-3 md:mb-5 mt-auto">
-                  <p className="text-lg md:text-xl font-semibold text-ink">
+                  <a href={href} className="mt-1 text-sm md:text-[15px] text-ink leading-snug line-clamp-2 hover:underline">
+                    {product.shortName}
+                  </a>
+                  <p className="mt-1 text-xs text-ink-soft line-clamp-1">{product.tagline}</p>
+                  <p className="mt-2 text-base md:text-lg font-bold text-ink">
                     {formatPrice(product.price)}
                   </p>
+                  <p className="text-[11px] md:text-xs text-ink-soft">Frete grátis</p>
+                  <a
+                    href={href}
+                    onClick={trackProductClick}
+                    className="mt-3 inline-flex items-center justify-center rounded-md bg-ink px-3 py-2.5 text-sm font-semibold text-cream hover:bg-gold transition-colors"
+                  >
+                    Comprar
+                  </a>
                 </div>
-                <a
-                  href={product.salesPageUrl || product.paymentLink}
-                  onClick={trackProductClick}
-                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-nude-dark px-4 md:px-6 py-2.5 md:py-3 text-sm font-medium text-cream hover:bg-gold transition-colors"
-                >
-                  <ShoppingBag size={16} />
-                  Comprar
-                </a>
-                <a
-                  href={buildWhatsAppLink(
-                    `Olá! Tenho uma dúvida sobre o ${product.name} 🌿`
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={trackWhatsAppClick}
-                  className="mt-3 hidden md:inline-flex items-center gap-1.5 text-xs text-ink-soft hover:text-nude-dark transition-colors"
-                >
-                  <MessageCircle size={13} />
-                  Dúvida antes de comprar? Fale no WhatsApp
-                </a>
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Vantagens */}
+        <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 border-t border-beige pt-6 md:pt-8">
+          {[
+            { Icon: Truck, t: "Frete grátis", d: "Para todo o Brasil, em 3 a 7 dias úteis" },
+            { Icon: BadgeCheck, t: "Originais com nota fiscal", d: "Produtos Principia lacrados" },
+            { Icon: ShieldCheck, t: "Compra segura", d: "Pix ou cartão · 7 dias para desistir" },
+          ].map(({ Icon, t, d }) => (
+            <div key={t} className="flex items-center gap-3">
+              <Icon size={22} className="text-ink shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-ink">{t}</p>
+                <p className="text-xs text-ink-soft">{d}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

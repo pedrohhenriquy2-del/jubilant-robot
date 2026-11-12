@@ -85,6 +85,8 @@ export function trackProductClick() {
 export const PRODUCTS = [
   {
     id: 1,
+    category: "Tratamento",
+    tagline: "Sérum para pele oleosa · 30 ml",
     name: "Principia Sérum Mix-01 (Niacinamida + Ácido Glicólico)",
     shortName: "Mix-01",
     description:
@@ -140,6 +142,8 @@ export const PRODUCTS = [
   },
   {
     id: 2,
+    category: "Kits",
+    tagline: "Rotina completa com 5 produtos",
     name: "Kit Avançado VC + RN com GL-01",
     shortName: "Kit Avançado",
     description:
@@ -197,6 +201,8 @@ export const PRODUCTS = [
   },
   {
     id: 3,
+    category: "Proteção solar",
+    tagline: "FPS 60 · toque seco · 40 ml",
     name: "Principia Protetor Solar Facial PS-01 FPS 60",
     shortName: "Protetor Solar PS-01",
     description:
@@ -249,6 +255,8 @@ export const PRODUCTS = [
   },
   {
     id: 4,
+    category: "Limpeza",
+    tagline: "Gel de limpeza facial · 200 g",
     name: "Principia Gel de Limpeza Facial GL-01 200g",
     shortName: "Gel de Limpeza GL-01",
     description:
@@ -301,6 +309,8 @@ export const PRODUCTS = [
   },
   {
     id: 5,
+    category: "Corpo",
+    tagline: "Hidratação de 72 horas · 454 g",
     name: "Principia Creme Hidratante Corporal CH-02 454g",
     shortName: "Creme Hidratante CH-02",
     description:
@@ -353,6 +363,8 @@ export const PRODUCTS = [
   },
   {
     id: 6,
+    category: "Tratamento",
+    tagline: "Tônico renovador · 120 ml",
     name: "Tônico Principia AL-7 (7% Ácido Lático + 1% Ácido Salicílico) 120ml",
     shortName: "Tônico AL-7",
     description:
