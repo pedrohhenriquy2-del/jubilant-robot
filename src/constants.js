@@ -89,7 +89,7 @@ export const PRODUCTS = [
     shortName: "Mix-01",
     description:
       "Acne, oleosidade, textura irregular, poros dilatados e perda de viço.",
-    price: 49.9,
+    price: 37.89,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQHM7L",
     salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.webp`,

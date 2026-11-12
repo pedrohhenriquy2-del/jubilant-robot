@@ -5,7 +5,7 @@
   var HANDLE = 'seluneoficial';
   var SITE = 'https://selune-oficial.com.br/';
   var PRODUTOS = {
-    PPU38CQHM7L: { d: 'Principia Sérum Mix-01 · 30 ml', p: 4990 },
+    PPU38CQHM7L: { d: 'Principia Sérum Mix-01 · 30 ml', p: 3789 },
     PPU38CQE85U: { d: 'Kit Avançado VC + RN com GL-01', p: 14550 },
     PPU38CQE87N: { d: 'Principia Protetor Solar Facial PS-01 FPS 60', p: 2990 },
     PPU38CQE87U: { d: 'Principia Gel de Limpeza Facial GL-01 · 200 g', p: 4550 },
