@@ -28,7 +28,7 @@
     </script>
     <!-- End Meta Pixel Code -->
     <style>
-      :root { --bg:#FAF7F2; --soft:#F2ECE4; --card:#FFFFFF; --ink:#2A2420; --muted:#6B5F57; --accent:#8C6A4E; --accent-dk:#6F523B; --line:#E6DDD2; --gold:#C9A15A; --ok:#2F6B4F; }
+      :root { --bg:#FAFAF8; --soft:#F3F2EF; --card:#FFFFFF; --ink:#1C1B19; --muted:#6A665F; --accent:#5C5852; --accent-dk:#1C1B19; --line:#E4E1DC; --gold:#A8A39C; --ok:#1C1B19; }
       * { box-sizing:border-box; }
       body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 Inter, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; -webkit-font-smoothing:antialiased; }
       .wrap { max-width:460px; margin:0 auto; padding:28px max(16px, env(safe-area-inset-right,0px)) 40px max(16px, env(safe-area-inset-left,0px)); display:flex; flex-direction:column; gap:14px; }
@@ -38,7 +38,7 @@
       .sub { color:var(--muted); margin:0; font-size:.92rem; }
       .trust { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin-top:6px; }
       .trust span { background:var(--soft); border:1px solid var(--line); border-radius:999px; padding:5px 10px; font-size:.76rem; font-weight:600; color:var(--accent-dk); }
-      .hero { background:var(--card); border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:0 10px 30px rgba(42,36,32,.08); }
+      .hero { background:var(--card); border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:0 10px 30px rgba(28,27,25,.08); }
       .hero .tag { display:block; background:var(--ink); color:#fff; text-align:center; font-size:.75rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:7px; }
       .hero .body { padding:16px; display:flex; flex-direction:column; gap:10px; }
       .hero .top { display:flex; gap:14px; align-items:center; }
@@ -53,7 +53,7 @@
       .btn:active { transform:scale(.98); }
       .btn:hover { background:var(--ink); }
       .pulse { animation:pulse 2.2s ease-in-out infinite; }
-      @keyframes pulse { 0%,100% { box-shadow:0 0 0 0 rgba(111,82,59,.45); } 50% { box-shadow:0 0 0 8px rgba(111,82,59,0); } }
+      @keyframes pulse { 0%,100% { box-shadow:0 0 0 0 rgba(28,27,25,.45); } 50% { box-shadow:0 0 0 8px rgba(28,27,25,0); } }
       @media (prefers-reduced-motion: reduce) { .pulse { animation:none; } }
       .note { text-align:center; font-size:.76rem; color:var(--muted); margin:0; }
       h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:10px 0 0; text-align:center; }
@@ -65,7 +65,7 @@
       .item .go { background:var(--accent-dk); color:#fff; border-radius:10px; padding:9px 12px; font-weight:700; font-size:.85rem; white-space:nowrap; }
       .wa { background:#fff; color:var(--ink); border:1.5px solid var(--ink); }
       .wa:hover { background:var(--soft); }
-      .site { background:transparent; color:var(--accent-dk); border:1.5px dashed var(--accent); }
+      .site { background:transparent; color:var(--muted); border:1.5px solid var(--line); }
       footer { text-align:center; font-size:.74rem; color:var(--muted); margin-top:8px; display:flex; flex-direction:column; gap:4px; }
       footer a { color:var(--muted); }
     </style>
@@ -77,14 +77,14 @@
         <h1>Skincare Principia original, direto na sua casa</h1>
         <p class="sub">Loja oficial Selune · CNPJ 56.996.633/0001-56</p>
         <div class="trust">
-          <span>🚚 Frete grátis</span>
-          <span>🧾 Nota fiscal</span>
-          <span>↩️ 7 dias para desistir</span>
+          <span>Frete grátis</span>
+          <span>Nota fiscal</span>
+          <span>7 dias para desistir</span>
         </div>
       </header>
 
       <section class="hero" aria-label="Destaque">
-        <span class="tag">⭐ Destaque da loja · pele oleosa</span>
+        <span class="tag">Destaque da loja · pele oleosa</span>
         <div class="body">
           <div class="top">
             <img src="./products/mix-01.webp" alt="Principia Sérum Mix-01 30 ml" width="112" height="112" />
@@ -99,7 +99,7 @@
             <small>frete grátis</small>
           </div>
           <a class="btn pulse buy" href="https://go.perfectpay.com.br/PPU38CQHM7L" data-name="Principia Sérum Mix-01" data-value="49.90">Comprar agora no Pix ou cartão</a>
-          <p class="note">Pagamento seguro pela InfinitePay · entrega em 3 a 7 dias úteis<br>📲 Ao finalizar, chega um código no seu WhatsApp para confirmar a compra.</p>
+          <p class="note">Pagamento seguro pela InfinitePay · entrega em 3 a 7 dias úteis<br>Ao finalizar, chega um código no seu WhatsApp para confirmar a compra.</p>
         </div>
       </section>
 
@@ -131,7 +131,7 @@
         <span class="go">R$ 49,90</span>
       </a>
 
-      <a class="btn wa" id="wa" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20produtos%20%F0%9F%8C%BF" target="_blank" rel="noopener">💬 Tirar dúvidas no WhatsApp</a>
+      <a class="btn wa" id="wa" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20produtos%20%F0%9F%8C%BF" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
       <a class="btn site" href="./">Ver o site completo da Selune</a>
 
       <footer>

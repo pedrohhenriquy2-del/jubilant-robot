@@ -4,17 +4,17 @@
   --font-display: "Lora", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  /* Paleta neutra Selune: off-white, areia, linho, café e bronze */
-  --color-cream: #faf7f2;
-  --color-offwhite: #f2ece4;
-  --color-beige: #e9dfd2;
-  --color-beige-dark: #d9cdbe;
-  --color-nude: #8c6a4e;
-  --color-nude-dark: #6f523b;
-  --color-gold: #2a2420;
-  --color-gold-light: #e8d6bf;
-  --color-ink: #2a2420;
-  --color-ink-soft: #6b5f57;
+  /* Paleta neutra Selune: off-white, pedra e grafite */
+  --color-cream: #FAFAF8;
+  --color-offwhite: #F3F2EF;
+  --color-beige: #E9E7E3;
+  --color-beige-dark: #D6D2CC;
+  --color-nude: #5C5852;
+  --color-nude-dark: #1C1B19;
+  --color-gold: #3A3835;
+  --color-gold-light: #E9E7E3;
+  --color-ink: #1C1B19;
+  --color-ink-soft: #6A665F;
 }
 
 html {
