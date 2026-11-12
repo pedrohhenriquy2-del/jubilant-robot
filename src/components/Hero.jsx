@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative pt-24 pb-10 md:pt-36 md:pb-20 bg-gradient-to-b from-offwhite to-cream overflow-hidden"
+      className="relative pt-8 pb-8 md:pt-16 md:pb-20 bg-gradient-to-b from-offwhite to-cream overflow-hidden"
     >
       <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-10 items-center">
         <motion.div
@@ -15,10 +15,7 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="text-center flex flex-col items-center"
         >
-          <span className="block font-display text-sm tracking-[0.2em] text-ink mb-2">
-            SELUNE OFICIAL
-          </span>
-          <span className="inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-5">
+          <span className="inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
             <Sparkles size={13} />
             Loja de skincare · Produtos Principia
           </span>
@@ -39,7 +36,7 @@ export default function Hero() {
               <ShoppingBag size={17} />
               Ver produtos
             </a>
-            <div className="inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
+            <div className="hidden md:inline-flex items-center gap-2 rounded-full bg-beige/60 px-4 py-2">
               <Heart size={15} className="text-nude-dark" />
               <span className="text-xs md:text-sm text-ink-soft font-medium">
                 {TRUST_BADGE}

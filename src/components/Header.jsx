@@ -15,11 +15,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-cream/95 backdrop-blur shadow-sm" : "bg-transparent"
+      className={`sticky top-0 inset-x-0 z-50 transition-shadow duration-300 bg-cream/95 backdrop-blur border-b border-beige ${
+        scrolled ? "shadow-sm" : ""
       }`}
     >
-      <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+      <div className="mx-auto max-w-6xl px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2.5">
           <img
             src={LOGO_WORDMARK}
