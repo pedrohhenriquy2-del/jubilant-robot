@@ -109,7 +109,7 @@ export default function Hero() {
             <ChevronRight size={22} />
           </button>
 
-          <div className="absolute bottom-1 inset-x-0 flex justify-center gap-1">
+          <div className="flex justify-center gap-1 bg-white md:bg-transparent md:absolute md:bottom-1 md:inset-x-0">
             {slides.map((s, i) => (
               <button
                 key={s.wide}
@@ -121,7 +121,7 @@ export default function Hero() {
               >
                 <span
                   className={`block h-2.5 rounded-full transition-all ${
-                    atual === i ? "w-6 bg-white" : "w-2.5 bg-white/50 group-hover:bg-white/80"
+                    atual === i ? "w-6 bg-ink md:bg-white" : "w-2.5 bg-ink/25 md:bg-white/50 group-hover:bg-ink/50 md:group-hover:bg-white/80"
                   }`}
                 />
               </button>
