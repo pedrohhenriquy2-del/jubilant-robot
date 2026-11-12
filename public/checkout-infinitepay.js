@@ -70,13 +70,13 @@
     box.setAttribute('role', 'dialog');
     box.setAttribute('aria-modal', 'true');
     box.setAttribute('aria-label', 'Pagamento recebido');
-    box.style.cssText = 'width:100%;max-width:420px;background:#FAFAF8;color:#1C1B19;padding:26px 22px 20px;border-radius:20px;font:15px/1.55 Inter,system-ui,sans-serif;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.3)';
+    box.style.cssText = 'width:100%;max-width:420px;background:#FAFAF8;color:#1C1B19;padding:26px 22px 20px;border-radius:20px;font:15px/1.55 Montserrat,system-ui,sans-serif;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.3)';
     box.innerHTML = '<div style="width:52px;height:52px;margin:0 auto;border-radius:999px;background:#1C1B19;color:#fff;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>' +
       '<h2 style="margin:10px 0 6px;font-size:1.3rem">Pagamento recebido!</h2>' +
       '<p style="margin:0 0 6px;color:#6A665F">Obrigada por comprar na Selune. Seu pedido já está com a gente.</p>' +
       '<p style="margin:0 0 16px;color:#6A665F">Vamos te avisar pelo <strong style="color:#1C1B19">WhatsApp</strong> quando ele for enviado, com o código de rastreio.</p>' +
       (recibo ? '<a href="' + recibo + '" target="_blank" rel="noopener" style="display:block;margin-bottom:10px;color:#1C1B19;font-weight:600">Ver comprovante</a>' : '') +
-      '<button type="button" style="width:100%;min-height:50px;border:0;border-radius:14px;background:#2F5D5A;color:#fff;font:700 1rem Inter,system-ui,sans-serif;cursor:pointer">Continuar no site</button>';
+      '<button type="button" style="width:100%;min-height:50px;border:0;border-radius:14px;background:#2F5D5A;color:#fff;font:700 1rem Montserrat,system-ui,sans-serif;cursor:pointer">Continuar no site</button>';
     fundo.appendChild(box);
     function fechar() { if (fundo.parentNode) fundo.parentNode.removeChild(fundo); }
     box.querySelector('button').addEventListener('click', fechar);
