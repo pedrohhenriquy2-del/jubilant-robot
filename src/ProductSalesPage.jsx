@@ -81,7 +81,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               transition={{ duration: 0.6 }}
               className="relative order-first md:order-last"
             >
-              <div className="aspect-square w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-10">
+              <div className="aspect-square w-full rounded-[2rem] bg-white border border-beige flex items-center justify-center shadow-lg shadow-ink/5 overflow-hidden p-10">
                 {product.video ? (
                   <video
                     src={product.video}
@@ -99,7 +99,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                   />
                 )}
               </div>
-              <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-2xl bg-gold-light/70 -z-10" />
+              <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-2xl bg-offwhite -z-10" />
             </motion.div>
 
             <motion.div

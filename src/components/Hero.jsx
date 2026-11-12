@@ -57,14 +57,14 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="relative"
         >
-          <div className="aspect-[4/5] w-full rounded-[2rem] bg-gradient-to-br from-beige via-beige-dark to-nude/60 flex items-center justify-center shadow-xl overflow-hidden p-3">
+          <div className="aspect-[4/5] w-full rounded-[2rem] bg-white border border-beige flex items-center justify-center shadow-lg shadow-ink/5 overflow-hidden p-3">
             <img
               src={`${import.meta.env.BASE_URL}hero-produto.webp`}
               alt="Principia Sérum Mix-01"
               className="w-full h-full object-contain rounded-2xl"
             />
           </div>
-          <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-2xl bg-gold-light/70 -z-10" />
+          <div className="absolute -bottom-6 -left-6 h-28 w-28 rounded-2xl bg-offwhite -z-10" />
         </motion.div>
       </div>
     </section>
