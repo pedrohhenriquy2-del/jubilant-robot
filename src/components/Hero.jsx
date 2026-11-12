@@ -79,9 +79,9 @@ export default function Hero() {
                 aria-label={`Foto ${i + 1} de ${slides.length}: ${s.alt}`}
               >
                 <picture>
-                  <source media="(max-width: 767px)" srcSet={`${base}${s.mob}?v=3789`} width="1080" height="1080" />
+                  <source media="(max-width: 767px)" srcSet={`${base}${s.mob}?v=3790`} width="1080" height="1080" />
                   <img
-                    src={`${base}${s.wide}?v=3789`}
+                    src={`${base}${s.wide}?v=3790`}
                     alt={s.alt}
                     width="1600"
                     height="640"
@@ -110,7 +110,7 @@ export default function Hero() {
             <ChevronRight size={22} />
           </button>
 
-          <div className="absolute bottom-3 inset-x-0 flex justify-center gap-2">
+          <div className="absolute bottom-1 inset-x-0 flex justify-center gap-1">
             {slides.map((s, i) => (
               <button
                 key={s.wide}
@@ -118,10 +118,14 @@ export default function Hero() {
                 onClick={() => irPara(i)}
                 aria-label={`Ver foto ${i + 1}`}
                 aria-current={atual === i}
-                className={`h-2.5 rounded-full transition-all ${
-                  atual === i ? "w-6 bg-white" : "w-2.5 bg-white/50 hover:bg-white/80"
-                }`}
-              />
+                className="group flex h-8 items-center px-1"
+              >
+                <span
+                  className={`block h-2.5 rounded-full transition-all ${
+                    atual === i ? "w-6 bg-white" : "w-2.5 bg-white/50 group-hover:bg-white/80"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
