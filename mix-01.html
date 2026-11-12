@@ -482,15 +482,15 @@
               <div class="price">
                 <span class="nfe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Nota fiscal eletrônica em todo pedido</span>
                 <span class="cmp">Nas grandes farmácias: <s>R$ 74,00</s></span>
-                <span class="from">Aqui, preço final já com frete grátis:</span>
-                <span class="now"><small>R$</small>37,89</span>
+                <span class="from" id="price-from">Aqui, preço final já com frete grátis:</span>
+                <span class="now"><small>R$</small><span id="price-now">37,89</span></span>
                 <span class="pay">Pix ou cartão · frete grátis</span>
               </div>
               <fieldset class="qty" id="qtd">
                 <legend>Escolha quantos frascos:</legend>
-                <label class="q"><input type="radio" name="qtd" value="1" data-key="" data-value="37.89" data-label="Quero meu Mix-01 agora" checked><span class="dot"></span><span class="qi"><span class="qn">1 frasco</span><span class="qs">Para começar a rotina</span></span><span class="qp"><b>R$ 37,89</b></span></label>
-                <label class="q"><span class="qb">Mais vantajoso</span><input type="radio" name="qtd" value="2" data-key="MIX01X2" data-value="69.90" data-label="Quero 2 frascos por R$ 69,90"><span class="dot"></span><span class="qi"><span class="qn">2 frascos</span><span class="qs">R$ 34,95 cada · <b>economize R$ 5,88</b></span></span><span class="qp"><s>R$ 75,78</s><b>R$ 69,90</b></span></label>
-                <label class="q"><span class="qb">Melhor preço</span><input type="radio" name="qtd" value="3" data-key="MIX01X3" data-value="99.90" data-label="Quero 3 frascos por R$ 99,90"><span class="dot"></span><span class="qi"><span class="qn">3 frascos</span><span class="qs">R$ 33,30 cada · <b>economize R$ 13,77</b></span></span><span class="qp"><s>R$ 113,67</s><b>R$ 99,90</b></span></label>
+                <label class="q"><input type="radio" name="qtd" value="1" data-key="" data-value="37.89" data-label="Quero meu Mix-01 agora" data-now="37,89" data-from="Aqui, preço final já com frete grátis:" checked><span class="dot"></span><span class="qi"><span class="qn">1 frasco</span><span class="qs">Para começar a rotina</span></span><span class="qp"><b>R$ 37,89</b></span></label>
+                <label class="q"><span class="qb">Mais vantajoso</span><input type="radio" name="qtd" value="2" data-key="MIX01X2" data-value="69.90" data-label="Quero 2 por R$ 69,90" data-now="69,90" data-from="Kit com 2 frascos, frete grátis:"><span class="dot"></span><span class="qi"><span class="qn">2 frascos</span><span class="qs">R$ 34,95 cada · <b>economize R$ 5,88</b></span></span><span class="qp"><s>R$ 75,78</s><b>R$ 69,90</b></span></label>
+                <label class="q"><span class="qb">Melhor preço</span><input type="radio" name="qtd" value="3" data-key="MIX01X3" data-value="99.90" data-label="Quero 3 por R$ 99,90" data-now="99,90" data-from="Kit com 3 frascos, frete grátis:"><span class="dot"></span><span class="qi"><span class="qn">3 frascos</span><span class="qs">R$ 33,30 cada · <b>economize R$ 13,77</b></span></span><span class="qp"><s>R$ 113,67</s><b>R$ 99,90</b></span></label>
               </fieldset>
               <a class="btn btn-lg buy" id="buy-main" data-value="37.89" href="https://go.perfectpay.com.br/PPU38CQHM7L"><span id="buy-label">Quero meu Mix-01 agora</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -788,6 +788,8 @@
         document.querySelectorAll('#qtd input').forEach(function (r) {
           r.addEventListener('change', function () {
             lab.textContent = r.dataset.label;
+            document.getElementById('price-now').textContent = r.dataset.now;
+            document.getElementById('price-from').textContent = r.dataset.from;
             btn.dataset.value = r.dataset.value;
             if (r.dataset.key) btn.dataset.ipay = r.dataset.key; else delete btn.dataset.ipay;
           });
