@@ -67,7 +67,7 @@ export default function Footer() {
         <p className="text-xs text-cream/70 max-w-2xl mx-auto">{LEGAL.about}</p>
         <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1">
           {LEGAL.policies.map((l) => (
-            <a key={l.href} href={l.href} className="text-xs text-cream/70 underline hover:text-cream">
+            <a key={l.href} href={l.href} className="inline-block py-2 text-xs text-cream/70 underline hover:text-cream">
               {l.label}
             </a>
           ))}

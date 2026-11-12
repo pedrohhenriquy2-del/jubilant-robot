@@ -58,7 +58,7 @@ export default function Products() {
               <article key={product.id} className="group flex flex-col">
                 <a href={href} className="relative block aspect-square w-full bg-white border border-beige rounded-md overflow-hidden">
                   {product.badge && (
-                    <span className="absolute top-2 left-2 z-10 bg-ink px-2 py-0.5 text-[10px] md:text-[11px] uppercase tracking-wide text-cream font-semibold">
+                    <span className="absolute top-2 left-2 z-10 bg-ink px-2 py-0.5 text-[11px] uppercase tracking-wide text-cream font-semibold">
                       {product.badge}
                     </span>
                   )}

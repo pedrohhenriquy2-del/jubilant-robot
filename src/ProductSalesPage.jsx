@@ -95,7 +95,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                   <img
                     src={product.photo}
                     alt={product.name}
-                    className="max-w-full max-h-full object-contain drop-shadow-lg"
+                    className="max-w-full max-h-full object-contain mix-blend-multiply"
                   />
                 )}
               </div>
@@ -140,8 +140,8 @@ export default function ProductSalesPage({ productId = 1 }) {
                 onClick={trackWhatsAppClick}
                 className="mt-3 inline-flex items-center gap-2 text-sm text-ink-soft hover:text-nude-dark transition-colors"
               >
-                <MessageCircle size={15} />
-                Prefiro tirar dúvidas no WhatsApp antes
+                <MessageCircle size={15} className="shrink-0" />
+                <span>Prefiro tirar dúvidas no WhatsApp</span>
               </a>
 
               <div className="mt-5 flex items-center justify-center gap-2 text-ink-soft">
@@ -301,10 +301,10 @@ export default function ProductSalesPage({ productId = 1 }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackWhatsAppClick}
-                className="mt-4 inline-flex items-center gap-2 text-sm text-cream/70 hover:text-cream transition-colors"
+                className="mt-4 inline-flex items-center justify-center gap-2 text-sm text-cream/70 hover:text-cream transition-colors"
               >
-                <MessageCircle size={16} />
-                Prefiro tirar dúvidas no WhatsApp antes
+                <MessageCircle size={16} className="shrink-0" />
+                <span>Prefiro tirar dúvidas no WhatsApp</span>
               </a>
             </div>
           </div>
@@ -315,7 +315,7 @@ export default function ProductSalesPage({ productId = 1 }) {
         <p className="text-xs text-ink-soft max-w-2xl mx-auto">{LEGAL.about}</p>
         <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1">
           {LEGAL.policies.map((l) => (
-            <a key={l.href} href={l.href} className="text-xs text-ink-soft underline hover:text-ink">
+            <a key={l.href} href={l.href} className="inline-block py-2 text-xs text-ink-soft underline hover:text-ink">
               {l.label}
             </a>
           ))}

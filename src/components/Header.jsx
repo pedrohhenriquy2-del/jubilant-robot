@@ -51,7 +51,7 @@ export default function Header() {
         <button
           type="button"
           aria-label="Abrir menu"
-          className="md:hidden text-ink"
+          className="md:hidden -mr-2 inline-flex h-11 w-11 items-center justify-center text-ink"
           onClick={() => setIsOpen((v) => !v)}
         >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
