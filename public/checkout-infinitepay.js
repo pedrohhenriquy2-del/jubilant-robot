@@ -10,7 +10,10 @@
     PPU38CQE87N: { d: 'Principia Protetor Solar Facial PS-01 FPS 60', p: 2990 },
     PPU38CQE87U: { d: 'Principia Gel de Limpeza Facial GL-01 · 200 g', p: 4550 },
     PPU38CQEQMQ: { d: 'Principia Creme Hidratante Corporal CH-02 · 454 g', p: 4990 },
-    PPU38CQEQMT: { d: 'Tônico Principia AL-7 · 120 ml', p: 2650 }
+    PPU38CQEQMT: { d: 'Tônico Principia AL-7 · 120 ml', p: 2650 },
+    // Kits do Mix-01 (só pela InfinitePay; se ela falhar, o pedido segue pelo WhatsApp)
+    MIX01X2: { d: 'Kit 2x Principia Sérum Mix-01 · 30 ml', p: 6990, wa: true },
+    MIX01X3: { d: 'Kit 3x Principia Sérum Mix-01 · 30 ml', p: 9990, wa: true }
   };
 
   function salvar(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
@@ -19,11 +22,13 @@
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest && ev.target.closest('a[href*="go.perfectpay.com.br/"]');
     if (!a) return;
-    var codigo = a.href.split('/').pop().split('?')[0];
+    var codigo = a.dataset.ipay || a.href.split('/').pop().split('?')[0];
     var prod = PRODUTOS[codigo];
     if (!prod) return;
     ev.preventDefault();
-    var fallback = a.href;
+    var fallback = prod.wa
+      ? 'https://wa.me/5538999659366?text=' + encodeURIComponent('Olá! Quero comprar o ' + prod.d + ' por R$ ' + (prod.p / 100).toFixed(2).replace('.', ',') + '.')
+      : a.href;
     var feito = false;
     function ir(url) { if (!feito) { feito = true; window.location.href = url; } }
     var timer = setTimeout(function () { ir(fallback); }, 7000);
