@@ -54,11 +54,11 @@ export default function Hero() {
   }, [atual, parado]);
 
   return (
-    <section id="inicio" className="bg-cream pt-4 md:pt-6">
+    <section id="inicio" className="bg-cream pt-0 md:pt-6">
       <h1 className="sr-only">Selune Oficial: skincare Principia original com frete grátis</h1>
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
+      <div className="mx-auto max-w-6xl px-0 md:px-6">
         <div
-          className="relative overflow-hidden rounded-t-md border border-b-0 border-beige bg-ink"
+          className="relative overflow-hidden md:rounded-t-md md:border md:border-b-0 md:border-beige bg-ink"
           role="region"
           aria-roledescription="carrossel"
           aria-label="Fotos do Principia Sérum Mix-01"
@@ -75,7 +75,7 @@ export default function Hero() {
               <a
                 key={s.wide}
                 href={`${base}mix-01.html`}
-                className="block w-full shrink-0 snap-center"
+                className="block w-full shrink-0 snap-center overflow-hidden"
                 aria-label={`Foto ${i + 1} de ${slides.length}: ${s.alt}`}
               >
                 <picture>
@@ -85,7 +85,7 @@ export default function Hero() {
                     width="1600"
                     height="640"
                     loading={i === 0 ? "eager" : "lazy"}
-                    className="w-full h-auto block"
+                    className="w-full h-auto block scale-[1.1] md:scale-100"
                   />
                 </picture>
               </a>
@@ -129,7 +129,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-2 sm:items-center rounded-b-md border border-t-0 border-beige bg-white p-3 md:p-4">
+        <div className="flex flex-col sm:flex-row gap-2 sm:items-center md:rounded-b-md md:border md:border-t-0 md:border-beige bg-white px-4 pb-4 pt-1 md:p-4">
           <a
             href={mix.paymentLink}
             onClick={trackProductClick}
