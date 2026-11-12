@@ -58,11 +58,32 @@
       fbq('track', 'Purchase', { value: info.valor, currency: 'BRL', content_name: info.nome }, { eventID: info.nsu });
       salvar('selune_registrado', info.nsu);
     }
+    // Só mostra o link do comprovante se ele for da própria InfinitePay.
+    var recibo = '';
+    try {
+      var u = new URL(q.get('receipt_url') || '');
+      if (u.protocol === 'https:' && /(^|\.)infinitepay\.io$/.test(u.hostname)) recibo = u.href;
+    } catch (e) {}
+    var fundo = document.createElement('div');
+    fundo.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(20,16,14,.55);display:flex;align-items:center;justify-content:center;padding:16px';
     var box = document.createElement('div');
-    box.setAttribute('role', 'status');
-    box.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:520px;margin:0 auto;background:#1f3d36;color:#fff;padding:16px 18px;border-radius:14px;font:15px/1.5 system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25)';
-    box.innerHTML = '<strong>Pagamento recebido! 💚</strong><br>Obrigada pela compra! Vamos te avisar pelo WhatsApp quando o pedido for enviado.' +
-      (q.get('receipt_url') ? '<br><a style="color:#9fe3d3" target="_blank" rel="noopener" href="' + encodeURI(q.get('receipt_url')) + '">Ver comprovante</a>' : '');
-    document.body.appendChild(box);
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Pagamento recebido');
+    box.style.cssText = 'width:100%;max-width:420px;background:#FAF7F2;color:#2A2420;padding:26px 22px 20px;border-radius:20px;font:15px/1.55 Inter,system-ui,sans-serif;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.3)';
+    box.innerHTML = '<div style="font-size:40px;line-height:1">💚</div>' +
+      '<h2 style="margin:10px 0 6px;font-size:1.3rem">Pagamento recebido!</h2>' +
+      '<p style="margin:0 0 6px;color:#6B5F57">Obrigada por comprar na Selune. Seu pedido já está com a gente.</p>' +
+      '<p style="margin:0 0 16px;color:#6B5F57">Vamos te avisar pelo <strong style="color:#2A2420">WhatsApp</strong> quando ele for enviado, com o código de rastreio.</p>' +
+      (recibo ? '<a href="' + recibo + '" target="_blank" rel="noopener" style="display:block;margin-bottom:10px;color:#6F523B;font-weight:600">Ver comprovante</a>' : '') +
+      '<button type="button" style="width:100%;min-height:50px;border:0;border-radius:14px;background:#6F523B;color:#fff;font:700 1rem Inter,system-ui,sans-serif;cursor:pointer">Continuar no site</button>';
+    fundo.appendChild(box);
+    function fechar() { if (fundo.parentNode) fundo.parentNode.removeChild(fundo); }
+    box.querySelector('button').addEventListener('click', fechar);
+    fundo.addEventListener('click', function (e) { if (e.target === fundo) fechar(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    document.body.appendChild(fundo);
+    // Limpa o endereço para a mensagem não voltar ao atualizar a página.
+    try { history.replaceState(null, '', location.pathname + location.hash); } catch (e) {}
   }
 })();

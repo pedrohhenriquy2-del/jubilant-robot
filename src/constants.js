@@ -183,7 +183,7 @@ export const PRODUCTS = [
       },
       {
         q: "Serve para qualquer tipo de pele?",
-        a: "O kit foi montado pra cobrir uma rotina completa — limpeza, hidratação, proteção e renovação. O ideal é começar aos poucos e observar como sua pele reage, principalmente ao retinol.",
+        a: "O kit foi montado pra cobrir uma rotina completa — limpeza, hidratação, proteção e renovação. O ideal é começar aos poucos e observar como sua pele reage, principalmente ao retinol. Se estiver grávida ou amamentando, fale com seu médico antes de usar o retinol.",
       },
       {
         q: "Como funciona o pagamento?",
