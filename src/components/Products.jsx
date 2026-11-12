@@ -18,23 +18,23 @@ import {
 
 export default function Products() {
   return (
-    <section id="produtos" className="py-20 md:py-28 bg-cream">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="produtos" className="py-10 md:py-20 bg-cream">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-xl mx-auto mb-14"
+          className="text-center max-w-xl mx-auto mb-8 md:mb-12"
         >
           <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
             Produtos
           </span>
-          <h2 className="text-3xl md:text-4xl text-ink font-semibold mb-6">
-            Skincare para continuar o cuidado em casa
+          <h2 className="text-2xl md:text-4xl text-ink font-semibold mb-2">
+            Nossos produtos
           </h2>
 
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs text-ink-soft">
             <span className="inline-flex items-center gap-1.5">
               <Lock size={14} className="text-nude-dark" />
               Compra segura
@@ -56,7 +56,7 @@ export default function Products() {
           </div>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
           {PRODUCTS.map((product, i) => (
             <motion.div
               key={product.id}
@@ -67,7 +67,7 @@ export default function Products() {
               className="relative rounded-2xl bg-offwhite border border-beige overflow-hidden flex flex-col text-center items-center"
             >
               {product.badge && (
-                <span className="absolute top-4 left-4 z-10 rounded-full bg-nude-dark px-3 py-1 text-[11px] uppercase tracking-wide text-cream font-medium">
+                <span className="absolute top-2 left-2 md:top-4 md:left-4 z-10 rounded-full bg-nude-dark px-2 py-0.5 md:px-3 md:py-1 text-[9px] md:text-[11px] uppercase tracking-wide text-cream font-medium">
                   {product.badge}
                 </span>
               )}
@@ -83,7 +83,7 @@ export default function Products() {
                   />
                 </div>
               ) : product.photo ? (
-                <div className="aspect-square w-full bg-white flex items-center justify-center p-6">
+                <div className="aspect-square w-full bg-white flex items-center justify-center p-3 md:p-6">
                   <img
                     src={product.photo}
                     alt={product.name}
@@ -99,12 +99,12 @@ export default function Products() {
                   </span>
                 </div>
               )}
-              <div className="p-6 flex flex-col items-center flex-1 w-full">
-                <h3 className="text-base font-medium text-ink mb-2">
+              <div className="p-3 md:p-6 flex flex-col items-center flex-1 w-full">
+                <h3 className="text-sm md:text-base font-medium text-ink mb-1 md:mb-2 leading-snug line-clamp-2">
                   {product.name}
                 </h3>
                 {product.description && (
-                  <p className="text-sm text-ink-soft mb-4">
+                  <p className="hidden md:block text-sm text-ink-soft mb-4">
                     {product.description}
                   </p>
                 )}
@@ -116,15 +116,15 @@ export default function Products() {
                     className="w-full rounded-xl mb-5 max-h-72 object-contain"
                   />
                 )}
-                <div className="mb-5 mt-auto">
-                  <p className="text-lg font-semibold text-nude-dark">
+                <div className="mb-3 md:mb-5 mt-auto">
+                  <p className="text-lg md:text-xl font-semibold text-ink">
                     {formatPrice(product.price)}
                   </p>
                 </div>
                 <a
                   href={product.salesPageUrl || product.paymentLink}
                   onClick={trackProductClick}
-                  className="inline-flex items-center gap-2 rounded-full bg-nude-dark px-6 py-3 text-sm font-medium text-cream hover:bg-gold transition-colors"
+                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-nude-dark px-4 md:px-6 py-2.5 md:py-3 text-sm font-medium text-cream hover:bg-gold transition-colors"
                 >
                   <ShoppingBag size={16} />
                   Comprar
@@ -136,7 +136,7 @@ export default function Products() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={trackWhatsAppClick}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs text-ink-soft hover:text-nude-dark transition-colors"
+                  className="mt-3 hidden md:inline-flex items-center gap-1.5 text-xs text-ink-soft hover:text-nude-dark transition-colors"
                 >
                   <MessageCircle size={13} />
                   Dúvida antes de comprar? Fale no WhatsApp

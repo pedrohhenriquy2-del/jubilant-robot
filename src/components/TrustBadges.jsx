@@ -6,7 +6,7 @@ const ICONS = { ShieldCheck, BadgeCheck, GraduationCap, HeartHandshake };
 
 export default function TrustBadges() {
   return (
-    <section className="py-16 md:py-20 bg-cream border-y border-beige">
+    <section className="py-10 md:py-16 bg-cream border-y border-beige">
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

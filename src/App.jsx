@@ -2,7 +2,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import TrustBadges from "./components/TrustBadges";
-import Services from "./components/Services";
 import Products from "./components/Products";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
@@ -21,10 +20,9 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <TrustBadges />
-        <Services />
         <Products />
+        <TrustBadges />
+        <About />
         <FAQ />
         <Contact />
       </main>

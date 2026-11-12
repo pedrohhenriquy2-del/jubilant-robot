@@ -6,9 +6,9 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-b from-offwhite to-cream overflow-hidden"
+      className="relative pt-24 pb-10 md:pt-36 md:pb-20 bg-gradient-to-b from-offwhite to-cream overflow-hidden"
     >
-      <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-10 items-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,19 +22,16 @@ export default function Hero() {
             <Sparkles size={13} />
             Loja de skincare · Produtos Principia
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-ink font-semibold">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-ink font-semibold">
             Oleosidade, cravos e poros dilatados?{" "}
             <span className="text-nude-dark italic">Isso tem solução.</span>
           </h1>
-          <p className="mt-6 text-base md:text-lg text-ink-soft max-w-md">
-            Se sua pele fica oleosa ao longo do dia, com cravos, poros
-            dilatados e textura irregular, o problema não é falta de cuidado
-            — é estar com os produtos errados. A linha Principia, vendida
-            pela Selune Oficial, foi pensada pra isso: uma rotina simples,
-            em casa, pra devolver equilíbrio, viço e uniformidade à sua pele.
+          <p className="mt-4 text-base md:text-lg text-ink-soft max-w-md">
+            Skincare Principia original, com nota fiscal e frete grátis para
+            todo o Brasil. Monte sua rotina em casa, sem complicação.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-center gap-3">
             <a
               href="#produtos"
               className="inline-flex items-center gap-2 rounded-full bg-nude-dark px-7 py-3.5 text-sm font-medium text-cream hover:bg-gold transition-colors shadow-lg shadow-nude/20"
@@ -55,7 +52,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="relative"
+          className="relative hidden md:block"
         >
           <div className="aspect-[4/5] w-full rounded-[2rem] bg-white border border-beige flex items-center justify-center shadow-lg shadow-ink/5 overflow-hidden p-3">
             <img

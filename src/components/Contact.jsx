@@ -5,7 +5,7 @@ import { CONTACT, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
 export default function Contact() {
   return (
-    <section id="contato" className="py-20 md:py-28 bg-offwhite">
+    <section id="contato" className="py-12 md:py-24 bg-offwhite">
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
