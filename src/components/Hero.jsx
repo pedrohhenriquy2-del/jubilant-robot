@@ -6,7 +6,7 @@ export default function Hero() {
       <h1 className="sr-only">Selune Oficial: skincare Principia original com frete grátis</h1>
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <a
-          href={base}
+          href={`${base}mix-01.html`}
           className="block overflow-hidden rounded-md border border-beige bg-ink"
           aria-label="Ver oferta: Principia Sérum Mix-01 por R$ 49,90 com frete grátis"
         >

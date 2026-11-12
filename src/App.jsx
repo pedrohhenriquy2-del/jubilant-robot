@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <a
-        href={`${import.meta.env.BASE_URL}`}
+        href={`${import.meta.env.BASE_URL}mix-01.html`}
         className="block bg-ink px-4 py-2.5 text-center text-xs md:text-sm font-medium text-cream"
       >
         Black Friday · Frete grátis · Sérum Mix-01 por R$ 49,90. Ver oferta →

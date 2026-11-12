@@ -2,14 +2,789 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Principia Sérum Mix-01 | Selune Oficial</title>
-    <link rel="canonical" href="https://selune-oficial.com.br/" />
-    <meta http-equiv="refresh" content="0; url=./" />
-    <script>location.replace('./' + location.search + location.hash);</script>
+    <meta name="description" content="Sérum Principia Mix-01 com 5% niacinamida, 4% ácido glicólico, 3% tranexâmico e 2% salicílico. Para pele oleosa, cravos, manchas e poros. R$ 49,90 com frete grátis." />
+    <meta name="author" content="Selune Oficial" />
+    <meta property="og:type" content="product" />
+    <meta property="og:title" content="Principia Sérum Mix-01 | Selune Oficial" />
+    <meta property="og:description" content="4 ativos para pele oleosa num frasco só. R$ 49,90 com frete grátis." />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://selune-oficial.com.br/mix-01.html" />
+    <link rel="canonical" href="https://selune-oficial.com.br/mix-01.html" />
+    <meta property="og:image" content="https://selune-oficial.com.br/og-mix-01.jpg?v=3" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" as="image" href="%BASE_URL%products/mix-01-hero-mao.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '792765023001456');
+      fbq('track', 'PageView');
+      fbq('track', 'ViewContent', {content_name: 'Principia Sérum Mix-01', value: 49.90, currency: 'BRL'});
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+      /* Paleta Selune: neutros (off-white, pedra e grafite). A cor fica por conta das fotos dos produtos. */
+      :root {
+        --bg: #FAFAF8; --soft: #F3F2EF; --blush: #E9E7E3; --ink: #1C1B19; --muted: #6A665F;
+        --accent: #5C5852; --accent-dk: #1C1B19; --teal: #5C5852; --line: #E4E1DC;
+        --green: #1C1B19; --green-dk: #000000; --green-bg: #F1F0ED;
+        --mint: #E9E7E3; --gold: #A8A39C;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+      a { color: var(--accent-dk); }
+      button, input, select, textarea { font-family: inherit; }
+      h1, h2, h3, p, figure, blockquote, ul { margin: 0; }
+      img { display: block; max-width: 100%; height: auto; }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      section { padding: 64px 0; }
+      .soft { background: var(--soft); }
+      .kicker { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-dk); }
+      h2 { font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; font-size: clamp(23px, 2.8vw, 32px); font-weight: 700; line-height: 1.2; letter-spacing: -.02em; }
+      h3 { letter-spacing: -.005em; }
+      .sec-head { max-width: 640px; margin: 0 auto 36px; display: flex; flex-direction: column; gap: 10px; text-align: center; }
+      .sec-head p { color: var(--muted); font-size: 16px; }
+
+      .btn { background: var(--green); color: #fff; text-decoration: none; font-weight: 700; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 10px 24px rgba(28,27,25,.22); transition: background .15s, transform .15s; }
+      .btn:hover { background: var(--green-dk); color: #fff; transform: translateY(-1px); }
+      .btn-lg { font-size: 17px; padding: 18px 32px; min-height: 58px; width: 100%; }
+      .check { flex: none; width: 22px; height: 22px; border-radius: 999px; background: var(--green-bg); color: var(--green); display: inline-flex; align-items: center; justify-content: center; }
+
+      .promo-bar { display: block; background: var(--ink); color: var(--bg); text-align: center; padding: 9px 12px; font-size: 12.5px; text-decoration: none; }
+      .promo-bar strong { color: var(--mint); font-weight: 700; }
+      .promo-bar s { opacity: .7; }
+      .promo-bar b { color: #FFFFFF; font-weight: 800; }
+      header { background: rgba(250,250,248,.94); backdrop-filter: blur(8px); border-bottom: 1px solid #E4E1DC; position: sticky; top: 0; z-index: 40; }
+      header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
+      .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; color: var(--ink); text-decoration: none; }
+      .brand img { width: auto; height: 38px; }
+      .hdr-trust { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+      .hdr-trust svg { color: var(--teal); flex: none; }
+      @media (min-width: 761px) { .hdr-trust { display: none; } }
+      header .btn { font-size: 14px; padding: 11px 22px; min-height: 44px; border-radius: 999px; box-shadow: none; }
+
+      .hero { padding: 44px 0 56px; background: radial-gradient(120% 90% at 85% 10%, var(--blush) 0%, var(--bg) 55%); }
+      .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+      .hero-copy { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+      .hero h1 { font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em; }
+      .hero h1 em { font-style: normal; }
+      .hero h1 em { color: var(--accent); }
+      .lead { font-size: 17px; color: var(--muted); max-width: 520px; }
+      .benefits { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+      .benefits li { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; }
+
+      .qprice { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: 15px; font-weight: 600; color: var(--muted); text-decoration: none; }
+      .qprice s { font-weight: 500; }
+      .qprice b { font-size: 22px; font-weight: 800; color: var(--ink); }
+      .qsep { color: var(--line); }
+      .offer { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 18px 40px rgba(28,27,25,.08); max-width: 480px; }
+      .offer-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+      .bf-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--ink); color: var(--mint); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+      .save { background: var(--green-bg); color: var(--green); font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 999px; }
+      .price { display: flex; flex-direction: column; gap: 2px; }
+      .price .from { font-size: 15px; color: var(--muted); }
+      .price .from s { font-weight: 600; }
+      .price .now { font-size: 46px; font-weight: 800; color: var(--green); line-height: 1.05; letter-spacing: -.02em; }
+      .price .now small { font-size: 18px; font-weight: 700; margin-right: 4px; }
+      .price .pay { font-size: 14px; color: var(--muted); }
+      .mini-trust { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; font-size: 13.5px; color: var(--muted); font-weight: 500; }
+      .mini-trust span { display: flex; align-items: center; gap: 7px; }
+      .mini-trust svg { color: var(--teal); flex: none; }
+
+      .hero-media { position: relative; display: flex; justify-content: center; min-width: 0; }
+      .stage { position: relative; width: 100%; max-width: 500px; aspect-ratio: 1 / 1; border-radius: 32px; background: #fff; box-shadow: 0 30px 60px rgba(28,27,25,.12), inset 0 0 0 1px rgba(228,225,220,.9); display: flex; align-items: center; justify-content: center; }
+      .stage { overflow: hidden; }
+      .stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .25s; }
+      .stage img.contain { object-fit: contain; padding: 4%; }
+      .seals { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; width: 100%; max-width: 500px; }
+      .seals span { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+      .seals svg { flex: none; color: var(--teal); }
+      .lotline { font-size: 13.5px; color: var(--muted); text-align: center; margin: 0; }
+      .lotline a { color: var(--accent-dk); font-weight: 600; }
+      .thumbs { display: flex; justify-content: center; gap: 10px; }
+      .thumb { width: 64px; height: 64px; padding: 0; border-radius: 14px; border: 2px solid var(--line); background: #fff; overflow: hidden; cursor: pointer; flex: none; }
+      .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .thumb[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--green-bg); }
+      .thumb:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+      .hero-media { flex-direction: column; align-items: center; gap: 16px; }
+      .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+      .chip { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+      .chip b { color: var(--teal); }
+
+      .strip { background: var(--ink); color: var(--bg); padding: 18px 0; }
+      .strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .strip div { display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; justify-content: center; }
+      .strip svg { color: var(--mint); flex: none; }
+
+      .real { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; }
+      .real-copy { display: flex; flex-direction: column; gap: 14px; }
+      .real-copy p { color: var(--muted); font-size: 16px; }
+      .slider { position: relative; width: 100%; max-width: 340px; margin: 0 auto; }
+      .slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; border-radius: 24px; box-shadow: 0 18px 40px rgba(28,27,25,.12); scrollbar-width: none; }
+      .slides::-webkit-scrollbar { display: none; }
+      .slides img { flex: 0 0 100%; width: 100%; aspect-ratio: 335 / 597; object-fit: cover; scroll-snap-align: center; }
+      .sl-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 999px; border: 0; background: rgba(255,255,255,.92); color: var(--ink); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 16px rgba(28,27,25,.16); }
+      .sl-prev { left: 10px; } .sl-next { right: 10px; }
+      .dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
+      .dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; background: var(--line); cursor: pointer; transition: width .2s, background .2s; }
+      .dots button[aria-current="true"] { width: 26px; background: var(--accent); }
+      .dots button::before { content: ""; display: block; margin: -17px; width: 44px; height: 44px; }
+      .real-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-weight: 500; }
+      .real-list li { display: flex; gap: 10px; align-items: flex-start; }
+      .real-list a { color: var(--teal); font-weight: 600; }
+      .ig-btn { align-self: center; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 22px; border-radius: 999px; border: 1.5px solid var(--ink); color: var(--ink); font-weight: 700; font-size: 15px; text-decoration: none; }
+      .ig-btn:hover { background: var(--ink); color: #fff; }
+      .ig-row { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 24px; text-align: center; }
+      .ig-row p { font-size: 14px; color: var(--muted); }
+      footer a { color: #F1F0ED; }
+      .nw { white-space: nowrap; }
+      .why { font-size: 13.5px; color: var(--muted); background: var(--soft); border-radius: 12px; padding: 10px 12px; }
+      .why b { color: var(--ink); }
+      .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .trust-item { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+      .trust-item .ic { width: 42px; height: 42px; border-radius: 12px; background: var(--soft); color: var(--teal); display: flex; align-items: center; justify-content: center; }
+      .trust-item h3 { font-size: 15.5px; font-weight: 700; }
+      .trust-item p { font-size: 14px; color: var(--muted); }
+      .trust-item a, .policy-links a { color: var(--accent-dk); font-weight: 600; }
+      .bump { display: flex; align-items: center; gap: 12px; border: 1.5px dashed var(--accent); border-radius: 14px; padding: 10px 12px; background: #fff; }
+      .bump img { flex: none; width: 52px; height: 52px; border-radius: 10px; object-fit: cover; background: var(--soft); }
+      .bump p { margin: 0; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+      .bump b { color: var(--ink); }
+      .bump .bp { color: var(--accent); font-weight: 800; white-space: nowrap; }
+      .bump s { white-space: nowrap; }
+      .xsell { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 24px; max-width: 860px; margin: 0 auto; }
+      .xsell img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 18px; background: var(--soft); }
+      .xsell-body { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+      .xsell h3 { font-size: 22px; line-height: 1.25; margin: 0; }
+      .xsell .desc { color: var(--muted); font-size: 15px; }
+      .xsell .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+      .xsell .tags span { background: var(--soft); color: var(--accent-dk); font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; }
+      .xsell .xprice { font-size: 32px; font-weight: 800; color: var(--accent); line-height: 1; }
+      .xsell .xprice small { font-size: 15px; margin-right: 3px; }
+      .xsell .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+      .xsell .btn { font-size: 16px; padding: 14px 26px; min-height: 50px; }
+      .xsell .more { font-weight: 600; font-size: 14px; min-height: 44px; display: inline-flex; align-items: center; }
+      @media (max-width: 760px) { .xsell { grid-template-columns: 1fr; padding: 18px; gap: 16px; } .xsell img { max-width: 240px; margin: 0 auto; } .xsell .btn { width: 100%; } }
+      .routine { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 960px; margin: 0 auto; }
+      .rcol { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+      .rhead { display: flex; align-items: center; gap: 12px; }
+      .rhead .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--soft); color: var(--accent); display: flex; align-items: center; justify-content: center; flex: none; }
+      .rhead h3 { margin: 0; font-size: 18px; }
+      .rhead small { display: block; font-size: 13px; color: var(--muted); font-weight: 500; }
+      .rstep { display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: center; padding: 10px; border-radius: 16px; text-decoration: none; color: inherit; transition: background .15s; }
+      .rstep:hover { background: var(--soft); }
+      .rstep img { width: 56px; height: 56px; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 4px; }
+      .rstep b { display: block; font-size: 15px; color: var(--ink); }
+      .rstep span { font-size: 13.5px; color: var(--muted); }
+      .rstep b .nw { font-size: inherit; color: inherit; }
+      .rstep .n { font-size: 11px; font-weight: 800; letter-spacing: .08em; color: var(--accent); text-transform: uppercase; display: block; }
+      .rnote { max-width: 960px; margin: 16px auto 0; text-align: center; font-size: 13.5px; color: var(--muted); }
+      @media (max-width: 760px) { .routine { grid-template-columns: 1fr; } .rcol { padding: 18px; } }
+      .pgrid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
+      .pcard { background: #fff; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+      .pcard[hidden] { display: none !important; }
+      .pcard:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(28,27,25,.10); }
+      .pimg { position: relative; display: block; aspect-ratio: 1; background: #fff; border-bottom: 1px solid var(--line); }
+      .pimg img { width: 100%; height: 100%; object-fit: contain; padding: 10%; }
+      .pbadge { position: absolute; top: 12px; left: 12px; background: var(--ink); color: var(--mint); font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 5px 10px; border-radius: 999px; }
+      .pbody { display: flex; flex-direction: column; gap: 8px; padding: 18px 18px 20px; flex: 1; }
+      .pbody h3 { font-size: 16px; line-height: 1.3; margin: 0; }
+      .pbody p { font-size: 13.5px; color: var(--muted); margin: 0; flex: 1; }
+      .pprice { font-size: 26px; font-weight: 800; color: var(--accent); line-height: 1.1; margin-top: 4px; }
+      .pprice small { font-size: 14px; margin-right: 3px; }
+      .pbuy { font-size: 15px; padding: 12px 16px; min-height: 48px; width: 100%; border-radius: 12px; }
+      .pmore { align-self: center; font-size: 13.5px; font-weight: 600; min-height: 40px; display: inline-flex; align-items: center; }
+      @media (max-width: 1080px) {
+        .pgrid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; gap: 14px; padding: 4px 20px 16px; margin: 0 -20px; scrollbar-width: none; }
+        .pgrid::-webkit-scrollbar { display: none; }
+        .pcard { flex: 0 0 240px; scroll-snap-align: start; }
+        .pcard:hover { transform: none; }
+      }
+      @media (max-width: 480px) { .pcard { flex-basis: 74%; } }
+      .paybadges { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; }
+      .paybadges span { display: inline-flex; align-items: center; justify-content: center; min-width: 46px; height: 26px; padding: 0 8px; border: 1px solid var(--line); border-radius: 6px; background: #fff; font-size: 11px; font-weight: 800; letter-spacing: .02em; color: var(--ink); }
+      .paybadges .pix { color: #5C5852; }
+      .paybadges .visa { color: #6A665F; font-style: italic; }
+      .paybadges .mc { color: #6A665F; }
+      .paybadges small { width: 100%; text-align: center; font-size: 12px; color: var(--muted); font-weight: 500; }
+      .ship { display: grid; gap: 2px; padding: 12px 14px; border-radius: 14px; background: var(--soft); font-size: 13.5px; color: var(--muted); text-align: left; }
+      .ship b { color: var(--ink); }
+      .origin { font-size: 13px; color: var(--muted); background: var(--soft); border-radius: 12px; padding: 10px 12px; }
+      .origin b { color: var(--ink); }
+      .nfe { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; margin-bottom: 6px; padding: 5px 10px; border-radius: 999px; background: var(--green-bg); color: var(--ink); border: 1px solid var(--accent); font-size: 12.5px; font-weight: 700; letter-spacing: .01em; }
+      .nfe svg { flex: none; }
+      .redirect { font-size: 13px; color: var(--muted); text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
+      .redirect svg { color: var(--teal); flex: none; }
+      .policy-links { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; }
+      .policy-links a { display: inline-flex; align-items: center; min-height: 40px; }
+      @media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 480px) { .trust-grid, .steps { grid-template-columns: 1fr; } }
+
+      .pains { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .pain { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; display: flex; flex-direction: column; gap: 8px; }
+      .pain .ic { width: 44px; height: 44px; border-radius: 12px; background: var(--soft); color: var(--accent); display: flex; align-items: center; justify-content: center; }
+      .pain h3 { font-size: 15.5px; font-weight: 700; }
+      .pain p { font-size: 13.5px; color: var(--muted); }
+      .bridge { margin-top: 28px; text-align: center; font-size: 17px; font-weight: 600; }
+      .bridge span { color: var(--accent); }
+
+      .actives { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .active { background: #fff; border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--line); }
+      .active .pct { font-size: 38px; font-weight: 800; color: var(--teal); line-height: 1; letter-spacing: -.02em; }
+      .active h3 { font-size: 16px; font-weight: 700; }
+      .active p { font-size: 13.5px; color: var(--muted); }
+      .active .tag { align-self: flex-start; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-dk); background: var(--soft); padding: 4px 9px; border-radius: 999px; }
+
+      .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .step { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 24px 22px; display: flex; flex-direction: column; gap: 8px; }
+      .step .n { width: 36px; height: 36px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+      .step h3 { font-size: 16px; font-weight: 700; }
+      .step p { font-size: 14px; color: var(--muted); }
+      .note { margin-top: 18px; text-align: center; font-size: 13px; color: var(--muted); }
+
+      .forwho { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 900px; margin: 0 auto; }
+      .forwho > div { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+      .forwho h3 { margin-bottom: 14px; font-size: 16px; display: flex; align-items: center; gap: 10px; }
+      .forwho ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15.5px; color: var(--muted); }
+      .forwho li { display: flex; gap: 10px; align-items: flex-start; }
+      .warn-ic { flex: none; width: 22px; height: 22px; border-radius: 999px; background: #EFEDE9; color: #4A4640; display: inline-flex; align-items: center; justify-content: center; }
+
+      .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .review { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 14px; }
+      .review blockquote { font-size: 15px; line-height: 1.5; font-weight: 500; }
+      .review figcaption { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; margin-top: auto; }
+      .review figcaption img { width: 44px; height: 44px; border-radius: 999px; object-fit: cover; }
+      .review figcaption small { display: block; font-weight: 500; color: var(--teal); font-size: 13px; }
+      .avatar { flex: none; width: 44px; height: 44px; border-radius: 999px; background: var(--blush); color: var(--accent-dk); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+      .stars { color: var(--ink); display: flex; gap: 3px; }
+      .qmark { font-size: 44px; line-height: .6; color: var(--blush); font-weight: 800; font-family: Georgia, serif; }
+
+      .guarantee { display: flex; gap: 28px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 32px; max-width: 860px; margin: 0 auto; }
+      .seal { flex: none; width: 120px; height: 120px; border-radius: 999px; background: var(--ink); color: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 0 0 6px var(--soft), 0 0 0 7px var(--line); }
+      .seal b { font-size: 38px; font-weight: 800; line-height: 1; color: var(--mint); }
+      .seal span { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+      .guarantee h2 { font-size: 24px; margin-bottom: 8px; }
+      .guarantee p { color: var(--muted); }
+
+      .faq { max-width: 760px; margin: 0 auto; }
+      .faq details { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 0 20px; margin-top: 10px; }
+      .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 17px 0; font-weight: 600; min-height: 44px; }
+      .faq summary::-webkit-details-marker { display: none; }
+      .faq summary svg { flex: none; transition: transform .2s; color: var(--accent-dk); }
+      .faq details[open] summary svg { transform: rotate(180deg); }
+      .faq details p { padding-bottom: 17px; font-size: 14.5px; color: var(--muted); }
+
+      .bnr { padding: 8px 0 0; }
+      .bnr a { display: block; border-radius: 24px; overflow: hidden; box-shadow: 0 18px 40px rgba(28,27,25,.14); }
+      .bnr img { width: 100%; height: auto; display: block; }
+      .final { background: radial-gradient(100% 120% at 50% 0%, var(--blush) 0%, var(--soft) 60%); }
+      .final-card { max-width: 560px; margin: 0 auto; background: #fff; border-radius: 28px; padding: 32px; display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; box-shadow: 0 24px 50px rgba(28,27,25,.10); }
+      .vwrap { position: relative; width: 100%; }
+      .vsec { padding: 48px 0; }
+      .vgrid { display: grid; grid-template-columns: 340px 1fr; gap: 48px; align-items: center; max-width: 900px; }
+      .vtxt { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; min-width: 0; }
+      .vtxt h2 { font-size: 32px; }
+      .vtxt .lead { color: var(--muted); }
+      @media (max-width: 760px) { .vgrid { grid-template-columns: 1fr; gap: 22px; } .vsec .vwrap { max-width: 280px; margin: 0 auto; } .vtxt { align-items: center; text-align: center; } .vtxt h2 { font-size: 26px; } }
+      .sound { position: absolute; right: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px; border: 0; border-radius: 999px; background: rgba(28,27,25,.82); color: #fff; font: 600 13px Montserrat, system-ui, sans-serif; cursor: pointer; }
+      .final-img { width: 100%; max-width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 20px; }
+      .fshow { position: relative; width: 100%; max-width: 100%; aspect-ratio: 4 / 5; border-radius: 22px; overflow: hidden; background: #fff; box-shadow: 0 18px 40px rgba(28,27,25,.14); }
+      .fshow img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.04); transition: opacity .9s ease, transform 3.6s ease; }
+      .fshow img.contain { object-fit: contain; padding: 8%; background: #fff; }
+      .fshow img.on { opacity: 1; transform: scale(1); }
+      .fdots { position: absolute; left: 0; right: 0; bottom: 12px; display: flex; justify-content: center; gap: 6px; }
+      .fdots span { width: 7px; height: 7px; border-radius: 999px; background: rgba(255,255,255,.7); box-shadow: 0 0 0 1px rgba(28,27,25,.15); transition: width .3s, background .3s; }
+      .fdots span.on { width: 22px; background: var(--accent); }
+      @media (prefers-reduced-motion: reduce) { .fshow img { transition: opacity .3s; transform: none; } }
+      .final-video { width: 100%; height: auto; aspect-ratio: 9 / 16; max-width: 100%; border-radius: 22px; background: var(--ink); object-fit: cover; display: block; box-shadow: 0 18px 40px rgba(28,27,25,.16); }
+      .final-card .offer { box-shadow: none; border: 0; padding: 0; max-width: none; }
+      .final-card h2 { font-size: 26px; }
+      .wa-link { font-size: 14px; font-weight: 600; color: var(--teal); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; }
+
+      footer { background: var(--ink); color: #D6D2CC; padding: 36px 0 100px; }
+      footer .flogo { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+      footer .flogo img { height: 40px; width: auto; }
+      footer .flogo p { font-size: 13.5px; color: #D6D2CC; max-width: 520px; }
+      footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; font-size: 13px; color: #D6D2CC; }
+      footer .policy-links a { color: #F1F0ED; }
+
+      .sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: #fff; border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); display: none; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 -8px 24px rgba(28,27,25,.08); }
+      .sticky .p span { font-size: 13px; color: var(--muted); }
+      .sticky .p b { display: block; font-size: 22px; font-weight: 800; color: var(--green); line-height: 1.1; }
+      .sticky .btn { font-size: 15px; padding: 14px 22px; min-height: 50px; border-radius: 12px; }
+      .wa-float { position: fixed; right: 18px; bottom: 22px; z-index: 51; width: 56px; height: 56px; border-radius: 999px; background: #1C1B19; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+
+      @media (max-width: 900px) {
+        .hero .wrap { grid-template-columns: 1fr; gap: 24px; }
+        .hero-media { order: -1; }
+        .stage { max-width: 340px; border-radius: 22px; }
+        .hero-media .chips { display: none; }
+        .thumbs { gap: 8px; }
+        .thumb { width: 48px; height: 48px; border-radius: 12px; }
+        .chip { font-size: 13px; padding: 7px 12px; }
+        .offer { max-width: none; }
+        .pains, .actives { grid-template-columns: 1fr 1fr; }
+        .steps { grid-template-columns: 1fr 1fr; }
+        .reviews { grid-template-columns: 1fr; }
+        .real { grid-template-columns: 1fr; gap: 24px; }
+        .strip .wrap { grid-template-columns: 1fr 1fr; }
+        .strip div { justify-content: flex-start; }
+        .final-card { grid-template-columns: 1fr; padding: 24px; gap: 18px; }
+        .vwrap { max-width: 260px; margin: 0 auto; }
+        .final-img { max-width: 260px; margin: 0 auto; }
+        .fshow { max-width: 280px; margin: 0 auto; }
+      }
+      @media (max-width: 760px) {
+        section { padding: 48px 0; }
+        .hero { padding: 24px 0 40px; }
+        .hero-copy { gap: 16px; }
+        .hero-copy .offer { order: 1; }
+        .hero-copy .lead { order: 2; }
+        .hero-copy .benefits { order: 3; }
+        .sticky { display: flex; }
+        header .btn { display: none; }
+        .wa-float { bottom: calc(88px + env(safe-area-inset-bottom)); width: 50px; height: 50px; }
+        .forwho { grid-template-columns: 1fr; }
+        .guarantee { flex-direction: column; text-align: center; padding: 26px 22px; }
+        footer { padding-bottom: 120px; }
+      }
+      @media (max-width: 420px) {
+        .steps { grid-template-columns: 1fr; }
+        .step { display: grid; grid-template-columns: 36px 1fr; column-gap: 14px; row-gap: 2px; padding: 18px; }
+        .step .n { grid-row: span 2; }
+        .pains, .actives { grid-template-columns: 1fr; }
+        .price .now { font-size: 42px; }
+      }
+
+      /* Celular: página mais enxuta, sem tirar conteúdo importante */
+      @media (max-width: 760px) {
+        section { padding: 36px 0; }
+        .sec-head { margin-bottom: 22px; }
+        .hero-copy .lead { display: none; }
+        .seals { gap: 6px 10px; }
+        .seals span { font-size: 12.5px; }
+        .slider { max-width: 240px; }
+        .reviews { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; gap: 12px; padding: 4px 20px 12px; margin: 0 -20px; scrollbar-width: none; }
+        .reviews::-webkit-scrollbar { display: none; }
+        .review { flex: 0 0 82%; scroll-snap-align: start; }
+        .steps { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+        .step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 12px 6px; gap: 6px; border-radius: 14px; }
+        .step p { display: none; }
+        .step .n { width: 28px; height: 28px; font-size: 14px; }
+        .step h3 { font-size: 12.5px; line-height: 1.25; }
+        .step p { font-size: 12.5px; }
+        .trust-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+        .trust-item { padding: 14px; gap: 6px; }
+        .trust-item .ic { width: 34px; height: 34px; }
+        .trust-item h3 { font-size: 14px; }
+        .trust-item p { display: none; }
+        .rcol { padding: 14px; gap: 6px; }
+        .rstep { grid-template-columns: 44px 1fr; gap: 10px; padding: 6px; }
+        .rstep img { width: 44px; height: 44px; }
+        .rstep span:not(.n) { font-size: 12.5px; }
+        .final-img { display: none; }
+      }
+
+      /* Celular: título antes da foto e botão do WhatsApp menor */
+      @media (max-width: 760px) {
+        .hero .wrap { display: flex; flex-direction: column; gap: 16px; }
+        .hero-copy { display: contents; }
+        .hero-copy .kicker { order: 1; }
+        .hero-copy h1 { order: 2; font-size: 28px; }
+        .hero-copy .qprice { order: 2; margin-top: -6px; align-self: flex-start; }
+        .hero-media { order: 3; }
+        .hero-copy .offer { order: 4; }
+        .hero-copy .benefits { order: 5; }
+        .hero-copy .lead { order: 6; }
+        .stage { max-width: 280px; }
+        .wa-float { width: 44px; height: 44px; right: 12px; }
+        .wa-float svg { width: 22px; height: 22px; }
+      }
+  
+    .price .cmp { display:block; font-size:.86rem; color:var(--muted); margin:6px 0 2px; }
+    .price .cmp s { color:var(--muted); }
+    .src { font-size:.72rem; color:var(--muted); margin-top:6px; line-height:1.4; }
+    .qcmp { text-decoration:line-through; color:var(--muted); font-weight:500; }
+  </style>
   </head>
   <body>
-    <p><a href="./">Ir para a página do Sérum Mix-01 da Selune Oficial</a></p>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=792765023001456&ev=PageView&noscript=1" />
+    </noscript>
+
+    <a class="promo-bar" id="promo" href="#oferta"><strong>Black Friday · Frete grátis</strong> · Mix-01 por <b>R$ 49,90</b> · entrega em 3 a 7 dias úteis →</a>
+
+    <header>
+      <div class="wrap">
+        <a class="brand" href="%BASE_URL%" aria-label="Selune Oficial, página inicial"><img src="%BASE_URL%logo-selune.svg" alt="Selune Skincare" width="117" height="38" /></a>
+        <span class="hdr-trust"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Loja com CNPJ</span>
+        <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHM7L">Comprar agora</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-copy">
+            <span class="kicker">Principia Sérum Mix-01 · 30 ml</span>
+            <h1>Menos brilho, menos cravos e <em>uma pele mais uniforme</em> com um único sérum.</h1>
+            <a class="qprice" href="#oferta"><b>R$ 49,90</b> <span class="qsep">·</span> <span class="qcmp">R$ 74 nas farmácias</span> <span class="qsep">·</span> Frete grátis <span class="qsep">·</span> Pix ou cartão</a>
+            <p class="lead">4 ativos em concentrações reais para quem tem pele oleosa, poros aparentes e manchinhas. Algumas gotas à noite e pronto.</p>
+            <ul class="benefits">
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Controla a oleosidade e o brilho do dia a dia</li>
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Ajuda a desobstruir os poros e a reduzir cravos</li>
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Ajuda a uniformizar o tom e suavizar manchas</li>
+              <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Renova a textura e devolve o viço</li>
+            </ul>
+
+            <div class="offer" id="oferta">
+              <div class="offer-top">
+                <span class="bf-tag">Oferta Black Friday</span>
+              </div>
+              <div class="price">
+                <span class="nfe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Nota fiscal eletrônica em todo pedido</span>
+                <span class="cmp">Nas grandes farmácias: <s>R$ 74,00</s></span>
+                <span class="from">Aqui, preço final já com frete grátis:</span>
+                <span class="now"><small>R$</small>49,90</span>
+                <span class="pay">Pix ou cartão · frete grátis</span>
+              </div>
+              <a class="btn btn-lg buy" href="https://go.perfectpay.com.br/PPU38CQHM7L">Quero meu Mix-01 agora
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Site seguro (SSL) · Pix aprovado na hora</p>
+              <p class="redirect" style="margin-top:4px">Ao finalizar, você recebe um código no WhatsApp para confirmar a compra. É a proteção antifraude da InfinitePay.</p>
+              <div class="ship"><b>Prazo de entrega</b><span>Entrega em <b>3 a 7 dias úteis</b> após a confirmação do pagamento, para todo o Brasil. Você recebe o <b>código de rastreio</b> por e-mail e WhatsApp.</span></div>
+<div class="paybadges" aria-label="Formas de pagamento"><span class="pix">PIX</span><span class="visa">VISA</span><span class="mc">Mastercard</span><span>Elo</span><small>Pagamento processado pela InfinitePay, com criptografia</small></div>
+              <div class="mini-trust">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Compra segura</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>3 a 7 dias úteis</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>7 dias para desistir</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Com nota fiscal</span>
+              </div>
+              <p class="why why-after"><b>Por que esse preço?</b> Somos uma loja online independente, sem custo de loja física. Você paga menos pelo mesmo Principia original, lacrado e com nota fiscal.</p>
+              <p class="src">Preço de referência: Drogasil (R$ 74,00) e Panvel (R$ 74,99), consultados em 12/11/2026.</p>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="stage">
+              <img id="hero-img" src="%BASE_URL%products/mix-01-hero-mao.webp" alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" width="960" height="960" fetchpriority="high" />
+            </div>
+            <div class="thumbs" role="group" aria-label="Fotos do produto"><button type="button" class="thumb" aria-pressed="true" aria-label="Ver foto 1" data-src="%BASE_URL%products/mix-01-hero-mao.webp" data-alt="Frasco do Principia Sérum Mix-01 na mão, com o rótulo de frente" data-fit=""><img src="%BASE_URL%products/thumb-mao.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 5" data-src="%BASE_URL%products/mix-01-mao-1.webp" data-alt="Frasco do Principia Sérum Mix-01 segurado na mão, ao ar livre" data-fit=""><img src="%BASE_URL%products/thumb-mao-1.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto dos ativos" data-src="%BASE_URL%products/mix-01-ativos.webp" data-alt="Os 4 ativos do Mix-01: 5% niacinamida, 4% ácido glicólico, 3% ácido tranexâmico e 2% ácido salicílico, e o que cada um faz" data-fit="contain"><img src="%BASE_URL%products/thumb-ativos.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 2" data-src="%BASE_URL%products/mix-01.webp" data-alt="Frasco e caixa do Principia Sérum Mix-01, 30 ml" data-fit="contain"><img src="%BASE_URL%products/thumb-mix-01.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 3" data-src="%BASE_URL%products/mix-01-caixa-frasco.webp" data-alt="Caixa e frasco do Mix-01 lado a lado" data-fit="contain"><img src="%BASE_URL%products/thumb-caixa-frasco.webp" alt="" width="64" height="64" loading="lazy" /></button><button type="button" class="thumb" aria-pressed="false" aria-label="Ver foto 4" data-src="%BASE_URL%products/mix-01-lateral.webp" data-alt="Lateral da caixa: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten" data-fit="contain"><img src="%BASE_URL%products/thumb-lateral.webp" alt="" width="64" height="64" loading="lazy" /></button></div>
+            <div class="seals" aria-label="Informações da embalagem"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Dermatologicamente testado</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Não testado em animais</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem parabenos e sulfatos</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Sem fragrância e corantes</span></div>
+            <p class="origin"><b>Transparência:</b> a Selune não é a Principia. Somos uma loja independente (CNPJ 56.996.633/0001-56) que revende produtos Principia originais e lacrados.</p>
+            <p class="lotline">Quer conferir antes? <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Pode%20me%20mandar%20uma%20foto%20do%20lote%20e%20da%20validade%20do%20Mix-01%3F">Peça no WhatsApp a foto do lote e da validade</a></p>
+            <div class="chips"><span class="chip"><b>4</b> ativos em 1</span><span class="chip"><b>30 ml</b></span><span class="chip">Uso noturno</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="strip">
+        <div class="wrap">
+          <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Frete grátis para todo o Brasil</div>
+          <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>7 dias para desistir</div>
+          <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Pix ou cartão</div>
+          <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>Atendimento no WhatsApp</div>
+        </div>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Indicação</span>
+            <h2>O Mix-01 é para você?</h2>
+          </div>
+          <div class="forwho">
+            <div>
+              <h3><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Indicado se você tem</h3>
+              <ul>
+                <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Pele oleosa ou mista</li>
+                <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Cravos, espinhas e poros aparentes</li>
+                <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Manchas, marcas e tom irregular</li>
+                <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Textura áspera e pele sem viço</li>
+              </ul>
+            </div>
+            <div>
+              <h3><span class="warn-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v5M12 17h.01"/></svg></span>Fale antes com seu dermatologista se</h3>
+              <ul>
+                <li><span class="warn-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M8 12h8"/></svg></span>Sua pele é muito sensível ou reativa</li>
+                <li><span class="warn-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M8 12h8"/></svg></span>Você está grávida ou amamentando</li>
+                <li><span class="warn-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M8 12h8"/></svg></span>Faz algum tratamento de pele com receita</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="soft">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Clientes Selune</span>
+            <h2>Quem usa, aprova</h2>
+            <p>Veja o que dizem as clientes que já usam o Mix-01.</p>
+          </div>
+          <div class="reviews">
+            <figure class="review">
+              <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg></span>
+              <blockquote>Acabou com a minha oleosidade. Achei o máximo!</blockquote>
+              <figcaption><img src="%BASE_URL%products/cliente-lauane.jpg" alt="" width="44" height="44" loading="lazy" /><span>Lauane Aparecida<small>Cliente Selune</small></span></figcaption>
+            </figure>
+            <figure class="review">
+              <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg></span>
+              <blockquote>Vi diferença já nos três primeiros dias de uso.</blockquote>
+              <figcaption><img src="%BASE_URL%products/cliente-ingrid.jpg" alt="" width="44" height="44" loading="lazy" /><span>Ingrid Freitas<small>Cliente Selune</small></span></figcaption>
+            </figure>
+            <figure class="review">
+              <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7-6.3-3.8-6.3 3.8 1.6-7L2 9.3l7-.7z"/></svg></span>
+              <blockquote>É bom e funciona.</blockquote>
+              <figcaption><img src="%BASE_URL%products/cliente-rosemire.jpg" alt="" width="44" height="44" loading="lazy" /><span>Rosemire<small>Cliente Selune</small></span></figcaption>
+            </figure>
+          </div>
+          <div class="ig-row">
+            <a class="ig-btn" href="https://www.instagram.com/seluneoficial.com.br/" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>Siga @seluneoficial.com.br</a>
+            <p>Fotos dos produtos, novidades e clientes Selune</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Passo a passo</span>
+            <h2>Como comprar</h2>
+            <p>Leva menos de 2 minutos.</p>
+          </div>
+          <div class="steps">
+            <div class="step"><span class="n">1</span><h3>Toque em comprar</h3><p>Clique em "Quero meu Mix-01" ou "Comprar agora" em qualquer parte da página.</p></div>
+            <div class="step"><span class="n">2</span><h3>Preencha seus dados</h3><p>No checkout seguro, informe nome, e-mail, CPF e endereço de entrega.</p></div>
+            <div class="step"><span class="n">3</span><h3>Escolha como pagar</h3><p>Pix ou cartão de crédito. Você recebe um código no WhatsApp para confirmar e, no Pix, o pagamento é aprovado na hora.</p></div>
+            <div class="step"><span class="n">4</span><h3>Receba em casa</h3><p>Frete grátis para todo o Brasil, em 3 a 7 dias úteis depois do pagamento.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="soft">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Compra segura</span>
+            <h2>Por que comprar na Selune</h2>
+          </div>
+          <div class="trust-grid">
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span><h3>Nota fiscal em todo pedido</h3><p>Toda compra sai com nota fiscal eletrônica, emitida pelo CNPJ 56.996.633/0001-56, que você pode consultar na Receita Federal.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3>Pagamento protegido</h3><p>O pagamento é feito em checkout seguro, por Pix ou cartão. Os dados do seu cartão não passam pela loja.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>7 dias para desistir</h3><p>Se não gostar, você pode desistir em até 7 dias após receber, como garante o Código de Defesa do Consumidor.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span><h3>Atendimento 24 horas</h3><p>Fale com a gente no WhatsApp <span class="nw">(38) 99965-9366</span>, a qualquer hora, todos os dias.</p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/></svg></span><h3>Procedência transparente</h3><p>Revendemos Principia original, enviado lacrado, com lote e validade. Peça a foto antes de comprar. Chegou violado, vencido ou diferente? Seu dinheiro de volta. <a href="%BASE_URL%politicas.html#procedencia">Ver garantia</a></p></div>
+            <div class="trust-item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></span><h3>Trocas e devoluções</h3><p>Defeito ou arrependimento? A devolução é simples e o frete é por nossa conta. <a href="%BASE_URL%politicas.html#trocas">Ver política</a></p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vsec" aria-label="Vídeo com todos os produtos Selune">
+        <div class="wrap vgrid">
+          <div class="vwrap">
+            <video class="final-video" id="bf-video" src="%BASE_URL%products/selune-todos-produtos.mp4" poster="%BASE_URL%products/selune-todos-produtos-poster.jpg" width="720" height="1280" muted loop playsinline preload="none" aria-label="Vídeo com os 6 produtos Principia da Selune: Mix-01, Gel de Limpeza, Tônico, Protetor Solar, Creme Hidratante e Kit Avançado, com preços"></video>
+          </div>
+          <div class="vtxt">
+            <span class="kicker">Linha completa</span>
+            <h2>Monte sua rotina Principia</h2>
+            <p class="lead">Do gel de limpeza ao protetor solar: 6 produtos originais, todos com frete grátis e nota fiscal.</p>
+            <a class="btn" href="%BASE_URL%" style="font-size:16px;padding:14px 26px;min-height:50px">Ver todos os produtos</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Complete sua rotina</span>
+            <h2>Mais cuidados Principia</h2>
+            <p>Produtos que combinam com o Mix-01, do gel de limpeza ao protetor solar.</p>
+          </div>
+          <div class="pgrid" role="list">
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%protetor-solar-ps-01.html" aria-label="Ver detalhes: Protetor Solar PS-01 FPS 60"><img src="%BASE_URL%products/protetor-solar-ps-01.webp" alt="Protetor Solar PS-01 FPS 60" width="300" height="300" loading="lazy" /><span class="pbadge">Toque seco</span></a>
+              <div class="pbody">
+                <h3>Protetor Solar <span class="nw">PS-01</span> FPS 60</h3>
+                <p>16,5% de filtros UV e 5% de niacinamida. Toque seco, proteção UVA e UVB.</p>
+                <span class="pprice"><small>R$</small>29,90</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQE87N" data-name="Protetor Solar PS-01 FPS 60" data-value="29.90">Comprar</a>
+                <a class="pmore" href="%BASE_URL%protetor-solar-ps-01.html">Ver detalhes</a>
+              </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%tonico-al-7.html" aria-label="Ver detalhes: Tônico AL-7 · 120 ml"><img src="%BASE_URL%products/tonico-al-7.webp" alt="Tônico AL-7 · 120 ml" width="300" height="300" loading="lazy" /><span class="pbadge">Renovador</span></a>
+              <div class="pbody">
+                <h3>Tônico <span class="nw">AL-7</span> · 120 ml</h3>
+                <p>7% ácido lático e 1% ácido salicílico. Para textura, oleosidade e poros.</p>
+                <span class="pprice"><small>R$</small>26,50</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQEQMT" data-name="Tônico AL-7 · 120 ml" data-value="26.50">Comprar</a>
+                <a class="pmore" href="%BASE_URL%tonico-al-7.html">Ver detalhes</a>
+              </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%gel-limpeza-gl-01.html" aria-label="Ver detalhes: Gel de Limpeza GL-01 · 200 g"><img src="%BASE_URL%products/gel-limpeza-gl-01.webp" alt="Gel de Limpeza GL-01 · 200 g" width="300" height="300" loading="lazy" /><span class="pbadge">Uso diário</span></a>
+              <div class="pbody">
+                <h3>Gel de Limpeza <span class="nw">GL-01</span> · 200 g</h3>
+                <p>2% ácido salicílico e glicerina. Limpa, reduz a oleosidade e deixa a pele macia.</p>
+                <span class="pprice"><small>R$</small>45,50</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQE87U" data-name="Gel de Limpeza GL-01 · 200 g" data-value="45.50">Comprar</a>
+                <a class="pmore" href="%BASE_URL%gel-limpeza-gl-01.html">Ver detalhes</a>
+              </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%creme-hidratante-ch-02.html" aria-label="Ver detalhes: Creme Hidratante CH-02 · 454 g"><img src="%BASE_URL%products/creme-hidratante-ch-02.webp" alt="Creme Hidratante CH-02 · 454 g" width="300" height="300" loading="lazy" /><span class="pbadge">Corpo · 72h</span></a>
+              <div class="pbody">
+                <h3>Creme Hidratante <span class="nw">CH-02</span> · 454 g</h3>
+                <p>Girassol, glicerina e manteiga de abacate. Hidratação de 72 horas para o corpo.</p>
+                <span class="pprice"><small>R$</small>49,90</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQEQMQ" data-name="Creme Hidratante CH-02 · 454 g" data-value="49.90">Comprar</a>
+                <a class="pmore" href="%BASE_URL%creme-hidratante-ch-02.html">Ver detalhes</a>
+              </div>
+            </article>
+            <article class="pcard">
+              <a class="pimg" href="%BASE_URL%kit-avancado.html" aria-label="Ver detalhes: Kit Avançado VC + RN"><img src="%BASE_URL%products/kit-avancado-vc-rn.webp" alt="Kit Avançado VC + RN" width="300" height="300" loading="lazy" /><span class="pbadge">Rotina completa</span></a>
+              <div class="pbody">
+                <h3>Kit Avançado VC + RN</h3>
+                <p>Protetor <span class="nw">PS-01</span>, gel <span class="nw">GL-01</span>, vitamina C, retinol e ácido hialurônico. A rotina completa.</p>
+                <span class="pprice"><small>R$</small>145,50</span>
+                <a class="btn pbuy" href="https://go.perfectpay.com.br/PPU38CQE85U" data-name="Kit Avançado VC + RN" data-value="145.50">Comprar</a>
+                <a class="pmore" href="%BASE_URL%kit-avancado.html">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="flogo"><img src="%BASE_URL%logo-selune-white.svg" alt="Selune Skincare" width="123" height="40" /><p>Loja independente de skincare. Revendemos produtos originais Principia, com frete grátis e atendimento 24 horas no WhatsApp.</p></div>
+        <span>Selune Oficial · Loja online de skincare · <a href="https://www.instagram.com/seluneoficial.com.br/" target="_blank" rel="noopener">Instagram @seluneoficial.com.br</a></span>
+        <span>Atendimento 24 horas no WhatsApp · aberto sempre</span>
+        <span>CNPJ 56.996.633/0001-56 · WhatsApp <span class="nw">(38) 99965-9366</span></span>
+        <nav class="policy-links" aria-label="Políticas"><a href="%BASE_URL%politicas.html#trocas">Trocas e devoluções</a><a href="%BASE_URL%politicas.html#procedencia">Garantia de procedência</a><a href="%BASE_URL%politicas.html#entrega">Entrega</a><a href="%BASE_URL%politicas.html#privacidade">Política de privacidade</a></nav>
+      </div>
+    </footer>
+
+    <a class="wa-float" href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Principia%20S%C3%A9rum%20Mix-01" aria-label="Falar no WhatsApp"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+
+    <div class="sticky">
+      <div class="p"><span>Frete grátis</span><b>R$ 49,90</b></div>
+      <a class="btn buy" href="https://go.perfectpay.com.br/PPU38CQHM7L">Comprar agora</a>
+    </div>
+
+    <script>
+      (function () {
+        // Fim da promoção: depois desta data o preço riscado, o "economize" e o contador somem sozinhos.
+        var end = new Date('2026-12-01T23:59:59-03:00').getTime();
+        var bar = document.getElementById('promo');
+        function tick() {
+          if (end - Date.now() > 0) return;
+          bar.style.display = 'none';
+          document.querySelectorAll('.promo-only, .bf-tag').forEach(function (n) { n.style.display = 'none'; });
+        }
+        tick(); setInterval(tick, 60000);
+      })();
+      (function () {
+        var img = document.getElementById('hero-img');
+        if (!img) return;
+        document.querySelectorAll('.thumb').forEach(function (b) {
+          b.addEventListener('click', function () {
+            document.querySelectorAll('.thumb').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+            b.setAttribute('aria-pressed', 'true');
+            img.src = b.dataset.src; img.alt = b.dataset.alt;
+            img.className = b.dataset.fit || '';
+          });
+        });
+      })();
+      (function () {
+        var track = document.getElementById('slides'), dots = document.getElementById('dots');
+        if (!track) return;
+        var imgs = track.querySelectorAll('img'), n = imgs.length, cur = 0, timer;
+        imgs.forEach(function (_, i) {
+          var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Foto ' + (i + 1));
+          b.addEventListener('click', function () { go(i); restart(); }); dots.appendChild(b);
+        });
+        function mark() { dots.querySelectorAll('button').forEach(function (b, i) { b.setAttribute('aria-current', String(i === cur)); }); }
+        function go(i) { cur = (i + n) % n; track.scrollTo({ left: cur * track.clientWidth }); mark(); }
+        track.addEventListener('scroll', function () { var i = Math.round(track.scrollLeft / track.clientWidth); if (i !== cur) { cur = i; mark(); } }, { passive: true });
+        document.querySelector('.sl-prev').addEventListener('click', function () { go(cur - 1); restart(); });
+        document.querySelector('.sl-next').addEventListener('click', function () { go(cur + 1); restart(); });
+        track.addEventListener('touchstart', function () { clearInterval(timer); }, { passive: true });
+        function restart() { clearInterval(timer); timer = setInterval(function () { go(cur + 1); }, 3500); }
+        mark(); restart();
+      })();
+      (function () {
+        var v = document.getElementById('bf-video'), sb = document.getElementById('bf-sound');
+        if (!v) return;
+        if (sb) sb.addEventListener('click', function () {
+          v.muted = !v.muted;
+          if (!v.muted) { v.currentTime = 0; v.play().catch(function () {}); }
+          sb.setAttribute('aria-pressed', String(!v.muted));
+          sb.querySelector('span').textContent = v.muted ? 'Ativar som' : 'Som ligado';
+        });
+        if (!('IntersectionObserver' in window)) { v.preload = 'auto'; v.play().catch(function () {}); return; }
+        new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); } });
+        }, { rootMargin: '200px' }).observe(v);
+      })();
+      (function () {
+        var box = document.getElementById('fshow');
+        if (!box) return;
+        var imgs = box.querySelectorAll('img'), dots = box.querySelectorAll('.fdots span'), i = 0, t;
+        function show(n) { imgs[i].classList.remove('on'); dots[i].classList.remove('on'); i = n % imgs.length; imgs[i].classList.add('on'); dots[i].classList.add('on'); }
+        function start() { stop(); t = setInterval(function () { show(i + 1); }, 3200); }
+        function stop() { if (t) clearInterval(t); }
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (es) { es.forEach(function (e) { e.isIntersecting ? start() : stop(); }); }).observe(box);
+        } else { start(); }
+      })();
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+        a.addEventListener('click', function () { if (window.fbq) fbq('track', 'Contact'); });
+      });
+      document.querySelectorAll('.pbuy').forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: a.dataset.name, value: parseFloat(a.dataset.value), currency: 'BRL'});
+        });
+      });
+      document.querySelectorAll('.buy').forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: 'Principia Sérum Mix-01', value: 49.90, currency: 'BRL'});
+        });
+      });
+      // Leva a origem do anúncio (utm_*, fbclid) até o checkout, para a venda ser atribuída à campanha certa
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search), keep = new URLSearchParams();
+          ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','src','sck'].forEach(function (k) { if (q.get(k)) keep.set(k, q.get(k)); });
+          if (!keep.toString()) return;
+          document.querySelectorAll('a.buy, a.pbuy').forEach(function (a) {
+            var u = new URL(a.href);
+            keep.forEach(function (v, k) { if (!u.searchParams.has(k)) u.searchParams.set(k, v); });
+            a.href = u.toString();
+          });
+        } catch (e) {}
+      })();
+    </script>
     <script src="./checkout-infinitepay.js?v=3" defer></script>
   </body>
 </html>

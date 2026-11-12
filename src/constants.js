@@ -91,7 +91,7 @@ export const PRODUCTS = [
       "Acne, oleosidade, textura irregular, poros dilatados e perda de viço.",
     price: 49.9,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQHM7L",
-    salesPageUrl: `${ASSET_BASE}`,
+    salesPageUrl: `${ASSET_BASE}mix-01.html`,
     photo: `${ASSET_BASE}products/mix-01.webp`,
     badge: "Novidade",
     // TROCAR: vídeo removido — mostrava produto de outra marca e pessoas
