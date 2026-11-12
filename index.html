@@ -412,7 +412,12 @@
         .wa-float { width: 44px; height: 44px; right: 12px; }
         .wa-float svg { width: 22px; height: 22px; }
       }
-    </style>
+  
+    .price .cmp { display:block; font-size:.86rem; color:var(--muted); margin:6px 0 2px; }
+    .price .cmp s { color:var(--muted); }
+    .src { font-size:.72rem; color:var(--muted); margin-top:6px; line-height:1.4; }
+    .qcmp { text-decoration:line-through; color:var(--muted); font-weight:500; }
+  </style>
   </head>
   <body>
     <noscript>
@@ -435,7 +440,7 @@
           <div class="hero-copy">
             <span class="kicker">Principia Sérum Mix-01 · 30 ml</span>
             <h1>Menos brilho, menos cravos e <em>uma pele mais uniforme</em> com um único sérum.</h1>
-            <a class="qprice" href="#oferta"><b>R$ 49,90</b> <span class="qsep">·</span> Frete grátis <span class="qsep">·</span> Pix ou cartão</a>
+            <a class="qprice" href="#oferta"><b>R$ 49,90</b> <span class="qsep">·</span> <span class="qcmp">R$ 74 nas farmácias</span> <span class="qsep">·</span> Frete grátis <span class="qsep">·</span> Pix ou cartão</a>
             <p class="lead">4 ativos em concentrações reais para quem tem pele oleosa, poros aparentes e manchinhas. Algumas gotas à noite e pronto.</p>
             <ul class="benefits">
               <li><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Controla a oleosidade e o brilho do dia a dia</li>
@@ -450,7 +455,8 @@
               </div>
               <div class="price">
                 <span class="nfe"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Nota fiscal eletrônica em todo pedido</span>
-                <span class="from">Preço final, já com frete grátis:</span>
+                <span class="cmp">Nas grandes farmácias: <s>R$ 74,00</s></span>
+                <span class="from">Aqui, preço final já com frete grátis:</span>
                 <span class="now"><small>R$</small>49,90</span>
                 <span class="pay">Pix ou cartão · frete grátis</span>
               </div>
@@ -466,6 +472,7 @@
                 <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Com nota fiscal</span>
               </div>
               <p class="why why-after"><b>Por que esse preço?</b> Somos uma loja online independente, sem custo de loja física. Você paga menos pelo mesmo Principia original, lacrado e com nota fiscal.</p>
+              <p class="src">Preço de referência: Drogasil (R$ 74,00) e Panvel (R$ 74,99), consultados em 12/11/2026.</p>
             </div>
           </div>
 
