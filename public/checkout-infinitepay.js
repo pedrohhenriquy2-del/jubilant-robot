@@ -76,7 +76,7 @@
       '<p style="margin:0 0 6px;color:#6A665F">Obrigada por comprar na Selune. Seu pedido já está com a gente.</p>' +
       '<p style="margin:0 0 16px;color:#6A665F">Vamos te avisar pelo <strong style="color:#1C1B19">WhatsApp</strong> quando ele for enviado, com o código de rastreio.</p>' +
       (recibo ? '<a href="' + recibo + '" target="_blank" rel="noopener" style="display:block;margin-bottom:10px;color:#1C1B19;font-weight:600">Ver comprovante</a>' : '') +
-      '<button type="button" style="width:100%;min-height:50px;border:0;border-radius:14px;background:#1C1B19;color:#fff;font:700 1rem Inter,system-ui,sans-serif;cursor:pointer">Continuar no site</button>';
+      '<button type="button" style="width:100%;min-height:50px;border:0;border-radius:14px;background:#2F5D5A;color:#fff;font:700 1rem Inter,system-ui,sans-serif;cursor:pointer">Continuar no site</button>';
     fundo.appendChild(box);
     function fechar() { if (fundo.parentNode) fundo.parentNode.removeChild(fundo); }
     box.querySelector('button').addEventListener('click', fechar);

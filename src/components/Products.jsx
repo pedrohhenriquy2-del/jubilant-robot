@@ -13,12 +13,15 @@ export default function Products() {
     <section id="produtos" className="py-8 md:py-14 bg-cream">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="flex items-end justify-between gap-4 mb-4 md:mb-6">
-          <div>
-            <h2 className="text-xl md:text-3xl text-ink font-bold tracking-tight">
-              Skincare Principia
+          <div className="max-w-2xl">
+            <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+              Selune Oficial · Principia original
+            </p>
+            <h2 className="mt-2 text-2xl md:text-4xl text-ink font-extrabold tracking-tight leading-tight text-balance">
+              Pele oleosa, cravos ou manchas? Tem um Principia para cada uma.
             </h2>
-            <p className="text-sm text-ink-soft mt-1">
-              {PRODUCTS.length} produtos originais · frete grátis
+            <p className="mt-2 text-sm md:text-base text-ink-soft">
+              Original e lacrado, com nota fiscal e frete grátis. Escolha o seu e receba em 3 a 7 dias úteis.
             </p>
           </div>
         </div>
@@ -74,14 +77,14 @@ export default function Products() {
                     {product.shortName}
                   </a>
                   <p className="mt-1 text-xs text-ink-soft line-clamp-1">{product.tagline}</p>
-                  <p className="mt-2 text-base md:text-lg font-bold text-ink">
+                  <p className="mt-2 text-base md:text-lg font-bold text-accent">
                     {formatPrice(product.price)}
                   </p>
                   <p className="text-[11px] md:text-xs text-ink-soft">Frete grátis</p>
                   <a
                     href={href}
                     onClick={trackProductClick}
-                    className="mt-3 inline-flex items-center justify-center rounded-md bg-ink px-3 py-2.5 text-sm font-semibold text-cream hover:bg-gold transition-colors"
+                    className="mt-3 inline-flex items-center justify-center rounded-md bg-accent px-3 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
                   >
                     Comprar
                   </a>

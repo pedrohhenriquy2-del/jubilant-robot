@@ -42,7 +42,7 @@ export default function Header() {
 
         <a
           href="#produtos"
-          className="hidden md:inline-flex items-center gap-2 rounded-full bg-nude-dark px-5 py-2.5 text-sm font-medium text-cream hover:bg-gold transition-colors"
+          className="hidden md:inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
         >
           <ShoppingBag size={15} />
           Comprar
@@ -81,7 +81,7 @@ export default function Header() {
               <a
                 href="#produtos"
                 onClick={() => setIsOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-nude-dark px-5 py-2.5 text-sm font-medium text-cream hover:bg-gold transition-colors"
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
               >
                 <ShoppingBag size={15} />
                 Comprar

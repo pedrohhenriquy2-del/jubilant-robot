@@ -561,21 +561,10 @@ export const FAQ_ITEMS = [
       "Sim, principalmente com ácidos (como os do Sérum Mix-01 e do Tônico AL-7). Recomendamos usar protetor solar diariamente durante o uso desses produtos.",
   },
   {
-    question: "Com que frequência devo usar os produtos?",
-    answer:
-      "Isso varia por produto — cada página de venda traz o modo de uso recomendado. Em geral, o ideal é seguir uma rotina constante para manter os resultados.",
-  },
-  {
     question: "Vocês entregam os produtos para todo o Brasil?",
     answer:
       "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por Pix ou cartão direto no checkout do site.",
-  },
-  {
-    question: "Os produtos servem para qualquer tipo de pele?",
-    answer:
-      "Cada produto foi formulado com uma indicação específica. Se tiver dúvida sobre qual combina com sua pele, é só chamar no WhatsApp antes de comprar.",
-  },
-];
+  },];
 
 export const TRUST_BADGE = "Cuidado de pele para o dia a dia";
 

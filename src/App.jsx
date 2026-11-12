@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import TrustBadges from "./components/TrustBadges";
 import Products from "./components/Products";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
@@ -21,7 +20,6 @@ function App() {
       <main>
         <Hero />
         <Products />
-        <TrustBadges />
         <About />
         <FAQ />
         <Contact />

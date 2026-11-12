@@ -34,7 +34,7 @@ function BuyButton({ product, className = "", children = "Comprar agora" }) {
     <a
       href={product.paymentLink}
       onClick={trackProductClick}
-      className={`inline-flex items-center justify-center gap-2 rounded-full bg-nude-dark text-cream font-medium hover:bg-gold transition-colors shadow-lg shadow-nude/20 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white font-semibold hover:bg-accent-dark transition-colors shadow-lg shadow-accent/20 ${className}`}
     >
       <ShoppingBag size={20} />
       {children}
@@ -125,7 +125,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                 </span>
               </div>
 
-              <p className="mt-4 text-3xl md:text-4xl font-semibold text-nude-dark">
+              <p className="mt-4 text-3xl md:text-4xl font-bold text-accent">
                 {formatPrice(product.price)}
               </p>
 
@@ -327,7 +327,7 @@ export default function ProductSalesPage({ productId = 1 }) {
 
       {/* Barra fixa de compra no mobile */}
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-cream/95 backdrop-blur border-t border-beige px-4 py-3 flex items-center justify-between gap-4">
-        <span className="text-lg font-semibold text-nude-dark">
+        <span className="text-lg font-bold text-accent">
           {formatPrice(product.price)}
         </span>
         <BuyButton product={product} className="px-6 py-3 text-sm">Comprar</BuyButton>

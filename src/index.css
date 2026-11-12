@@ -15,6 +15,9 @@
   --color-gold-light: #E9E7E3;
   --color-ink: #1C1B19;
   --color-ink-soft: #6A665F;
+  /* Cor de ação: botões e preços (verde-azulado das embalagens Principia, em tom profundo) */
+  --color-accent: #2F5D5A;
+  --color-accent-dark: #244947;
 }
 
 html {
