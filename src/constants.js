@@ -65,11 +65,9 @@ export const CONTACT = {
 };
 
 export const NAV_LINKS = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Rotina", href: "#servicos" },
   { label: "Produtos", href: "#produtos" },
-    { label: "FAQ", href: "#faq" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Dúvidas", href: "#faq" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -80,7 +78,7 @@ export function trackProductClick() {
   }
 }
 
-// Catálogo de produtos com link de checkout (Perfect Pay).
+// Catálogo de produtos (o botão Comprar abre o checkout da InfinitePay; Perfect Pay fica de reserva).
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
   {

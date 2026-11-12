@@ -48,7 +48,7 @@ export default function Products() {
         </div>
 
         {/* Grade de produtos */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-10">
           {list.map((product) => {
             const href = product.salesPageUrl || product.paymentLink;
             return (
