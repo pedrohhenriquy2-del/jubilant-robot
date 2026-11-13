@@ -12,7 +12,7 @@ export default function Products() {
   return (
     <section id="produtos" className="py-8 md:py-14 bg-cream">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="flex items-end justify-between gap-4 mb-4 md:mb-6">
+        <div className="flex justify-center gap-4 mb-4 md:mb-6 text-center">
           <div className="max-w-2xl">
             <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
               Selune Oficial · Principia original
@@ -30,7 +30,7 @@ export default function Products() {
         <div
           role="tablist"
           aria-label="Filtrar por categoria"
-          className="-mx-4 px-4 md:mx-0 md:px-0 flex md:justify-center gap-2 overflow-x-auto pb-1 mb-5 md:mb-8 [scrollbar-width:none]"
+          className="-mx-4 px-4 md:mx-0 md:px-0 flex justify-start sm:justify-center gap-2 overflow-x-auto pb-1 mb-5 md:mb-8 [scrollbar-width:none]"
         >
           {CATEGORIES.map((c) => (
             <button
