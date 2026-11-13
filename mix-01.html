@@ -255,6 +255,14 @@
       .origin b { color: var(--ink); }
       .nfe { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; margin-bottom: 6px; padding: 5px 10px; border-radius: 999px; background: var(--green-bg); color: var(--ink); border: 1px solid var(--accent); font-size: 12.5px; font-weight: 700; letter-spacing: .01em; }
       .nfe svg { flex: none; }
+      .upsell { display: grid; grid-template-columns: 64px 1fr; gap: 10px 12px; align-items: center; padding: 12px; border: 1px dashed #BDB8B1; border-radius: 14px; background: var(--soft, #F3F2EF); }
+      .upsell img { width: 64px; height: 64px; object-fit: contain; background: #fff; border-radius: 10px; }
+      .upsell .up-txt { display: flex; flex-direction: column; gap: 2px; font-size: 13px; line-height: 1.4; color: var(--muted); min-width: 0; }
+      .upsell .up-txt b { color: var(--ink); font-size: 14px; }
+      .upsell .up-txt strong { color: var(--green); }
+      .upsell .up-txt s { font-size: 12px; }
+      .upsell .up-btn { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 12px; border: 1.5px solid var(--green); color: var(--green); background: #fff; font-weight: 700; font-size: 15px; text-decoration: none; }
+      .upsell .up-btn:hover { background: var(--green); color: #fff; }
       .redirect { font-size: 13px; color: var(--muted); text-align: center; display: flex; align-items: center; justify-content: center; gap: 6px; }
       .redirect svg { color: var(--teal); flex: none; }
       .policy-links { display: flex; flex-wrap: wrap; gap: 6px 18px; width: 100%; }
@@ -496,6 +504,14 @@
               </fieldset>
               <a class="btn btn-lg buy" id="buy-main" data-value="24.95" href="https://go.perfectpay.com.br/PPU38CQHM7L"><span id="buy-label">Quero meu Mix-01 agora</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <div class="upsell">
+                <img src="%BASE_URL%products/kit-rotina.webp" alt="Kit Rotina Selune: sérum Mix-01 e protetor solar PS-01" width="72" height="72" loading="lazy" />
+                <div class="up-txt">
+                  <b>Leve junto o protetor solar</b>
+                  <span>Quem usa ácido precisa de protetor todo dia. Kit Mix-01 + Protetor PS-01 por <strong>R$ 49,90</strong> <s>R$ 54,85</s></span>
+                </div>
+                <a class="pbuy up-btn" data-ipay="KITROTINA" data-name="Kit Rotina Selune" data-value="49.90" href="./kit-rotina.html">Quero o kit</a>
+              </div>
               <p class="redirect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Site seguro (SSL) · Pix aprovado na hora</p>
               <p class="redirect" style="margin-top:4px">Ao finalizar, você recebe um código no WhatsApp para confirmar a compra. É a proteção antifraude da InfinitePay.</p>
               <div class="ship"><b>Prazo de entrega</b><span>Entrega em <b>3 a 7 dias úteis</b> após a confirmação do pagamento, para todo o Brasil. Você recebe o <b>código de rastreio</b> por e-mail e WhatsApp.</span></div>
