@@ -30,15 +30,15 @@
     <meta property="og:image" content="https://selune-oficial.com.br/og-image.jpg" />
 
     <!-- Preload da imagem principal do Hero (maior elemento visível ao carregar) -->
-    <link rel="preload" as="image" href="%BASE_URL%hero-produto.webp" />
+    <link rel="preload" as="image" href="%BASE_URL%banners/black-friday-1600.webp?v=2495" fetchpriority="high" />
 
     <!-- Fonte: Montserrat (títulos e texto) -->
+    <link rel="preconnect" href="https://api.checkout.infinitepay.io" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -63,6 +63,6 @@
     </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="./checkout-infinitepay.js?v=6" defer></script>
+    <script src="./checkout-infinitepay.js?v=7" defer></script>
   </body>
 </html>

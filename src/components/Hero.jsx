@@ -80,11 +80,13 @@ export default function Hero() {
               >
                 <picture>
                   <img
-                    src={`${base}${s.wide}?v=3790`}
+                    src={`${base}${s.wide}?v=2495`}
                     alt={s.alt}
                     width="1600"
                     height="640"
                     loading={i === 0 ? "eager" : "lazy"}
+                    fetchPriority={i === 0 ? "high" : "auto"}
+                    decoding={i === 0 ? "sync" : "async"}
                     className="w-full h-auto block scale-[1.06] md:scale-100"
                   />
                 </picture>

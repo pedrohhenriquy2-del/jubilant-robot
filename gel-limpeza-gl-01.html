@@ -25,12 +25,12 @@
     <!-- Preload da foto do produto (maior elemento visível ao carregar) -->
     <link rel="preload" as="image" href="%BASE_URL%products/gel-limpeza-gl-01.webp" />
 
+    <link rel="preconnect" href="https://api.checkout.infinitepay.io" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -56,6 +56,6 @@
     </noscript>
     <div id="root"></div>
     <script type="module" src="/src/gel-limpeza-gl01-main.jsx"></script>
-    <script src="./checkout-infinitepay.js?v=6" defer></script>
+    <script src="./checkout-infinitepay.js?v=7" defer></script>
   </body>
 </html>

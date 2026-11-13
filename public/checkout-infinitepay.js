@@ -5,7 +5,8 @@
   var HANDLE = 'seluneoficial';
   var SITE = 'https://selune-oficial.com.br/';
   var PRODUTOS = {
-    PPU38CQHM7L: { d: 'Principia Sérum Mix-01 · 30 ml', p: 3789 },
+    // Mix-01: se a InfinitePay falhar, o pedido segue pelo WhatsApp (o link antigo da Perfect Pay cobra outro preço).
+    PPU38CQHM7L: { d: 'Principia Sérum Mix-01 · 30 ml', p: 2495, wa: true },
     PPU38CQE85U: { d: 'Kit Avançado VC + RN com GL-01', p: 14550 },
     PPU38CQE87N: { d: 'Principia Protetor Solar Facial PS-01 FPS 60', p: 2990 },
     PPU38CQE87U: { d: 'Principia Gel de Limpeza Facial GL-01 · 200 g', p: 4550 },
@@ -19,10 +20,53 @@
   function salvar(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function ler(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 
+  var SELETOR = 'a[href*="go.perfectpay.com.br/"]';
+  var VALIDADE = 10 * 60 * 1000; // um link preparado vale por 10 minutos
+  var prontos = {}; // código do produto -> { nsu, quando, promessa }
+
+  function alvo(ev) { return ev.target && ev.target.closest && ev.target.closest(SELETOR); }
+  function codigoDe(a) { return a.dataset.ipay || a.href.split('/').pop().split('?')[0]; }
+
+  // Cria o link de pagamento na InfinitePay (uma vez por produto, reaproveitado por 10 minutos).
+  function preparar(codigo) {
+    var prod = PRODUTOS[codigo];
+    if (!prod) return null;
+    var p = prontos[codigo];
+    if (p && Date.now() - p.quando < VALIDADE) return p;
+    var nsu = 'selune-' + Date.now().toString(36);
+    p = prontos[codigo] = { nsu: nsu, quando: Date.now(), promessa: null };
+    p.promessa = fetch('https://api.checkout.infinitepay.io/links', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        handle: HANDLE,
+        items: [{ description: prod.d + ' · Frete grátis', price: prod.p, quantity: 1 }],
+        order_nsu: nsu,
+        redirect_url: SITE + '?compra=ok'
+      })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        var url = j && (j.url || j.link || j.checkout_url || (j.data && (j.data.url || j.data.link)));
+        if (!url) delete prontos[codigo];
+        return url || null;
+      })
+      .catch(function () { delete prontos[codigo]; return null; });
+    return p;
+  }
+
+  // Adianta o trabalho: quando o cliente encosta ou passa o mouse no botão, o link já começa
+  // a ser criado. No clique, o checkout abre na hora em vez de esperar a resposta da InfinitePay.
+  function adiantar(ev) { var a = alvo(ev); if (a) preparar(codigoDe(a)); }
+  document.addEventListener('pointerdown', adiantar, { passive: true, capture: true });
+  document.addEventListener('touchstart', adiantar, { passive: true, capture: true });
+  document.addEventListener('mouseover', adiantar, { passive: true, capture: true });
+  document.addEventListener('focusin', adiantar, true);
+
   document.addEventListener('click', function (ev) {
-    var a = ev.target.closest && ev.target.closest('a[href*="go.perfectpay.com.br/"]');
+    var a = alvo(ev);
     if (!a) return;
-    var codigo = a.dataset.ipay || a.href.split('/').pop().split('?')[0];
+    var codigo = codigoDe(a);
     var prod = PRODUTOS[codigo];
     if (!prod) return;
     ev.preventDefault();
@@ -32,26 +76,14 @@
     var feito = false;
     function ir(url) { if (!feito) { feito = true; window.location.href = url; } }
     var timer = setTimeout(function () { ir(fallback); }, 7000);
-    var pedido = 'selune-' + Date.now().toString(36);
-    salvar('selune_pedido', JSON.stringify({ nsu: pedido, valor: prod.p / 100, nome: prod.d }));
+    var p = preparar(codigo);
+    salvar('selune_pedido', JSON.stringify({ nsu: p.nsu, valor: prod.p / 100, nome: prod.d }));
     a.style.opacity = '.6';
-    fetch('https://api.checkout.infinitepay.io/links', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        handle: HANDLE,
-        items: [{ description: prod.d + ' · Frete grátis', price: prod.p, quantity: 1 }],
-        order_nsu: pedido,
-        redirect_url: SITE + '?compra=ok'
-      })
-    })
-      .then(function (r) { return r.json(); })
-      .then(function (j) {
-        clearTimeout(timer);
-        var url = j && (j.url || j.link || j.checkout_url || (j.data && (j.data.url || j.data.link)));
-        ir(url || fallback);
-      })
-      .catch(function () { clearTimeout(timer); ir(fallback); });
+    p.promessa.then(function (url) {
+      clearTimeout(timer);
+      delete prontos[codigo]; // cada link serve para um pedido só
+      ir(url || fallback);
+    });
   });
 
   // Volta da InfinitePay depois do pagamento: registra a compra no Pixel e agradece.
