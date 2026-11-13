@@ -72,10 +72,25 @@ export const NAV_LINKS = [
 ];
 
 // Dispara o evento de conversão do Meta Pixel ao clicar em "Comprar".
-export function trackProductClick() {
-  if (typeof window !== "undefined" && typeof window.fbq === "function") {
-    window.fbq("track", "InitiateCheckout");
+// Envia também o valor e o produto, para o Meta saber quanto vale cada início de compra.
+export function trackProductClick(e) {
+  if (typeof window === "undefined" || typeof window.fbq !== "function") return;
+  const el = e && e.currentTarget;
+  const href = (el && el.getAttribute && el.getAttribute("href")) || "";
+  const prod =
+    PRODUCTS.find((p) => el && el.dataset && el.dataset.ipay && p.ipay === el.dataset.ipay) ||
+    PRODUCTS.find((p) => p.paymentLink && href && href.split("?")[0] === p.paymentLink.split("?")[0]);
+  if (!prod) {
+    window.fbq("track", "InitiateCheckout", { currency: "BRL" });
+    return;
   }
+  window.fbq("track", "InitiateCheckout", {
+    content_name: prod.name,
+    content_ids: [String(prod.id)],
+    content_type: "product",
+    value: prod.price,
+    currency: "BRL",
+  });
 }
 
 // Catálogo de produtos (o botão Comprar abre o checkout da InfinitePay; Perfect Pay fica de reserva).
