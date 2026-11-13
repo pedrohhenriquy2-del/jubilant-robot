@@ -25,7 +25,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppFloatButton />
+      <WhatsAppFloatButton esconderEm="#produtos" />
     </>
   );
 }
