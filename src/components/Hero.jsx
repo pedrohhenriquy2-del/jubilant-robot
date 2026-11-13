@@ -7,7 +7,16 @@ export default function Hero() {
   const base = import.meta.env.BASE_URL;
   const mix = PRODUCTS.find((p) => p.id === 1);
   const preco = formatPrice(mix.price);
+  const kit = PRODUCTS.find((p) => p.id === 7);
+  const precoKit = formatPrice(kit.price);
   const slides = [
+    {
+      // Oferta de Black Friday do kit: tirar este slide depois de 01/12.
+      wide: "banners/kit-rotina-1600.webp",
+      mob: "banners/kit-rotina-1080.webp",
+      alt: `Black Friday Selune: Kit Rotina Selune, Sérum Mix-01 + Protetor Solar PS-01, por ${precoKit}, frete grátis até 01/12`,
+      href: "kit-rotina.html",
+    },
     {
       wide: "banners/black-friday-1600.webp",
       mob: "banners/black-friday-1080.webp",
@@ -28,6 +37,7 @@ export default function Hero() {
   const trilho = useRef(null);
   const [atual, setAtual] = useState(0);
   const [parado, setParado] = useState(false);
+  const emKit = atual === 0;
 
   function irPara(i) {
     const el = trilho.current;
@@ -61,7 +71,7 @@ export default function Hero() {
           className="relative overflow-hidden md:rounded-t-md md:border md:border-b-0 md:border-beige bg-ink"
           role="region"
           aria-roledescription="carrossel"
-          aria-label="Fotos do Principia Sérum Mix-01"
+          aria-label="Ofertas da Selune Oficial"
           onPointerDown={() => setParado(true)}
           onMouseEnter={() => setParado(true)}
           onFocus={() => setParado(true)}
@@ -74,7 +84,7 @@ export default function Hero() {
             {slides.map((s, i) => (
               <a
                 key={s.wide}
-                href={`${base}mix-01.html`}
+                href={`${base}${s.href || "mix-01.html"}`}
                 className="block w-full shrink-0 snap-center overflow-hidden"
                 aria-label={`Foto ${i + 1} de ${slides.length}: ${s.alt}`}
               >
@@ -132,19 +142,22 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-2 sm:items-center md:rounded-b-md md:border md:border-t-0 md:border-beige bg-white px-4 pb-4 pt-1 md:p-4">
+          {/* Os botões acompanham o slide: no primeiro (kit), vendem o kit. */}
           <a
-            href={mix.paymentLink}
+            key={emKit ? "kit" : "mix"}
+            href={emKit ? kit.paymentLink : mix.paymentLink}
+            data-ipay={emKit ? kit.ipayCode : undefined}
             onClick={trackProductClick}
             className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3.5 text-base font-bold text-white hover:bg-accent-dark transition-colors"
           >
             <ShoppingBag size={19} />
-            Comprar agora por {preco}
+            {emKit ? `Comprar o kit por ${precoKit}` : `Comprar agora por ${preco}`}
           </a>
           <a
-            href={`${base}mix-01.html`}
+            href={`${base}${emKit ? "kit-rotina.html" : "mix-01.html"}`}
             className="inline-flex items-center justify-center rounded-md border border-beige-dark px-5 py-3.5 text-sm font-semibold text-ink hover:border-ink transition-colors"
           >
-            Ver detalhes do Mix-01
+            {emKit ? "Ver detalhes do kit" : "Ver detalhes do Mix-01"}
           </a>
         </div>
       </div>
