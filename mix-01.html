@@ -21,7 +21,7 @@
     <link rel="preload" as="image" href="%BASE_URL%products/mix-01-hero-mao.webp" />
 
     <link rel="preconnect" href="https://api.checkout.infinitepay.io" crossorigin />
-    <link rel="dns-prefetch" href="https://checkout.infinitepay.io" />
+    <link rel="preconnect" href="https://checkout.infinitepay.io" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
@@ -490,7 +490,7 @@
                 <span class="now"><small>R$</small><span id="price-now">24,95</span></span>
                 <span class="pay">Pix ou cartão · frete grátis</span>
               </div>
-              <fieldset class="qty" id="qtd" hidden>
+              <fieldset class="qty" id="qtd" hidden style="display:none">
                 <legend>Escolha quantos frascos:</legend>
                 <label class="q"><input type="radio" name="qtd" value="1" data-key="" data-value="24.95" data-label="Quero meu Mix-01 agora" data-now="24,95" data-cmp="R$ 74,00" data-from="Aqui, preço final já com frete grátis:" checked><span class="dot"></span><span class="qi"><span class="qn">1 frasco</span><span class="qs">Para começar a rotina</span></span><span class="qp"><b>R$ 24,95</b></span></label>
               </fieldset>
@@ -825,6 +825,6 @@
         } catch (e) {}
       })();
     </script>
-    <script src="./checkout-infinitepay.js?v=7" defer></script>
+    <script src="./checkout-infinitepay.js?v=8" defer></script>
   </body>
 </html>

@@ -70,21 +70,118 @@
     var prod = PRODUTOS[codigo];
     if (!prod) return;
     ev.preventDefault();
+    abrir(a, codigo, prod);
+  });
+
+  function abrir(a, codigo, prod) {
     var fallback = prod.wa
       ? 'https://wa.me/5538999659366?text=' + encodeURIComponent('Olá! Quero comprar o ' + prod.d + ' por R$ ' + (prod.p / 100).toFixed(2).replace('.', ',') + '.')
-      : a.href;
+      : (a.href || 'https://go.perfectpay.com.br/' + codigo);
+    if (a.getAttribute('aria-busy') === 'true') return;
     var feito = false;
     function ir(url) { if (!feito) { feito = true; window.location.href = url; } }
     var timer = setTimeout(function () { ir(fallback); }, 7000);
     var p = preparar(codigo);
-    salvar('selune_pedido', JSON.stringify({ nsu: p.nsu, valor: prod.p / 100, nome: prod.d }));
-    a.style.opacity = '.6';
+    salvar('selune_pedido', JSON.stringify({ nsu: p.nsu, valor: prod.p / 100, nome: prod.d, codigo: codigo, quando: Date.now() }));
+    ocupar(a, true);
+    aviso('Abrindo o pagamento seguro…');
     p.promessa.then(function (url) {
       clearTimeout(timer);
       delete prontos[codigo]; // cada link serve para um pedido só
       ir(url || fallback);
     });
+  }
+
+  // Mostra que o clique funcionou enquanto o checkout abre, e evita toque duplo.
+  function ocupar(a, sim) {
+    if (sim) { a.setAttribute('aria-busy', 'true'); a.style.opacity = '.6'; a.style.pointerEvents = 'none'; }
+    else { a.removeAttribute('aria-busy'); a.style.opacity = ''; a.style.pointerEvents = ''; }
+  }
+  var caixaAviso;
+  function aviso(txt) {
+    if (!caixaAviso) {
+      caixaAviso = document.createElement('div');
+      caixaAviso.setAttribute('role', 'status');
+      caixaAviso.style.cssText = 'position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:99998;background:#1C1B19;color:#fff;padding:14px 20px;border-radius:14px;font:600 15px/1.3 Montserrat,system-ui,sans-serif;box-shadow:0 12px 32px rgba(0,0,0,.28);text-align:center;max-width:86vw';
+      document.body.appendChild(caixaAviso);
+    }
+    caixaAviso.textContent = txt;
+    caixaAviso.style.display = txt ? 'block' : 'none';
+  }
+
+  // Cliente voltou do checkout (botão "voltar"): libera os botões e oferece retomar o pedido.
+  window.addEventListener('pageshow', function () {
+    [].forEach.call(document.querySelectorAll(SELETOR + '[aria-busy="true"]'), function (b) { ocupar(b, false); });
+    if (caixaAviso) aviso('');
+    retomar();
   });
+
+  var barra;
+  function retomar() {
+    if (barra || new URLSearchParams(location.search).get('compra') === 'ok') return;
+    var info = {};
+    try { info = JSON.parse(ler('selune_pedido') || '{}'); } catch (e) {}
+    var prod = info.codigo && PRODUTOS[info.codigo];
+    if (!prod || !info.quando || Date.now() - info.quando > 24 * 60 * 60 * 1000) return;
+    if (ler('selune_registrado') === info.nsu || ler('selune_dispensado') === info.nsu) return;
+    if (!info.conferido) {
+      info.conferido = true;
+      fetch('https://api.checkout.infinitepay.io/payment_check', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ handle: HANDLE, order_nsu: info.nsu })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          if (j && j.paid === true) {
+            if (window.fbq) fbq('track', 'Purchase', { value: info.valor, currency: 'BRL', content_name: info.nome }, { eventID: info.nsu });
+            salvar('selune_registrado', info.nsu);
+          } else { mostrarBarra(info, prod); }
+        })
+        .catch(function () { mostrarBarra(info, prod); });
+      return;
+    }
+  }
+
+  function mostrarBarra(info, prod) {
+    if (barra) return;
+    var preco = 'R$ ' + (prod.p / 100).toFixed(2).replace('.', ',');
+    barra = document.createElement('div');
+    barra.setAttribute('role', 'region');
+    barra.setAttribute('aria-label', 'Compra em andamento');
+    barra.style.cssText = 'position:fixed;left:12px;right:12px;top:12px;z-index:99997;max-width:520px;margin:0 auto;background:#FAFAF8;color:#1C1B19;border:1px solid #E4E1DC;border-radius:16px;padding:14px 14px 12px;font:14px/1.45 Montserrat,system-ui,sans-serif;box-shadow:0 14px 36px rgba(0,0,0,.18)';
+    var titulo = document.createElement('b');
+    titulo.textContent = 'Conseguiu finalizar sua compra?';
+    titulo.style.cssText = 'display:block;font-size:15px;padding-right:28px';
+    var texto = document.createElement('span');
+    texto.textContent = prod.d + ' · ' + preco + ' com frete grátis. Se ainda não pagou, dá para concluir agora. Se já pagou, é só fechar este aviso.';
+    texto.style.cssText = 'display:block;color:#6A665F;margin:2px 0 10px';
+    var linha = document.createElement('div');
+    linha.style.cssText = 'display:flex;gap:8px;flex-wrap:wrap';
+    var pagar = document.createElement('button');
+    pagar.type = 'button';
+    pagar.textContent = 'Finalizar no Pix ou cartão';
+    pagar.style.cssText = 'flex:1 1 180px;min-height:46px;border:0;border-radius:12px;background:#2F5D5A;color:#fff;font:700 15px Montserrat,system-ui,sans-serif;cursor:pointer';
+    var duvida = document.createElement('a');
+    duvida.textContent = 'Tirar dúvida no WhatsApp';
+    duvida.href = 'https://wa.me/5538999659366?text=' + encodeURIComponent('Olá! Comecei a compra do ' + prod.d + ' e fiquei com uma dúvida.');
+    duvida.target = '_blank'; duvida.rel = 'noopener';
+    duvida.style.cssText = 'flex:1 1 160px;min-height:46px;display:flex;align-items:center;justify-content:center;border:1px solid #1C1B19;border-radius:12px;color:#1C1B19;font-weight:600;text-decoration:none';
+    var fechar = document.createElement('button');
+    fechar.type = 'button';
+    fechar.setAttribute('aria-label', 'Fechar');
+    fechar.textContent = '×';
+    fechar.style.cssText = 'position:absolute;right:6px;top:4px;width:36px;height:36px;border:0;background:none;font-size:24px;line-height:1;color:#6A665F;cursor:pointer';
+    function sumir() { salvar('selune_dispensado', info.nsu); if (barra && barra.parentNode) barra.parentNode.removeChild(barra); barra = null; }
+    fechar.addEventListener('click', sumir);
+    pagar.addEventListener('click', function () {
+      if (window.fbq) fbq('track', 'InitiateCheckout', { content_name: prod.d, value: prod.p / 100, currency: 'BRL' });
+      abrir(pagar, info.codigo, prod);
+    });
+    linha.appendChild(pagar); linha.appendChild(duvida);
+    barra.appendChild(fechar); barra.appendChild(titulo); barra.appendChild(texto); barra.appendChild(linha);
+    document.body.appendChild(barra);
+  }
 
   // Volta da InfinitePay depois do pagamento: registra a compra no Pixel e agradece.
   var q = new URLSearchParams(location.search);
