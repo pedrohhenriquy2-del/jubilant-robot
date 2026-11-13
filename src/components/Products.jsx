@@ -30,7 +30,7 @@ export default function Products() {
         <div
           role="tablist"
           aria-label="Filtrar por categoria"
-          className="-mx-4 px-4 md:mx-0 md:px-0 flex gap-2 overflow-x-auto pb-1 mb-5 md:mb-8 [scrollbar-width:none]"
+          className="-mx-4 px-4 md:mx-0 md:px-0 flex md:justify-center gap-2 overflow-x-auto pb-1 mb-5 md:mb-8 [scrollbar-width:none]"
         >
           {CATEGORIES.map((c) => (
             <button
@@ -51,11 +51,11 @@ export default function Products() {
         </div>
 
         {/* Grade de produtos */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-10">
+        <div className="flex flex-wrap justify-center gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-10">
           {list.map((product) => {
             const href = product.salesPageUrl || product.paymentLink;
             return (
-              <article key={product.id} className="group flex flex-col">
+              <article key={product.id} className="group flex flex-col w-[calc(50%-6px)] md:w-[calc(33.333%-16px)]">
                 <a href={href} className="relative block aspect-square w-full bg-white border border-beige rounded-md overflow-hidden">
                   {product.badge && (
                     <span className="absolute top-2 left-2 z-10 bg-ink px-2 py-0.5 text-[11px] uppercase tracking-wide text-cream font-semibold">
@@ -69,7 +69,7 @@ export default function Products() {
                     className="w-full h-full object-contain p-3 md:p-5 transition-transform duration-300 group-hover:scale-[1.03]"
                   />
                 </a>
-                <div className="pt-3 flex flex-col flex-1">
+                <div className="pt-3 flex flex-col flex-1 text-center">
                   <p className="text-[11px] md:text-xs font-bold uppercase tracking-[0.12em] text-ink">
                     Principia
                   </p>

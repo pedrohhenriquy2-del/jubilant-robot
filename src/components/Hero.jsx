@@ -11,13 +11,6 @@ export default function Hero() {
   const precoKit = formatPrice(kit.price);
   const slides = [
     {
-      // Oferta de Black Friday do kit: tirar este slide depois de 01/12.
-      wide: "banners/kit-rotina-1600.webp",
-      mob: "banners/kit-rotina-1080.webp",
-      alt: `Black Friday Selune: Kit Rotina Selune, Sérum Mix-01 + Protetor Solar PS-01, por ${precoKit}, frete grátis até 01/12`,
-      href: "kit-rotina.html",
-    },
-    {
       wide: "banners/black-friday-1600.webp",
       mob: "banners/black-friday-1080.webp",
       alt: `Black Friday Selune: Principia Sérum Mix-01 por ${preco}, frete grátis, Pix ou cartão`,
@@ -37,7 +30,8 @@ export default function Hero() {
   const trilho = useRef(null);
   const [atual, setAtual] = useState(0);
   const [parado, setParado] = useState(false);
-  const emKit = atual === 0;
+  // O topo mostra só o Mix-01; o Kit Rotina segue na grade de produtos.
+  const emKit = false;
 
   function irPara(i) {
     const el = trilho.current;
