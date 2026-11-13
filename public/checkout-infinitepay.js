@@ -14,13 +14,15 @@
     PPU38CQEQMT: { d: 'Tônico Principia AL-7 · 120 ml', p: 2650 },
     // Kits do Mix-01 (só pela InfinitePay; se ela falhar, o pedido segue pelo WhatsApp)
     MIX01X2: { d: 'Kit 2x Principia Sérum Mix-01 · 30 ml', p: 6990, wa: true },
-    MIX01X3: { d: 'Kit 3x Principia Sérum Mix-01 · 30 ml', p: 9990, wa: true }
+    MIX01X3: { d: 'Kit 3x Principia Sérum Mix-01 · 30 ml', p: 9990, wa: true },
+    // Kit Rotina Selune (Black Friday): Mix-01 + Protetor PS-01
+    KITROTINA: { d: 'Kit Rotina Selune: Sérum Mix-01 + Protetor Solar PS-01', p: 4990, wa: true }
   };
 
   function salvar(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function ler(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 
-  var SELETOR = 'a[href*="go.perfectpay.com.br/"]';
+  var SELETOR = 'a[href*="go.perfectpay.com.br/"], a[data-ipay]';
   var VALIDADE = 10 * 60 * 1000; // um link preparado vale por 10 minutos
   var prontos = {}; // código do produto -> { nsu, quando, promessa }
 
@@ -111,7 +113,7 @@
 
   // Cliente voltou do checkout (botão "voltar"): libera os botões e oferece retomar o pedido.
   window.addEventListener('pageshow', function () {
-    [].forEach.call(document.querySelectorAll(SELETOR + '[aria-busy="true"]'), function (b) { ocupar(b, false); });
+    [].forEach.call(document.querySelectorAll('a[aria-busy="true"]'), function (b) { ocupar(b, false); });
     if (caixaAviso) aviso('');
     retomar();
   });

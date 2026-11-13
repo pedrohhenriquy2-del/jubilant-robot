@@ -16,6 +16,7 @@ export default defineConfig({
         // Páginas de vendas dedicadas de cada produto
         mix01: resolve(__dirname, 'mix-01.html'),
         kitAvancado: resolve(__dirname, 'kit-avancado.html'),
+        kitRotina: resolve(__dirname, 'kit-rotina.html'),
         protetorSolarPs01: resolve(__dirname, 'protetor-solar-ps-01.html'),
         gelLimpezaGl01: resolve(__dirname, 'gel-limpeza-gl-01.html'),
         cremeHidratanteCh02: resolve(__dirname, 'creme-hidratante-ch-02.html'),

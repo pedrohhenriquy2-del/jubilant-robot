@@ -139,6 +139,81 @@ export const PRODUCTS = [
     ],
   },
   {
+    id: 7,
+    category: "Kits",
+    tagline: "Sérum Mix-01 + Protetor Solar PS-01",
+    name: "Kit Rotina Selune: Trata + Protege",
+    shortName: "Kit Rotina Selune",
+    description:
+      "Os dois passos que não podem faltar na rotina, juntos e mais baratos do que separados: sérum Principia Mix-01 (30 ml) para tratar e protetor solar Principia PS-01 FPS 60 (40 ml) para proteger.",
+    price: 49.9,
+    // Soma real dos dois produtos comprados separados (24,95 + 29,90).
+    compareAtPrice: 54.85,
+    // Oferta de Black Friday: tirar estas duas linhas depois de 01/12.
+    offerNote: "Oferta de Black Friday · frete grátis até 01/12",
+    bonus: {
+      title: "Bônus: e-book Sua Rotina Skincare",
+      text: "O guia da pele bem cuidada, em PDF. Enviamos no seu WhatsApp depois da confirmação do pagamento.",
+    },
+    // Checkout só pela InfinitePay (código em public/checkout-infinitepay.js).
+    // Se o script não carregar, o botão leva o pedido para o WhatsApp.
+    ipayCode: "KITROTINA",
+    paymentLink: buildWhatsAppLink(
+      "Olá! Quero comprar o Kit Rotina Selune (Sérum Mix-01 + Protetor Solar PS-01) por R$ 49,90."
+    ),
+    salesPageUrl: `${ASSET_BASE}kit-rotina.html`,
+    photo: `${ASSET_BASE}products/kit-rotina.webp`,
+    badge: "Black Friday",
+    benefits: [
+      {
+        icon: "Moon",
+        title: "Passo 1 · Sérum Mix-01 (à noite)",
+        text: "Niacinamida 5%, ácido glicólico 4%, ácido tranexâmico 3% e ácido salicílico 2%. Para acne, oleosidade, textura irregular e poros dilatados.",
+      },
+      {
+        icon: "Sun",
+        title: "Passo 2 · Protetor Solar PS-01 (de manhã)",
+        text: "FPS 60 com 16,5% mix de filtros UV e 5% niacinamida. Toque seco, antioleosidade, proteção UVA e UVB.",
+      },
+      {
+        icon: "ShieldCheck",
+        title: "Feitos para usar juntos",
+        text: "Quem usa sérum com ácidos precisa de protetor solar todos os dias. No kit, os dois já chegam juntos.",
+      },
+      {
+        icon: "Sparkles",
+        title: "Mais barato do que separado",
+        text: "Separados, os dois saem por R$ 54,85. No kit, R$ 49,90 com frete grátis.",
+      },
+    ],
+    salesFaq: [
+      {
+        q: "Como uso os dois produtos?",
+        a: "À noite, aplique algumas gotas do sérum Mix-01 no rosto limpo. Comece com uso a cada dois dias para avaliar a sensibilidade da sua pele. De manhã, aplique o protetor solar PS-01 e reaplique ao longo do dia se ficar exposta ao sol.",
+      },
+      {
+        q: "Serve para qualquer tipo de pele?",
+        a: "É indicado principalmente para peles oleosas, mistas e com tendência a acne, poros dilatados e textura irregular.",
+      },
+      {
+        q: "Como recebo o e-book de bônus?",
+        a: "Depois da confirmação do pagamento, enviamos o PDF do e-book Sua Rotina Skincare no seu WhatsApp.",
+      },
+      {
+        q: "Até quando vale a oferta?",
+        a: "O frete grátis da Black Friday vale até 01/12. Os pedidos chegam em 3 a 7 dias úteis.",
+      },
+      {
+        q: "Como funciona o pagamento?",
+        a: "O pagamento é feito em ambiente seguro, com Pix ou cartão.",
+      },
+      {
+        q: "Tenho dúvidas antes de comprar, como falo com vocês?",
+        a: "É só chamar no WhatsApp (38) 99965-9366. O atendimento é 24 horas, todos os dias.",
+      },
+    ],
+  },
+  {
     id: 2,
     category: "Kits",
     tagline: "Rotina completa com 5 produtos",

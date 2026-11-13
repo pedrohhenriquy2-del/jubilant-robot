@@ -79,6 +79,11 @@ export default function Products() {
                   <p className="mt-1 text-xs text-ink-soft line-clamp-1">{product.tagline}</p>
                   <p className="mt-2 text-base md:text-lg font-bold text-accent">
                     {formatPrice(product.price)}
+                    {product.compareAtPrice && (
+                      <s className="ml-2 text-xs font-normal text-ink-soft">
+                        {formatPrice(product.compareAtPrice)}
+                      </s>
+                    )}
                   </p>
                   <p className="text-[11px] md:text-xs text-ink-soft">Frete grátis</p>
                   <a

@@ -13,6 +13,7 @@ import {
   Wallet,
   BadgeCheck,
   Truck,
+  Gift,
 } from "lucide-react";
 import {
   BRAND,
@@ -33,6 +34,7 @@ function BuyButton({ product, className = "", children = "Comprar agora" }) {
   return (
     <a
       href={product.paymentLink}
+      data-ipay={product.ipayCode}
       onClick={trackProductClick}
       className={`inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white font-semibold hover:bg-accent-dark transition-colors shadow-lg shadow-accent/20 ${className}`}
     >
@@ -125,9 +127,26 @@ export default function ProductSalesPage({ productId = 1 }) {
                 </span>
               </div>
 
-              <p className="mt-4 text-3xl md:text-4xl font-bold text-accent">
+              {product.compareAtPrice && (
+                <p className="mt-4 text-sm text-ink-soft">
+                  Separados: <s>{formatPrice(product.compareAtPrice)}</s>
+                </p>
+              )}
+              <p className={`${product.compareAtPrice ? "mt-1" : "mt-4"} text-3xl md:text-4xl font-bold text-accent`}>
                 {formatPrice(product.price)}
               </p>
+              {product.offerNote && (
+                <p className="mt-2 text-sm font-semibold text-ink">{product.offerNote}</p>
+              )}
+              {product.bonus && (
+                <div className="mt-4 mx-auto max-w-sm flex items-start gap-3 rounded-2xl border border-beige bg-white p-4 text-left">
+                  <Gift size={20} className="text-accent shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-ink">{product.bonus.title}</p>
+                    <p className="text-xs text-ink-soft leading-relaxed">{product.bonus.text}</p>
+                  </div>
+                </div>
+              )}
 
               <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
                 <BuyButton product={product} className="px-10 py-4 text-base w-full sm:w-auto" />
@@ -290,6 +309,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               </div>
               <a
                 href={product.paymentLink}
+                data-ipay={product.ipayCode}
                 onClick={trackProductClick}
                 className="inline-flex items-center gap-2 rounded-full bg-gold-light px-8 py-4 text-ink font-medium hover:bg-cream transition-colors"
               >
