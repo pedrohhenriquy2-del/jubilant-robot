@@ -78,7 +78,7 @@ export function trackProductClick(e) {
   const el = e && e.currentTarget;
   const href = (el && el.getAttribute && el.getAttribute("href")) || "";
   const prod =
-    PRODUCTS.find((p) => el && el.dataset && el.dataset.ipay && p.ipay === el.dataset.ipay) ||
+    PRODUCTS.find((p) => el && el.dataset && el.dataset.ipay && p.ipayCode === el.dataset.ipay) ||
     PRODUCTS.find((p) => p.paymentLink && href && href.split("?")[0] === p.paymentLink.split("?")[0]);
   if (!prod) {
     window.fbq("track", "InitiateCheckout", { currency: "BRL" });

@@ -86,13 +86,20 @@ export default function Products() {
                     )}
                   </p>
                   <p className="text-[11px] md:text-xs text-ink-soft">Frete grátis</p>
+                  {/* Compra direta: o botão já abre o pagamento (Pix ou cartão). */}
                   <a
-                    href={href}
+                    href={product.paymentLink}
+                    data-ipay={product.ipayCode || undefined}
                     onClick={trackProductClick}
                     className="mt-3 inline-flex items-center justify-center rounded-md bg-accent px-3 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
                   >
                     Comprar
                   </a>
+                  {product.salesPageUrl && (
+                    <a href={product.salesPageUrl} className="mt-1.5 py-1.5 text-center text-xs text-ink-soft underline underline-offset-2 hover:text-ink">
+                      Ver detalhes
+                    </a>
+                  )}
                 </div>
               </article>
             );
