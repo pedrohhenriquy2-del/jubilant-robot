@@ -81,7 +81,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="relative order-first md:order-last"
+              className="relative order-last"
             >
               <div className="aspect-square w-full rounded-[2rem] bg-white border border-beige flex items-center justify-center shadow-lg shadow-ink/5 overflow-hidden p-10">
                 {product.video ? (
@@ -149,7 +149,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               )}
 
               <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <BuyButton product={product} className="px-10 py-4 text-base w-full sm:w-auto" />
+                <BuyButton product={product} className="px-10 py-4 text-base w-auto" />
               </div>
 
               <a
