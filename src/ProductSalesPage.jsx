@@ -148,7 +148,7 @@ export default function ProductSalesPage({ productId = 1 }) {
                 </div>
               )}
 
-              <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+              <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <BuyButton product={product} className="px-10 py-4 text-base w-full sm:w-auto" />
               </div>
 
@@ -233,13 +233,13 @@ export default function ProductSalesPage({ productId = 1 }) {
             <h2 className="text-2xl md:text-3xl font-semibold mb-10">
               O que essa fórmula faz pela sua pele
             </h2>
-            <div className="grid sm:grid-cols-2 gap-6 text-left">
+            <div className="grid sm:grid-cols-2 gap-6 text-center">
               {product.benefits.map((b) => {
                 const Icon = ICONS[b.icon];
                 return (
                   <div
                     key={b.title}
-                    className="rounded-2xl bg-offwhite border border-beige p-6 flex gap-4 hover:border-nude/60 hover:shadow-lg transition-all"
+                    className="rounded-2xl bg-offwhite border border-beige p-6 flex flex-col items-center gap-3 hover:border-nude/60 hover:shadow-lg transition-all"
                   >
                     <div className="h-11 w-11 rounded-full bg-beige flex items-center justify-center shrink-0">
                       <Icon size={20} className="text-nude-dark" />
@@ -272,7 +272,7 @@ export default function ProductSalesPage({ productId = 1 }) {
             <h2 className="text-2xl md:text-3xl font-semibold mb-10">
               Perguntas frequentes
             </h2>
-            <div className="text-left space-y-6">
+            <div className="text-center space-y-6">
               {product.salesFaq.map((item) => (
                 <div key={item.q} className="border-b border-beige pb-6">
                   <p className="font-medium text-ink mb-2">{item.q}</p>
