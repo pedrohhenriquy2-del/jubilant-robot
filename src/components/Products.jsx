@@ -30,7 +30,7 @@ export default function Products() {
         <div
           role="tablist"
           aria-label="Filtrar por categoria"
-          className="-mx-4 px-4 md:mx-0 md:px-0 flex justify-start sm:justify-center gap-2 overflow-x-auto pb-1 mb-5 md:mb-8 [scrollbar-width:none]"
+          className="flex flex-wrap justify-center gap-2 pb-1 mb-5 md:mb-8"
         >
           {CATEGORIES.map((c) => (
             <button

@@ -42,7 +42,7 @@ export default function Header() {
 
         <a
           href="#produtos"
-          className="hidden md:inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
+          className="ml-auto md:ml-0 mr-1 md:mr-0 inline-flex items-center gap-2 rounded-full bg-accent px-4 md:px-5 py-2 md:py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
         >
           <ShoppingBag size={15} />
           Comprar

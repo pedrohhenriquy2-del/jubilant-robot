@@ -135,23 +135,23 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-2 sm:items-center md:rounded-b-md md:border md:border-t-0 md:border-beige bg-white px-4 pb-4 pt-1 md:p-4">
+        <div className="flex flex-row gap-2 items-stretch md:rounded-b-md md:border md:border-t-0 md:border-beige bg-white px-4 pb-4 pt-1 md:p-4">
           {/* Os botões acompanham o slide: no primeiro (kit), vendem o kit. */}
           <a
             key={emKit ? "kit" : "mix"}
             href={emKit ? kit.paymentLink : mix.paymentLink}
             data-ipay={emKit ? kit.ipayCode : undefined}
             onClick={trackProductClick}
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3.5 text-base font-bold text-white hover:bg-accent-dark transition-colors"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-3 md:px-5 py-3.5 text-[15px] md:text-base font-bold text-white hover:bg-accent-dark transition-colors"
           >
             <ShoppingBag size={19} />
-            {emKit ? `Comprar o kit por ${precoKit}` : `Comprar agora por ${preco}`}
+            {emKit ? `Comprar o kit por ${precoKit}` : `Comprar por ${preco}`}
           </a>
           <a
             href={`${base}${emKit ? "kit-rotina.html" : "mix-01.html"}`}
-            className="inline-flex items-center justify-center rounded-md border border-beige-dark px-5 py-3.5 text-sm font-semibold text-ink hover:border-ink transition-colors"
+            className="inline-flex items-center justify-center rounded-md border border-beige-dark px-3 md:px-5 py-3.5 text-[13px] md:text-sm font-semibold text-ink hover:border-ink transition-colors text-center leading-tight"
           >
-            {emKit ? "Ver detalhes do kit" : "Ver detalhes do Mix-01"}
+            {emKit ? "Ver detalhes" : "Ver detalhes"}
           </a>
         </div>
       </div>
