@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://selune-oficial.com.br/sitemap.xml

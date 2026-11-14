@@ -1,0 +1,1 @@
+import{A as e,M as t,N as n,j as r}from"./WhatsAppFloatButton-BEy2bHLr.js";import{t as i}from"./ProductSalesPage-BgFwV8V6.js";var a=n(t(),1),o=r(),s=e();(0,o.createRoot)(document.getElementById(`root`)).render((0,s.jsx)(a.StrictMode,{children:(0,s.jsx)(i,{productId:3})}));
