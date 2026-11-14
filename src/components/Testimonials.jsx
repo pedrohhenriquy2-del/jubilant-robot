@@ -36,7 +36,7 @@ export default function Testimonials() {
                   <Star
                     key={idx}
                     size={16}
-                    className="fill-gold text-gold"
+                    className="fill-[#F5B301] text-[#F5B301]"
                   />
                 ))}
               </div>
