@@ -83,10 +83,10 @@ export function trackProductClick(e) {
     todos.find((p) => el && el.dataset && el.dataset.ipay && p.ipayCode === el.dataset.ipay) ||
     todos.find((p) => p.paymentLink && href && href.split("?")[0] === p.paymentLink.split("?")[0]);
   if (!prod) {
-    window.fbq("track", "InitiateCheckout", { currency: "BRL" });
+    window.fbq("trackCustom", "CliqueComprar", { currency: "BRL" });
     return;
   }
-  window.fbq("track", "InitiateCheckout", {
+  window.fbq("trackCustom", "CliqueComprar", {
     content_name: prod.name,
     content_ids: [String(prod.id)],
     content_type: "product",
@@ -623,7 +623,7 @@ export const NOVOS_PRODUTOS = [
     ipayCode: "SELOLEO",
     paymentLink: buildWhatsAppLink("Olá! Quero comprar Óleo de Rosa Mosqueta Apinil 30 ml por R$ 32,90."),
     photo: `${ASSET_BASE}products/novos/oleo-rosa-mosqueta.webp`,
-    badge: "Mais vendido",
+    badge: "Multiuso",
   },
   {
     id: 108, category: "Kits", brand: "Selune", shortName: "Kit Pele Oleosa",

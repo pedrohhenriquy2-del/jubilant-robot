@@ -818,12 +818,12 @@
       });
       document.querySelectorAll('.pbuy').forEach(function (a) {
         a.addEventListener('click', function () {
-          if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: a.dataset.name, value: parseFloat(a.dataset.value), currency: 'BRL'});
+          if (window.fbq) fbq('trackCustom', 'CliqueComprar', {content_name: a.dataset.name, value: parseFloat(a.dataset.value), currency: 'BRL'});
         });
       });
       document.querySelectorAll('.buy').forEach(function (a) {
         a.addEventListener('click', function () {
-          if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: 'Principia Sérum Mix-01', value: parseFloat(a.dataset.value || '24.95'), num_items: a.dataset.ipay === 'MIX01X3' ? 3 : (a.dataset.ipay === 'MIX01X2' ? 2 : 1), currency: 'BRL'});
+          if (window.fbq) fbq('trackCustom', 'CliqueComprar', {content_name: 'Principia Sérum Mix-01', value: parseFloat(a.dataset.value || '24.95'), num_items: a.dataset.ipay === 'MIX01X3' ? 3 : (a.dataset.ipay === 'MIX01X2' ? 2 : 1), currency: 'BRL'});
         });
       });
       // Leva a origem do anúncio (utm_*, fbclid) até o checkout, para a venda ser atribuída à campanha certa

@@ -1,7 +1,7 @@
 /* Checkout Cartpanda: ao clicar em "Comprar", leva o cliente direto para o
    checkout da Cartpanda com o produto já no carrinho.
-   Produto que ainda não está cadastrado na Cartpanda segue pelo WhatsApp,
-   então nenhuma venda se perde. */
+   Carrinho com produtos diferentes segue pelo WhatsApp (o link da Cartpanda
+   aceita um produto por vez), então nenhuma venda se perde. */
 (function () {
   var LOJA = 'https://selune-oficial-com.mycartpanda.com/checkout/';
   var WHATS = 'https://wa.me/5538999659366?text=';
@@ -23,13 +23,12 @@
     SELOLEO: { d: 'Óleo de Rosa Mosqueta Apinil 30 ml', p: 3290, v: 214544933 },
     SELKITOL: { d: 'Kit Pele Oleosa: Sabonete Ácido Salicílico + Sérum Ácido Hialurônico + Protetor FPS 60', p: 6990, v: 214544934 },
     SELKITGL: { d: 'Kit Glow: Mousse Micelar + Sérum Rosa Mosqueta + Creme Rosa Mosqueta', p: 5990, v: 214544935 },
-    // Ainda não cadastrados na Cartpanda: seguem pelo WhatsApp até ganharem uma variante.
-    KITROTINA: { d: 'Kit Rotina Selune: Sérum Mix-01 + Protetor Solar PS-01', p: 4990 },
-    PPU38CQE85U: { d: 'Kit Avançado VC + RN com GL-01', p: 14550 },
-    PPU38CQE87N: { d: 'Principia Protetor Solar Facial PS-01 FPS 60', p: 2990 },
-    PPU38CQE87U: { d: 'Principia Gel de Limpeza Facial GL-01 · 200 g', p: 4550 },
-    PPU38CQEQMQ: { d: 'Principia Creme Hidratante Corporal CH-02 · 454 g', p: 4990 },
-    PPU38CQEQMT: { d: 'Tônico Principia AL-7 · 120 ml', p: 2650 }
+    KITROTINA: { d: 'Kit Rotina Selune: Sérum Mix-01 + Protetor Solar PS-01', p: 4990, v: 214571430 },
+    PPU38CQE87N: { d: 'Principia Protetor Solar Facial PS-01 FPS 60', p: 2990, v: 214571431 },
+    PPU38CQEQMT: { d: 'Tônico Principia AL-7 · 120 ml', p: 2650, v: 214571432 },
+    PPU38CQE87U: { d: 'Principia Gel de Limpeza Facial GL-01 · 200 g', p: 4550, v: 214571433 },
+    PPU38CQEQMQ: { d: 'Principia Creme Hidratante Corporal CH-02 · 454 g', p: 4990, v: 214571434 },
+    PPU38CQE85U: { d: 'Kit Avançado VC + RN com GL-01', p: 14550, v: 214571435 }
   };
 
   var SELETOR = 'a[href*="go.perfectpay.com.br/"], a[data-ipay]';
