@@ -65,7 +65,8 @@ export default function Footer() {
 
       <ul className="mx-auto max-w-6xl px-6 mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-cream/80">
         <li>Nota fiscal eletrônica em todo pedido</li>
-        <li>Produtos originais, regularizados na ANVISA pelos fabricantes</li>
+        {/* ANVISA: só voltar a dizer "regularizados na ANVISA" depois de conferir cada marca em consultas.anvisa.gov.br */}
+        <li>Produtos originais, comprados de distribuidor com nota fiscal</li>
         <li>Pagamento seguro por Pix ou cartão</li>
         <li>7 dias para desistir</li>
       </ul>
