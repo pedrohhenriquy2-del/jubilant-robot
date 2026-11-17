@@ -17,7 +17,7 @@ export default function Contact() {
             Fale com uma pessoa de verdade antes de comprar
           </h2>
           <p className="text-cream/70 max-w-md mx-auto mb-6">
-            Tire suas dúvidas sobre os produtos, o envio ou o pagamento. A gente responde pelo WhatsApp (38) 99965-9366.
+            Tire suas dúvidas sobre os produtos, o envio ou o pagamento. A gente responde pelo WhatsApp <span className="whitespace-nowrap">(38) 99965-9366</span>.
           </p>
           <a
             href={WHATSAPP_LINK}
