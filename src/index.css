@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
   /* Paleta premium Selune: branco, bege, nude, dourado discreto e marrom suave */

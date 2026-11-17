@@ -25,6 +25,9 @@
     SELSAB: { d: 'Sabonete Facial Ácido Salicílico Dermachem 100 ml', p: 3290, wa: true },
     SELMOUS: { d: 'Mousse Micelar Rosa Mosqueta Phállebeauty 150 ml', p: 3290, wa: true },
     SELCREM: { d: 'Creme Rosa Mosqueta + Colágeno Florêncio 50 g', p: 3490, wa: true },
+    SELSABRM: { d: 'Sabonete Facial Rosa Mosqueta Dermachem 100 ml', p: 3290, wa: true },
+    SELESF: { d: 'Esfoliante Facial Rosa Mosqueta Dermachem 100 g', p: 3490, wa: true },
+    SELOLEO: { d: 'Óleo de Rosa Mosqueta Apinil 30 ml', p: 3290, wa: true },
     SELKITOL: { d: 'Kit Pele Oleosa: Sabonete Ácido Salicílico + Sérum Ácido Hialurônico + Protetor FPS 60', p: 6990, wa: true },
     SELKITGL: { d: 'Kit Glow: Mousse Micelar + Sérum Rosa Mosqueta + Creme Rosa Mosqueta', p: 5990, wa: true }
   };

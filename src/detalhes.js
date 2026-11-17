@@ -135,6 +135,54 @@ export const DETALHES = {
     combina: ["SELROSA", "SELMOUS"],
     kit: "SELKITGL",
   },
+  SELSABRM: {
+    slug: "sabonete-facial-rosa-mosqueta",
+    titulo: "Limpeza suave com rosa mosqueta",
+    resumo:
+      "Sabonete facial Dermachem com extrato de rosa mosqueta e ácido hialurônico, em bisnaga de 100 ml. Na embalagem: para pele sensível e extrasseca.",
+    embalagem: ["Para pele sensível e extrasseca", "Limpeza, hidratação e nutrição", "Dermatologicamente testado"],
+    composicao: "Extrato de Rosa Mosqueta · Ácido Hialurônico · Solução ionizada de colágeno hidrolisado",
+    caracteristicas: ["100 ml", "Bisnaga", "Uso facial"],
+    uso: [
+      "Molhe o rosto e aplique uma pequena quantidade.",
+      "Massageie com movimentos suaves, evitando a área dos olhos.",
+      "Enxágue bem e seque.",
+    ],
+    indicacao: "Pele sensível e extrasseca, segundo a embalagem. Siga as advertências do rótulo.",
+    combina: ["SELROSA", "SELCREM"],
+  },
+  SELESF: {
+    slug: "esfoliante-facial-rosa-mosqueta",
+    titulo: "O passo de esfoliação da sua rotina",
+    resumo:
+      "Esfoliante facial Dermachem com óleo de rosa mosqueta e esfoliante da casca de coco, em bisnaga de 100 g. Na embalagem: para pele sensível e extrasseca.",
+    embalagem: ["Para pele sensível e extrasseca", "Limpeza, revitalização e hidratação", "Dermatologicamente testado"],
+    composicao:
+      "Óleo de Rosa Mosqueta · Esfoliante da Casca de Coco · Ácido Hialurônico · Solução ionizada de colágeno hidrolisado",
+    caracteristicas: ["100 g", "Bisnaga", "Uso facial"],
+    uso: [
+      "Com o rosto úmido, aplique uma pequena quantidade.",
+      "Massageie com movimentos circulares suaves, evitando a área dos olhos.",
+      "Enxágue bem. Siga a frequência de uso indicada no rótulo.",
+    ],
+    indicacao: "Pele sensível e extrasseca, segundo a embalagem. Siga as advertências do rótulo.",
+    combina: ["SELSABRM", "SELCREM"],
+  },
+  SELOLEO: {
+    slug: "oleo-de-rosa-mosqueta",
+    titulo: "Rosa mosqueta em óleo, no frasco de 30 ml",
+    resumo: "Óleo de rosa mosqueta Apinil, em frasco de 30 ml com bico aplicador.",
+    embalagem: ["Óleo de Rosa Mosqueta", "30 ml"],
+    composicao: "Óleo de Rosa Mosqueta",
+    caracteristicas: ["30 ml", "Frasco com bico aplicador"],
+    uso: [
+      "Com a pele limpa e seca, aplique algumas gotas.",
+      "Massageie suavemente até absorver.",
+      "Siga o modo de uso indicado no rótulo.",
+    ],
+    indicacao: "Uso externo. Siga as orientações e advertências da embalagem.",
+    combina: ["SELSABRM", "SELCREM"],
+  },
   SELKITOL: {
     slug: "kit-pele-oleosa",
     titulo: "Rotina completa para pele oleosa: limpa, hidrata e protege",
