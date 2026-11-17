@@ -41,6 +41,7 @@ export default function Reviews() {
             </figure>
           ))}
         </div>
+        <p className="mt-4 text-xs text-ink-soft">Relatos de clientes. Os resultados variam de pessoa para pessoa.</p>
       </div>
     </section>
   );

@@ -398,16 +398,16 @@ export const PRODUCTS = [
   {
     id: 5,
     category: "Corpo",
-    tagline: "Hidratação de 72 horas · 454 g",
+    tagline: "Hidratação para o corpo · 454 g",
     name: "Principia Creme Hidratante Corporal CH-02 454g",
     shortName: "Creme Hidratante CH-02",
     description:
-      "5% óleo de semente de girassol, 5% glicerina e 3% manteiga de abacate. Para peles sensíveis, secas a extra secas, com 72 horas de hidratação.",
+      "5% óleo de semente de girassol, 5% glicerina e 3% manteiga de abacate. Para peles sensíveis, secas a extra secas. Segundo a Principia, hidrata por até 72 horas.",
     price: 49.9,
     paymentLink: "https://go.perfectpay.com.br/PPU38CQEQMQ",
     salesPageUrl: `${ASSET_BASE}creme-hidratante-ch-02.html`,
     photo: `${ASSET_BASE}products/creme-hidratante-ch-02.webp`,
-    badge: "72h de hidratação",
+    badge: "Corpo",
     benefits: [
       {
         icon: "Droplet",
@@ -417,7 +417,7 @@ export const PRODUCTS = [
       {
         icon: "Sparkles",
         title: "5% Glicerina",
-        text: "Mantém a hidratação por até 72 horas.",
+        text: "Segundo a Principia, mantém a hidratação por até 72 horas.",
       },
       {
         icon: "ShieldCheck",
@@ -437,7 +437,7 @@ export const PRODUCTS = [
       },
       {
         q: "Serve para pele muito seca?",
-        a: "Sim, foi formulado para peles sensíveis, secas a extra secas, com até 72 horas de hidratação.",
+        a: "Segundo a Principia, ele é indicado para peles sensíveis, secas a extra secas, com até 72 horas de hidratação.",
       },
       {
         q: "Como funciona o pagamento?",
@@ -508,131 +508,9 @@ export const PRODUCTS = [
 // Selos de confiança/segurança. TROCAR: não afirmar registro específico em
 // órgãos regulatórios (ex: ANVISA) sem documentação real que comprove isso —
 // aqui ficam apenas compromissos gerais de boas práticas e qualidade.
-export const SAFETY_BADGES = [
-  {
-    icon: "ShieldCheck",
-    title: "Boas práticas de segurança",
-    description:
-      "Compromisso com boas práticas e cuidado no atendimento e no envio dos produtos.",
-  },
-  {
-    icon: "BadgeCheck",
-    title: "Produtos de qualidade",
-    description:
-      "Fórmulas com ingredientes seguros e reconhecidos, escolhidos com cuidado.",
-  },
-  {
-    icon: "GraduationCap",
-    title: "Curadoria especializada",
-    description:
-      "Produtos selecionados com base em ativos eficazes e reconhecidos no skincare.",
-  },
-  {
-    icon: "HeartHandshake",
-    title: "Transparência com você",
-    description:
-      "Atendimento claro, sem promessas milagrosas, focado no seu bem-estar real.",
-  },
-];
 
-export const SERVICES = [
-  {
-    icon: "Sparkles",
-    title: "Limpeza Facial Diária",
-    description:
-      "Remove impurezas e oleosidade em excesso, preparando a pele pros próximos passos da sua rotina.",
-  },
-  {
-    icon: "Droplet",
-    title: "Hidratação Profunda",
-    description:
-      "Repõe a barreira de hidratação da pele, deixando-a macia, viçosa e com aspecto saudável.",
-  },
-  {
-    icon: "Sun",
-    title: "Proteção Solar Diária",
-    description:
-      "Protege contra os raios UVA e UVB no dia a dia, sem deixar a pele oleosa ou esbranquiçada.",
-  },
-  {
-    icon: "Leaf",
-    title: "Renovação da Textura",
-    description:
-      "Ácidos que ajudam a renovar a pele, melhorando textura, poros dilatados e uniformidade.",
-  },
-  {
-    icon: "Heart",
-    title: "Ajuda para escolher",
-    description:
-      "Não sabe por onde começar? Chame no WhatsApp e indicamos os produtos certos para o seu tipo de pele.",
-  },
-  {
-    icon: "ShieldCheck",
-    title: "Ação Anti-idade",
-    description:
-      "No Kit Avançado, retinol e vitamina C ajudam a suavizar linhas finas com o uso contínuo.",
-  },
-];
 
-export const GALLERY_IMAGES = [
-  {
-    id: 1,
-    src: `${ASSET_BASE}gallery/resultados-acne.webp`,
-    alt: "Antes e depois: redução da aparência de acne",
-  },
-  {
-    id: 2,
-    src: `${ASSET_BASE}gallery/resultados-firmeza.webp`,
-    alt: "Antes e depois: pele mais firme e hidratada",
-  },
-  {
-    id: 3,
-    src: `${ASSET_BASE}gallery/resultados-uniformidade.webp`,
-    alt: "Antes e depois: pele mais uniforme e luminosa",
-  },
-  {
-    id: 4,
-    src: `${ASSET_BASE}gallery/resultados-manchas.webp`,
-    alt: "Antes e depois: redução da aparência de manchas",
-  },
-  {
-    id: 5,
-    src: `${ASSET_BASE}gallery/resultados-brilho.webp`,
-    alt: "Pele com viço e luminosidade",
-  },
-  {
-    id: 6,
-    src: `${ASSET_BASE}gallery/resultados-vitalidade.webp`,
-    alt: "Antes e depois: mais brilho, vitalidade e hidratação",
-  },
-];
 
-export const TESTIMONIALS = [
-  {
-    name: "Camila Rezende",
-    photo: `${ASSET_BASE}testimonials/camila-rezende.jpeg`,
-    rating: 5,
-    text: "Minha pele nunca esteve tão limpa e uniforme. O atendimento é super acolhedor, me senti cuidada do início ao fim.",
-  },
-  {
-    name: "Fernanda Alves",
-    photo: `${ASSET_BASE}testimonials/fernanda-alves.jpeg`,
-    rating: 5,
-    text: "Fiz a limpeza de pele profunda e amei o resultado. Ambiente impecável e profissional muito atenciosa.",
-  },
-  {
-    name: "Juliana Martins",
-    photo: `${ASSET_BASE}testimonials/juliana-martins.webp`,
-    rating: 5,
-    text: "Já é minha terceira sessão na Selune e cada vez saio mais satisfeita. Recomendo de olhos fechados!",
-  },
-  {
-    name: "Patrícia Gomes",
-    photo: `${ASSET_BASE}testimonials/patricia-gomes.jpeg`,
-    rating: 5,
-    text: "Atendimento personalizado de verdade. Explicaram cada etapa do procedimento e minha pele agradeceu.",
-  },
-];
 
 export const FAQ_ITEMS = [
   {

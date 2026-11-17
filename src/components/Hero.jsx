@@ -23,7 +23,7 @@ export default function Hero() {
     {
       wide: "banners/mix01-formula-1600.webp",
       mob: "banners/mix01-formula-1080.webp",
-      alt: "Lateral da caixa do Mix-01: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten",
+      alt: "Lateral da caixa do Mix-01, segundo a embalagem da Principia: dermatologicamente testado, não testado em animais, sem parabenos, sulfatos, silicones, fragrância, corantes e glúten",
     },
   ];
 
