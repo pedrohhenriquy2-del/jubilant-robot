@@ -1,10 +1,10 @@
 import { ShoppingBag, Truck, ReceiptText, CreditCard } from "lucide-react";
-import { PRODUCTS } from "../constants";
+import { VITRINE as PRODUCTS } from "../constants";
 
 // Banner de abertura: mensagem principal + fotos dos produtos da loja.
 // As fotos vêm da lista de produtos, então acompanham a troca de marcas.
 export default function Hero() {
-  const fotos = PRODUCTS.filter((p) => p.photo).slice(0, 4);
+  const fotos = PRODUCTS.filter((p) => p.photo && !p.photos).slice(0, 4);
   return (
     <section id="inicio" className="bg-cream">
       <h1 className="sr-only">Selune Oficial: skincare original com preço acessível</h1>

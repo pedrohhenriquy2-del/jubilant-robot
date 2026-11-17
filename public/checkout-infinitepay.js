@@ -16,7 +16,17 @@
     MIX01X2: { d: 'Kit 2x Principia Sérum Mix-01 · 30 ml', p: 6990, wa: true },
     MIX01X3: { d: 'Kit 3x Principia Sérum Mix-01 · 30 ml', p: 9990, wa: true },
     // Kit Rotina Selune (Black Friday): Mix-01 + Protetor PS-01
-    KITROTINA: { d: 'Kit Rotina Selune: Sérum Mix-01 + Protetor Solar PS-01', p: 4990, wa: true }
+    KITROTINA: { d: 'Kit Rotina Selune: Sérum Mix-01 + Protetor Solar PS-01', p: 4990, wa: true },
+    // Nova Selune (SBB Distribuidora)
+    SELHIAL: { d: 'Sérum Ácido Hialurônico 1,5% Dermachem 30 ml', p: 3490, wa: true },
+    SELROSA: { d: 'Sérum Rosa Mosqueta Dermachem 30 ml', p: 3490, wa: true },
+    SELCENT: { d: 'Centella Asiática Ampoule Bella Femme 30 ml', p: 4490, wa: true },
+    SELPROT: { d: 'Protetor Solar Facial FPS 60 sem cor Dermachem 40 g', p: 3990, wa: true },
+    SELSAB: { d: 'Sabonete Facial Ácido Salicílico Dermachem 100 ml', p: 3290, wa: true },
+    SELMOUS: { d: 'Mousse Micelar Rosa Mosqueta Phállebeauty 150 ml', p: 3290, wa: true },
+    SELCREM: { d: 'Creme Rosa Mosqueta + Colágeno Florêncio 50 g', p: 2990, wa: true },
+    SELKITOL: { d: 'Kit Pele Oleosa: Sabonete Ácido Salicílico + Sérum Ácido Hialurônico + Protetor FPS 60', p: 6990, wa: true },
+    SELKITGL: { d: 'Kit Glow: Mousse Micelar + Sérum Rosa Mosqueta + Creme Rosa Mosqueta', p: 5990, wa: true }
   };
 
   function salvar(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }

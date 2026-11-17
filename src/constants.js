@@ -512,6 +512,115 @@ export const PRODUCTS = [
 
 
 
+
+// ===== Nova Selune: produtos da SBB Distribuidora =====
+// Fotos servidas pelo CDN do fornecedor (facilzap). Trocar por fotos próprias quando houver.
+export const NOVOS_PRODUTOS = [
+  {
+    id: 101, category: "Sérum", brand: "Dermachem", shortName: "Sérum Ácido Hialurônico 1,5%",
+    name: "Sérum Ácido Hialurônico 1,5% Dermachem 30 ml",
+    tagline: "Sérum facial · 30 ml",
+    description: "Sérum facial com ácido hialurônico, para a rotina de hidratação do rosto.",
+    price: 34.9,
+    ipayCode: "SELHIAL",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Sérum Ácido Hialurônico 1,5% Dermachem 30 ml por R$ 34,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1762880425_5227e857cadfe0c565d5.webp?width=700&height=700&quality=85&format=webp",
+    badge: "Hidratação",
+  },
+  {
+    id: 102, category: "Sérum", brand: "Dermachem", shortName: "Sérum Rosa Mosqueta",
+    name: "Sérum Rosa Mosqueta Dermachem 30 ml",
+    tagline: "Sérum facial · 30 ml",
+    description: "Sérum facial com óleo de rosa mosqueta, para incluir na rotina de cuidado do rosto.",
+    price: 34.9,
+    ipayCode: "SELROSA",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Sérum Rosa Mosqueta Dermachem 30 ml por R$ 34,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1762880798_5c15a3e0cab2de90adb6.webp?width=700&height=700&quality=85&format=webp",
+  },
+  {
+    id: 103, category: "Sérum", brand: "Bella Femme", shortName: "Centella Asiática Ampoule",
+    name: "Centella Asiática Ampoule Bella Femme 30 ml",
+    tagline: "Ampola facial · 30 ml",
+    description: "Ampola facial com centella asiática, para quem gosta de uma rotina leve e calmante.",
+    price: 44.9,
+    ipayCode: "SELCENT",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Centella Asiática Ampoule Bella Femme 30 ml por R$ 44,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1794585998_3a11e73d6b1ee75c9e90.webp?width=700&height=700&quality=85&format=webp",
+    badge: "Novidade",
+  },
+  {
+    id: 104, category: "Protetor", brand: "Dermachem", shortName: "Protetor Solar Facial FPS 60",
+    name: "Protetor Solar Facial FPS 60 sem cor Dermachem 40 g",
+    tagline: "FPS 60 · sem cor · 40 g",
+    description: "Protetor solar facial FPS 60, sem cor, para usar todos os dias.",
+    price: 39.9,
+    ipayCode: "SELPROT",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Protetor Solar Facial FPS 60 sem cor Dermachem 40 g por R$ 39,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1775576045_99d8e6f10ec9d8cdaa4f.webp?width=700&height=700&quality=85&format=webp",
+    badge: "FPS 60",
+  },
+  {
+    id: 105, category: "Limpeza", brand: "Dermachem", shortName: "Sabonete Facial Ácido Salicílico",
+    name: "Sabonete Facial Ácido Salicílico Dermachem 100 ml",
+    tagline: "Sabonete facial · 100 ml",
+    description: "Sabonete líquido facial com ácido salicílico, para a limpeza do rosto de manhã e à noite.",
+    price: 32.9,
+    ipayCode: "SELSAB",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Sabonete Facial Ácido Salicílico Dermachem 100 ml por R$ 32,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1723202259_7897863c4b8eeb7adcdd.jpg.webp?width=700&height=700&quality=85&format=webp",
+    badge: "Pele oleosa",
+  },
+  {
+    id: 106, category: "Limpeza", brand: "Phállebeauty", shortName: "Mousse Micelar Rosa Mosqueta",
+    name: "Mousse Micelar Rosa Mosqueta Phállebeauty 150 ml",
+    tagline: "Mousse de limpeza · 150 ml",
+    description: "Mousse micelar de limpeza facial com rosa mosqueta.",
+    price: 32.9,
+    ipayCode: "SELMOUS",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Mousse Micelar Rosa Mosqueta Phállebeauty 150 ml por R$ 32,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1734537175_e88b7124d2a14062a30f.jpg.webp?width=700&height=700&quality=85&format=webp",
+  },
+  {
+    id: 107, category: "Hidratante", brand: "Florêncio", shortName: "Creme Rosa Mosqueta + Colágeno",
+    name: "Creme Rosa Mosqueta + Colágeno Florêncio 50 g",
+    tagline: "Creme hidratante · 50 g",
+    description: "Creme hidratante com rosa mosqueta e colágeno.",
+    price: 29.9,
+    ipayCode: "SELCREM",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Creme Rosa Mosqueta + Colágeno Florêncio 50 g por R$ 29,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/6a1713729c7e2_jm6HeL7A.webp?width=700&height=700&quality=85&format=webp",
+  },
+  {
+    id: 108, category: "Kits", brand: "Selune", shortName: "Kit Pele Oleosa",
+    name: "Kit Pele Oleosa: Sabonete Ácido Salicílico + Sérum Ácido Hialurônico + Protetor FPS 60",
+    tagline: "3 produtos · limpa, hidrata e protege",
+    description: "Sabonete facial com ácido salicílico (100 ml), sérum de ácido hialurônico 1,5% (30 ml) e protetor solar facial FPS 60 (40 g), da Dermachem.",
+    price: 69.9,
+    compareAtPrice: 107.7,
+    ipayCode: "SELKITOL",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Kit Pele Oleosa: Sabonete Ácido Salicílico + Sérum Ácido Hialurônico + Protetor FPS 60 por R$ 69,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1723202259_7897863c4b8eeb7adcdd.jpg.webp?width=700&height=700&quality=85&format=webp",
+    photos: ["https://arquivos-cdn.facilzap.app.br/produtos/1723202259_7897863c4b8eeb7adcdd.jpg.webp?width=700&height=700&quality=85&format=webp", "https://arquivos-cdn.facilzap.app.br/produtos/1762880425_5227e857cadfe0c565d5.webp?width=700&height=700&quality=85&format=webp", "https://arquivos-cdn.facilzap.app.br/produtos/1775576045_99d8e6f10ec9d8cdaa4f.webp?width=700&height=700&quality=85&format=webp"],
+    badge: "Kit",
+  },
+  {
+    id: 109, category: "Kits", brand: "Selune", shortName: "Kit Glow",
+    name: "Kit Glow: Mousse Micelar + Sérum Rosa Mosqueta + Creme Rosa Mosqueta",
+    tagline: "3 produtos · rotina rosa mosqueta",
+    description: "Mousse micelar rosa mosqueta (150 ml), sérum rosa mosqueta (30 ml) e creme rosa mosqueta + colágeno (50 g).",
+    price: 59.9,
+    compareAtPrice: 97.7,
+    ipayCode: "SELKITGL",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar Kit Glow: Mousse Micelar + Sérum Rosa Mosqueta + Creme Rosa Mosqueta por R$ 59,90."),
+    photo: "https://arquivos-cdn.facilzap.app.br/produtos/1734537175_e88b7124d2a14062a30f.jpg.webp?width=700&height=700&quality=85&format=webp",
+    photos: ["https://arquivos-cdn.facilzap.app.br/produtos/1734537175_e88b7124d2a14062a30f.jpg.webp?width=700&height=700&quality=85&format=webp", "https://arquivos-cdn.facilzap.app.br/produtos/1762880798_5c15a3e0cab2de90adb6.webp?width=700&height=700&quality=85&format=webp", "https://arquivos-cdn.facilzap.app.br/produtos/6a1713729c7e2_jm6HeL7A.webp?width=700&height=700&quality=85&format=webp"],
+    badge: "Kit",
+  },
+];
+
+// Produtos que aparecem na loja (a Principia segue só nas páginas próprias).
+export const VITRINE = NOVOS_PRODUTOS;
+
 export const FAQ_ITEMS = [
   {
     question: "Como escolho o produto certo para minha pele?",
@@ -531,7 +640,7 @@ export const FAQ_ITEMS = [
   {
     question: "Vocês entregam os produtos para todo o Brasil?",
     answer:
-      "Sim! Os produtos de skincare da Principia são enviados para todo o Brasil, com pagamento por Pix ou cartão direto no checkout do site.",
+      "Sim! Enviamos para todo o Brasil, com frete grátis, em 3 a 7 dias úteis. O pagamento é por Pix ou cartão, direto no checkout do site.",
   },];
 
 export const TRUST_BADGE = "Cuidado de pele para o dia a dia";

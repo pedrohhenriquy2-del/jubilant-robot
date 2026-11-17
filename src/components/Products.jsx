@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Truck, ShieldCheck, BadgeCheck } from "lucide-react";
-import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
+import { VITRINE as PRODUCTS, trackProductClick, formatPrice } from "../constants";
 
 // Filtros por categoria, como nas grandes lojas de beleza.
 // Ordem fixa das categorias; só aparecem as que têm produto.
@@ -55,7 +55,7 @@ export default function Products() {
         {/* Grade de produtos */}
         <div className="flex flex-wrap justify-center gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-10">
           {list.map((product) => {
-            const href = product.salesPageUrl || product.paymentLink;
+            const href = product.salesPageUrl || undefined;
             return (
               <article key={product.id} className="group flex flex-col w-[calc(50%-6px)] md:w-[calc(33.333%-16px)]">
                 <a href={href} className="relative block aspect-square w-full bg-white border border-beige rounded-md overflow-hidden">
@@ -64,16 +64,24 @@ export default function Products() {
                       {product.badge}
                     </span>
                   )}
-                  <img
-                    src={product.photo}
-                    alt={product.name}
-                    loading="lazy"
-                    className="w-full h-full object-contain p-3 md:p-5 transition-transform duration-300 group-hover:scale-[1.03]"
-                  />
+                  {product.photos ? (
+                    <span className="grid grid-cols-3 items-center gap-1 w-full h-full p-2 md:p-4">
+                      {product.photos.map((src) => (
+                        <img key={src} src={src} alt="" loading="lazy" className="w-full h-auto object-contain" />
+                      ))}
+                    </span>
+                  ) : (
+                    <img
+                      src={product.photo}
+                      alt={product.name}
+                      loading="lazy"
+                      className="w-full h-full object-contain p-3 md:p-5 transition-transform duration-300 group-hover:scale-[1.03]"
+                    />
+                  )}
                 </a>
                 <div className="pt-3 flex flex-col flex-1 text-center">
                   <p className="text-[11px] md:text-xs font-bold uppercase tracking-[0.12em] text-ink">
-                    Principia
+                    {product.brand || "Principia"}
                   </p>
                   <a href={href} className="mt-1 text-sm md:text-[15px] text-ink leading-snug line-clamp-2 hover:underline">
                     {product.shortName}

@@ -19,7 +19,7 @@ export default function Reviews() {
           Quem usa, aprova
         </h2>
         <p className="mt-2 text-sm md:text-base text-ink-soft">
-          O que dizem as clientes que já usam o Sérum Mix-01.
+          O que dizem as clientes da Selune.
         </p>
 
         <div className="mt-6 md:mt-8 grid gap-3 md:gap-6 md:grid-cols-3 text-left">
