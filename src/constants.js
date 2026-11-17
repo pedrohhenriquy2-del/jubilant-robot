@@ -66,9 +66,10 @@ export const CONTACT = {
 
 export const NAV_LINKS = [
   { label: "Produtos", href: "#produtos" },
+  { label: "Kits", href: "#kits" },
   { label: "Sobre", href: "#sobre" },
   { label: "Dúvidas", href: "#faq" },
-  { label: "Contato", href: "#contato" },
+  { label: "Atendimento", href: "#contato" },
 ];
 
 // Dispara o evento de conversão do Meta Pixel ao clicar em "Comprar".
@@ -77,9 +78,10 @@ export function trackProductClick(e) {
   if (typeof window === "undefined" || typeof window.fbq !== "function") return;
   const el = e && e.currentTarget;
   const href = (el && el.getAttribute && el.getAttribute("href")) || "";
+  const todos = [...PRODUCTS, ...NOVOS_PRODUTOS];
   const prod =
-    PRODUCTS.find((p) => el && el.dataset && el.dataset.ipay && p.ipayCode === el.dataset.ipay) ||
-    PRODUCTS.find((p) => p.paymentLink && href && href.split("?")[0] === p.paymentLink.split("?")[0]);
+    todos.find((p) => el && el.dataset && el.dataset.ipay && p.ipayCode === el.dataset.ipay) ||
+    todos.find((p) => p.paymentLink && href && href.split("?")[0] === p.paymentLink.split("?")[0]);
   if (!prod) {
     window.fbq("track", "InitiateCheckout", { currency: "BRL" });
     return;
@@ -623,25 +625,36 @@ export const VITRINE = NOVOS_PRODUTOS;
 
 export const FAQ_ITEMS = [
   {
-    question: "Como escolho o produto certo para minha pele?",
+    question: "Os produtos são originais?",
     answer:
-      "Cada produto tem a indicação na própria descrição (acne, oleosidade, textura irregular, manchas, hidratação etc.). Se tiver dúvida, é só chamar no WhatsApp que ajudamos a montar sua rotina.",
+      "Sim. Compramos de distribuidor, com nota fiscal, e enviamos lacrados, na embalagem do fabricante. Todo pedido sai com nota fiscal eletrônica.",
   },
   {
-    question: "Quanto tempo leva para ver resultado?",
+    question: "Qual produto é o certo para a minha pele?",
     answer:
-      "Varia de pessoa para pessoa e do produto usado, mas o uso constante, seguindo o modo de uso indicado em cada página, é o que traz os melhores resultados.",
+      "Cada página mostra o que a embalagem do fabricante indica. Se ficar em dúvida, chame no WhatsApp e uma pessoa da Selune te ajuda a montar a rotina antes de comprar.",
   },
   {
-    question: "Preciso usar protetor solar junto com os produtos?",
+    question: "Quanto tempo leva para chegar?",
     answer:
-      "Sim, principalmente com ácidos (como os do Sérum Mix-01 e do Tônico AL-7). Recomendamos usar protetor solar diariamente durante o uso desses produtos.",
+      "Enviamos para todo o Brasil com frete grátis, em 3 a 7 dias úteis. Você recebe o código de rastreio pelo WhatsApp.",
   },
   {
-    question: "Vocês entregam os produtos para todo o Brasil?",
+    question: "Quais as formas de pagamento?",
     answer:
-      "Sim! Enviamos para todo o Brasil, com frete grátis, em 3 a 7 dias úteis. O pagamento é por Pix ou cartão, direto no checkout do site.",
-  },];
+      "Pix ou cartão de crédito, no checkout seguro da InfinitePay. Você não precisa criar conta.",
+  },
+  {
+    question: "E se eu me arrepender?",
+    answer:
+      "Você tem 7 dias após receber para desistir da compra, como garante o Código de Defesa do Consumidor. É só chamar no WhatsApp.",
+  },
+  {
+    question: "Preciso usar protetor solar junto?",
+    answer:
+      "Durante o dia, o protetor solar é o último passo de qualquer rotina de skincare. Siga também as advertências de cada embalagem.",
+  },
+];
 
 export const TRUST_BADGE = "Cuidado de pele para o dia a dia";
 

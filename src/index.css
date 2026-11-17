@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
-  /* Paleta neutra Selune: off-white, pedra e grafite */
-  --color-cream: #FAFAF8;
-  --color-offwhite: #F3F2EF;
-  --color-beige: #E9E7E3;
-  --color-beige-dark: #D6D2CC;
-  --color-nude: #5C5852;
-  --color-nude-dark: #1C1B19;
-  --color-gold: #3A3835;
-  --color-gold-light: #E9E7E3;
-  --color-ink: #1C1B19;
-  --color-ink-soft: #6A665F;
-  /* Cor de ação: botões e preços (verde-azulado das embalagens Principia, em tom profundo) */
-  --color-accent: #2F5D5A;
-  --color-accent-dark: #244947;
+  /* Paleta premium Selune: branco, bege, nude, dourado discreto e marrom suave */
+  --color-cream: #FBF8F4;       /* branco premium (fundo) */
+  --color-offwhite: #F5EFE8;    /* bege claro (faixas) */
+  --color-beige: #EADFD3;       /* bege sofisticado (bordas, cartões) */
+  --color-beige-dark: #D9C8B6;  /* nude (bordas fortes) */
+  --color-nude: #C9A99A;        /* nude rosado (detalhes) */
+  --color-nude-dark: #4A3A30;
+  --color-gold: #A8875A;        /* dourado discreto */
+  --color-gold-light: #E8D9C0;
+  --color-ink: #3D2E25;         /* marrom suave para textos */
+  --color-ink-soft: #7A6658;
+  /* Cor de ação: marrom profundo com texto branco (contraste 10:1) */
+  --color-accent: #4A3426;
+  --color-accent-dark: #2F2018;
 }
 
 html {
@@ -35,3 +35,9 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-display);
 }
+
+h1, h2, h3 { letter-spacing: -0.005em; font-weight: 600; }
+
+@keyframes sobe { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+.anima { animation: sobe .7s ease-out both }
+@media (prefers-reduced-motion: reduce) { .anima { animation: none } html { scroll-behavior: auto } }

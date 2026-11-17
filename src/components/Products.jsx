@@ -1,138 +1,69 @@
 import { useState } from "react";
-import { Truck, ShieldCheck, BadgeCheck } from "lucide-react";
-import { VITRINE as PRODUCTS, trackProductClick, formatPrice } from "../constants";
+import { VITRINE } from "../constants";
+import ProductCard from "./ProductCard";
 
-// Filtros por categoria, como nas grandes lojas de beleza.
-// Ordem fixa das categorias; só aparecem as que têm produto.
-const ORDEM = ["Sérum", "Protetor", "Limpeza", "Hidratante", "Tônico", "Kits"];
-const CATEGORIES = ["Todos", ...ORDEM.filter((c) => PRODUCTS.some((p) => p.category === c)), ...Array.from(new Set(PRODUCTS.map((p) => p.category))).filter((c) => !ORDEM.includes(c))];
+const PASSOS = ["Todos", "Limpeza", "Sérum", "Hidratante", "Protetor"];
 
+// Vitrine: produtos avulsos com filtro por passo da rotina, depois os kits.
 export default function Products() {
-  const [cat, setCat] = useState("Todos");
-  const list = cat === "Todos" ? PRODUCTS : PRODUCTS.filter((p) => p.category === cat);
+  const [filtro, setFiltro] = useState("Todos");
+  const avulsos = VITRINE.filter((p) => p.category !== "Kits");
+  const kits = VITRINE.filter((p) => p.category === "Kits");
+  const lista = filtro === "Todos" ? avulsos : avulsos.filter((p) => p.category === filtro);
 
   return (
-    <section id="produtos" className="py-8 md:py-14 bg-cream">
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="flex justify-center gap-4 mb-4 md:mb-6 text-center">
-          <div className="max-w-2xl">
-            <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
-              Produtos originais · preço claro
+    <>
+      <section id="produtos" className="bg-cream py-14 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 md:px-6">
+          <header className="text-center">
+            <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Produtos em destaque</p>
+            <h2 className="mt-2 font-display text-4xl md:text-5xl text-ink [text-wrap:balance]">Monte a sua rotina</h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
+              Limpeza, sérum, hidratante e protetor solar. Escolha pelo passo que falta na sua rotina.
             </p>
-            <h2 className="mt-2 text-2xl md:text-4xl text-ink font-extrabold tracking-tight leading-tight text-balance">
-              Encontre o cuidado certo para a sua pele
-            </h2>
-            <p className="mt-2 text-sm md:text-base text-ink-soft">
-              Sérum, protetor, limpeza, hidratante e kits. O preço que você vê é o preço final, com frete grátis e nota fiscal.
-            </p>
+          </header>
+
+          <div className="mt-7 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label="Filtrar por passo da rotina">
+            {PASSOS.map((c) => (
+              <button
+                key={c}
+                type="button"
+                role="tab"
+                aria-selected={filtro === c}
+                onClick={() => setFiltro(c)}
+                className={`shrink-0 min-h-10 rounded-full border px-5 text-sm font-medium transition-colors ${
+                  filtro === c ? "border-accent bg-accent text-white" : "border-beige-dark bg-white text-ink hover:border-ink"
+                }`}
+              >
+                {c === "Protetor" ? "Protetor solar" : c}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
+            {lista.map((p) => (
+              <ProductCard key={p.id} p={p} />
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Filtros */}
-        <div
-          role="tablist"
-          aria-label="Filtrar por categoria"
-          className="flex flex-wrap justify-center gap-2 pb-1 mb-5 md:mb-8"
-        >
-          {CATEGORIES.map((c) => (
-            <button
-              key={c}
-              type="button"
-              role="tab"
-              aria-selected={cat === c}
-              onClick={() => setCat(c)}
-              className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
-                cat === c
-                  ? "bg-ink text-cream border-ink"
-                  : "bg-white text-ink border-beige-dark hover:border-ink"
-              }`}
-            >
-              {c}
-            </button>
-          ))}
+      <section id="kits" className="bg-offwhite py-14 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 md:px-6">
+          <header className="text-center">
+            <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Kits Selune</p>
+            <h2 className="mt-2 font-display text-4xl md:text-5xl text-ink [text-wrap:balance]">A rotina completa, pronta</h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
+              Três passos que combinam, em um pedido só e por menos do que comprando separado.
+            </p>
+          </header>
+          <div className="mx-auto mt-8 grid max-w-3xl gap-4 md:gap-6 sm:grid-cols-2">
+            {kits.map((p) => (
+              <ProductCard key={p.id} p={p} />
+            ))}
+          </div>
         </div>
-
-        {/* Grade de produtos */}
-        <div className="flex flex-wrap justify-center gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-10">
-          {list.map((product) => {
-            const href = product.salesPageUrl || undefined;
-            return (
-              <article key={product.id} className="group flex flex-col w-[calc(50%-6px)] md:w-[calc(33.333%-16px)]">
-                <a href={href} className="relative block aspect-square w-full bg-white border border-beige rounded-md overflow-hidden">
-                  {product.badge && (
-                    <span className="absolute top-2 left-2 z-10 bg-ink px-2 py-0.5 text-[11px] uppercase tracking-wide text-cream font-semibold">
-                      {product.badge}
-                    </span>
-                  )}
-                  {product.photos ? (
-                    <span className="grid grid-cols-3 items-center -space-x-2 w-full h-full p-1 md:p-2">
-                      {product.photos.map((src) => (
-                        <img key={src} src={src} alt="" loading="lazy" className="w-full h-auto object-contain scale-[1.35]" />
-                      ))}
-                    </span>
-                  ) : (
-                    <img
-                      src={product.photo}
-                      alt={product.name}
-                      loading="lazy"
-                      className="w-full h-full object-contain p-3 md:p-5 transition-transform duration-300 group-hover:scale-[1.03]"
-                    />
-                  )}
-                </a>
-                <div className="pt-3 flex flex-col flex-1 text-center">
-                  <p className="text-[11px] md:text-xs font-bold uppercase tracking-[0.12em] text-ink">
-                    {product.brand || "Principia"}
-                  </p>
-                  <a href={href} className="mt-1 text-sm md:text-[15px] text-ink leading-snug line-clamp-2 hover:underline">
-                    {product.shortName}
-                  </a>
-                  <p className="mt-1 text-xs text-ink-soft line-clamp-1">{product.tagline}</p>
-                  <p className="mt-2 text-base md:text-lg font-bold text-accent">
-                    {formatPrice(product.price)}
-                    {product.compareAtPrice && (
-                      <s className="ml-2 text-xs font-normal text-ink-soft">
-                        {formatPrice(product.compareAtPrice)}
-                      </s>
-                    )}
-                  </p>
-                  <p className="text-[11px] md:text-xs text-ink-soft">Frete grátis</p>
-                  {/* Compra direta: o botão já abre o pagamento (Pix ou cartão). */}
-                  <a
-                    href={product.paymentLink}
-                    data-ipay={product.ipayCode || undefined}
-                    onClick={trackProductClick}
-                    className="mt-3 inline-flex items-center justify-center rounded-md bg-accent px-3 py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
-                  >
-                    Comprar
-                  </a>
-                  {product.salesPageUrl && (
-                    <a href={product.salesPageUrl} className="mt-1.5 py-1.5 text-center text-xs text-ink-soft underline underline-offset-2 hover:text-ink">
-                      Ver detalhes
-                    </a>
-                  )}
-                </div>
-              </article>
-            );
-          })}
-        </div>
-
-        {/* Vantagens */}
-        <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 border-t border-beige pt-6 md:pt-8">
-          {[
-            { Icon: Truck, t: "Frete grátis", d: "Para todo o Brasil, em 3 a 7 dias úteis" },
-            { Icon: BadgeCheck, t: "Originais com nota fiscal", d: "Produtos lacrados, de marcas confiáveis" },
-            { Icon: ShieldCheck, t: "Compra segura", d: "Pix ou cartão · 7 dias para desistir" },
-          ].map(({ Icon, t, d }) => (
-            <div key={t} className="flex items-center gap-3">
-              <Icon size={22} className="text-ink shrink-0" />
-              <div>
-                <p className="text-sm font-semibold text-ink">{t}</p>
-                <p className="text-xs text-ink-soft">{d}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

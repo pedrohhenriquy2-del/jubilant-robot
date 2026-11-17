@@ -10,11 +10,11 @@ import {
   trackWhatsAppClick,
 } from "../constants";
 
-export default function Footer() {
+export default function Footer({ naLoja = true }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink text-cream/80 pt-12 pb-24 md:pb-12">
+    <footer className="bg-[#2F2018] text-cream/80 pt-14 pb-10">
       <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center md:flex-row md:items-center md:justify-between gap-8">
         <div className="flex items-center gap-3">
           <div>
@@ -32,7 +32,7 @@ export default function Footer() {
           {FOOTER_LINKS.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={naLoja ? link.href : `${import.meta.env.BASE_URL}${link.href}`}
               className="text-sm text-cream/70 hover:text-cream transition-colors"
             >
               {link.label}

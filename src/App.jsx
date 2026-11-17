@@ -1,34 +1,32 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Guidance from "./components/Guidance";
-import About from "./components/About";
 import Products from "./components/Products";
+import Benefits from "./components/Benefits";
 import Reviews from "./components/Reviews";
+import About from "./components/About";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import CartDrawer from "./components/CartDrawer";
 import WhatsAppFloatButton from "./components/WhatsAppFloatButton";
 
+// Ordem da página: atenção (banner) → interesse (produtos) → desejo (kits) →
+// confiança (diferenciais, avaliações, sobre, dúvidas, entrega) → compra (carrinho).
 function App() {
   return (
     <>
-      <a
-        href="#produtos"
-        className="block bg-ink px-4 py-2.5 text-center text-xs md:text-sm font-medium text-cream"
-      >
-        Frete grátis para todo o Brasil · Pix ou cartão · Nota fiscal
-      </a>
       <Header />
       <main>
         <Hero />
-        <Guidance />
         <Products />
+        <Benefits />
         <Reviews />
         <About />
         <FAQ />
         <Contact />
       </main>
       <Footer />
+      <CartDrawer />
       <WhatsAppFloatButton esconderEm="#produtos" />
     </>
   );

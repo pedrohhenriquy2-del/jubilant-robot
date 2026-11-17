@@ -1,37 +1,42 @@
-import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
-import { WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
+import { MessageCircle, Truck, CreditCard, Clock } from "lucide-react";
+import { WHATSAPP_LINK, CONTACT, trackWhatsAppClick } from "../constants";
 
+// Entrega, pagamento e atendimento: responde as últimas dúvidas antes do checkout.
 export default function Contact() {
+  const blocos = [
+    { icone: Truck, titulo: "Entrega", texto: "Frete grátis para todo o Brasil. Prazo de 3 a 7 dias úteis, com rastreio pelo WhatsApp." },
+    { icone: CreditCard, titulo: "Pagamento", texto: "Pix ou cartão de crédito no checkout seguro da InfinitePay. Nota fiscal em todo pedido." },
+    { icone: Clock, titulo: "Atendimento", texto: `WhatsApp ${CONTACT.whatsappDisplay}, todos os dias. Trocas e desistência em até 7 dias.` },
+  ];
   return (
-    <section id="contato" className="py-10 md:py-16 bg-offwhite">
-      <div className="mx-auto max-w-6xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          className="rounded-2xl bg-ink text-cream px-6 py-10 md:px-16 md:py-12 text-center"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
-            Fale com uma pessoa de verdade antes de comprar
-          </h2>
-          <p className="text-cream/70 max-w-md mx-auto mb-6">
-            Tire suas dúvidas sobre os produtos, o envio ou o pagamento. A gente responde pelo WhatsApp <span className="whitespace-nowrap">(38) 99965-9366</span>.
+    <section id="contato" className="bg-cream py-14 md:py-20">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
+        <div className="grid gap-4 md:grid-cols-3 md:gap-6">
+          {blocos.map(({ icone: I, titulo, texto }) => (
+            <div key={titulo} className="rounded-2xl border border-beige bg-white p-6">
+              <I size={22} strokeWidth={1.6} className="text-gold" aria-hidden="true" />
+              <h3 className="mt-3 font-display text-2xl text-ink">{titulo}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-ink-soft">{texto}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 rounded-3xl bg-accent px-6 py-10 text-center text-cream md:px-16 md:py-14">
+          <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold-light">Não sabe o que escolher?</p>
+          <h2 className="mt-2 font-display text-3xl md:text-5xl [text-wrap:balance]">Fale com uma pessoa de verdade antes de comprar</h2>
+          <p className="mx-auto mt-3 max-w-md text-sm md:text-base text-cream/75">
+            Conte como é a sua pele e a sua rotina. A gente indica os produtos e tira as dúvidas sobre envio e pagamento.
           </p>
           <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackWhatsAppClick}
-            className="inline-flex items-center gap-2 rounded-full bg-[#1F8F4E] px-8 py-4 text-white text-lg font-bold hover:bg-[#187540] transition-colors"
+            className="mt-6 inline-flex min-h-14 items-center gap-2 rounded-full bg-cream px-8 text-sm font-semibold uppercase tracking-[0.12em] text-accent hover:bg-white transition-colors"
           >
-            <MessageCircle size={20} />
-            Chamar no WhatsApp
+            <MessageCircle size={18} aria-hidden="true" /> Chamar no WhatsApp
           </a>
-        </motion.div>
-
-
+        </div>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.25 }}
-          className="shrink-0 text-nude-dark"
+          className="shrink-0 text-gold"
         >
           <ChevronDown size={20} />
         </motion.span>
@@ -43,19 +43,19 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="py-10 md:py-16 bg-cream">
-      <div className="mx-auto max-w-3xl px-6">
+    <section id="faq" className="py-14 md:py-20 bg-white border-y border-beige">
+      <div className="mx-auto max-w-3xl px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <span className="inline-block text-xs uppercase tracking-[0.2em] text-nude-dark font-medium mb-4">
+          <span className="inline-block text-[11px] md:text-xs uppercase tracking-[0.22em] text-gold font-semibold mb-2">
             Dúvidas frequentes
           </span>
-          <h2 className="text-3xl md:text-4xl text-ink font-semibold">
+          <h2 className="font-display text-4xl md:text-5xl text-ink">
             Perguntas frequentes
           </h2>
         </motion.div>

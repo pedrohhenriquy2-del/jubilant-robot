@@ -1,4 +1,8 @@
 import { resolve } from 'path'
+import { readFileSync } from 'fs'
+
+// Páginas de venda dos produtos novos (geradas por scripts-gerar-paginas.mjs)
+const paginasProduto = JSON.parse(readFileSync(resolve(__dirname, 'paginas-produto.json'), 'utf8'))
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -29,6 +33,7 @@ export default defineConfig({
         politicas: resolve(__dirname, 'politicas.html'),
         // Página de links para a bio do Instagram/TikTok
         links: resolve(__dirname, 'links.html'),
+        ...Object.fromEntries(paginasProduto.map((s) => [s, resolve(__dirname, `${s}.html`)])),
       },
     },
   },
