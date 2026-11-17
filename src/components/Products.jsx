@@ -23,7 +23,7 @@ export default function Products() {
               Encontre o cuidado certo para a sua pele
             </h2>
             <p className="mt-2 text-sm md:text-base text-ink-soft">
-              Sérum, protetor, limpeza, hidratante, tônico e kits. O preço que você vê é o preço final, com frete grátis e nota fiscal.
+              Sérum, protetor, limpeza, hidratante e kits. O preço que você vê é o preço final, com frete grátis e nota fiscal.
             </p>
           </div>
         </div>
@@ -65,9 +65,9 @@ export default function Products() {
                     </span>
                   )}
                   {product.photos ? (
-                    <span className="grid grid-cols-3 items-center gap-1 w-full h-full p-2 md:p-4">
+                    <span className="grid grid-cols-3 items-center -space-x-2 w-full h-full p-1 md:p-2">
                       {product.photos.map((src) => (
-                        <img key={src} src={src} alt="" loading="lazy" className="w-full h-auto object-contain" />
+                        <img key={src} src={src} alt="" loading="lazy" className="w-full h-auto object-contain scale-[1.35]" />
                       ))}
                     </span>
                   ) : (
