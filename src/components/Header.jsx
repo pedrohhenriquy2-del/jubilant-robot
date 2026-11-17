@@ -23,7 +23,7 @@ export default function Header({ naLoja = true }) {
         href={link("#produtos")}
         className="block bg-accent px-4 py-2 text-center text-[11px] md:text-xs font-medium uppercase tracking-[0.14em] text-cream"
       >
-        Frete grátis para todo o Brasil · Pix ou cartão · Nota fiscal
+        <span className="md:hidden">Frete grátis · Pix ou cartão · Nota fiscal</span><span className="hidden md:inline">Frete grátis para todo o Brasil · Pix ou cartão · Nota fiscal em todo pedido</span>
       </a>
       <header
         className={`sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur transition-shadow ${rolou ? "shadow-[0_6px_24px_-18px_rgba(74,52,38,.6)]" : ""}`}

@@ -46,10 +46,6 @@ export default function FAQ() {
     <section id="faq" className="py-14 md:py-20 bg-white border-y border-beige">
       <div className="mx-auto max-w-3xl px-4 md:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
           <span className="inline-block text-[11px] md:text-xs uppercase tracking-[0.22em] text-gold font-semibold mb-2">
@@ -61,10 +57,6 @@ export default function FAQ() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
         >
           {FAQ_ITEMS.map((item, index) => (
             <FaqItem

@@ -38,6 +38,7 @@ for (const [, cod, slug, titulo, resumo] of codigos) {
     <meta property="product:price:currency" content="BRL" />
     <link rel="preload" as="image" href="./${foto}" fetchpriority="high" />
 ${fontes}
+    <script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"Product",name:nome,image:`https://selune-oficial.com.br/${foto}`,description:resumo,brand:{"@type":"Brand",name:(trecho.match(/brand: "([^"]+)"/)||[])[1]},offers:{"@type":"Offer",price:preco.replace(",","."),priceCurrency:"BRL",availability:"https://schema.org/InStock",url:`https://selune-oficial.com.br/${slug}.html`}})}</script>
 ${pixel}
   </head>
   <body>

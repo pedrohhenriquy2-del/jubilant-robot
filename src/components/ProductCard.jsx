@@ -10,7 +10,7 @@ export default function ProductCard({ p, compacto = false }) {
   const fotos = p.photos || [p.photo];
   return (
     <article className="group flex flex-col rounded-2xl bg-white border border-beige overflow-hidden transition-shadow hover:shadow-[0_18px_40px_-24px_rgba(74,52,38,.45)]">
-      <a href={href} className="relative block aspect-square bg-white overflow-hidden" aria-label={`Ver detalhes: ${p.shortName}`}>
+      <a href={href} className={`relative block bg-white overflow-hidden ${fotos.length > 1 ? "aspect-[4/3]" : "aspect-square"}`} aria-label={`Ver detalhes: ${p.shortName}`}>
         {fotos.length > 1 ? (
           <div className="absolute inset-0 grid grid-cols-3 items-center px-2">
             {fotos.map((f) => (
@@ -57,9 +57,9 @@ export default function ProductCard({ p, compacto = false }) {
           <button
             type="button"
             onClick={() => adicionar(p.ipayCode)}
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-4 text-sm font-semibold tracking-wide text-white hover:bg-accent-dark transition-colors"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-3 text-[13px] md:text-sm leading-tight font-semibold tracking-wide text-white hover:bg-accent-dark transition-colors"
           >
-            <ShoppingBag size={16} aria-hidden="true" />
+            <ShoppingBag size={16} aria-hidden="true" className="hidden sm:block" />
             Adicionar ao carrinho
           </button>
           {!compacto && (

@@ -13,13 +13,14 @@ export default function Hero() {
           src={`${base}banners/hero-premium-mob.webp`}
           alt="Sérum de ácido hialurônico, ampola de centella, protetor solar FPS 60, mousse micelar e sérum rosa mosqueta sobre um pedestal bege"
           width="900"
-          height="900"
+          height="675"
           fetchpriority="high"
           className="block w-full h-auto md:absolute md:inset-0 md:h-full md:object-cover md:object-right"
         />
       </picture>
-      <div className="relative mx-auto max-w-6xl px-5 md:px-6">
-        <div className="anima -mt-10 md:mt-0 rounded-t-3xl md:rounded-none bg-cream md:bg-transparent px-1 pt-7 pb-9 text-center md:max-w-[520px] md:py-28 lg:py-36 md:text-left">
+      <div className="relative -mt-8 md:mt-0 rounded-t-[28px] md:rounded-none bg-cream md:bg-transparent">
+      <div className="mx-auto max-w-6xl px-5 md:px-6">
+        <div className="anima px-1 pt-7 pb-9 text-center md:max-w-[520px] md:py-28 lg:py-36 md:text-left">
           <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Skincare Selune Oficial</p>
           <h1 className="mt-3 font-display text-[40px] leading-[1.02] md:text-6xl lg:text-[68px] text-ink [text-wrap:balance]">
             Sua pele merece uma rotina especial.
@@ -39,6 +40,7 @@ export default function Hero() {
             <li>✓ Pix ou cartão</li>
           </ul>
         </div>
+      </div>
       </div>
     </section>
   );

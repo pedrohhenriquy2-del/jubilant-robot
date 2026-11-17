@@ -7,7 +7,7 @@ export default function About() {
     <section id="sobre" className="bg-offwhite py-14 md:py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-14 md:px-6">
         <div className="overflow-hidden rounded-3xl">
-          <img src={`${base}banners/hero-premium-mob.webp`} alt="" width="900" height="900" loading="lazy" className="w-full h-auto" />
+          <img src={`${base}banners/sobre-selune.webp`} alt="Sabonete facial, sérum de ácido hialurônico e protetor solar FPS 60 sobre fundo bege" width="720" height="800" loading="lazy" className="w-full h-auto" />
         </div>
         <div className="text-center md:text-left">
           <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Sobre a Selune</p>
