@@ -3,7 +3,9 @@ import { Truck, ShieldCheck, BadgeCheck } from "lucide-react";
 import { PRODUCTS, trackProductClick, formatPrice } from "../constants";
 
 // Filtros por categoria, como nas grandes lojas de beleza.
-const CATEGORIES = ["Todos", ...Array.from(new Set(PRODUCTS.map((p) => p.category)))];
+// Ordem fixa das categorias; só aparecem as que têm produto.
+const ORDEM = ["Sérum", "Protetor", "Limpeza", "Hidratante", "Tônico", "Kits"];
+const CATEGORIES = ["Todos", ...ORDEM.filter((c) => PRODUCTS.some((p) => p.category === c)), ...Array.from(new Set(PRODUCTS.map((p) => p.category))).filter((c) => !ORDEM.includes(c))];
 
 export default function Products() {
   const [cat, setCat] = useState("Todos");
@@ -15,13 +17,13 @@ export default function Products() {
         <div className="flex justify-center gap-4 mb-4 md:mb-6 text-center">
           <div className="max-w-2xl">
             <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
-              Selune Oficial · Principia original
+              Produtos originais · preço claro
             </p>
             <h2 className="mt-2 text-2xl md:text-4xl text-ink font-extrabold tracking-tight leading-tight text-balance">
-              Pele oleosa, cravos ou manchas? Tem um Principia para cada uma.
+              Encontre o cuidado certo para a sua pele
             </h2>
             <p className="mt-2 text-sm md:text-base text-ink-soft">
-              Original e lacrado, com nota fiscal e frete grátis. Escolha o seu e receba em 3 a 7 dias úteis.
+              Sérum, protetor, limpeza, hidratante, tônico e kits. O preço que você vê é o preço final, com frete grátis e nota fiscal.
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ShoppingBag } from "lucide-react";
-import { BRAND, LOGO_WORDMARK, NAV_LINKS } from "../constants";
+import { Menu, X, ShoppingBag, MessageCircle } from "lucide-react";
+import { BRAND, LOGO_WORDMARK, NAV_LINKS, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,8 +41,20 @@ export default function Header() {
         </nav>
 
         <a
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={trackWhatsAppClick}
+          aria-label="Falar no WhatsApp"
+          className="ml-auto md:ml-0 mr-2 inline-flex items-center gap-2 rounded-full border border-[#1F8F4E] px-3 md:px-4 py-2 md:py-2.5 text-sm font-semibold text-[#1F8F4E] hover:bg-[#1F8F4E] hover:text-white transition-colors"
+        >
+          <MessageCircle size={16} />
+          <span className="hidden sm:inline">WhatsApp</span>
+        </a>
+
+        <a
           href="#produtos"
-          className="ml-auto md:ml-0 mr-1 md:mr-0 inline-flex items-center gap-2 rounded-full bg-accent px-4 md:px-5 py-2 md:py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
+          className="mr-1 md:mr-0 inline-flex items-center gap-2 rounded-full bg-accent px-4 md:px-5 py-2 md:py-2.5 text-sm font-semibold text-white hover:bg-accent-dark transition-colors"
         >
           <ShoppingBag size={15} />
           Comprar

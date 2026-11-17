@@ -40,13 +40,13 @@ export function trackWhatsAppClick() {
 
 export const BRAND = {
   name: "Selune Oficial",
-  tagline: "Beleza, autocuidado e confiança",
+  tagline: "Skincare acessível, original e com nota fiscal",
 };
 
 export const LEGAL = {
   cnpj: "56.996.633/0001-56",
   about:
-    "Loja independente de skincare. Revendemos produtos Principia originais e lacrados, com nota fiscal em todo pedido.",
+    "Loja online independente de skincare. Revendemos produtos originais e lacrados de marcas confiáveis, com nota fiscal em todo pedido. Não oferecemos serviços de estética.",
   policies: [
     { label: "Trocas e devoluções", href: `${ASSET_BASE}politicas.html#trocas` },
     { label: "Garantia de procedência", href: `${ASSET_BASE}politicas.html#procedencia` },
@@ -98,7 +98,7 @@ export function trackProductClick(e) {
 export const PRODUCTS = [
   {
     id: 1,
-    category: "Tratamento",
+    category: "Sérum",
     tagline: "Sérum para pele oleosa · 30 ml",
     name: "Principia Sérum Mix-01 (Niacinamida + Ácido Glicólico)",
     shortName: "Mix-01",
@@ -289,7 +289,7 @@ export const PRODUCTS = [
   },
   {
     id: 3,
-    category: "Proteção solar",
+    category: "Protetor",
     tagline: "FPS 60 · toque seco · 40 ml",
     name: "Principia Protetor Solar Facial PS-01 FPS 60",
     shortName: "Protetor Solar PS-01",
@@ -397,7 +397,7 @@ export const PRODUCTS = [
   },
   {
     id: 5,
-    category: "Corpo",
+    category: "Hidratante",
     tagline: "Hidratação para o corpo · 454 g",
     name: "Principia Creme Hidratante Corporal CH-02 454g",
     shortName: "Creme Hidratante CH-02",
@@ -451,7 +451,7 @@ export const PRODUCTS = [
   },
   {
     id: 6,
-    category: "Tratamento",
+    category: "Tônico",
     tagline: "Tônico renovador · 120 ml",
     name: "Tônico Principia AL-7 (7% Ácido Lático + 1% Ácido Salicílico) 120ml",
     shortName: "Tônico AL-7",

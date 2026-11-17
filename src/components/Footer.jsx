@@ -63,7 +63,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 mt-8 pt-6 border-t border-cream/10 text-center space-y-3">
+      <ul className="mx-auto max-w-6xl px-6 mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-cream/80">
+        <li>Nota fiscal eletrônica em todo pedido</li>
+        <li>Produtos originais, regularizados na ANVISA pelos fabricantes</li>
+        <li>Pagamento seguro por Pix ou cartão</li>
+        <li>7 dias para desistir</li>
+      </ul>
+
+      <div className="mx-auto max-w-6xl px-6 mt-6 pt-6 border-t border-cream/10 text-center space-y-3">
         <p className="text-xs text-cream/70 max-w-2xl mx-auto">{LEGAL.about}</p>
         <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1">
           {LEGAL.policies.map((l) => (

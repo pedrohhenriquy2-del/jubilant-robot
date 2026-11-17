@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Guidance from "./components/Guidance";
 import About from "./components/About";
 import Products from "./components/Products";
 import Reviews from "./components/Reviews";
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Guidance />
         <Products />
         <Reviews />
         <About />
