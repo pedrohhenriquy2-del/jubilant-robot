@@ -46,7 +46,6 @@ para trocar textos, links ou dados de contato.
   `GALLERY_IMAGES` (`src/constants.js`).
 - **Foto do Hero** — `public/hero-produto.jpeg` (produto usado nos
   procedimentos).
-- **Foto do Sobre** — `public/about-clinica.webp`.
 - **Fotos dos Depoimentos** — 4 fotos reais de clientes em
   `public/testimonials/`.
 - **Fonte dos títulos** — Jost (trocada a pedido do cliente).
