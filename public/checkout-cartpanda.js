@@ -49,15 +49,17 @@
     } catch (e) { return ''; }
   }
 
-  // itens = [{ codigo, q }] -> link do checkout Cartpanda, ou null se algum item não estiver lá.
+  // itens = [{ codigo, q }] -> link do checkout Cartpanda (um produto, qualquer quantidade).
+  // O link direto da Cartpanda só aceita um produto por vez; carrinho com produtos
+  // diferentes, ou produto que não está na Cartpanda, segue pelo WhatsApp.
   function linkCartpanda(itens) {
-    var partes = [];
+    var v = null, q = 0;
     for (var i = 0; i < itens.length; i++) {
       var pr = PRODUTOS[itens[i].codigo];
-      if (!pr || !pr.v) return null;
-      partes.push(pr.v + ':' + itens[i].q * (pr.q || 1));
+      if (!pr || !pr.v || (v && v !== pr.v)) return null;
+      v = pr.v; q += itens[i].q * (pr.q || 1);
     }
-    return partes.length ? LOJA + partes.join(',') + origem() : null;
+    return v ? LOJA + v + ':' + q + origem() : null;
   }
 
   function linkWhats(itens) {
