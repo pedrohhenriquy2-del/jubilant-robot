@@ -36,7 +36,7 @@ export default function WhatsAppFloatButton({ esconderEm }) {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       style={{ pointerEvents: oculto ? "none" : undefined }}
-      className="fixed bottom-6 right-6 z-50 flex h-14 items-center justify-center gap-2 rounded-full bg-nude-dark px-4 text-cream shadow-xl hover:bg-gold transition-colors md:pl-4 md:pr-5"
+      className="fixed bottom-6 right-6 z-50 hidden md:flex h-14 items-center justify-center gap-2 rounded-full bg-nude-dark px-4 text-cream shadow-xl hover:bg-gold transition-colors md:pl-4 md:pr-5"
     >
       <MessageCircle size={26} className="shrink-0" />
       <span className="hidden md:inline text-sm font-medium whitespace-nowrap">

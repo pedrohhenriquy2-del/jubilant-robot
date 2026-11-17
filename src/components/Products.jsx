@@ -112,7 +112,7 @@ export default function Products() {
         <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 border-t border-beige pt-6 md:pt-8">
           {[
             { Icon: Truck, t: "Frete grátis", d: "Para todo o Brasil, em 3 a 7 dias úteis" },
-            { Icon: BadgeCheck, t: "Originais com nota fiscal", d: "Produtos Principia lacrados" },
+            { Icon: BadgeCheck, t: "Originais com nota fiscal", d: "Produtos lacrados, de marcas confiáveis" },
             { Icon: ShieldCheck, t: "Compra segura", d: "Pix ou cartão · 7 dias para desistir" },
           ].map(({ Icon, t, d }) => (
             <div key={t} className="flex items-center gap-3">

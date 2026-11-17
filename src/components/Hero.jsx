@@ -4,7 +4,7 @@ import { PRODUCTS } from "../constants";
 // Banner de abertura: mensagem principal + fotos dos produtos da loja.
 // As fotos vêm da lista de produtos, então acompanham a troca de marcas.
 export default function Hero() {
-  const fotos = PRODUCTS.filter((p) => p.image).slice(0, 4);
+  const fotos = PRODUCTS.filter((p) => p.photo).slice(0, 4);
   return (
     <section id="inicio" className="bg-cream">
       <h1 className="sr-only">Selune Oficial: skincare original com preço acessível</h1>
@@ -42,7 +42,7 @@ export default function Hero() {
               className="aspect-square rounded-xl bg-white border border-beige flex items-center justify-center p-4 hover:border-ink/30 transition-colors"
               aria-label={`Ver ${p.shortName}`}
             >
-              <img src={p.image} alt={p.name} width="300" height="300" loading="eager" className="max-h-full w-auto object-contain" />
+              <img src={p.photo} alt={p.name} width="300" height="300" loading="eager" className="max-h-full w-auto object-contain" />
             </a>
           ))}
         </div>
