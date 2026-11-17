@@ -27,7 +27,7 @@ export default function Reviews() {
             <figure key={a.nome} className="rounded-2xl border border-beige bg-white p-6 flex flex-col gap-3">
               <div className="flex gap-1" role="img" aria-label="5 de 5 estrelas">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={18} className="fill-gold text-gold" aria-hidden="true" />
+                  <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />
                 ))}
               </div>
               <blockquote className="font-display text-xl md:text-2xl text-ink leading-snug">“{a.texto}”</blockquote>
