@@ -16,6 +16,14 @@ function ler() {
 }
 
 let itens = ler();
+// Voltou do checkout com pagamento feito: esvazia o carrinho.
+try {
+  const q = new URLSearchParams(window.location.search);
+  if (q.get("compra") === "ok" && (q.get("transaction_nsu") || q.get("receipt_url"))) {
+    itens = [];
+    localStorage.setItem(CHAVE, "[]");
+  }
+} catch {}
 let aberto = false;
 
 function avisar() {

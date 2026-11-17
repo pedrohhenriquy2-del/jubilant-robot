@@ -34,14 +34,14 @@ export default function Header({ naLoja = true }) {
               type="button"
               aria-label={menu ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menu}
-              className="-ml-2 inline-flex h-11 w-11 items-center justify-center text-ink md:hidden"
+              className="-ml-2 inline-flex h-11 w-11 items-center justify-center text-ink lg:hidden"
               onClick={() => setMenu((v) => !v)}
             >
               {menu ? <X size={24} /> : <Menu size={24} />}
             </button>
-            <nav className="hidden md:flex items-center gap-7" aria-label="Menu principal">
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-7" aria-label="Menu principal">
               {NAV_LINKS.map((l) => (
-                <a key={l.href} href={link(l.href)} className="text-[13px] font-medium uppercase tracking-[0.12em] text-ink-soft hover:text-ink transition-colors">
+                <a key={l.href} href={link(l.href)} className="text-xs font-medium uppercase tracking-[0.14em] text-ink-soft hover:text-ink transition-colors">
                   {l.label}
                 </a>
               ))}
@@ -80,7 +80,7 @@ export default function Header({ naLoja = true }) {
         </div>
 
         {menu && (
-          <nav className="md:hidden border-t border-beige bg-cream px-4 pb-4" aria-label="Menu">
+          <nav className="lg:hidden border-t border-beige bg-cream px-4 pb-4" aria-label="Menu">
             {NAV_LINKS.map((l) => (
               <a
                 key={l.href}
