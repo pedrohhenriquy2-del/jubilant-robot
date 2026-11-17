@@ -44,7 +44,7 @@ ${pixel}
   <body>
     <div id="root" data-produto="${cod}"></div>
     <script type="module" src="/src/produto.jsx"></script>
-    <script src="./checkout-infinitepay.js?v=11" defer></script>
+    <script src="./checkout-cartpanda.js?v=1" defer></script>
   </body>
 </html>
 `);

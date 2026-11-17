@@ -95,7 +95,7 @@ export function trackProductClick(e) {
   });
 }
 
-// Catálogo de produtos (o botão Comprar abre o checkout da InfinitePay; Perfect Pay fica de reserva).
+// Catálogo de produtos (o botão Comprar abre o checkout da Cartpanda).
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
   {
@@ -172,7 +172,7 @@ export const PRODUCTS = [
       title: "Bônus: e-book Sua Rotina Skincare",
       text: "O guia da pele bem cuidada, em PDF. Enviamos no seu WhatsApp depois da confirmação do pagamento.",
     },
-    // Checkout só pela InfinitePay (código em public/checkout-infinitepay.js).
+    // Checkout pela Cartpanda (código em public/checkout-cartpanda.js).
     // Se o script não carregar, o botão leva o pedido para o WhatsApp.
     ipayCode: "KITROTINA",
     paymentLink: buildWhatsAppLink(
@@ -675,7 +675,7 @@ export const FAQ_ITEMS = [
   {
     question: "Quais as formas de pagamento?",
     answer:
-      "Pix ou cartão de crédito, no checkout seguro da InfinitePay. Você não precisa criar conta.",
+      "Pix ou cartão de crédito, no checkout seguro da Cartpanda. Você não precisa criar conta.",
   },
   {
     question: "E se eu me arrepender?",

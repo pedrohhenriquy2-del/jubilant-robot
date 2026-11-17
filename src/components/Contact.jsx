@@ -5,7 +5,7 @@ import { WHATSAPP_LINK, CONTACT, trackWhatsAppClick } from "../constants";
 export default function Contact() {
   const blocos = [
     { icone: Truck, titulo: "Entrega", texto: "Frete grátis para todo o Brasil. Prazo de 3 a 7 dias úteis, com rastreio pelo WhatsApp." },
-    { icone: CreditCard, titulo: "Pagamento", texto: "Pix ou cartão de crédito no checkout seguro da InfinitePay. Nota fiscal em todo pedido." },
+    { icone: CreditCard, titulo: "Pagamento", texto: "Pix ou cartão de crédito no checkout seguro da Cartpanda. Nota fiscal em todo pedido." },
     { icone: Clock, titulo: "Atendimento", texto: `WhatsApp ${CONTACT.whatsappDisplay}, todos os dias. Trocas e desistência em até 7 dias.` },
   ];
   return (

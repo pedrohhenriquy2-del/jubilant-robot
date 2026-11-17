@@ -5,7 +5,7 @@ const ITENS = [
   { icone: ShieldCheck, titulo: "Originais e lacrados", texto: "Comprados de distribuidor e enviados na embalagem do fabricante." },
   { icone: Receipt, titulo: "Nota fiscal em todo pedido", texto: "Nota fiscal eletrônica, com CNPJ, em todas as compras." },
   { icone: Truck, titulo: "Frete grátis", texto: "Para todo o Brasil, com código de rastreio no WhatsApp." },
-  { icone: CreditCard, titulo: "Pix ou cartão", texto: "Checkout seguro da InfinitePay, sem precisar criar conta." },
+  { icone: CreditCard, titulo: "Pix ou cartão", texto: "checkout seguro da Cartpanda, sem precisar criar conta." },
   { icone: MessageCircle, titulo: "Atendimento humano", texto: "Uma pessoa da Selune responde suas dúvidas no WhatsApp." },
   { icone: RotateCcw, titulo: "7 dias para desistir", texto: "Direito de arrependimento garantido pelo Código do Consumidor." },
 ];
