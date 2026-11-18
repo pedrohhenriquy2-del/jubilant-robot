@@ -129,7 +129,7 @@ export default function CartDrawer() {
             >
               <Lock size={17} aria-hidden="true" /> Finalizar compra
             </button>
-            <p className="mt-2 text-center text-xs text-ink-soft">Pix ou cartão · pagamento seguro InfinitePay · nota fiscal</p>
+            <p className="mt-2 text-center text-xs text-ink-soft">5% off no Pix · cartão ou boleto · checkout seguro Yampi</p>
           </footer>
         )}
       </aside>

@@ -94,7 +94,7 @@ export function trackProductClick(e) {
   });
 }
 
-// Catálogo de produtos (o botão Comprar abre o checkout da InfinitePay).
+// Catálogo de produtos (o botão Comprar abre o checkout da Yampi; ver public/checkout-yampi.js).
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
   {
@@ -709,7 +709,7 @@ export const FAQ_ITEMS = [
   {
     question: "Quais as formas de pagamento?",
     answer:
-      "Pix ou cartão de crédito, no checkout seguro da InfinitePay. Você não precisa criar conta.",
+      "Pix com 5% de desconto, cartão de crédito ou boleto, no checkout seguro da Yampi. Você não precisa criar conta.",
   },
   {
     question: "E se eu me arrepender?",

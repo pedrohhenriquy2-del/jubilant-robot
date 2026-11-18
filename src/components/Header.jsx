@@ -53,8 +53,8 @@ export default function Header({ naLoja = true }) {
           </>
         ) : (
           <>
-            <span className="md:hidden">Frete grátis · Pix ou cartão · Nota fiscal</span>
-            <span className="hidden md:inline">Frete grátis para todo o Brasil · Pix ou cartão · Nota fiscal em todo pedido</span>
+            <span className="md:hidden">Frete grátis · 5% off no Pix · Nota fiscal</span>
+            <span className="hidden md:inline">Frete grátis para todo o Brasil · 5% off no Pix · Nota fiscal em todo pedido</span>
           </>
         )}
       </a>
