@@ -66,8 +66,6 @@ export const CONTACT = {
 
 export const NAV_LINKS = [
   { label: "Ofertas", href: "#ofertas" },
-  { label: "Produtos", href: "#produtos" },
-  { label: "Kits", href: "#kits" },
   { label: "Sobre", href: "#sobre" },
   { label: "Dúvidas", href: "#faq" },
   { label: "Atendimento", href: "#contato" },
