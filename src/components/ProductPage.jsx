@@ -103,7 +103,7 @@ export default function ProductPage({ codigo }) {
                 Você economiza {formatPrice(p.compareAtPrice - p.price)} em relação a comprar {incluso.length > 1 ? `os ${incluso.length}` : "os itens"} separados
               </p>
             ) : null}
-            <p className="mt-1 text-sm text-ink-soft">No Pix ou no cartão · frete grátis para todo o Brasil</p>
+            <p className="mt-1 text-sm text-ink-soft">Em até 12x no cartão ou boleto · frete grátis para todo o Brasil</p>
 
             <div ref={botoes} className="mt-6 grid gap-3">
               <button
@@ -228,7 +228,7 @@ export default function ProductPage({ codigo }) {
               <Pergunta aberta q="É original?" a="Sim. Compramos de distribuidor com nota fiscal e enviamos lacrado, na embalagem do fabricante, com nota fiscal eletrônica no seu nome." />
               <Pergunta q="Serve para a minha pele?" a={`${d.indicacao} Se tiver alguma condição de pele ou dúvida, fale com seu dermatologista ou chame a gente no WhatsApp antes de comprar.`} />
               <Pergunta q="Quando chega?" a="O frete é grátis para todo o Brasil e o prazo é de 3 a 7 dias úteis. O código de rastreio chega pelo WhatsApp." />
-              <Pergunta q="Como pago?" a="Pix com 5% de desconto, cartão de crédito ou boleto, no checkout seguro da Yampi. Não precisa criar conta." />
+              <Pergunta q="Como pago?" a="Cartão de crédito em até 12x ou boleto, no checkout seguro da Yampi. Não precisa criar conta." />
               <Pergunta q="Posso devolver?" a="Sim. Você tem 7 dias depois de receber para desistir da compra. É só chamar no WhatsApp." />
             </div>
           </div>

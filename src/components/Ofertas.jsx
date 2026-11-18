@@ -78,7 +78,7 @@ export default function Ofertas() {
                   )}
                 </div>
                 <p className="mt-0.5 flex items-center gap-1 text-[11px] font-medium text-gold">
-                  <Truck size={13} aria-hidden="true" /> Frete grátis · Pix ou cartão
+                  <Truck size={13} aria-hidden="true" /> Frete grátis · cartão ou boleto
                 </p>
               </div>
               <div className="col-span-2 grid grid-cols-[1fr_auto] gap-2">
