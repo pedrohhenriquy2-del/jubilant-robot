@@ -2,6 +2,65 @@
 // Regra: só entra aqui o que está impresso na embalagem ou informado pelo fabricante.
 // "embalagem" = frases da própria embalagem (mostradas como "Segundo a embalagem").
 export const DETALHES = {
+  SELGHK: {
+    slug: "serum-ghk-cu-peptideo-de-cobre",
+    titulo: "A tecnologia do peptídeo de cobre na sua rotina",
+    resumo:
+      "Sérum facial EnvySkin GHK-Cu, da Bella Femme, com peptídeo de cobre (GHK-Cu), colágeno e ácido hialurônico. Frasco conta-gotas de 30 ml.",
+    embalagem: ["GHK-Cu · peptídeo de cobre", "Colágeno", "Ácido hialurônico", "Laboratory Technology"],
+    composicao: "Peptídeo de cobre (GHK-Cu) · Colágeno · Ácido Hialurônico",
+    caracteristicas: ["30 ml", "Frasco com conta-gotas", "Uso facial, sobre a pele"],
+    uso: [
+      "Com o rosto limpo e seco, aplique algumas gotas.",
+      "Espalhe com a ponta dos dedos até absorver.",
+      "Depois, use o seu hidratante. Durante o dia, finalize com protetor solar.",
+    ],
+    indicacao: "Uso tópico, apenas na pele do rosto. Siga as orientações e advertências da embalagem.",
+    combina: ["SELCREMC", "SELPROT"],
+    kit: "SELKITFI",
+  },
+  SELCREMC: {
+    slug: "creme-antissinais-vitamina-c-colageno",
+    titulo: "Vitamina C e colágeno para fechar a rotina",
+    resumo:
+      "Creme antissinais Florêncio com vitamina C e colágeno, da linha facial, em bisnaga de 50 g.",
+    embalagem: [
+      "Ação antissinais: reduz linhas finas e rugas",
+      "Vitamina C: antioxidante e iluminadora, uniformiza o tom da pele",
+      "Colágeno: melhora a elasticidade e a firmeza da pele",
+      "Hidratação intensa",
+    ],
+    composicao: "Vitamina C · Colágeno",
+    caracteristicas: ["50 g", "Bisnaga", "Linha facial"],
+    uso: [
+      "Depois da limpeza e do sérum, aplique uma pequena quantidade.",
+      "Espalhe no rosto até absorver.",
+      "Durante o dia, finalize com protetor solar.",
+    ],
+    indicacao: "Uso facial. Siga as orientações e advertências da embalagem.",
+    combina: ["SELGHK", "SELPROT"],
+    kit: "SELKITFI",
+  },
+  SELKITFI: {
+    slug: "kit-firmeza",
+    titulo: "Sérum de peptídeo de cobre e creme antissinais, juntos",
+    resumo:
+      "Dois passos antissinais em um pedido só: sérum EnvySkin GHK-Cu Bella Femme (30 ml) e creme antissinais Vitamina C + Colágeno Florêncio (50 g).",
+    embalagem: [
+      "Sérum: GHK-Cu, colágeno e ácido hialurônico",
+      "Creme: vitamina C e colágeno, ação antissinais",
+    ],
+    composicao: "2 produtos antissinais",
+    caracteristicas: ["Sérum 30 ml", "Creme 50 g"],
+    uso: [
+      "Com o rosto limpo, aplique algumas gotas do sérum.",
+      "Em seguida, aplique o creme.",
+      "Durante o dia, finalize com protetor solar.",
+    ],
+    indicacao: "Siga as orientações e advertências de cada embalagem.",
+    combina: ["SELPROT", "SELSABRM"],
+    incluso: ["SELGHK", "SELCREMC"],
+  },
   SELHIAL: {
     slug: "serum-acido-hialuronico",
     titulo: "Hidratação leve para usar todos os dias",

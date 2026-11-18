@@ -57,7 +57,7 @@ export default function Products() {
               Três passos que combinam, em um pedido só e por menos do que comprando separado.
             </p>
           </header>
-          <div className="mx-auto mt-8 grid max-w-3xl gap-4 md:gap-6 sm:grid-cols-2">
+          <div className="mx-auto mt-8 grid max-w-5xl gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {kits.map((p) => (
               <ProductCard key={p.id} p={p} />
             ))}

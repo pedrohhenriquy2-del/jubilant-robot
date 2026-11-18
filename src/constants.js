@@ -520,6 +520,17 @@ export const PRODUCTS = [
 // Fotos dos produtos baixadas do catálogo da SBB e guardadas no próprio site.
 export const NOVOS_PRODUTOS = [
   {
+    id: 113, category: "Sérum", brand: "Bella Femme", shortName: "Sérum GHK-Cu Peptídeo de Cobre",
+    name: "Sérum GHK-Cu Peptídeo de Cobre Bella Femme 30 ml",
+    tagline: "Sérum facial · 30 ml",
+    description: "Sérum facial EnvySkin GHK-Cu, com peptídeo de cobre, colágeno e ácido hialurônico.",
+    price: 44.9,
+    ipayCode: "SELGHK",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar o Sérum GHK-Cu Peptídeo de Cobre Bella Femme 30 ml por R$ 44,90."),
+    photo: `${ASSET_BASE}products/novos/serum-ghk-cu.webp`,
+    badge: "Lançamento",
+  },
+  {
     id: 101, category: "Sérum", brand: "Dermachem", shortName: "Sérum Ácido Hialurônico 1,5%",
     name: "Sérum Ácido Hialurônico 1,5% Dermachem 30 ml",
     tagline: "Sérum facial · 30 ml",
@@ -627,6 +638,17 @@ export const NOVOS_PRODUTOS = [
     badge: "Multiuso",
   },
   {
+    id: 114, category: "Hidratante", brand: "Florêncio", shortName: "Creme Antissinais Vitamina C + Colágeno",
+    name: "Creme Antissinais Vitamina C + Colágeno Florêncio 50 g",
+    tagline: "Creme facial · 50 g",
+    description: "Creme facial antissinais com vitamina C e colágeno, da linha facial Florêncio.",
+    price: 34.9,
+    ipayCode: "SELCREMC",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar o Creme Antissinais Vitamina C + Colágeno Florêncio 50 g por R$ 34,90."),
+    photo: `${ASSET_BASE}products/novos/creme-vitamina-c.webp`,
+    badge: "Novidade",
+  },
+  {
     id: 108, category: "Kits", brand: "Selune", shortName: "Kit Pele Oleosa",
     name: "Kit Pele Oleosa: Sabonete Ácido Salicílico + Sérum Ácido Hialurônico + Protetor FPS 60",
     tagline: "3 produtos · limpa, hidrata e protege",
@@ -650,6 +672,19 @@ export const NOVOS_PRODUTOS = [
     paymentLink: buildWhatsAppLink("Olá! Quero comprar Kit Glow: Mousse Micelar + Sérum Rosa Mosqueta + Creme Rosa Mosqueta por R$ 59,90."),
     photo: `${ASSET_BASE}products/novos/mousse-micelar.webp`,
     photos: [`${ASSET_BASE}products/novos/mousse-micelar.webp`, `${ASSET_BASE}products/novos/serum-rosa-mosqueta.webp`, `${ASSET_BASE}products/novos/creme-rosa-mosqueta.webp`],
+    badge: "Kit",
+  },
+  {
+    id: 115, category: "Kits", brand: "Selune", shortName: "Kit Firmeza",
+    name: "Kit Firmeza: Sérum GHK-Cu + Creme Antissinais Vitamina C + Colágeno",
+    tagline: "2 produtos · sérum e creme antissinais",
+    description: "Sérum GHK-Cu Bella Femme (30 ml) e Creme Antissinais Vitamina C + Colágeno Florêncio (50 g).",
+    price: 64.9,
+    compareAtPrice: 79.8,
+    ipayCode: "SELKITFI",
+    paymentLink: buildWhatsAppLink("Olá! Quero comprar o Kit Firmeza: Sérum GHK-Cu + Creme Antissinais Vitamina C + Colágeno por R$ 64,90."),
+    photo: `${ASSET_BASE}products/novos/serum-ghk-cu.webp`,
+    photos: [`${ASSET_BASE}products/novos/serum-ghk-cu.webp`, `${ASSET_BASE}products/novos/creme-vitamina-c.webp`],
     badge: "Kit",
   },
 ];

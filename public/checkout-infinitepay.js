@@ -29,6 +29,9 @@
     SELESF: { d: 'Esfoliante Facial Rosa Mosqueta Dermachem 100 g', p: 3490, wa: true },
     SELOLEO: { d: 'Óleo de Rosa Mosqueta Apinil 30 ml', p: 3290, wa: true },
     SELKITOL: { d: 'Kit Pele Oleosa: Sabonete Ácido Salicílico + Sérum Ácido Hialurônico + Protetor FPS 60', p: 6990, wa: true },
+    SELGHK: { d: 'Sérum GHK-Cu Peptídeo de Cobre Bella Femme 30 ml', p: 4490, wa: true },
+    SELCREMC: { d: 'Creme Antissinais Vitamina C + Colágeno Florêncio 50 g', p: 3490, wa: true },
+    SELKITFI: { d: 'Kit Firmeza: Sérum GHK-Cu + Creme Antissinais Vitamina C + Colágeno', p: 6490, wa: true },
     SELKITGL: { d: 'Kit Glow: Mousse Micelar + Sérum Rosa Mosqueta + Creme Rosa Mosqueta', p: 5990, wa: true }
   };
 
