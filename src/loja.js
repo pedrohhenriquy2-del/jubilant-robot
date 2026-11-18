@@ -1,6 +1,6 @@
 // Organização da loja: categorias, necessidades da pele e filtro compartilhado
 // entre o menu de categorias, a seção "Compre pela necessidade" e a vitrine.
-import { PRODUCTS, VITRINE } from "./constants";
+import { VITRINE } from "./constants";
 
 // Necessidade da pele -> produtos (só para navegação; as promessas de cada
 // produto ficam na página dele, com o que está na embalagem).
@@ -38,17 +38,8 @@ export function produtosDo(filtro) {
   return VITRINE.filter((p) => p.category === filtro);
 }
 
-// Tudo o que aparece na busca: vitrine + Mix-01 e Kit Rotina (páginas próprias).
+// Tudo o que aparece na busca: os produtos da vitrine.
 export function catalogoBusca(paginaDe) {
-  const extras = PRODUCTS.filter((p) => p.id === 1 || p.id === 7).map((p) => ({
-    nome: p.name,
-    curto: p.id === 1 ? "Sérum Mix-01" : "Kit Rotina Selune",
-    marca: p.id === 1 ? "Principia" : "Kit Selune",
-    preco: p.price,
-    foto: p.photo,
-    href: p.salesPageUrl,
-    busca: `${p.name} ${p.tagline} ${p.description}`,
-  }));
   const vitrine = VITRINE.map((p) => ({
     nome: p.name,
     curto: p.shortName,
@@ -58,7 +49,7 @@ export function catalogoBusca(paginaDe) {
     href: paginaDe(p.ipayCode),
     busca: `${p.name} ${p.tagline} ${p.description} ${p.category} ${NECESSIDADES.filter((n) => n.codigos.includes(p.ipayCode)).map((n) => n.rotulo).join(" ")}`,
   }));
-  return [...extras, ...vitrine];
+  return vitrine;
 }
 
 export const semAcento = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();

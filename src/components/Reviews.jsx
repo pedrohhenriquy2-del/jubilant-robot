@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 
-// Avaliações reais de clientes Selune (as mesmas da página do Mix-01).
+// Avaliações reais de clientes Selune.
 const AVALIACOES = [
   { nome: "Lauane Aparecida", foto: "products/cliente-lauane.jpg", texto: "Acabou com a minha oleosidade. Achei o máximo!" },
   { nome: "Ingrid Freitas", foto: "products/cliente-ingrid.jpg", texto: "Vi diferença já nos três primeiros dias de uso." },

@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { PRODUCTS, VITRINE, formatPrice } from "../constants";
+import { VITRINE, formatPrice } from "../constants";
 import { paginaDe } from "../detalhes";
 
 const BF_FIM = new Date("2026-12-01T23:59:59-03:00").getTime();
 const base = import.meta.env.BASE_URL;
-const KIT = PRODUCTS.find((p) => p.id === 7);
 const GHK = VITRINE.find((p) => p.ipayCode === "SELGHK");
-const MIX = PRODUCTS.find((p) => p.id === 1);
+const KITOL = VITRINE.find((p) => p.ipayCode === "SELKITOL");
+const MENOR = Math.min(...VITRINE.map((p) => p.price));
 
 // Banner rotativo da página inicial: três ofertas, troca sozinho a cada 6 s,
 // pausa quando a pessoa interage, aceita deslizar no celular e as setas.
@@ -15,15 +15,14 @@ function slides() {
   const bf = Date.now() < BF_FIM;
   return [
     {
-      id: "rotina",
-      selo: bf ? "Black Friday · frete grátis até 01/12" : "Kit mais completo",
-      titulo: "Kit Rotina Selune",
-      texto: "Sérum Mix-01 para tratar à noite + Protetor PS-01 FPS 60 para proteger de manhã.",
-      preco: KIT.price,
-      de: KIT.compareAtPrice,
-      foto: KIT.photo,
-      href: KIT.salesPageUrl,
-      cta: "Quero o kit",
+      id: "bf",
+      selo: bf ? "Black Friday · frete grátis até 01/12" : "Frete grátis",
+      titulo: "Skincare original, com frete grátis para todo o Brasil",
+      texto: `Sérum, limpeza, hidratante e protetor solar a partir de ${formatPrice(MENOR)}. Com nota fiscal em todo pedido.`,
+      foto: `${base}banners/hero-premium-mob.webp`,
+      larga: true,
+      href: "#ofertas",
+      cta: "Ver ofertas",
       fundo: "bg-ink",
       claro: true,
     },
@@ -39,18 +38,19 @@ function slides() {
       fundo: "bg-[#E7EEF2]",
     },
     {
-      id: "mix",
-      selo: "O mais pedido",
-      titulo: "Sérum Mix-01",
-      texto: "Para pele oleosa, cravos, poros e manchinhas. Por menos de R$ 25 com frete grátis.",
-      preco: MIX.price,
-      foto: MIX.photo,
-      href: MIX.salesPageUrl,
-      cta: "Ver o Mix-01",
+      id: "kitol",
+      selo: "Kit pele oleosa",
+      titulo: "Kit Pele Oleosa",
+      texto: "Sabonete de ácido salicílico + sérum de ácido hialurônico + protetor FPS 60, num pedido só.",
+      preco: KITOL.price,
+      de: KITOL.compareAtPrice,
+      fotos: KITOL.photos,
+      href: paginaDe("SELKITOL"),
+      cta: "Ver o kit",
       fundo: "bg-offwhite",
     },
   ];
-}
+}}
 
 export default function Banner() {
   const lista = useRef(slides()).current;
@@ -96,16 +96,24 @@ export default function Banner() {
           >
             <div className="mx-auto grid max-w-6xl items-center gap-2 px-5 pt-6 pb-12 md:grid-cols-2 md:gap-10 md:px-6 md:py-14">
               <a href={s.href} tabIndex={n === i ? 0 : -1} className="order-1 md:order-2 mx-auto block w-[62%] max-w-[300px] md:w-full md:max-w-[420px]" aria-hidden="true">
-                <img src={s.foto} alt="" width="600" height="600" fetchpriority={n === 0 ? "high" : "auto"} loading={n === 0 ? "eager" : "lazy"} className="aspect-square w-full rounded-[28px] bg-white object-contain p-3 shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)]" />
+                {s.fotos ? (
+                  <span className="grid aspect-square w-full grid-cols-3 items-center gap-1 rounded-[28px] bg-white p-3 shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)]">
+                    {s.fotos.map((f) => (
+                      <img key={f} src={f} alt="" width="300" height="300" loading="lazy" className="w-full h-auto scale-125" />
+                    ))}
+                  </span>
+                ) : (
+                  <img src={s.foto} alt="" width="600" height={s.larga ? 450 : 600} fetchpriority={n === 0 ? "high" : "auto"} loading={n === 0 ? "eager" : "lazy"} className={`w-full rounded-[28px] bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)] ${s.larga ? "aspect-[4/3] object-cover" : "aspect-square object-contain p-3"}`} />
+                )}
               </a>
               <div className={`order-2 md:order-1 text-center md:text-left ${s.claro ? "text-cream" : "text-ink"}`}>
                 <p className={`inline-block rounded-full px-3 py-1 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.16em] ${s.claro ? "bg-cream text-ink" : "bg-ink text-cream"}`}>{s.selo}</p>
                 <h2 className="mt-3 font-display text-[30px] leading-[1.05] md:text-5xl [text-wrap:balance]">{s.titulo}</h2>
                 <p className={`mx-auto md:mx-0 mt-2 max-w-md text-sm md:text-lg leading-relaxed ${s.claro ? "text-cream/80" : "text-ink-soft"}`}>{s.texto}</p>
-                <p className="mt-3 flex items-baseline justify-center md:justify-start gap-2">
+                {s.preco && <p className="mt-3 flex items-baseline justify-center md:justify-start gap-2">
                   <span className="text-3xl md:text-4xl font-bold">{formatPrice(s.preco)}</span>
                   {s.de && <span className={`text-sm line-through ${s.claro ? "text-cream/60" : "text-ink-soft"}`}>{formatPrice(s.de)}</span>}
-                </p>
+                </p>}
                 <p className={`mt-1 text-xs ${s.claro ? "text-cream/70" : "text-ink-soft"}`}>Frete grátis · Pix ou cartão</p>
                 <a
                   href={s.href}
