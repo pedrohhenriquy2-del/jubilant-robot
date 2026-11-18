@@ -14,7 +14,7 @@ export default function Busca({ aberta, fechar, naLoja = true }) {
   useEffect(() => {
     if (!aberta) return;
     setQ("");
-    const t = setTimeout(() => campo.current && campo.current.focus(), 50);
+    const t = setTimeout(() => campo.current && campo.current.focus(), 180);
     const esc = (e) => e.key === "Escape" && fechar();
     document.addEventListener("keydown", esc);
     document.body.style.overflow = "hidden";
@@ -76,10 +76,10 @@ export default function Busca({ aberta, fechar, naLoja = true }) {
             </p>
           )}
 
-          <ul className="mt-3 grid gap-2">
+          <ul className="mt-3 grid grid-cols-1 gap-2">
             {achados.map((p) => (
-              <li key={p.href}>
-                <a href={p.href} className="flex items-center gap-3 rounded-2xl border border-beige bg-white p-2 pr-4 hover:border-beige-dark">
+              <li key={p.href} className="min-w-0">
+                <a href={p.href} className="flex w-full min-w-0 items-center gap-3 overflow-hidden rounded-2xl border border-beige bg-white p-2 pr-4 hover:border-beige-dark">
                   <img src={p.foto} alt="" width="64" height="64" loading="lazy" className="h-16 w-16 shrink-0 rounded-xl object-contain" />
                   <span className="min-w-0 flex-1">
                     <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-gold">{p.marca}</span>

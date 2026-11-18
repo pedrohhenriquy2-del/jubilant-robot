@@ -12,6 +12,14 @@ export default function Products() {
     (NECESSIDADES.find((n) => n.id === filtro) || {}).rotulo ||
     (filtro === "Todos" ? "Todos os produtos" : (CATEGORIAS.find((c) => c.id === filtro) || {}).rotulo);
 
+  // Deixa o filtro escolhido sempre visível nas fileiras que rolam de lado.
+  useEffect(() => {
+    document.querySelectorAll("#produtos [data-fileira]").forEach((row) => {
+      const b = row.querySelector('[aria-pressed="true"]');
+      if (b) row.scrollTo({ left: b.offsetLeft - row.clientWidth / 2 + b.clientWidth / 2, behavior: "smooth" });
+    });
+  }, [filtro]);
+
   useEffect(() => {
     const f = (e) => setFiltro(e.detail);
     window.addEventListener("selune:filtro", f);
@@ -45,10 +53,10 @@ export default function Products() {
           </header>
 
           <div className="mt-7 grid gap-2">
-            <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Tipo de produto">
+            <div className="relative -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Tipo de produto" data-fileira>
               {CATEGORIAS.map((c) => chip(c.id, c.rotulo))}
             </div>
-            <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Necessidade da pele">
+            <div className="relative -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 md:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Necessidade da pele" data-fileira>
               {NECESSIDADES.map((n) => chip(n.id, n.rotulo))}
             </div>
           </div>
