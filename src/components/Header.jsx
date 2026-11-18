@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import { Menu, X, ShoppingBag, MessageCircle } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { Menu, X, ShoppingBag, MessageCircle, Search } from "lucide-react";
 import { BRAND, LOGO_WORDMARK, NAV_LINKS, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 import { useCarrinho, abrirCarrinho } from "../cart";
+import { CATEGORIAS, NECESSIDADES, filtrar } from "../loja";
+import Busca from "./Busca";
 
 // Fim da oferta de Black Friday (frete grátis até 01/12, horário de Brasília).
 const FIM_BLACK_FRIDAY = new Date("2026-12-01T23:59:59-03:00").getTime();
@@ -25,10 +27,12 @@ function useContagem(fim) {
 export default function Header({ naLoja = true }) {
   const [menu, setMenu] = useState(false);
   const [rolou, setRolou] = useState(false);
+  const [busca, setBusca] = useState(false);
   const { qtd } = useCarrinho();
   const base = import.meta.env.BASE_URL;
   const link = (h) => (naLoja ? h : `${base}${h}`);
   const falta = useContagem(FIM_BLACK_FRIDAY);
+  const fecharBusca = useCallback(() => setBusca(false), []);
 
   useEffect(() => {
     const f = () => setRolou(window.scrollY > 12);
@@ -81,7 +85,15 @@ export default function Header({ naLoja = true }) {
             <img src={LOGO_WORDMARK} alt={BRAND.name} width="140" height="40" className="h-9 md:h-10 w-auto" />
           </a>
 
-          <div className="flex items-center justify-end gap-1 md:gap-3">
+          <div className="flex items-center justify-end gap-0.5 md:gap-3">
+            <button
+              type="button"
+              onClick={() => setBusca(true)}
+              aria-label="Buscar produtos"
+              className="inline-flex h-11 w-11 items-center justify-center text-ink md:w-auto md:gap-2 md:rounded-full md:border md:border-beige-dark md:px-4 md:text-sm md:font-medium md:hover:border-ink"
+            >
+              <Search size={21} aria-hidden="true" /> <span className="hidden md:inline">Buscar</span>
+            </button>
             <a
               href={WHATSAPP_LINK}
               target="_blank"
@@ -108,6 +120,36 @@ export default function Header({ naLoja = true }) {
           </div>
         </div>
 
+        <nav
+          aria-label="Categorias"
+          className="border-t border-beige/70"
+        >
+          <ul className="mx-auto flex max-w-6xl gap-1.5 overflow-x-auto px-4 py-2 md:justify-center md:px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <li className="shrink-0">
+              <a href={link("#ofertas")} className="inline-flex min-h-9 items-center rounded-full bg-ink px-3.5 text-[13px] font-semibold text-cream">
+                Ofertas
+              </a>
+            </li>
+            {[...CATEGORIAS.filter((c) => c.id !== "Todos"), ...NECESSIDADES.map((n) => ({ id: n.id, rotulo: n.curto }))].map((c) => (
+              <li key={c.id} className="shrink-0">
+                {naLoja ? (
+                  <button
+                    type="button"
+                    onClick={() => filtrar(c.id)}
+                    className="inline-flex min-h-9 items-center rounded-full px-3.5 text-[13px] font-medium text-ink hover:bg-offwhite"
+                  >
+                    {c.rotulo}
+                  </button>
+                ) : (
+                  <a href={`${base}#produtos`} className="inline-flex min-h-9 items-center rounded-full px-3.5 text-[13px] font-medium text-ink hover:bg-offwhite">
+                    {c.rotulo}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         {menu && (
           <nav className="lg:hidden border-t border-beige bg-cream px-4 pb-4" aria-label="Menu">
             {NAV_LINKS.map((l) => (
@@ -132,6 +174,7 @@ export default function Header({ naLoja = true }) {
           </nav>
         )}
       </header>
+      <Busca aberta={busca} fechar={fecharBusca} naLoja={naLoja} />
     </>
   );
 }

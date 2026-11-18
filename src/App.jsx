@@ -1,5 +1,6 @@
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Banner from "./components/Banner";
+import Necessidades from "./components/Necessidades";
 import Ofertas from "./components/Ofertas";
 import Products from "./components/Products";
 import Benefits from "./components/Benefits";
@@ -18,8 +19,9 @@ function App() {
     <>
       <Header />
       <main>
-        <Hero />
+        <Banner />
         <Ofertas />
+        <Necessidades />
         <Products />
         <Reviews />
         <Benefits />
