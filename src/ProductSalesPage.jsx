@@ -171,7 +171,7 @@ export default function ProductSalesPage({ productId = 1 }) {
               </div>
 
               <p className="mt-3 text-xs text-ink-soft max-w-sm mx-auto">
-                Checkout seguro da Cartpanda, sem precisar criar conta.
+                Ao finalizar, você recebe um código no WhatsApp para confirmar a compra. É a proteção antifraude da InfinitePay.
               </p>
 
               <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-ink-soft">

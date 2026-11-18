@@ -65,6 +65,7 @@ export const CONTACT = {
 };
 
 export const NAV_LINKS = [
+  { label: "Ofertas", href: "#ofertas" },
   { label: "Produtos", href: "#produtos" },
   { label: "Kits", href: "#kits" },
   { label: "Sobre", href: "#sobre" },
@@ -83,10 +84,10 @@ export function trackProductClick(e) {
     todos.find((p) => el && el.dataset && el.dataset.ipay && p.ipayCode === el.dataset.ipay) ||
     todos.find((p) => p.paymentLink && href && href.split("?")[0] === p.paymentLink.split("?")[0]);
   if (!prod) {
-    window.fbq("trackCustom", "CliqueComprar", { currency: "BRL" });
+    window.fbq("track", "InitiateCheckout", { currency: "BRL" });
     return;
   }
-  window.fbq("trackCustom", "CliqueComprar", {
+  window.fbq("track", "InitiateCheckout", {
     content_name: prod.name,
     content_ids: [String(prod.id)],
     content_type: "product",
@@ -95,7 +96,7 @@ export function trackProductClick(e) {
   });
 }
 
-// Catálogo de produtos (o botão Comprar abre o checkout da Cartpanda).
+// Catálogo de produtos (o botão Comprar abre o checkout da InfinitePay).
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
   {
@@ -172,7 +173,7 @@ export const PRODUCTS = [
       title: "Bônus: e-book Sua Rotina Skincare",
       text: "O guia da pele bem cuidada, em PDF. Enviamos no seu WhatsApp depois da confirmação do pagamento.",
     },
-    // Checkout pela Cartpanda (código em public/checkout-cartpanda.js).
+    // Checkout pela InfinitePay (código em public/checkout-infinitepay.js).
     // Se o script não carregar, o botão leva o pedido para o WhatsApp.
     ipayCode: "KITROTINA",
     paymentLink: buildWhatsAppLink(
@@ -675,7 +676,7 @@ export const FAQ_ITEMS = [
   {
     question: "Quais as formas de pagamento?",
     answer:
-      "Pix ou cartão de crédito, no checkout seguro da Cartpanda. Você não precisa criar conta.",
+      "Pix ou cartão de crédito, no checkout seguro da InfinitePay. Você não precisa criar conta.",
   },
   {
     question: "E se eu me arrepender?",

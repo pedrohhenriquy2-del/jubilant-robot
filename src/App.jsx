@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Ofertas from "./components/Ofertas";
 import Products from "./components/Products";
 import Benefits from "./components/Benefits";
 import Reviews from "./components/Reviews";
@@ -18,9 +19,10 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Ofertas />
         <Products />
-        <Benefits />
         <Reviews />
+        <Benefits />
         <About />
         <FAQ />
         <Contact />

@@ -127,13 +127,9 @@ export default function CartDrawer() {
               onClick={(e) => finalizar(e.currentTarget)}
               className="mt-3 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-accent text-base font-semibold tracking-wide text-white hover:bg-accent-dark"
             >
-              <Lock size={17} aria-hidden="true" /> {linhas.length > 1 ? "Finalizar pelo WhatsApp" : "Finalizar compra"}
+              <Lock size={17} aria-hidden="true" /> Finalizar compra
             </button>
-            <p className="mt-2 text-center text-xs text-ink-soft">
-              {linhas.length > 1
-                ? "Com produtos diferentes, a gente fecha seu pedido pelo WhatsApp, com Pix ou cartão."
-                : "Pix ou cartão · pagamento seguro Cartpanda · nota fiscal"}
-            </p>
+            <p className="mt-2 text-center text-xs text-ink-soft">Pix ou cartão · pagamento seguro InfinitePay · nota fiscal</p>
           </footer>
         )}
       </aside>

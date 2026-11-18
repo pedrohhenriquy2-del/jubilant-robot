@@ -64,7 +64,7 @@ export function finalizar(botao) {
   const linhas = detalhar();
   const total = linhas.reduce((s, l) => s + l.p.price * l.q, 0);
   if (typeof window !== "undefined" && typeof window.fbq === "function") {
-    window.fbq("trackCustom", "CliqueComprar", {
+    window.fbq("track", "InitiateCheckout", {
       content_ids: linhas.map((l) => String(l.p.id)),
       content_type: "product",
       num_items: linhas.reduce((s, l) => s + l.q, 0),

@@ -228,7 +228,7 @@ export default function ProductPage({ codigo }) {
               <Pergunta aberta q="É original?" a="Sim. Compramos de distribuidor com nota fiscal e enviamos lacrado, na embalagem do fabricante, com nota fiscal eletrônica no seu nome." />
               <Pergunta q="Serve para a minha pele?" a={`${d.indicacao} Se tiver alguma condição de pele ou dúvida, fale com seu dermatologista ou chame a gente no WhatsApp antes de comprar.`} />
               <Pergunta q="Quando chega?" a="O frete é grátis para todo o Brasil e o prazo é de 3 a 7 dias úteis. O código de rastreio chega pelo WhatsApp." />
-              <Pergunta q="Como pago?" a="Pix ou cartão de crédito, no checkout seguro da Cartpanda. Não precisa criar conta." />
+              <Pergunta q="Como pago?" a="Pix ou cartão de crédito, no checkout seguro da InfinitePay. Não precisa criar conta." />
               <Pergunta q="Posso devolver?" a="Sim. Você tem 7 dias depois de receber para desistir da compra. É só chamar no WhatsApp." />
             </div>
           </div>

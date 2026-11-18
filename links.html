@@ -10,7 +10,8 @@
     <meta property="og:description" content="Sérum Mix-01 por R$ 24,95 com frete grátis. Nota fiscal e 7 dias para desistir." />
     <meta property="og:image" content="https://selune-oficial.com.br/og-mix-01.jpg" />
     <meta property="og:url" content="https://selune-oficial.com.br/links.html" />
-    <link rel="preconnect" href="https://selune-oficial-com.mycartpanda.com" />
+    <link rel="preconnect" href="https://api.checkout.infinitepay.io" crossorigin />
+    <link rel="preconnect" href="https://checkout.infinitepay.io" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
@@ -102,7 +103,7 @@
             <small>frete grátis</small>
           </div>
           <a class="btn pulse buy" href="https://go.perfectpay.com.br/PPU38CQHM7L" data-name="Principia Sérum Mix-01" data-value="24.95">Comprar agora no Pix ou cartão</a>
-          <p class="note">Checkout seguro da Cartpanda, sem criar conta · entrega em 3 a 7 dias úteis</p>
+          <p class="note">Pagamento seguro pela InfinitePay · entrega em 3 a 7 dias úteis<br>Ao finalizar, chega um código no seu WhatsApp para confirmar a compra.</p>
         </div>
       </section>
 
@@ -150,10 +151,10 @@
     </main>
     <script>
       document.querySelectorAll('a.buy').forEach(function (a) {
-        a.addEventListener('click', function () { if (window.fbq) fbq('trackCustom', 'CliqueComprar', { content_name: a.dataset.name, value: parseFloat(a.dataset.value), currency: 'BRL' }); });
+        a.addEventListener('click', function () { if (window.fbq) fbq('track', 'InitiateCheckout', { content_name: a.dataset.name, value: parseFloat(a.dataset.value), currency: 'BRL' }); });
       });
       document.getElementById('wa').addEventListener('click', function () { if (window.fbq) fbq('track', 'Contact'); });
     </script>
-    <script src="./checkout-cartpanda.js?v=1" defer></script>
+    <script src="./checkout-infinitepay.js?v=9" defer></script>
   </body>
 </html>

@@ -48,6 +48,7 @@ export default function ProductCard({ p, compacto = false }) {
             </span>
           )}
         </div>
+        <p className="text-[11px] text-ink-soft">Frete grátis · Pix ou cartão</p>
         {p.compareAtPrice && (
           <p className="text-xs font-semibold text-gold">
             Economize {formatPrice(p.compareAtPrice - p.price)} em relação aos itens separados

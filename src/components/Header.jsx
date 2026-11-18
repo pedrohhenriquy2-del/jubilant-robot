@@ -3,6 +3,24 @@ import { Menu, X, ShoppingBag, MessageCircle } from "lucide-react";
 import { BRAND, LOGO_WORDMARK, NAV_LINKS, WHATSAPP_LINK, trackWhatsAppClick } from "../constants";
 import { useCarrinho, abrirCarrinho } from "../cart";
 
+// Fim da oferta de Black Friday (frete grátis até 01/12, horário de Brasília).
+const FIM_BLACK_FRIDAY = new Date("2026-12-01T23:59:59-03:00").getTime();
+
+// Tempo que falta até o fim da oferta ("4d 6h", "5h 12min"); vazio depois que acaba.
+function useContagem(fim) {
+  const [agora, setAgora] = useState(() => Date.now());
+  useEffect(() => {
+    const t = setInterval(() => setAgora(Date.now()), 30000);
+    return () => clearInterval(t);
+  }, []);
+  const ms = fim - agora;
+  if (ms <= 0) return "";
+  const d = Math.floor(ms / 86400000);
+  const h = Math.floor((ms % 86400000) / 3600000);
+  const m = Math.floor((ms % 3600000) / 60000);
+  return d > 0 ? `${d}d ${h}h` : `${h}h ${m}min`;
+}
+
 // Barra superior + cabeçalho. No celular: menu à esquerda, logo no centro, sacola à direita.
 export default function Header({ naLoja = true }) {
   const [menu, setMenu] = useState(false);
@@ -10,6 +28,7 @@ export default function Header({ naLoja = true }) {
   const { qtd } = useCarrinho();
   const base = import.meta.env.BASE_URL;
   const link = (h) => (naLoja ? h : `${base}${h}`);
+  const falta = useContagem(FIM_BLACK_FRIDAY);
 
   useEffect(() => {
     const f = () => setRolou(window.scrollY > 12);
@@ -20,10 +39,20 @@ export default function Header({ naLoja = true }) {
   return (
     <>
       <a
-        href={link("#produtos")}
+        href={link("#ofertas")}
         className="block bg-accent px-4 py-2 text-center text-[11px] md:text-xs font-medium uppercase tracking-[0.14em] text-cream"
       >
-        <span className="md:hidden">Frete grátis · Pix ou cartão · Nota fiscal</span><span className="hidden md:inline">Frete grátis para todo o Brasil · Pix ou cartão · Nota fiscal em todo pedido</span>
+        {falta ? (
+          <>
+            <span className="md:hidden">Black Friday · frete grátis · termina em {falta}</span>
+            <span className="hidden md:inline">Black Friday Selune · frete grátis para todo o Brasil · termina em {falta}</span>
+          </>
+        ) : (
+          <>
+            <span className="md:hidden">Frete grátis · Pix ou cartão · Nota fiscal</span>
+            <span className="hidden md:inline">Frete grátis para todo o Brasil · Pix ou cartão · Nota fiscal em todo pedido</span>
+          </>
+        )}
       </a>
       <header
         className={`sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur transition-shadow ${rolou ? "shadow-[0_6px_24px_-18px_rgba(74,52,38,.6)]" : ""}`}

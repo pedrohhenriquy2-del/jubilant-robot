@@ -17,7 +17,8 @@
     <meta property="product:price:amount" content="34.90" />
     <meta property="product:price:currency" content="BRL" />
     <link rel="preload" as="image" href="./products/novos/serum-hialuronico.webp" fetchpriority="high" />
-    <link rel="preconnect" href="https://selune-oficial-com.mycartpanda.com" />
+    <link rel="preconnect" href="https://api.checkout.infinitepay.io" crossorigin />
+    <link rel="preconnect" href="https://checkout.infinitepay.io" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
@@ -43,6 +44,6 @@
   <body>
     <div id="root" data-produto="SELHIAL"></div>
     <script type="module" src="/src/produto.jsx"></script>
-    <script src="./checkout-cartpanda.js?v=1" defer></script>
+    <script src="./checkout-infinitepay.js?v=12" defer></script>
   </body>
 </html>
