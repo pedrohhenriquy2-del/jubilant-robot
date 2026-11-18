@@ -50,7 +50,7 @@ function slides() {
       fundo: "bg-offwhite",
     },
   ];
-}}
+}
 
 export default function Banner() {
   const lista = useRef(slides()).current;
