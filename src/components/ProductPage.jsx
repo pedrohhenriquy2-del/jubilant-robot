@@ -100,7 +100,7 @@ export default function ProductPage({ codigo }) {
             </div>
             {p.compareAtPrice ? (
               <p className="mt-1 text-sm font-semibold text-gold">
-                Você economiza {formatPrice(p.compareAtPrice - p.price)} em relação a comprar os 3 separados
+                Você economiza {formatPrice(p.compareAtPrice - p.price)} em relação a comprar {incluso.length > 1 ? `os ${incluso.length}` : "os itens"} separados
               </p>
             ) : null}
             <p className="mt-1 text-sm text-ink-soft">No Pix ou no cartão · frete grátis para todo o Brasil</p>
@@ -202,7 +202,7 @@ export default function ProductPage({ codigo }) {
                 <p className="mt-2 text-sm text-ink-soft">{kit.description}</p>
                 <p className="mt-3 text-sm font-semibold text-ink">
                   {formatPrice(kit.price)} <span className="font-normal text-ink-soft line-through">{formatPrice(kit.compareAtPrice)}</span>
-                  <span className="block text-gold">Economia de {formatPrice(kit.compareAtPrice - kit.price)} sobre os 3 separados</span>
+                  <span className="block text-gold">Economia de {formatPrice(kit.compareAtPrice - kit.price)} sobre os itens separados</span>
                 </p>
               </div>
               <div className="max-w-sm md:justify-self-end">
