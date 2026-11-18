@@ -26,7 +26,7 @@ export default function Hero() {
           {Date.now() < BF_FIM && <p className="inline-flex items-center gap-2 rounded-full bg-ink px-3 py-1 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.18em] text-cream">
             Black Friday · frete grátis até 01/12
           </p>}
-          <h1 className="mt-4 font-display text-[38px] leading-[1.04] md:text-6xl lg:text-[64px] text-ink [text-wrap:balance]">
+          <h1 className="mt-4 font-display text-[34px] leading-[1.06] md:text-6xl lg:text-[64px] text-ink [text-wrap:balance]">
             Skincare que funciona, com preço que cabe no bolso.
           </h1>
           <p className="mx-auto md:mx-0 mt-4 max-w-md text-[15px] md:text-lg leading-relaxed text-ink-soft">

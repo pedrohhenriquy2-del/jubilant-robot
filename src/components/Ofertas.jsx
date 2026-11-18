@@ -70,7 +70,7 @@ export default function Ofertas() {
                         <Star key={i} size={13} className="fill-yellow-400 text-yellow-400" />
                       ))}
                     </span>
-                    <a href="#avaliacoes" className="underline underline-offset-2">avaliações de clientes</a>
+                    <a href="#avaliacoes" className="underline underline-offset-2">avaliações reais</a>
                   </p>
                 )}
                 <div className="mt-3 flex flex-wrap items-baseline gap-x-2">
@@ -90,7 +90,7 @@ export default function Ofertas() {
                   data-name={c.p.name}
                   data-value={c.p.price}
                   onClick={trackProductClick}
-                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-accent px-4 py-3.5 text-sm font-semibold uppercase tracking-[0.1em] text-white shadow-[0_12px_26px_-14px_rgba(74,52,38,.9)] hover:bg-accent-dark transition-colors"
+                  className="inline-flex min-h-13 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-accent px-4 py-3.5 text-[13px] sm:text-sm font-semibold uppercase tracking-[0.06em] text-white shadow-[0_12px_26px_-14px_rgba(74,52,38,.9)] hover:bg-accent-dark transition-colors"
                 >
                   <Lock size={15} aria-hidden="true" /> Comprar agora
                 </a>

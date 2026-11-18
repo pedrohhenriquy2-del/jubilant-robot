@@ -44,7 +44,7 @@ export default function Header({ naLoja = true }) {
       >
         {falta ? (
           <>
-            <span className="md:hidden">Black Friday · frete grátis · termina em {falta}</span>
+            <span className="md:hidden">Black Friday · frete grátis · faltam {falta}</span>
             <span className="hidden md:inline">Black Friday Selune · frete grátis para todo o Brasil · termina em {falta}</span>
           </>
         ) : (

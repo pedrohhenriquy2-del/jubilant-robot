@@ -33,12 +33,12 @@ export default function ProductCard({ p, compacto = false }) {
           </span>
         )}
       </a>
-      <div className="flex flex-1 flex-col gap-1.5 p-4 md:p-5">
+      <div className="flex flex-1 flex-col gap-1 md:gap-1.5 p-3.5 md:p-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">{p.brand === "Selune" ? "Kit Selune" : p.brand}</p>
-        <h3 className="font-display text-xl md:text-[22px] leading-tight text-ink">
+        <h3 className="font-display text-[17px] md:text-[22px] leading-tight text-ink">
           <a href={href} className="hover:underline underline-offset-4 decoration-gold-light">{p.shortName}</a>
         </h3>
-        {!compacto && <p className="text-sm text-ink-soft leading-snug">{d.titulo || p.tagline}</p>}
+        {!compacto && <p className="hidden md:block text-sm text-ink-soft leading-snug">{d.titulo || p.tagline}</p>}
         <p className="text-xs text-ink-soft">{p.tagline}</p>
         <div className="mt-auto pt-3 flex items-baseline gap-2">
           <span className="text-lg font-bold text-ink">{formatPrice(p.price)}</span>
@@ -48,7 +48,7 @@ export default function ProductCard({ p, compacto = false }) {
             </span>
           )}
         </div>
-        <p className="text-[11px] text-ink-soft">Frete grátis · Pix ou cartão</p>
+        <p className="text-[11px] font-medium text-gold">Frete grátis</p>
         {p.compareAtPrice && (
           <p className="text-xs font-semibold text-gold">
             Economize {formatPrice(p.compareAtPrice - p.price)} em relação aos itens separados
