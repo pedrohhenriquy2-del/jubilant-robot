@@ -2,10 +2,13 @@ import { Lock, Truck } from "lucide-react";
 import { VITRINE, formatPrice, precoPix, trackProductClick } from "../constants";
 import { paginaDe } from "../detalhes";
 
-// Ofertas em destaque logo abaixo do banner: o lançamento (GHK-Cu) e o kit
-// antissinais. "Comprar agora" vai direto para o pagamento.
+// Ofertas em destaque logo abaixo do banner: o lançamento (GHK-Cu), o kit
+// antissinais e a linha rosa mosqueta. "Comprar agora" vai direto para o pagamento.
 const GHK = VITRINE.find((p) => p.ipayCode === "SELGHK");
 const KIT = VITRINE.find((p) => p.ipayCode === "SELKITFI");
+const OLEO = VITRINE.find((p) => p.ipayCode === "SELOLEO");
+const SABRM = VITRINE.find((p) => p.ipayCode === "SELSABRM");
+const ESF = VITRINE.find((p) => p.ipayCode === "SELESF");
 
 const CARTOES = [
   {
@@ -25,6 +28,27 @@ const CARTOES = [
     referencia: KIT && formatPrice(KIT.compareAtPrice),
     riscado: true,
   },
+  {
+    p: OLEO,
+    selo: "Rosa mosqueta",
+    titulo: "Óleo de Rosa Mosqueta",
+    sub: "Apinil · frasco de 30 ml com bico aplicador",
+    pontos: ["Óleo de rosa mosqueta", "Algumas gotas na pele limpa e seca"],
+  },
+  {
+    p: SABRM,
+    selo: "Rosa mosqueta",
+    titulo: "Sabonete Facial Rosa Mosqueta",
+    sub: "Dermachem · com ácido hialurônico, 100 ml",
+    pontos: ["Para pele sensível e extrasseca (embalagem)", "Limpeza do rosto"],
+  },
+  {
+    p: ESF,
+    selo: "Rosa mosqueta",
+    titulo: "Esfoliante Facial Rosa Mosqueta",
+    sub: "Dermachem · com casca de coco, 100 g",
+    pontos: ["Para pele sensível e extrasseca (embalagem)", "Use na frequência indicada no rótulo"],
+  },
 ];
 
 export default function Ofertas() {
@@ -37,7 +61,7 @@ export default function Ofertas() {
             Comece por aqui
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
-            O lançamento da Selune e o kit que combina com ele, com frete grátis para todo o Brasil.
+            O lançamento da Selune, o kit antissinais e a linha rosa mosqueta, com frete grátis para todo o Brasil.
           </p>
         </header>
 
