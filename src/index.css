@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
   /* Paleta premium Selune: branco, bege, nude, dourado discreto e marrom suave */
@@ -32,11 +32,24 @@ body {
   font-family: var(--font-sans);
 }
 
-h1, h2, h3, h4 {
+/* Visual premium: títulos em serifa elegante, cartões e textos em Montserrat */
+h1, h2 {
   font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.04;
 }
 
-h1, h2, h3 { letter-spacing: -0.005em; font-weight: 600; }
+h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+/* Títulos que usam a classe font-display ganham a serifa e um pouco mais de tamanho */
+.font-display { font-family: var(--font-display); font-weight: 600; }
+
+::selection { background: var(--color-gold-light); color: var(--color-ink); }
 
 @keyframes sobe { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
 .anima { animation: sobe .7s ease-out both }

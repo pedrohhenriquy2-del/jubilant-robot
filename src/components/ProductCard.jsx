@@ -9,7 +9,7 @@ export default function ProductCard({ p, compacto = false }) {
   const href = paginaDe(p.ipayCode);
   const fotos = p.photos || [p.photo];
   return (
-    <article className="group flex flex-col rounded-2xl bg-white border border-beige overflow-hidden transition-shadow hover:shadow-[0_18px_40px_-24px_rgba(74,52,38,.45)]">
+    <article className="group flex flex-col rounded-2xl bg-white border border-beige overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-light hover:shadow-[0_22px_44px_-26px_rgba(74,52,38,.5)]">
       <a href={href} className={`relative block bg-white overflow-hidden ${fotos.length > 1 ? "aspect-[4/3]" : "aspect-square"}`} aria-label={`Ver detalhes: ${p.shortName}`}>
         {fotos.length > 1 ? (
           <div className="absolute inset-0 grid grid-cols-3 items-center px-2">
@@ -35,7 +35,7 @@ export default function ProductCard({ p, compacto = false }) {
       </a>
       <div className="flex flex-1 flex-col gap-1 md:gap-1.5 p-3.5 md:p-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">{p.brand === "Selune" ? "Kit Selune" : p.brand}</p>
-        <h3 className="font-display text-[17px] md:text-[22px] leading-tight text-ink">
+        <h3 className="font-display text-[21px] md:text-[25px] leading-[1.08] text-ink">
           <a href={href} className="hover:underline underline-offset-4 decoration-gold-light">{p.shortName}</a>
         </h3>
         {!compacto && <p className="hidden md:block text-sm text-ink-soft leading-snug">{d.titulo || p.tagline}</p>}

@@ -65,7 +65,7 @@ export default function Ofertas() {
                 </a>
 
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
-                  <h3 className="font-display text-2xl sm:text-[28px] leading-tight text-ink">
+                  <h3 className="font-display text-[30px] sm:text-[34px] leading-[1.05] text-ink">
                     <a href={paginaDe(c.p.ipayCode)} className="hover:underline underline-offset-4 decoration-gold-light">{c.titulo}</a>
                   </h3>
                   <p className="mt-1 text-sm text-ink-soft">{c.sub}</p>

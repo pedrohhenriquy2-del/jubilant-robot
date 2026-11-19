@@ -108,7 +108,7 @@ export default function Banner() {
               </a>
               <div className={`order-2 md:order-1 text-center md:text-left ${s.claro ? "text-cream" : "text-ink"}`}>
                 <p className={`inline-block rounded-full px-3 py-1 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.16em] ${s.claro ? "bg-cream text-ink" : "bg-ink text-cream"}`}>{s.selo}</p>
-                <h2 className="mt-3 font-display text-[30px] leading-[1.05] md:text-5xl [text-wrap:balance]">{s.titulo}</h2>
+                <h2 className="mt-3 font-display text-[38px] leading-[1.02] md:text-6xl [text-wrap:balance]">{s.titulo}</h2>
                 <p className={`mx-auto md:mx-0 mt-2 max-w-md text-sm md:text-lg leading-relaxed ${s.claro ? "text-cream/80" : "text-ink-soft"}`}>{s.texto}</p>
                 {s.preco && <p className="mt-3 flex items-baseline justify-center md:justify-start gap-2">
                   <span className="text-3xl md:text-4xl font-bold">{formatPrice(s.preco)}</span>
