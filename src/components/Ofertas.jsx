@@ -2,12 +2,10 @@ import { Lock, Truck } from "lucide-react";
 import { VITRINE, formatPrice, precoPix, trackProductClick } from "../constants";
 import { paginaDe } from "../detalhes";
 
-// Ofertas em destaque logo abaixo do banner: só a linha rosa mosqueta
-// (kit de Black Friday + os 3 produtos). "Comprar agora" vai direto para o pagamento.
-const OLEO = VITRINE.find((p) => p.ipayCode === "SELOLEO");
-const SABRM = VITRINE.find((p) => p.ipayCode === "SELSABRM");
-const ESF = VITRINE.find((p) => p.ipayCode === "SELESF");
+// Ofertas da semana: só os kits da linha rosa mosqueta.
+// "Comprar agora" vai direto para o pagamento.
 const KITRM = VITRINE.find((p) => p.ipayCode === "SELKITRM");
+const KITGL = VITRINE.find((p) => p.ipayCode === "SELKITGL");
 
 const CARTOES = [
   {
@@ -20,25 +18,13 @@ const CARTOES = [
     riscado: true,
   },
   {
-    p: OLEO,
-    selo: "Rosa mosqueta",
-    titulo: "Óleo de Rosa Mosqueta",
-    sub: "Apinil · frasco de 30 ml com bico aplicador",
-    pontos: ["Óleo de rosa mosqueta", "Algumas gotas na pele limpa e seca"],
-  },
-  {
-    p: SABRM,
-    selo: "Rosa mosqueta",
-    titulo: "Sabonete Facial Rosa Mosqueta",
-    sub: "Dermachem · com ácido hialurônico, 100 ml",
-    pontos: ["Para pele sensível e extrasseca (embalagem)", "Limpeza do rosto"],
-  },
-  {
-    p: ESF,
-    selo: "Rosa mosqueta",
-    titulo: "Esfoliante Facial Rosa Mosqueta",
-    sub: "Dermachem · com casca de coco, 100 g",
-    pontos: ["Para pele sensível e extrasseca (embalagem)", "Use na frequência indicada no rótulo"],
+    p: KITGL,
+    selo: "Kit rosa mosqueta",
+    titulo: "Kit Glow Rosa Mosqueta",
+    sub: "Mousse Micelar + Sérum + Creme · rotina rosa mosqueta",
+    pontos: ["3 produtos da linha rosa mosqueta", "Você economiza R$ 42,80"],
+    referencia: KITGL && formatPrice(KITGL.compareAtPrice),
+    riscado: true,
   },
 ];
 
@@ -52,7 +38,7 @@ export default function Ofertas() {
             Comece por aqui
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
-            O Kit Rosa Mosqueta de Black Friday e a linha completa, com frete grátis para todo o Brasil.
+            Os kits da linha rosa mosqueta, com preço de Black Friday e frete grátis para todo o Brasil.
           </p>
         </header>
 
