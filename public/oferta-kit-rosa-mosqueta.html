@@ -57,7 +57,13 @@
 
       /* Faixa de urgência */
       .faixa { position: sticky; top: 0; z-index: 60; background: var(--dark); color: var(--cream); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-align: center; padding: 9px 10px; }
-      .faixa b { color: var(--gold-l); font-variant-numeric: tabular-nums; }
+      .faixa { overflow: hidden; padding: 9px 0; }
+      .faixa-trilho { display: flex; width: max-content; animation: faixa 34s linear infinite; }
+      .faixa-trilho > div { display: flex; align-items: center; flex-shrink: 0; }
+      .faixa-trilho span { padding: 0 18px; white-space: nowrap; }
+      .faixa-trilho i { color: var(--gold-l); font-style: normal; }
+      @keyframes faixa { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) { .faixa-trilho { animation: none; } }
       header.topo .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
       header.topo img { height: 36px; width: auto; }
       header.topo a.loja { font-size: 13px; font-weight: 600; color: var(--ink-soft); text-decoration: none; }
@@ -165,6 +171,20 @@
       .hero-kit img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
       .hero-kit figcaption { font-size: 12px; font-weight: 700; color: var(--ink); line-height: 1.2; }
       .hero-kit small { display: block; font-weight: 500; color: var(--ink-soft); font-size: 11px; }
+      .prova { background: var(--rose-l); }
+      .depo { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 22px -20px 0; padding: 0 20px 6px; text-align: left; scrollbar-width: none; }
+      .depo::-webkit-scrollbar { display: none; }
+      .depo figure { margin: 0; flex: 0 0 80%; max-width: 340px; scroll-snap-align: center; background: #fff; border: 1px solid var(--beige); border-radius: 20px; padding: 18px; }
+      .depo img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+      .depo blockquote { margin: 10px 0 8px; font-family: var(--serif); font-size: 22px; line-height: 1.2; color: var(--ink); }
+      .depo figcaption { font-size: 12px; color: var(--ink-soft); }
+      @media (min-width: 860px) { .depo { justify-content: center; margin: 22px 0 0; padding: 0; } .depo figure { flex: 1; } }
+      .prova .nota { font-size: 11px; color: var(--ink-soft); margin: 10px 0 0; }
+      .promessa { display: grid; gap: 10px; margin-top: 22px; text-align: left; }
+      @media (min-width: 860px) { .promessa { grid-template-columns: repeat(3,1fr); } }
+      .promessa div { background: #fff; border: 1px solid var(--beige); border-radius: 16px; padding: 14px 16px; }
+      .promessa b { display: block; font-family: var(--serif); font-size: 20px; color: var(--ink); }
+      .promessa span { font-size: 13px; color: var(--ink-soft); }
       .mini { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; max-width: 620px; margin: 26px auto 0; }
       .mini div { background: #fff; border: 1px solid var(--beige); border-radius: 18px; padding: 12px 8px 14px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
       .mini img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
@@ -193,7 +213,7 @@
     </style>
   </head>
   <body>
-    <div class="faixa">Black Friday Selune · frete grátis termina em <b data-relogio="curto">--</b></div>
+    <div class="faixa" aria-label="Black Friday da Selune · Frete grátis para todo o Brasil · 5% off no Pix · Nota fiscal em todo pedido · 7 dias para desistir"><div class="faixa-trilho" aria-hidden="true"><div><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i></div><div><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i></div></div></div>
     <header class="topo">
       <div class="wrap">
         <a href="./" aria-label="Selune Oficial, página inicial"><img src="./logo-selune.svg" alt="Selune" width="160" height="44" /></a>
@@ -208,7 +228,7 @@
           <div>
             <span class="selo">🖤 Black Friday · −35%</span>
             <h1>Sua pele não precisa de mais um creme. Precisa de uma <em>rotina.</em></h1>
-            <p class="lead"><b>Limpa, esfolia e finaliza</b> em 3 minutos. Tudo que faltava num kit só.</p>
+            <p class="lead"><b>Limpa, esfolia e finaliza</b> em 3 minutos. Um momento só seu, todo dia, com tudo que faltava num kit só.</p>
             <div class="hero-kit" aria-label="O que vem no kit">
               <figure><img src="./products/novos/sabonete-rosa-mosqueta.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="200" height="200" fetchpriority="high" /><figcaption>Sabonete<small>100 ml</small></figcaption></figure>
               <figure><img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="200" height="200" fetchpriority="high" /><figcaption>Esfoliante<small>100 g</small></figcaption></figure>
@@ -218,7 +238,7 @@
               <div class="de">De <s>R$ 92,76</s> (comprando separado)</div>
               <div class="por"><strong>R$ 59,90</strong><span class="off">−35%</span></div>
               <span class="pix">ou R$ 56,91 no Pix</span>
-              <p class="eco">Economize <b>R$ 32,86</b> + <b>frete grátis</b>.</p>
+              <p class="eco">Economize <b>R$ 32,86</b> + <b>frete grátis</b>. Sai por <b>R$ 19,97</b> cada produto.</p>
               <a class="btn rose" href="https://wa.me/5538999659366" data-ipay="SELKITRM">🔒 Quero meu kit agora</a>
               <div class="confianca">
                 <span><i>✓</i> Original e lacrado</span>
@@ -264,10 +284,29 @@
         </div>
       </section>
 
+      <!-- PROVA E CONFIANÇA -->
+      <section class="prova centro">
+        <div class="wrap">
+          <h2>Quem compra na Selune, <em>conta pra amiga.</em></h2>
+          <div class="depo">
+            <figure><img src="./products/cliente-lauane.jpg" alt="Foto de Lauane Aparecida" width="56" height="56" loading="lazy" /><blockquote>“Acabou com a minha oleosidade. Achei o máximo!”</blockquote><figcaption>Lauane Aparecida · cliente Selune</figcaption></figure>
+            <figure><img src="./products/cliente-ingrid.jpg" alt="Foto de Ingrid Freitas" width="56" height="56" loading="lazy" /><blockquote>“Vi diferença já nos três primeiros dias de uso.”</blockquote><figcaption>Ingrid Freitas · cliente Selune</figcaption></figure>
+            <figure><img src="./products/cliente-rosemire.jpg" alt="Foto de Rosemire" width="56" height="56" loading="lazy" /><blockquote>“É bom e funciona.”</blockquote><figcaption>Rosemire · cliente Selune</figcaption></figure>
+          </div>
+          <p class="nota">Relatos reais de clientes sobre compras anteriores na Selune. Os resultados variam de pessoa para pessoa.</p>
+          <div class="promessa">
+            <div><b>Original de verdade</b><span>Lacrado, comprado de distribuidor, com nota fiscal.</span></div>
+            <div><b>Gente de verdade</b><span>No WhatsApp quem responde é uma pessoa da Selune.</span></div>
+            <div><b>Compra sem medo</b><span>Recebeu e não gostou? 7 dias para desistir.</span></div>
+          </div>
+        </div>
+      </section>
+
       <!-- FECHAMENTO -->
       <section class="fim centro">
         <div class="wrap estreito">
-          <h2>O frete grátis termina em:</h2>
+          <h2>Você merece <em>3 minutos por dia</em> só seus.</h2>
+          <p class="lead" style="margin:6px 0 16px">O preço de Black Friday com frete grátis vai até 01/12:</p>
           <div class="relogio" aria-live="off">
             <div><b data-r="d">--</b><span>dias</span></div>
             <div><b data-r="h">--</b><span>horas</span></div>
