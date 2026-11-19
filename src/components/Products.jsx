@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { VITRINE } from "../constants";
 import { CATEGORIAS, NECESSIDADES, produtosDo } from "../loja";
 import ProductCard from "./ProductCard";
 
-// Vitrine: filtro por tipo de produto ou por necessidade da pele, depois os kits.
+// Vitrine: filtro por tipo de produto ou por necessidade da pele (kits primeiro em "Todos").
 export default function Products() {
   const [filtro, setFiltro] = useState("Todos");
-  const kits = VITRINE.filter((p) => p.category === "Kits");
   const lista = produtosDo(filtro);
   const titulo =
     (NECESSIDADES.find((n) => n.id === filtro) || {}).rotulo ||
@@ -42,7 +40,7 @@ export default function Products() {
 
   return (
     <>
-      <section id="produtos" className="bg-cream py-14 md:py-20">
+      <section id="produtos" className="bg-cream py-10 md:py-16">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <header className="text-center">
             <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Loja Selune</p>
@@ -72,22 +70,6 @@ export default function Products() {
         </div>
       </section>
 
-      <section id="kits" className="bg-offwhite py-14 md:py-20">
-        <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <header className="text-center">
-            <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Kits Selune</p>
-            <h2 className="mt-2 font-display text-4xl md:text-5xl text-ink [text-wrap:balance]">A rotina completa, pronta</h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
-              Produtos que combinam, em um pedido só e por menos do que comprando separado.
-            </p>
-          </header>
-          <div className="mx-auto mt-8 grid max-w-5xl gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {kits.map((p) => (
-              <ProductCard key={p.id} p={p} />
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

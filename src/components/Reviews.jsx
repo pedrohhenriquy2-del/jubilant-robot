@@ -10,7 +10,7 @@ const AVALIACOES = [
 export default function Reviews() {
   const base = import.meta.env.BASE_URL;
   return (
-    <section id="avaliacoes" className="py-14 md:py-20 bg-cream">
+    <section id="avaliacoes" className="py-10 md:py-16 bg-cream">
       <div className="mx-auto max-w-6xl px-4 md:px-6 text-center">
         <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">
           Avaliações reais

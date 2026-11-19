@@ -76,9 +76,8 @@ export const CONTACT = {
 
 export const NAV_LINKS = [
   { label: "Ofertas", href: "#ofertas" },
-  { label: "Sobre", href: "#sobre" },
+  { label: "Loja", href: "#produtos" },
   { label: "Dúvidas", href: "#faq" },
-  { label: "Atendimento", href: "#contato" },
 ];
 
 // Dispara o evento de conversão do Meta Pixel ao clicar em "Comprar".

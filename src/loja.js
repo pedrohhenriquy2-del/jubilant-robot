@@ -31,7 +31,7 @@ export function filtrar(valor) {
 }
 
 export function produtosDo(filtro) {
-  if (!filtro || filtro === "Todos") return VITRINE.filter((p) => p.category !== "Kits");
+  if (!filtro || filtro === "Todos") return [...VITRINE.filter((p) => p.category === "Kits"), ...VITRINE.filter((p) => p.category !== "Kits")];
   if (filtro === "Kits") return VITRINE.filter((p) => p.category === "Kits");
   const n = NECESSIDADES.find((x) => x.id === filtro);
   if (n) return n.codigos.map((c) => VITRINE.find((p) => p.ipayCode === c)).filter(Boolean);

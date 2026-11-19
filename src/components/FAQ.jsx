@@ -43,7 +43,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="py-14 md:py-20 bg-white border-y border-beige">
+    <section id="faq" className="py-10 md:py-16 bg-white border-y border-beige">
       <div className="mx-auto max-w-3xl px-4 md:px-6">
         <motion.div
           className="text-center mb-8"
@@ -58,7 +58,7 @@ export default function FAQ() {
 
         <motion.div
         >
-          {FAQ_ITEMS.map((item, index) => (
+          {FAQ_ITEMS.slice(0, 4).map((item, index) => (
             <FaqItem
               key={item.question}
               item={item}
