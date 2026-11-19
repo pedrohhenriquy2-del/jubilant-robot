@@ -229,7 +229,7 @@ export default function ProductPage({ codigo }) {
           <div>
             <h2 className="font-display text-3xl text-ink">Dúvidas sobre este produto</h2>
             <div className="mt-3">
-              <Pergunta aberta q="É original?" a="Sim. Compramos de distribuidor com nota fiscal e enviamos lacrado, na embalagem do fabricante, com nota fiscal eletrônica no seu nome." />
+              <Pergunta aberta q="É original?" a="Sim. Compramos de distribuidor com nota fiscal e enviamos lacrado, na embalagem do fabricante, com nota fiscal eletrônica." />
               <Pergunta q="Serve para a minha pele?" a={`${d.indicacao} Se tiver alguma condição de pele ou dúvida, fale com seu dermatologista ou chame a gente no WhatsApp antes de comprar.`} />
               <Pergunta q="Quando chega?" a="O frete é grátis para todo o Brasil e o prazo é de 3 a 7 dias úteis. O código de rastreio chega pelo WhatsApp." />
               <Pergunta q="Como pago?" a="Pix com 5% de desconto, cartão de crédito (à vista ou parcelado) ou boleto, no checkout seguro da Yampi. Não precisa criar conta." />

@@ -6,7 +6,7 @@ const ITENS = [
   {
     icone: ShieldCheck,
     titulo: "Original de verdade",
-    texto: "Cada produto vem lacrado, comprado de distribuidor, com nota fiscal no seu nome.",
+    texto: "Cada produto vem lacrado, comprado de distribuidor, com nota fiscal em todo pedido.",
   },
   {
     icone: MessageCircle,

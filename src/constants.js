@@ -50,7 +50,7 @@ export function trackWhatsAppClick() {
 
 export const BRAND = {
   name: "Selune Oficial",
-  tagline: "Skincare acessível, original e com nota fiscal",
+  tagline: "Skincare original para o seu momento de autocuidado",
 };
 
 export const LEGAL = {
@@ -716,7 +716,7 @@ export const FAQ_ITEMS = [
   {
     question: "Os produtos são originais?",
     answer:
-      "Sim, 100%. Compramos de distribuidor, com nota fiscal, e enviamos lacrados, na embalagem do fabricante. Todo pedido sai com nota fiscal eletrônica no seu nome.",
+      "Sim, 100%. Compramos de distribuidor, com nota fiscal, e enviamos lacrados, na embalagem do fabricante. Todo pedido sai com nota fiscal eletrônica.",
   },
   {
     question: "E se eu receber e não gostar?",
