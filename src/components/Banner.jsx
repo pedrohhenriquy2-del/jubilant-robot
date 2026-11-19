@@ -36,7 +36,8 @@ function slides() {
       larga: true,
       href: "#ofertas",
       cta: "Ver ofertas",
-      fundo: "bg-offwhite",
+      fundo: "bg-accent-dark",
+      claro: true,
     },
     {
       id: "ghk",
@@ -47,7 +48,8 @@ function slides() {
       foto: GHK.photo,
       href: paginaDe("SELGHK"),
       cta: "Conhecer o GHK-Cu",
-      fundo: "bg-[#E7EEF2]",
+      fundo: "bg-ink",
+      claro: true,
     },
   ];
 }
