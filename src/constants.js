@@ -716,27 +716,27 @@ export const FAQ_ITEMS = [
   {
     question: "Os produtos são originais?",
     answer:
-      "Sim. Compramos de distribuidor, com nota fiscal, e enviamos lacrados, na embalagem do fabricante. Todo pedido sai com nota fiscal eletrônica.",
+      "Sim, 100%. Compramos de distribuidor, com nota fiscal, e enviamos lacrados, na embalagem do fabricante. Todo pedido sai com nota fiscal eletrônica no seu nome.",
   },
   {
-    question: "Qual produto é o certo para a minha pele?",
+    question: "E se eu receber e não gostar?",
     answer:
-      "Cada página mostra o que a embalagem do fabricante indica. Se ficar em dúvida, chame no WhatsApp e uma pessoa da Selune te ajuda a montar a rotina antes de comprar.",
+      "Você tem 7 dias depois de receber para desistir da compra, como garante o Código de Defesa do Consumidor. É só chamar no WhatsApp que a gente resolve com você.",
   },
   {
     question: "Quanto tempo leva para chegar?",
     answer:
-      "Enviamos para todo o Brasil com frete grátis, em 3 a 7 dias úteis. Você recebe o código de rastreio pelo WhatsApp.",
+      "O frete é grátis para todo o Brasil e chega em até 7 dias úteis depois da confirmação do pagamento. Você recebe o código de rastreio pelo WhatsApp e acompanha tudo.",
   },
   {
     question: "Quais as formas de pagamento?",
     answer:
-      "Pix com 5% de desconto, cartão de crédito (à vista ou parcelado) ou boleto, no checkout seguro da Yampi. Você não precisa criar conta.",
+      "Pix com 5% de desconto, cartão de crédito (à vista ou parcelado) ou boleto, no checkout seguro da Yampi, com pagamento processado pelo Mercado Pago. Você não precisa criar conta.",
   },
   {
-    question: "E se eu me arrepender?",
+    question: "Qual produto é o certo para a minha pele?",
     answer:
-      "Você tem 7 dias após receber para desistir da compra, como garante o Código de Defesa do Consumidor. É só chamar no WhatsApp.",
+      "Cada página mostra o que a embalagem do fabricante indica. Se ficar em dúvida, chame no WhatsApp: uma pessoa da Selune te ajuda a montar a rotina antes de você comprar.",
   },
   {
     question: "Preciso usar protetor solar junto?",

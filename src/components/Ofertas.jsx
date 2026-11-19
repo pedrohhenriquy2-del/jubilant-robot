@@ -33,10 +33,10 @@ export default function Ofertas() {
         <header className="text-center">
           <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Ofertas da semana</p>
           <h2 id="ofertas-titulo" className="mt-2 font-display text-4xl md:text-5xl text-ink [text-wrap:balance]">
-            Comece por aqui
+            Sua rotina completa, num pedido só
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
-            Os kits da linha rosa mosqueta, com preço de Black Friday e frete grátis para todo o Brasil.
+            Tudo combina e tudo chega junto. Escolha o seu kit de rosa mosqueta com preço de Black Friday e frete grátis até 01/12.
           </p>
         </header>
 

@@ -4,6 +4,7 @@ import Ofertas from "./components/Ofertas";
 import Products from "./components/Products";
 import Benefits from "./components/Benefits";
 import Reviews from "./components/Reviews";
+import Promessa from "./components/Promessa";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
@@ -21,6 +22,7 @@ function App() {
         <Benefits />
         <Products />
         <Reviews />
+        <Promessa />
         <FAQ />
       </main>
       <Footer />

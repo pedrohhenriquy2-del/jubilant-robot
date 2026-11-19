@@ -49,16 +49,16 @@ export default function FAQ() {
           className="text-center mb-8"
         >
           <span className="inline-block text-[11px] md:text-xs uppercase tracking-[0.22em] text-gold font-semibold mb-2">
-            Dúvidas frequentes
+            Antes de comprar
           </span>
           <h2 className="font-display text-4xl md:text-5xl text-ink">
-            Perguntas frequentes
+            Ficou alguma dúvida?
           </h2>
         </motion.div>
 
         <motion.div
         >
-          {FAQ_ITEMS.slice(0, 4).map((item, index) => (
+          {FAQ_ITEMS.slice(0, 5).map((item, index) => (
             <FaqItem
               key={item.question}
               item={item}

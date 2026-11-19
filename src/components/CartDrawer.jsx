@@ -62,7 +62,7 @@ export default function CartDrawer() {
           {linhas.length === 0 ? (
             <div className="py-16 text-center">
               <p className="font-display text-2xl text-ink">Seu carrinho está vazio</p>
-              <p className="mt-2 text-sm text-ink-soft">Escolha os produtos da sua rotina.</p>
+              <p className="mt-2 text-sm text-ink-soft">Que tal começar pelo Kit Rosa Mosqueta? É a rotina completa, com frete grátis.</p>
               <a
                 href={`${import.meta.env.BASE_URL}#produtos`}
                 onClick={() => abrirCarrinho(false)}

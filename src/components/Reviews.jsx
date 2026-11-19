@@ -19,7 +19,7 @@ export default function Reviews() {
           Quem já comprou na Selune
         </h2>
         <p className="mt-2 text-sm md:text-base text-ink-soft">
-          O que dizem as clientes da Selune.
+          Relatos reais de quem já cuida da pele com a gente.
         </p>
 
         <div className="-mx-4 mt-6 flex snap-x gap-3 overflow-x-auto px-4 pb-2 text-left md:mx-0 md:mt-8 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

@@ -49,7 +49,7 @@ export default function Products() {
             <p className="text-[11px] md:text-xs font-semibold uppercase tracking-[0.22em] text-gold">Loja Selune</p>
             <h2 className="mt-2 font-display text-4xl md:text-5xl text-ink [text-wrap:balance]">Monte a sua rotina</h2>
             <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
-              Filtre pelo tipo de produto ou pela necessidade da sua pele.
+              Comece pelo que a sua pele pede hoje. Na dúvida, chame no WhatsApp: uma pessoa de verdade te ajuda a escolher.
             </p>
           </header>
 
