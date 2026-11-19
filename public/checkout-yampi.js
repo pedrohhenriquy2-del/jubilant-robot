@@ -17,7 +17,8 @@
     SELCREMC: '4RIA4EUMQ4',
     SELKITOL: '80N203MGI8',
     SELKITGL: 'QVQ4SJ5EYJ',
-    SELKITFI: '4ZUJSCLFEJ'
+    SELKITFI: '4ZUJSCLFEJ',
+    SELKITRM: 'FA0GQK8RWK'
   };
 
   // Limpa o pedido antigo da InfinitePay guardado no navegador (evita o aviso

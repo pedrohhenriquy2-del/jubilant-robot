@@ -263,6 +263,27 @@ export const DETALHES = {
     combina: ["SELCENT", "SELMOUS"],
     incluso: ["SELSAB", "SELHIAL", "SELPROT"],
   },
+  SELKITRM: {
+    slug: "kit-rosa-mosqueta",
+    titulo: "Rotina rosa mosqueta: limpa, esfolia e finaliza",
+    resumo:
+      "A linha rosa mosqueta completa em um pedido só: sabonete facial Dermachem (100 ml), esfoliante facial Dermachem (100 g) e óleo de rosa mosqueta Apinil (30 ml).",
+    embalagem: [
+      "Sabonete: limpeza, hidratação e nutrição",
+      "Esfoliante: limpeza, revitalização e hidratação",
+      "Óleo: rosa mosqueta com bico aplicador",
+    ],
+    composicao: "3 produtos com rosa mosqueta",
+    caracteristicas: ["Sabonete 100 ml", "Esfoliante 100 g", "Óleo 30 ml"],
+    uso: [
+      "Limpe o rosto com o sabonete.",
+      "Use o esfoliante na frequência indicada no rótulo.",
+      "Finalize com algumas gotas do óleo e massageie até absorver.",
+    ],
+    indicacao: "Siga as orientações e advertências de cada embalagem.",
+    combina: ["SELPROT", "SELCREM"],
+    incluso: ["SELSABRM", "SELESF", "SELOLEO"],
+  },
   SELKITGL: {
     slug: "kit-glow-rosa-mosqueta",
     titulo: "Rotina rosa mosqueta: limpeza, sérum e creme",

@@ -9,8 +9,18 @@ const KIT = VITRINE.find((p) => p.ipayCode === "SELKITFI");
 const OLEO = VITRINE.find((p) => p.ipayCode === "SELOLEO");
 const SABRM = VITRINE.find((p) => p.ipayCode === "SELSABRM");
 const ESF = VITRINE.find((p) => p.ipayCode === "SELESF");
+const KITRM = VITRINE.find((p) => p.ipayCode === "SELKITRM");
 
 const CARTOES = [
+  {
+    p: KITRM,
+    selo: "Black Friday",
+    titulo: "Kit Rosa Mosqueta",
+    sub: "Sabonete + Esfoliante + Óleo · limpa, esfolia e finaliza",
+    pontos: ["3 produtos da linha rosa mosqueta", "Você economiza R$ 32,86"],
+    referencia: KITRM && formatPrice(KITRM.compareAtPrice),
+    riscado: true,
+  },
   {
     p: GHK,
     selo: "Lançamento",
@@ -73,7 +83,7 @@ export default function Ofertas() {
             >
               <a href={paginaDe(c.p.ipayCode)} className="relative block self-start overflow-hidden rounded-2xl bg-offwhite aspect-square" aria-label={`Ver detalhes: ${c.titulo}`}>
                 {c.p.photos ? (
-                  <span className="grid h-full w-full grid-cols-2 items-center gap-1 p-2">
+                  <span className={`grid h-full w-full ${c.p.photos.length > 2 ? "grid-cols-3" : "grid-cols-2"} items-center gap-1 p-2`}>
                     {c.p.photos.map((f) => (
                       <img key={f} src={f} alt="" width="300" height="300" loading="lazy" className="w-full h-auto" />
                     ))}
