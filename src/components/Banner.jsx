@@ -97,9 +97,9 @@ export default function Banner() {
             <div className="mx-auto grid max-w-6xl items-center gap-2 px-5 pt-6 pb-12 md:grid-cols-2 md:gap-10 md:px-6 md:py-14">
               <a href={s.href} tabIndex={n === i ? 0 : -1} className="order-1 md:order-2 mx-auto block w-[62%] max-w-[300px] md:w-full md:max-w-[420px]" aria-hidden="true">
                 {s.fotos ? (
-                  <span className="grid aspect-square w-full grid-cols-3 items-center gap-1 rounded-[28px] bg-white p-3 shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)]">
+                  <span className="grid aspect-[5/4] w-full grid-cols-3 items-center gap-0 overflow-hidden rounded-[28px] bg-white px-2 shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)]">
                     {s.fotos.map((f) => (
-                      <img key={f} src={f} alt="" width="300" height="300" loading={n === 0 ? "eager" : "lazy"} className="w-full h-auto scale-125" />
+                      <img key={f} src={f} alt="" width="300" height="300" loading={n === 0 ? "eager" : "lazy"} className="w-full h-auto scale-[1.55]" />
                     ))}
                   </span>
                 ) : (
