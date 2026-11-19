@@ -21,11 +21,14 @@ export function formatPrice(value) {
   });
 }
 
-// Preço no Pix (5% de desconto no checkout da Yampi). O desconto é arredondado
-// para baixo, então o valor mostrado nunca fica menor do que o cobrado.
+// Preço no Pix (5% de desconto no checkout da Yampi). O desconto segue o
+// arredondamento da Yampi; no meio-centavo exato arredonda para baixo, então o
+// valor mostrado nunca fica menor do que o cobrado.
 export function precoPix(value) {
   const centavos = Math.round(value * 100);
-  return (centavos - Math.floor(centavos * 0.05)) / 100;
+  const desconto = centavos * 0.05;
+  const arred = desconto % 1 === 0.5 ? Math.floor(desconto) : Math.round(desconto);
+  return (centavos - arred) / 100;
 }
 
 export const WHATSAPP_MESSAGE =
