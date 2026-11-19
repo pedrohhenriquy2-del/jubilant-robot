@@ -40,10 +40,10 @@ export default function ProductCard({ p, compacto = false }) {
         </h3>
         {!compacto && <p className="hidden md:block text-sm text-ink-soft leading-snug">{d.titulo || p.tagline}</p>}
         <p className="text-xs text-ink-soft">{p.tagline}</p>
-        <div className="mt-auto pt-3 flex items-baseline gap-2">
+        <div className="mt-auto pt-3 flex flex-wrap items-baseline gap-x-2">
           <span className="text-lg font-bold text-ink">{formatPrice(p.price)}</span>
           {p.compareAtPrice && (
-            <span className="text-sm text-ink-soft line-through" aria-label={`Separados: ${formatPrice(p.compareAtPrice)}`}>
+            <span className="text-xs sm:text-sm text-ink-soft line-through" aria-label={`Separados: ${formatPrice(p.compareAtPrice)}`}>
               {formatPrice(p.compareAtPrice)}
             </span>
           )}
