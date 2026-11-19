@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { X, Minus, Plus, Lock, Truck } from "lucide-react";
-import { formatPrice, VITRINE } from "../constants";
+import { formatPrice, precoPix, VITRINE } from "../constants";
 import { DETALHES, paginaDe } from "../detalhes";
 import { useCarrinho, mudarQtd, abrirCarrinho, finalizar, adicionar } from "../cart";
 
@@ -122,6 +122,7 @@ export default function CartDrawer() {
               <span className="text-sm text-ink-soft">Total com frete grátis</span>
               <span className="text-xl font-bold text-ink">{formatPrice(total)}</span>
             </div>
+            <p className="mt-0.5 text-right text-sm font-semibold text-accent">ou {formatPrice(precoPix(total))} no Pix</p>
             <button
               type="button"
               onClick={(e) => finalizar(e.currentTarget)}

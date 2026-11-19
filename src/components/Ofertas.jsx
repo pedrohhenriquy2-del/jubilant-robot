@@ -1,5 +1,5 @@
 import { Lock, Truck } from "lucide-react";
-import { VITRINE, formatPrice, trackProductClick } from "../constants";
+import { VITRINE, formatPrice, precoPix, trackProductClick } from "../constants";
 import { paginaDe } from "../detalhes";
 
 // Ofertas em destaque logo abaixo do banner: o lançamento (GHK-Cu) e o kit
@@ -78,7 +78,7 @@ export default function Ofertas() {
                   )}
                 </div>
                 <p className="mt-0.5 flex items-center gap-1 text-[11px] font-medium text-gold">
-                  <Truck size={13} aria-hidden="true" /> Frete grátis · 5% off no Pix
+                  <Truck size={13} aria-hidden="true" /> Frete grátis · <strong className="text-accent">{formatPrice(precoPix(c.p.price))} no Pix</strong>
                 </p>
               </div>
               <div className="col-span-2 grid grid-cols-[1fr_auto] gap-2">

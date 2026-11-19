@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ShoppingBag, Lock, Truck, Receipt, ShieldCheck, RotateCcw, Check, ChevronDown, MessageCircle } from "lucide-react";
-import { VITRINE, formatPrice, trackProductClick, buildWhatsAppLink, trackWhatsAppClick } from "../constants";
+import { VITRINE, formatPrice, precoPix, trackProductClick, buildWhatsAppLink, trackWhatsAppClick } from "../constants";
 import { DETALHES, paginaDe } from "../detalhes";
 import { adicionar } from "../cart";
 import Header from "./Header";
@@ -103,7 +103,11 @@ export default function ProductPage({ codigo }) {
                 Você economiza {formatPrice(p.compareAtPrice - p.price)} em relação a comprar {incluso.length > 1 ? `os ${incluso.length}` : "os itens"} separados
               </p>
             ) : null}
-            <p className="mt-1 text-sm text-ink-soft">5% off no Pix ou parcelado no cartão · frete grátis para todo o Brasil</p>
+            <p className="mt-1 text-base text-ink">
+              ou <strong className="font-bold text-accent">{formatPrice(precoPix(p.price))} no Pix</strong>
+              <span className="ml-2 rounded-full bg-gold-light px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-ink">5% off</span>
+            </p>
+            <p className="mt-1 text-sm text-ink-soft">Ou parcelado no cartão · frete grátis para todo o Brasil</p>
 
             <div ref={botoes} className="mt-6 grid gap-3">
               <button

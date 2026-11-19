@@ -21,6 +21,13 @@ export function formatPrice(value) {
   });
 }
 
+// Preço no Pix (5% de desconto no checkout da Yampi). O desconto é arredondado
+// para baixo, então o valor mostrado nunca fica menor do que o cobrado.
+export function precoPix(value) {
+  const centavos = Math.round(value * 100);
+  return (centavos - Math.floor(centavos * 0.05)) / 100;
+}
+
 export const WHATSAPP_MESSAGE =
   "Olá! Vim pelo site da Selune Oficial e gostaria de saber mais 🌿";
 

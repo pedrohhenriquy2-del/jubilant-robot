@@ -1,5 +1,5 @@
 import { ShoppingBag } from "lucide-react";
-import { formatPrice } from "../constants";
+import { formatPrice, precoPix } from "../constants";
 import { DETALHES, paginaDe } from "../detalhes";
 import { adicionar } from "../cart";
 
@@ -48,6 +48,7 @@ export default function ProductCard({ p, compacto = false }) {
             </span>
           )}
         </div>
+        <p className="text-xs font-semibold text-accent">ou {formatPrice(precoPix(p.price))} no Pix</p>
         <p className="text-[11px] font-medium text-gold">Frete grátis</p>
         {p.compareAtPrice && (
           <p className="text-xs font-semibold text-gold">

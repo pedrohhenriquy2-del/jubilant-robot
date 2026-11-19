@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from "fs";
 const det = readFileSync("src/detalhes.js", "utf8");
 const cons = readFileSync("src/constants.js", "utf8");
 const head = readFileSync("index.html", "utf8");
-const pixel = head.slice(head.indexOf("    <!-- Meta Pixel Code -->"), head.indexOf("    <!-- End Meta Pixel Code -->") + 36);
+const pixel = head.slice(head.indexOf("    <!-- Meta Pixel Code -->"), head.indexOf("    <!-- End Meta Pixel Code -->") + "    <!-- End Meta Pixel Code -->".length);
 const fontes = head.split("\n").filter((l) => l.includes("fonts.g") || l.includes("preconnect")).join("\n");
 const bloco = cons.slice(cons.indexOf("export const NOVOS_PRODUTOS"));
 const codigos = [...det.matchAll(/^  (SEL[A-Z]+): \{\n    slug: "([^"]+)",\n    titulo: "([^"]+)",\n    resumo:\s*"([^"]+)"/gm)];
