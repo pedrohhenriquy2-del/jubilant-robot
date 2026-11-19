@@ -68,7 +68,7 @@ export default function Footer({ naLoja = true }) {
         <li>Produtos originais, comprados de distribuidor com nota fiscal</li>
         {/* Quando cada marca for conferida em consultas.anvisa.gov.br, dá para trocar por "regularizados na ANVISA". */}
         <li>ANVISA: peça no WhatsApp o número de notificação de qualquer produto</li>
-        <li>Pagamento seguro por cartão ou boleto</li>
+        <li>Pagamento seguro por Pix, cartão ou boleto</li>
         <li>7 dias para desistir</li>
       </ul>
 

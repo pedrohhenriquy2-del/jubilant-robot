@@ -709,7 +709,7 @@ export const FAQ_ITEMS = [
   {
     question: "Quais as formas de pagamento?",
     answer:
-      "Cartão de crédito (à vista ou parcelado) ou boleto, no checkout seguro da Yampi. Você não precisa criar conta.",
+      "Pix com 5% de desconto, cartão de crédito (à vista ou parcelado) ou boleto, no checkout seguro da Yampi. Você não precisa criar conta.",
   },
   {
     question: "E se eu me arrepender?",

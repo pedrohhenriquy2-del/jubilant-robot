@@ -114,7 +114,7 @@ export default function Banner() {
                   <span className="text-3xl md:text-4xl font-bold">{formatPrice(s.preco)}</span>
                   {s.de && <span className={`text-sm line-through ${s.claro ? "text-cream/60" : "text-ink-soft"}`}>{formatPrice(s.de)}</span>}
                 </p>}
-                <p className={`mt-1 text-xs ${s.claro ? "text-cream/70" : "text-ink-soft"}`}>Frete grátis · cartão ou boleto</p>
+                <p className={`mt-1 text-xs ${s.claro ? "text-cream/70" : "text-ink-soft"}`}>Frete grátis · 5% off no Pix</p>
                 <a
                   href={s.href}
                   tabIndex={n === i ? 0 : -1}
