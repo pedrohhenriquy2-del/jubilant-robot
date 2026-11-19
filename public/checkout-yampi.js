@@ -1,7 +1,5 @@
 /* Checkout Yampi: ao clicar em "Comprar", leva o cliente para o checkout da Yampi
-   (Pix com 5% de desconto, cartão e boleto, order bump e recuperação de carrinho).
-   Carrega antes do checkout-infinitepay.js e assume o clique; produto que não
-   estiver na lista abaixo continua indo para a InfinitePay. */
+   (pagamento pelo PagBank, order bump e recuperação de carrinho). */
 (function () {
   var LOJA = 'https://selune-oficialcombr.pay.yampi.com.br/r/';
   var TOKENS = {
@@ -21,6 +19,10 @@
     SELKITGL: 'QVQ4SJ5EYJ',
     SELKITFI: '4ZUJSCLFEJ'
   };
+
+  // Limpa o pedido antigo da InfinitePay guardado no navegador (evita o aviso
+  // "Conseguiu finalizar sua compra?" que levava para o checkout antigo).
+  try { ['selune_pedido', 'selune_registrado', 'selune_dispensado'].forEach(function (k) { localStorage.removeItem(k); }); } catch (e) {}
 
   function codigoDe(a) { return a.dataset.ipay || ''; }
 

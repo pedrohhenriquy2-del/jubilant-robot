@@ -129,7 +129,7 @@ export default function CartDrawer() {
             >
               <Lock size={17} aria-hidden="true" /> Finalizar compra
             </button>
-            <p className="mt-2 text-center text-xs text-ink-soft">Cartão em até 12x ou boleto · checkout seguro Yampi</p>
+            <p className="mt-2 text-center text-xs text-ink-soft">Cartão parcelado ou boleto · checkout seguro Yampi</p>
           </footer>
         )}
       </aside>

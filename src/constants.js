@@ -171,7 +171,7 @@ export const PRODUCTS = [
       title: "Bônus: e-book Sua Rotina Skincare",
       text: "O guia da pele bem cuidada, em PDF. Enviamos no seu WhatsApp depois da confirmação do pagamento.",
     },
-    // Checkout pela InfinitePay (código em public/checkout-infinitepay.js).
+    // Checkout pela Yampi (código em public/checkout-yampi.js).
     // Se o script não carregar, o botão leva o pedido para o WhatsApp.
     ipayCode: "KITROTINA",
     paymentLink: buildWhatsAppLink(
@@ -709,7 +709,7 @@ export const FAQ_ITEMS = [
   {
     question: "Quais as formas de pagamento?",
     answer:
-      "Cartão de crédito em até 12x ou boleto, no checkout seguro da Yampi. Você não precisa criar conta.",
+      "Cartão de crédito (à vista ou parcelado) ou boleto, no checkout seguro da Yampi. Você não precisa criar conta.",
   },
   {
     question: "E se eu me arrepender?",

@@ -53,8 +53,8 @@ export default function Header({ naLoja = true }) {
           </>
         ) : (
           <>
-            <span className="md:hidden">Frete grátis · Até 12x no cartão · Nota fiscal</span>
-            <span className="hidden md:inline">Frete grátis para todo o Brasil · Até 12x no cartão · Nota fiscal em todo pedido</span>
+            <span className="md:hidden">Frete grátis · Parcele no cartão · Nota fiscal</span>
+            <span className="hidden md:inline">Frete grátis para todo o Brasil · Parcele no cartão · Nota fiscal em todo pedido</span>
           </>
         )}
       </a>

@@ -31,7 +31,7 @@ for (const [, cod, slug, titulo, resumo] of codigos) {
     <meta property="og:type" content="product" />
     <meta property="og:site_name" content="Selune Oficial" />
     <meta property="og:title" content="${esc(nome)} · R$ ${preco} com frete grátis" />
-    <meta property="og:description" content="${esc(titulo)}. Original, com nota fiscal. Até 12x no cartão." />
+    <meta property="og:description" content="${esc(titulo)}. Original, com nota fiscal. Cartão parcelado ou boleto." />
     <meta property="og:url" content="https://selune-oficial.com.br/${slug}.html" />
     <meta property="og:image" content="https://selune-oficial.com.br/${foto}" />
     <meta property="product:price:amount" content="${preco.replace(",", ".")}" />
@@ -44,8 +44,7 @@ ${pixel}
   <body>
     <div id="root" data-produto="${cod}"></div>
     <script type="module" src="/src/produto.jsx"></script>
-    <script src="./checkout-yampi.js?v=1" defer></script>
-    <script src="./checkout-infinitepay.js?v=12" defer></script>
+    <script src="./checkout-yampi.js?v=2" defer></script>
   </body>
 </html>
 `);
