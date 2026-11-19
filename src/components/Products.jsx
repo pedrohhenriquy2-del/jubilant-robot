@@ -7,8 +7,8 @@ export default function Products() {
   const [filtro, setFiltro] = useState("Todos");
   const [tudo, setTudo] = useState(false);
   const lista = produtosDo(filtro);
-  // Loja curta: mostra 6 de cara e o resto só se a cliente pedir.
-  const visiveis = tudo ? lista : lista.slice(0, 6);
+  // Loja curta: mostra 8 de cara e o resto só se a cliente pedir.
+  const visiveis = tudo ? lista : lista.slice(0, 8);
   const titulo =
     (NECESSIDADES.find((n) => n.id === filtro) || {}).rotulo ||
     (filtro === "Todos" ? "Todos os produtos" : (CATEGORIAS.find((c) => c.id === filtro) || {}).rotulo);

@@ -6,7 +6,7 @@ import { paginaDe } from "../detalhes";
 const BF_FIM = new Date("2026-12-01T23:59:59-03:00").getTime();
 const base = import.meta.env.BASE_URL;
 const GHK = VITRINE.find((p) => p.ipayCode === "SELGHK");
-const KITOL = VITRINE.find((p) => p.ipayCode === "SELKITOL");
+const KITRM = VITRINE.find((p) => p.ipayCode === "SELKITRM");
 const MENOR = Math.min(...VITRINE.map((p) => p.price));
 
 // Banner rotativo da página inicial: três ofertas, troca sozinho a cada 6 s,
@@ -14,6 +14,19 @@ const MENOR = Math.min(...VITRINE.map((p) => p.price));
 function slides() {
   const bf = Date.now() < BF_FIM;
   return [
+    {
+      id: "kitrm",
+      selo: bf ? "Black Friday · −35%" : "Kit rosa mosqueta",
+      titulo: "Kit Rosa Mosqueta: limpa, esfolia e finaliza",
+      texto: "Sabonete + Esfoliante + Óleo de rosa mosqueta. A rotina completa em 3 minutos, num pedido só.",
+      preco: KITRM.price,
+      de: KITRM.compareAtPrice,
+      fotos: KITRM.photos,
+      href: paginaDe("SELKITRM"),
+      cta: "Quero o kit",
+      fundo: "bg-ink",
+      claro: true,
+    },
     {
       id: "bf",
       selo: bf ? "Black Friday · frete grátis até 01/12" : "Frete grátis",
@@ -23,8 +36,7 @@ function slides() {
       larga: true,
       href: "#ofertas",
       cta: "Ver ofertas",
-      fundo: "bg-ink",
-      claro: true,
+      fundo: "bg-offwhite",
     },
     {
       id: "ghk",
@@ -36,18 +48,6 @@ function slides() {
       href: paginaDe("SELGHK"),
       cta: "Conhecer o GHK-Cu",
       fundo: "bg-[#E7EEF2]",
-    },
-    {
-      id: "kitol",
-      selo: "Kit pele oleosa",
-      titulo: "Kit Pele Oleosa",
-      texto: "Sabonete de ácido salicílico + sérum de ácido hialurônico + protetor FPS 60, num pedido só.",
-      preco: KITOL.price,
-      de: KITOL.compareAtPrice,
-      fotos: KITOL.photos,
-      href: paginaDe("SELKITOL"),
-      cta: "Ver o kit",
-      fundo: "bg-offwhite",
     },
   ];
 }
@@ -99,7 +99,7 @@ export default function Banner() {
                 {s.fotos ? (
                   <span className="grid aspect-square w-full grid-cols-3 items-center gap-1 rounded-[28px] bg-white p-3 shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)]">
                     {s.fotos.map((f) => (
-                      <img key={f} src={f} alt="" width="300" height="300" loading="lazy" className="w-full h-auto scale-125" />
+                      <img key={f} src={f} alt="" width="300" height="300" loading={n === 0 ? "eager" : "lazy"} className="w-full h-auto scale-125" />
                     ))}
                   </span>
                 ) : (
