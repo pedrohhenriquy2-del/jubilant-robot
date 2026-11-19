@@ -8,20 +8,15 @@ import Busca from "./Busca";
 // Fim da oferta de Black Friday (frete grátis até 01/12, horário de Brasília).
 const FIM_BLACK_FRIDAY = new Date("2026-12-01T23:59:59-03:00").getTime();
 
-// Tempo que falta até o fim da oferta ("4d 6h", "5h 12min"); vazio depois que acaba.
-function useContagem(fim) {
-  const [agora, setAgora] = useState(() => Date.now());
-  useEffect(() => {
-    const t = setInterval(() => setAgora(Date.now()), 30000);
-    return () => clearInterval(t);
-  }, []);
-  const ms = fim - agora;
-  if (ms <= 0) return "";
-  const d = Math.floor(ms / 86400000);
-  const h = Math.floor((ms % 86400000) / 3600000);
-  const m = Math.floor((ms % 3600000) / 60000);
-  return d > 0 ? `${d}d ${h}h` : `${h}h ${m}min`;
-}
+// Frases que passam na faixa do topo (letreiro). Depois da Black Friday, ficam só as garantias.
+const FAIXA_BF = [
+  "Black Friday da Selune",
+  "Frete grátis para todo o Brasil",
+  "Kit Rosa Mosqueta por R$ 59,90",
+  "5% off no Pix",
+  "Nota fiscal em todo pedido",
+];
+const FAIXA = ["Frete grátis para todo o Brasil", "5% off no Pix", "Nota fiscal em todo pedido", "7 dias para desistir"];
 
 // Barra superior + cabeçalho. No celular: menu à esquerda, logo no centro, sacola à direita.
 export default function Header({ naLoja = true }) {
@@ -31,7 +26,7 @@ export default function Header({ naLoja = true }) {
   const { qtd } = useCarrinho();
   const base = import.meta.env.BASE_URL;
   const link = (h) => (naLoja ? h : `${base}${h}`);
-  const falta = useContagem(FIM_BLACK_FRIDAY);
+  const frases = Date.now() < FIM_BLACK_FRIDAY ? FAIXA_BF : FAIXA;
   const fecharBusca = useCallback(() => setBusca(false), []);
 
   useEffect(() => {
@@ -44,19 +39,21 @@ export default function Header({ naLoja = true }) {
     <>
       <a
         href={link("#ofertas")}
-        className="block bg-accent px-4 py-2 text-center text-[11px] md:text-xs font-medium uppercase tracking-[0.14em] text-cream"
+        className="faixa-topo group block overflow-hidden bg-accent py-2 text-[11px] md:text-xs font-medium uppercase tracking-[0.16em] text-cream"
+        aria-label={frases.join(" · ")}
       >
-        {falta ? (
-          <>
-            <span className="md:hidden">Black Friday · frete grátis · faltam {falta}</span>
-            <span className="hidden md:inline">Black Friday Selune · frete grátis para todo o Brasil · termina em {falta}</span>
-          </>
-        ) : (
-          <>
-            <span className="md:hidden">Frete grátis · 5% off no Pix · Nota fiscal</span>
-            <span className="hidden md:inline">Frete grátis para todo o Brasil · 5% off no Pix · Nota fiscal em todo pedido</span>
-          </>
-        )}
+        <span className="faixa-trilho flex w-max" aria-hidden="true">
+          {[0, 1].map((k) => (
+            <span key={k} className="flex shrink-0 items-center">
+              {[...frases, ...frases].map((f, j) => (
+                <span key={j} className="flex items-center whitespace-nowrap">
+                  <span className="px-4 md:px-6">{f}</span>
+                  <span className="text-gold-light">✦</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </span>
       </a>
       <header
         className={`sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur transition-shadow ${rolou ? "shadow-[0_6px_24px_-18px_rgba(74,52,38,.6)]" : ""}`}
