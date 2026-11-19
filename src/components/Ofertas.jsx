@@ -2,10 +2,8 @@ import { Lock, Truck } from "lucide-react";
 import { VITRINE, formatPrice, precoPix, trackProductClick } from "../constants";
 import { paginaDe } from "../detalhes";
 
-// Ofertas em destaque logo abaixo do banner: o lançamento (GHK-Cu), o kit
-// antissinais e a linha rosa mosqueta. "Comprar agora" vai direto para o pagamento.
-const GHK = VITRINE.find((p) => p.ipayCode === "SELGHK");
-const KIT = VITRINE.find((p) => p.ipayCode === "SELKITFI");
+// Ofertas em destaque logo abaixo do banner: só a linha rosa mosqueta
+// (kit de Black Friday + os 3 produtos). "Comprar agora" vai direto para o pagamento.
 const OLEO = VITRINE.find((p) => p.ipayCode === "SELOLEO");
 const SABRM = VITRINE.find((p) => p.ipayCode === "SELSABRM");
 const ESF = VITRINE.find((p) => p.ipayCode === "SELESF");
@@ -19,23 +17,6 @@ const CARTOES = [
     sub: "Sabonete + Esfoliante + Óleo · limpa, esfolia e finaliza",
     pontos: ["3 produtos da linha rosa mosqueta", "Você economiza R$ 32,86"],
     referencia: KITRM && formatPrice(KITRM.compareAtPrice),
-    riscado: true,
-  },
-  {
-    p: GHK,
-    selo: "Lançamento",
-    titulo: "Sérum GHK-Cu",
-    sub: "Peptídeo de cobre + colágeno + ácido hialurônico",
-    pontos: ["Bella Femme · 30 ml com conta-gotas", "Uso facial, de manhã e à noite"],
-    referencia: "Séruns de GHK-Cu chegam a R$ 82 nas farmácias",
-  },
-  {
-    p: KIT,
-    selo: "Kit antissinais",
-    titulo: "Kit Firmeza",
-    sub: "Sérum GHK-Cu + Creme Antissinais Vitamina C + Colágeno",
-    pontos: ["Sérum 30 ml + creme 50 g", "Mais barato do que comprar separado"],
-    referencia: KIT && formatPrice(KIT.compareAtPrice),
     riscado: true,
   },
   {
@@ -71,7 +52,7 @@ export default function Ofertas() {
             Comece por aqui
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
-            O lançamento da Selune, o kit antissinais e a linha rosa mosqueta, com frete grátis para todo o Brasil.
+            O Kit Rosa Mosqueta de Black Friday e a linha completa, com frete grátis para todo o Brasil.
           </p>
         </header>
 
