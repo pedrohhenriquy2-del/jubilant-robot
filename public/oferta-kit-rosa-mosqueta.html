@@ -183,13 +183,13 @@
       .passo.ativo { display: grid; animation: entra .5s ease-out both; }
       @keyframes entra { from { opacity: 0; transform: translateX(14px) } to { opacity: 1; transform: none } }
       .passo-img { display: flex; justify-content: center; align-items: center; height: 250px; }
-      .passo-img img { max-height: 270px; width: auto; max-width: 100%; mix-blend-mode: multiply; animation: flutua 5s ease-in-out infinite; }
+      .passo-img img { display: block; height: 240px; width: auto; max-width: 100%; object-fit: contain; mix-blend-mode: multiply; animation: flutua 5s ease-in-out infinite; }
       .passo-txt small { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
       .passo-txt h3 { margin: 4px 0 6px; font-family: var(--serif); font-size: 34px; line-height: 1; color: var(--ink); }
       .passo-txt p { margin: 0 0 12px; font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
       .passo-txt em { color: var(--gold); font-style: italic; }
       .passo-txt .tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--ink); background: #fff; border: 1px solid var(--beige); border-radius: 999px; padding: 5px 10px; }
-      @media (min-width: 860px) { .passo { padding: 30px 34px 30px 20px; } .passo-img { height: 300px; } .passo-img img { max-height: 300px; } .passo-txt h3 { font-size: 42px; } .passo-txt p { font-size: 16px; } }
+      @media (min-width: 860px) { .passo { padding: 30px 34px 30px 20px; } .passo-img { height: 300px; } .passo-img img { height: 290px; } .passo-txt h3 { font-size: 42px; } .passo-txt p { font-size: 16px; } }
       @media (prefers-reduced-motion: reduce) { .palco img, .passo-img img, .passo.ativo { animation: none; } }
       .hero-kit { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 18px 0 4px; }
       .hero-kit figure { margin: 0; background: #fff; border: 1px solid var(--beige); border-radius: 16px; padding: 6px 4px 10px; text-align: center; }
@@ -316,15 +316,15 @@
             </div>
             <div class="passos-palco">
               <div class="passo ativo" role="tabpanel">
-                <div class="passo-img"><img src="./products/novos/sabonete-rosa-mosqueta-limpo.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="800" height="800" loading="lazy" /></div>
+                <div class="passo-img"><img src="./products/novos/sabonete-rosa-mosqueta-passo.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="330" height="731" loading="lazy" /></div>
                 <div class="passo-txt"><small>Passo 1 · todo dia</small><h3>Limpa</h3><p>Massageie o <b>sabonete facial</b> no rosto úmido e enxágue. A pele fica limpa e pronta para o resto do ritual.</p><span class="tag">Sabonete Facial Rosa Mosqueta · 100 ml</span></div>
               </div>
               <div class="passo" role="tabpanel">
-                <div class="passo-img"><img src="./products/novos/esfoliante-rosa-mosqueta-limpo.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="800" height="800" loading="lazy" /></div>
+                <div class="passo-img"><img src="./products/novos/esfoliante-rosa-mosqueta-passo.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="329" height="731" loading="lazy" /></div>
                 <div class="passo-txt"><small>Passo 2 · algumas vezes na semana</small><h3>Esfolia</h3><p>Movimentos suaves com o <b>esfoliante</b>, como indica a embalagem. É o passo que deixa a textura da pele mais lisinha ao toque.</p><span class="tag">Esfoliante Facial Rosa Mosqueta · 100 g</span></div>
               </div>
               <div class="passo" role="tabpanel">
-                <div class="passo-img"><img src="./products/novos/oleo-rosa-mosqueta-limpo.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="800" height="800" loading="lazy" /></div>
+                <div class="passo-img"><img src="./products/novos/oleo-rosa-mosqueta-passo.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="247" height="678" loading="lazy" /></div>
                 <div class="passo-txt"><small>Passo 3 · para finalizar</small><h3>Finaliza</h3><p>Poucas gotas de <b>óleo de rosa mosqueta</b> nas mãos, pressione no rosto e pronto. <em>Esse é o seu momento.</em></p><span class="tag">Óleo de Rosa Mosqueta Apinil · 30 ml</span></div>
               </div>
             </div>
