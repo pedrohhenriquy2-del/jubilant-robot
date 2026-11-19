@@ -12,16 +12,24 @@ const ITENS = [
 
 export default function Benefits() {
   // Faixa curta de garantias: o essencial para decidir, sem rolar.
-  const curtos = [ITENS[0], ITENS[1], ITENS[3], ITENS[5]];
+  const curtos = [
+    { ...ITENS[0], sub: "Direto do distribuidor" },
+    { ...ITENS[1], titulo: "Nota fiscal", sub: "Em todo pedido" },
+    { ...ITENS[3], sub: "Ou cartão e boleto" },
+    { ...ITENS[5], sub: "Troca pelo WhatsApp" },
+  ];
   return (
     <section className="bg-white py-6 md:py-8 border-y border-beige" aria-label="Garantias da compra">
       <ul className="mx-auto grid max-w-6xl grid-cols-2 gap-x-3 gap-y-4 px-4 md:grid-cols-4 md:px-6">
-        {curtos.map(({ icone: I, titulo }) => (
+        {curtos.map(({ icone: I, titulo, sub }) => (
           <li key={titulo} className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold-light bg-cream text-gold">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold-light bg-cream text-gold">
               <I size={17} strokeWidth={1.7} aria-hidden="true" />
             </span>
-            <span className="text-[13px] md:text-sm font-semibold leading-tight text-ink">{titulo}</span>
+            <span className="flex flex-col leading-tight">
+              <span className="text-[13px] md:text-sm font-semibold text-ink">{titulo}</span>
+              <span className="mt-0.5 text-[11px] md:text-xs text-ink-soft">{sub}</span>
+            </span>
           </li>
         ))}
       </ul>
