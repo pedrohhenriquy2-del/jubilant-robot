@@ -160,6 +160,11 @@
       details p { margin: 10px 0 0; color: var(--ink-soft); }
 
       /* Final */
+      .hero-kit { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 18px 0 4px; }
+      .hero-kit figure { margin: 0; background: #fff; border: 1px solid var(--beige); border-radius: 16px; padding: 6px 4px 10px; text-align: center; }
+      .hero-kit img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
+      .hero-kit figcaption { font-size: 12px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+      .hero-kit small { display: block; font-weight: 500; color: var(--ink-soft); font-size: 11px; }
       .mini { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; max-width: 620px; margin: 26px auto 0; }
       .mini div { background: #fff; border: 1px solid var(--beige); border-radius: 18px; padding: 12px 8px 14px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
       .mini img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
@@ -204,6 +209,11 @@
             <span class="selo">🖤 Black Friday · −35%</span>
             <h1>Sua pele não precisa de mais um creme. Precisa de uma <em>rotina.</em></h1>
             <p class="lead"><b>Limpa, esfolia e finaliza</b> em 3 minutos. Tudo que faltava num kit só.</p>
+            <div class="hero-kit" aria-label="O que vem no kit">
+              <figure><img src="./products/novos/sabonete-rosa-mosqueta.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="200" height="200" fetchpriority="high" /><figcaption>Sabonete<small>100 ml</small></figcaption></figure>
+              <figure><img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="200" height="200" fetchpriority="high" /><figcaption>Esfoliante<small>100 g</small></figcaption></figure>
+              <figure><img src="./products/novos/oleo-rosa-mosqueta.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="200" height="200" fetchpriority="high" /><figcaption>Óleo<small>30 ml</small></figcaption></figure>
+            </div>
             <div class="oferta-box">
               <div class="de">De <s>R$ 92,76</s> (comprando separado)</div>
               <div class="por"><strong>R$ 59,90</strong><span class="off">−35%</span></div>
