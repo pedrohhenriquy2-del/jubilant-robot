@@ -22,9 +22,9 @@ export default function Reviews() {
           O que dizem as clientes da Selune.
         </p>
 
-        <div className="mt-6 md:mt-8 grid gap-3 md:gap-6 md:grid-cols-3 text-left">
+        <div className="-mx-4 mt-6 flex snap-x gap-3 overflow-x-auto px-4 pb-2 text-left md:mx-0 md:mt-8 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {AVALIACOES.map((a) => (
-            <figure key={a.nome} className="rounded-2xl border border-beige bg-white p-6 flex flex-col gap-3">
+            <figure key={a.nome} className="w-[78%] shrink-0 snap-center rounded-2xl border border-beige bg-white p-5 flex flex-col gap-3 md:w-auto">
               <div className="flex gap-1" role="img" aria-label="5 de 5 estrelas">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} size={18} className="fill-yellow-400 text-yellow-400" aria-hidden="true" />

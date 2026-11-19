@@ -5,7 +5,10 @@ import ProductCard from "./ProductCard";
 // Vitrine: filtro por tipo de produto ou por necessidade da pele (kits primeiro em "Todos").
 export default function Products() {
   const [filtro, setFiltro] = useState("Todos");
+  const [tudo, setTudo] = useState(false);
   const lista = produtosDo(filtro);
+  // Loja curta: mostra 6 de cara e o resto só se a cliente pedir.
+  const visiveis = tudo ? lista : lista.slice(0, 6);
   const titulo =
     (NECESSIDADES.find((n) => n.id === filtro) || {}).rotulo ||
     (filtro === "Todos" ? "Todos os produtos" : (CATEGORIAS.find((c) => c.id === filtro) || {}).rotulo);
@@ -19,7 +22,7 @@ export default function Products() {
   }, [filtro]);
 
   useEffect(() => {
-    const f = (e) => setFiltro(e.detail);
+    const f = (e) => { setFiltro(e.detail); setTudo(false); };
     window.addEventListener("selune:filtro", f);
     return () => window.removeEventListener("selune:filtro", f);
   }, []);
@@ -29,7 +32,7 @@ export default function Products() {
       key={id}
       type="button"
       aria-pressed={filtro === id}
-      onClick={() => setFiltro(id)}
+      onClick={() => { setFiltro(id); setTudo(false); }}
       className={`shrink-0 min-h-10 rounded-full border px-4 text-sm font-medium transition-colors ${
         filtro === id ? "border-accent bg-accent text-white" : "border-beige-dark bg-white text-ink hover:border-ink"
       }`}
@@ -63,10 +66,19 @@ export default function Products() {
             <span className="font-semibold text-ink">{titulo}</span> · {lista.length} {lista.length === 1 ? "produto" : "produtos"}
           </p>
           <div className="mt-3 grid grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4">
-            {lista.map((p) => (
+            {visiveis.map((p) => (
               <ProductCard key={p.id} p={p} />
             ))}
           </div>
+          {visiveis.length < lista.length && (
+            <button
+              type="button"
+              onClick={() => setTudo(true)}
+              className="mx-auto mt-6 flex min-h-12 items-center justify-center rounded-full border border-ink px-6 text-sm font-semibold text-ink hover:bg-ink hover:text-cream transition-colors"
+            >
+              Ver todos os {lista.length} produtos
+            </button>
+          )}
         </div>
       </section>
 
