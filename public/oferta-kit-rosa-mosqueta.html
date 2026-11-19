@@ -185,6 +185,14 @@
       .promessa div { background: #fff; border: 1px solid var(--beige); border-radius: 16px; padding: 14px 16px; }
       .promessa b { display: block; font-family: var(--serif); font-size: 20px; color: var(--ink); }
       .promessa span { font-size: 13px; color: var(--ink-soft); }
+      .ritual { max-width: 620px; margin: 26px auto 0; text-align: left; background: #fff; border: 1px solid var(--beige); border-radius: 20px; padding: 20px 20px 8px; }
+      .ritual-titulo { font-family: var(--serif); font-size: 24px; line-height: 1.15; margin: 0 0 12px; text-align: center; color: var(--ink); }
+      .ritual-titulo em { color: var(--gold); }
+      .ritual ol { list-style: none; margin: 0; padding: 0; counter-reset: r; }
+      .ritual li { counter-increment: r; display: grid; grid-template-columns: 34px 1fr; column-gap: 12px; padding: 0 0 14px; }
+      .ritual li::before { content: counter(r); grid-row: span 2; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: var(--cream, #FBF8F4); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+      .ritual b { font-size: 15px; color: var(--ink); }
+      .ritual span { font-size: 14px; line-height: 1.5; color: var(--ink-soft); }
       .mini { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; max-width: 620px; margin: 26px auto 0; }
       .mini div { background: #fff; border: 1px solid var(--beige); border-radius: 18px; padding: 12px 8px 14px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
       .mini img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
@@ -279,8 +287,17 @@
             <div><img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="200" height="200" loading="lazy" /><b>2 · Esfolia</b><span>Esfoliante facial</span></div>
             <div><img src="./products/novos/oleo-rosa-mosqueta.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="200" height="200" loading="lazy" /><b>3 · Finaliza</b><span>Óleo 30 ml</span></div>
           </div>
+          <div class="ritual">
+            <p class="ritual-titulo">Seu ritual, <em>do jeito que cabe no seu dia</em></p>
+            <ol>
+              <li><b>Limpa</b><span>Massageie o sabonete no rosto úmido e enxágue. A pele fica pronta para o resto.</span></li>
+              <li><b>Esfolia</b><span>Algumas vezes na semana, movimentos suaves com o esfoliante, como indica a embalagem.</span></li>
+              <li><b>Finaliza</b><span>Poucas gotas de óleo nas mãos, pressione no rosto e pronto. Esse é o seu momento.</span></li>
+            </ol>
+          </div>
           <p class="lead" style="margin-top:22px">Separados: <s>R$ 92,76</s>. No kit: <b>R$ 59,90</b> com frete grátis.</p>
-          <p style="margin-top:6px;font-size:12px;color:var(--ink-soft)">Uso externo. Siga as orientações de cada embalagem.</p>
+          <a class="btn rose" style="max-width:420px;margin:16px auto 0" href="https://wa.me/5538999659366" data-ipay="SELKITRM">🔒 Quero começar minha rotina</a>
+          <p style="margin-top:10px;font-size:12px;color:var(--ink-soft)">Uso externo. Siga as orientações de cada embalagem.</p>
         </div>
       </section>
 
@@ -299,6 +316,7 @@
             <div><b>Gente de verdade</b><span>No WhatsApp quem responde é uma pessoa da Selune.</span></div>
             <div><b>Compra sem medo</b><span>Recebeu e não gostou? 7 dias para desistir.</span></div>
           </div>
+          <a class="btn rose" style="max-width:420px;margin:22px auto 0" href="https://wa.me/5538999659366" data-ipay="SELKITRM">🔒 Quero meu kit com frete grátis</a>
         </div>
       </section>
 
@@ -321,6 +339,8 @@
             <p style="margin:14px 0 0;font-size:13px;color:var(--ink-soft);text-align:center">Original, com nota fiscal · <b>7 dias para desistir</b></p>
           </div>
           <div style="text-align:left;margin-top:30px">
+            <details><summary>É original?</summary><p>Sim. Os 3 produtos vêm lacrados, comprados de distribuidor, com nota fiscal em todo pedido.</p></details>
+            <details><summary>Serve para a minha pele?</summary><p>Cada embalagem traz as indicações do fabricante. Ficou em dúvida? Chame no <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Quero%20saber%20se%20o%20Kit%20Rosa%20Mosqueta%20serve%20para%20a%20minha%20pele.">WhatsApp</a> antes de comprar: uma pessoa da Selune te ajuda.</p></details>
             <details><summary>Quando chega?</summary><p>Envio em 3 a 7 dias úteis, frete grátis e código de rastreio no WhatsApp.</p></details>
             <details><summary>Como pago?</summary><p>Pix com 5% off (R$ 56,91), cartão à vista ou parcelado, ou boleto. Não precisa criar conta.</p></details>
             <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias após receber para desistir. É só chamar no <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Kit%20Rosa%20Mosqueta.">WhatsApp</a>.</p></details>
