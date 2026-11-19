@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kit Rosa Mosqueta: Sabonete + Esfoliante + Óleo","image":["https://selune-oficial.com.br/products/novos/sabonete-rosa-mosqueta.webp","https://selune-oficial.com.br/products/novos/esfoliante-rosa-mosqueta.webp","https://selune-oficial.com.br/products/novos/oleo-rosa-mosqueta.webp"],"brand":{"@type":"Brand","name":"Selune"},"offers":{"@type":"Offer","price":"59.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://selune-oficial.com.br/oferta-kit-rosa-mosqueta.html"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Kit Rosa Mosqueta: Sabonete + Esfoliante + Óleo","image":["https://selune-oficial.com.br/products/novos/kit-rosa-mosqueta-composicao.webp","https://selune-oficial.com.br/products/novos/sabonete-rosa-mosqueta.webp","https://selune-oficial.com.br/products/novos/esfoliante-rosa-mosqueta.webp","https://selune-oficial.com.br/products/novos/oleo-rosa-mosqueta.webp"],"brand":{"@type":"Brand","name":"Selune"},"offers":{"@type":"Offer","price":"59.90","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://selune-oficial.com.br/oferta-kit-rosa-mosqueta.html"}}</script>
     <!-- Meta Pixel Code -->
     <script>
       !function(f,b,e,v,n,t,s)
@@ -109,14 +109,6 @@
       /* Virada */
       .virada .grid { display: grid; gap: 22px; margin-top: 34px; }
       @media (min-width: 860px) { .virada .grid { grid-template-columns: repeat(3, 1fr); } }
-      .passo { background: #fff; border-radius: 26px; border: 1px solid var(--beige); padding: 20px; position: relative; }
-      .passo .num { position: absolute; top: -18px; left: 20px; width: 46px; height: 46px; border-radius: 999px; background: var(--rose); color: #fff; font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px -10px rgba(47,32,24,.55); }
-      .passo .foto { background: radial-gradient(circle at 50% 40%, #fff 0, var(--rose-l) 75%); border-radius: 20px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; padding: 16px; }
-      .passo .foto img { max-height: 100%; width: auto; mix-blend-mode: multiply; }
-      .passo h3 { margin-top: 16px; font-family: var(--serif); font-size: 34px; }
-      .passo h3 small { display: block; font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-      .passo p { margin: 8px 0 0; color: var(--ink-soft); font-size: 15px; }
-      .passo .rotulo { margin-top: 12px; display: inline-block; background: var(--off); border-radius: 10px; padding: 6px 10px; font-size: 12px; font-weight: 600; color: var(--ink); }
 
       /* Ritual */
       .ritual { background: var(--off); }
@@ -166,6 +158,40 @@
       details p { margin: 10px 0 0; color: var(--ink-soft); }
 
       /* Final */
+      /* Palco do kit (produtos juntos) */
+      .palco { position: relative; margin: 18px 0 6px; padding: 18px 10px 14px; border-radius: 26px; background: radial-gradient(70% 60% at 50% 45%, #fff 0%, #F5EFE8 62%, #EADFD3 100%); border: 1px solid var(--beige); overflow: hidden; text-align: center; }
+      .palco::before { content: ""; position: absolute; left: 12%; right: 12%; bottom: 46px; height: 26px; border-radius: 50%; background: radial-gradient(closest-side, rgba(74,52,38,.28), transparent); }
+      .palco img { position: relative; display: block; width: 100%; max-width: 440px; height: auto; margin: 0 auto; animation: flutua 5s ease-in-out infinite; }
+      .palco figcaption { position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--ink); }
+      .palco figcaption span { background: #fff; border: 1px solid var(--beige); border-radius: 999px; padding: 6px 12px; }
+      .palco figcaption small { font-weight: 500; color: var(--ink-soft); }
+      .palco figcaption i { font-style: normal; color: var(--gold); font-weight: 800; }
+      @keyframes flutua { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+      /* Passos interativos */
+      .passos { max-width: 680px; margin: 18px auto 0; text-align: left; }
+      .passos-abas { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+      .passos-abas button { position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; border: 1px solid var(--beige); border-radius: 16px; background: #fff; color: var(--ink-soft); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; overflow: hidden; transition: background .3s, color .3s, border-color .3s; }
+      .passos-abas button b { display: inline-flex; width: 24px; height: 24px; border-radius: 50%; align-items: center; justify-content: center; background: var(--off); color: var(--gold); font-size: 12px; }
+      .passos-abas button[aria-selected="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+      .passos-abas button[aria-selected="true"] b { background: var(--gold); color: #fff; }
+      .barra-p { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: transparent; }
+      .barra-p span { display: block; height: 100%; width: 0; background: var(--gold); }
+      .passos-abas button[aria-selected="true"] .barra-p span { animation: enche 4.5s linear forwards; }
+      .passos.parado .passos-abas button .barra-p span { animation: none; width: 100%; }
+      @keyframes enche { to { width: 100% } }
+      .passos-palco { position: relative; margin-top: 12px; border-radius: 24px; background: linear-gradient(160deg, #fff 0%, #F5EFE8 100%); border: 1px solid var(--beige); min-height: 300px; overflow: hidden; }
+      .passo { display: none; grid-template-columns: 40% 1fr; align-items: center; gap: 8px; padding: 22px 20px 22px 8px; }
+      .passo.ativo { display: grid; animation: entra .5s ease-out both; }
+      @keyframes entra { from { opacity: 0; transform: translateX(14px) } to { opacity: 1; transform: none } }
+      .passo-img { display: flex; justify-content: center; align-items: center; height: 250px; }
+      .passo-img img { max-height: 250px; width: auto; max-width: 100%; filter: drop-shadow(0 18px 22px rgba(74,52,38,.22)); animation: flutua 5s ease-in-out infinite; }
+      .passo-txt small { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+      .passo-txt h3 { margin: 4px 0 6px; font-family: var(--serif); font-size: 34px; line-height: 1; color: var(--ink); }
+      .passo-txt p { margin: 0 0 12px; font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+      .passo-txt em { color: var(--gold); font-style: italic; }
+      .passo-txt .tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--ink); background: #fff; border: 1px solid var(--beige); border-radius: 999px; padding: 5px 10px; }
+      @media (min-width: 860px) { .passo { padding: 30px 34px 30px 20px; } .passo-img { height: 300px; } .passo-img img { max-height: 300px; } .passo-txt h3 { font-size: 42px; } .passo-txt p { font-size: 16px; } }
+      @media (prefers-reduced-motion: reduce) { .palco img, .passo-img img, .passo.ativo { animation: none; } }
       .hero-kit { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 18px 0 4px; }
       .hero-kit figure { margin: 0; background: #fff; border: 1px solid var(--beige); border-radius: 16px; padding: 6px 4px 10px; text-align: center; }
       .hero-kit img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
@@ -238,11 +264,10 @@
             <span class="selo">🖤 Black Friday · −35%</span>
             <h1>Sua pele não precisa de mais um creme. Precisa de uma <em>rotina.</em></h1>
             <p class="lead"><b>Limpa, esfolia e finaliza</b> em 3 minutos. Um momento só seu, todo dia, com tudo que faltava num kit só.</p>
-            <div class="hero-kit" aria-label="O que vem no kit">
-              <figure><img src="./products/novos/sabonete-rosa-mosqueta.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="200" height="200" fetchpriority="high" /><figcaption>Sabonete<small>100 ml</small></figcaption></figure>
-              <figure><img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="200" height="200" fetchpriority="high" /><figcaption>Esfoliante<small>100 g</small></figcaption></figure>
-              <figure><img src="./products/novos/oleo-rosa-mosqueta.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="200" height="200" fetchpriority="high" /><figcaption>Óleo<small>30 ml</small></figcaption></figure>
-            </div>
+            <figure class="palco" aria-label="O que vem no kit">
+              <img src="./products/novos/kit-rosa-mosqueta-composicao.webp" alt="Kit Rosa Mosqueta: sabonete facial 100 ml, esfoliante facial 100 g e óleo de rosa mosqueta 30 ml" width="1200" height="960" fetchpriority="high" />
+              <figcaption><span>Sabonete <small>100 ml</small></span><i>+</i><span>Esfoliante <small>100 g</small></span><i>+</i><span>Óleo <small>30 ml</small></span></figcaption>
+            </figure>
             <div class="oferta-box">
               <div class="de">De <s>R$ 92,76</s> (comprando separado)</div>
               <div class="por"><strong>R$ 59,90</strong><span class="off">−35%</span></div>
@@ -283,18 +308,27 @@
       <section class="virada centro">
         <div class="wrap">
           <h2>3 passos. <em>Uma rotina completa.</em></h2>
-          <div class="mini">
-            <div><img src="./products/novos/sabonete-rosa-mosqueta.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="200" height="200" loading="lazy" /><b>1 · Limpa</b><span>Sabonete facial</span></div>
-            <div><img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="200" height="200" loading="lazy" /><b>2 · Esfolia</b><span>Esfoliante facial</span></div>
-            <div><img src="./products/novos/oleo-rosa-mosqueta.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="200" height="200" loading="lazy" /><b>3 · Finaliza</b><span>Óleo 30 ml</span></div>
-          </div>
-          <div class="ritual">
-            <p class="ritual-titulo">Seu ritual, <em>do jeito que cabe no seu dia</em></p>
-            <ol>
-              <li><b>Limpa</b><span>Massageie o sabonete no rosto úmido e enxágue. A pele fica pronta para o resto.</span></li>
-              <li><b>Esfolia</b><span>Algumas vezes na semana, movimentos suaves com o esfoliante, como indica a embalagem.</span></li>
-              <li><b>Finaliza</b><span>Poucas gotas de óleo nas mãos, pressione no rosto e pronto. Esse é o seu momento.</span></li>
-            </ol>
+          <p class="lead" style="margin-top:8px">Toque em cada passo e veja como fica o seu ritual.</p>
+          <div class="passos" data-passos>
+            <div class="passos-abas" role="tablist" aria-label="Passos da rotina">
+              <button type="button" role="tab" aria-selected="true" data-i="0"><b>1</b>Limpa<span class="barra-p"><span></span></span></button>
+              <button type="button" role="tab" aria-selected="false" data-i="1"><b>2</b>Esfolia<span class="barra-p"><span></span></span></button>
+              <button type="button" role="tab" aria-selected="false" data-i="2"><b>3</b>Finaliza<span class="barra-p"><span></span></span></button>
+            </div>
+            <div class="passos-palco">
+              <div class="passo ativo" role="tabpanel">
+                <div class="passo-img"><img src="./products/novos/sabonete-rosa-mosqueta-recorte.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="300" height="600" loading="lazy" /></div>
+                <div class="passo-txt"><small>Passo 1 · todo dia</small><h3>Limpa</h3><p>Massageie o <b>sabonete facial</b> no rosto úmido e enxágue. A pele fica limpa e pronta para o resto do ritual.</p><span class="tag">Sabonete Facial Rosa Mosqueta · 100 ml</span></div>
+              </div>
+              <div class="passo" role="tabpanel">
+                <div class="passo-img"><img src="./products/novos/esfoliante-rosa-mosqueta-recorte.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="300" height="600" loading="lazy" /></div>
+                <div class="passo-txt"><small>Passo 2 · algumas vezes na semana</small><h3>Esfolia</h3><p>Movimentos suaves com o <b>esfoliante</b>, como indica a embalagem. É o passo que deixa a textura da pele mais lisinha ao toque.</p><span class="tag">Esfoliante Facial Rosa Mosqueta · 100 g</span></div>
+              </div>
+              <div class="passo" role="tabpanel">
+                <div class="passo-img"><img src="./products/novos/oleo-rosa-mosqueta-recorte.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="206" height="641" loading="lazy" /></div>
+                <div class="passo-txt"><small>Passo 3 · para finalizar</small><h3>Finaliza</h3><p>Poucas gotas de <b>óleo de rosa mosqueta</b> nas mãos, pressione no rosto e pronto. <em>Esse é o seu momento.</em></p><span class="tag">Óleo de Rosa Mosqueta Apinil · 30 ml</span></div>
+              </div>
+            </div>
           </div>
           <p class="lead" style="margin-top:22px">Separados: <s>R$ 92,76</s>. No kit: <b>R$ 59,90</b> com frete grátis.</p>
           <a class="btn rose" style="max-width:420px;margin:16px auto 0" href="https://wa.me/5538999659366" data-ipay="SELKITRM">🔒 Começar minha rotina</a>
@@ -370,6 +404,21 @@
           [['d', d], ['h', h], ['m', m], ['s', ss]].forEach(function (x) { var el = document.querySelector('[data-r="' + x[0] + '"]'); if (el) el.textContent = p(x[1]); });
         }
         tick(); setInterval(tick, 1000);
+      })();
+    </script>
+    <script>
+      (function () {
+        var box = document.querySelector('[data-passos]'); if (!box) return;
+        var abas = box.querySelectorAll('[role=tab]'), passos = box.querySelectorAll('.passo'), i = 0, t = null;
+        var calmo = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function mostra(n) {
+          i = n;
+          abas.forEach(function (a, k) { a.setAttribute('aria-selected', k === n ? 'true' : 'false'); var s = a.querySelector('.barra-p span'); if (s) { s.style.animation = 'none'; s.offsetWidth; s.style.animation = ''; } });
+          passos.forEach(function (p, k) { p.classList.toggle('ativo', k === n); });
+        }
+        function roda() { if (calmo) return; clearInterval(t); t = setInterval(function () { mostra((i + 1) % passos.length); }, 4500); }
+        abas.forEach(function (a, k) { a.addEventListener('click', function () { mostra(k); box.classList.add('parado'); clearInterval(t); }); });
+        if ('IntersectionObserver' in window) { new IntersectionObserver(function (e) { if (e[0].isIntersecting && !box.classList.contains('parado')) roda(); else clearInterval(t); }, { threshold: .3 }).observe(box); } else roda();
       })();
     </script>
     <script src="./checkout-yampi.js?v=3" defer></script>
