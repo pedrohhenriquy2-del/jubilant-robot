@@ -101,8 +101,9 @@ export default function Ofertas() {
                     <span className={`text-xs text-ink-soft ${c.riscado ? "line-through" : ""}`}>{c.referencia}</span>
                   )}
                 </div>
+                <p className="mt-0.5 text-sm font-semibold text-accent">ou {formatPrice(precoPix(c.p.price))} no Pix</p>
                 <p className="mt-0.5 flex items-center gap-1 text-[11px] font-medium text-gold">
-                  <Truck size={13} aria-hidden="true" /> Frete grátis · <strong className="text-accent">{formatPrice(precoPix(c.p.price))} no Pix</strong>
+                  <Truck size={13} aria-hidden="true" /> Frete grátis para todo o Brasil
                 </p>
               </div>
               <div className="col-span-2 grid grid-cols-[1fr_auto] gap-2">
