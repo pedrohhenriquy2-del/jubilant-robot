@@ -160,6 +160,12 @@
       details p { margin: 10px 0 0; color: var(--ink-soft); }
 
       /* Final */
+      .mini { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; max-width: 620px; margin: 26px auto 0; }
+      .mini div { background: #fff; border: 1px solid var(--beige); border-radius: 18px; padding: 12px 8px 14px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+      .mini img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; mix-blend-mode: multiply; }
+      .mini b { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--gold); }
+      .mini span { font-size: 13px; font-weight: 600; }
+      .fim details { background: #fff; }
       .fim { background: linear-gradient(180deg, var(--rose-l), var(--cream)); }
       .relogio { display: flex; justify-content: center; gap: 10px; margin-top: 22px; }
       .relogio div { background: var(--dark); color: #fff; border-radius: 14px; min-width: 70px; padding: 10px 6px; text-align: center; }
@@ -197,12 +203,12 @@
           <div>
             <span class="selo">🖤 Black Friday · −35%</span>
             <h1>Sua pele não precisa de mais um creme. Precisa de uma <em>rotina.</em></h1>
-            <p class="lead">O Kit Rosa Mosqueta junta os 3 passos que faltavam no seu dia: <b>limpa, esfolia e finaliza</b>. Em 3 minutos, sem complicação.</p>
+            <p class="lead"><b>Limpa, esfolia e finaliza</b> em 3 minutos. Tudo que faltava num kit só.</p>
             <div class="oferta-box">
               <div class="de">De <s>R$ 92,76</s> (comprando separado)</div>
               <div class="por"><strong>R$ 59,90</strong><span class="off">−35%</span></div>
               <span class="pix">ou R$ 56,91 no Pix</span>
-              <p class="eco">Você economiza <b>R$ 32,86</b> e ainda leva com <b>frete grátis</b>.</p>
+              <p class="eco">Economize <b>R$ 32,86</b> + <b>frete grátis</b>.</p>
               <a class="btn rose" href="https://wa.me/5538999659366" data-ipay="SELKITRM">🔒 Quero meu kit agora</a>
               <div class="confianca">
                 <span><i>✓</i> Original e lacrado</span>
@@ -224,166 +230,52 @@
       <!-- DOR -->
       <section class="dor">
         <div class="wrap estreito">
-          <p class="kicker">Seja sincera com você</p>
-          <h2 class="serif" style="margin-top:12px">Quantas dessas você já sentiu essa semana?</h2>
+          <h2 class="serif">Isso acontece com você?</h2>
           <div class="checks">
             <div><i>✓</i><span>A pele <b>repuxa</b> depois de lavar o rosto.</span></div>
-            <div><i>✓</i><span>Você passa um creme caro e, à tarde, <b>parece que não passou nada</b>.</span></div>
-            <div><i>✓</i><span>A pele fica <b>áspera ao toque</b>, sem aquele viço.</span></div>
-            <div><i>✓</i><span>A base <b>marca</b> e você evita foto de perto.</span></div>
-            <div><i>✓</i><span>Já comprou produto por indicação e <b>largou na gaveta</b>.</span></div>
-            <div><i>✓</i><span>Quer cuidar da pele, mas <b>não tem tempo</b> pra rotina de 10 passos.</span></div>
+            <div><i>✓</i><span>Fica <b>áspera</b> e sem viço.</span></div>
+            <div><i>✓</i><span>O creme <b>some</b> antes do fim do dia.</span></div>
           </div>
-          <p class="verdade">Se marcou duas ou mais, o problema não é você. É a <em>rotina pela metade.</em></p>
+          <p class="verdade">O problema não é você. É a <em>rotina pela metade.</em></p>
         </div>
       </section>
 
       <!-- SOLUÇÃO -->
       <section class="virada centro">
         <div class="wrap">
-          <p class="kicker">A solução</p>
-          <h2 style="margin-top:12px">3 passos. 3 produtos. <em>Uma rotina completa.</em></h2>
-          <p class="lead">Cada produto faz uma parte. Juntos, eles cuidam da pele do começo ao fim.</p>
-          <div class="grid" style="text-align:left">
-            <article class="passo">
-              <span class="num">1</span>
-              <div class="foto"><img src="./products/novos/sabonete-rosa-mosqueta.webp" alt="Sabonete Facial Rosa Mosqueta Dermachem 100 ml" width="300" height="300" loading="lazy" /></div>
-              <h3><small>Passo 1 · Limpa</small>Sabonete Facial</h3>
-              <p>Dermachem 100 ml, com extrato de rosa mosqueta e ácido hialurônico. Limpa a pele e tira as impurezas do dia.</p>
-              <span class="rotulo">Na embalagem: limpeza, hidratação e nutrição</span>
-            </article>
-            <article class="passo">
-              <span class="num">2</span>
-              <div class="foto"><img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="Esfoliante Facial Rosa Mosqueta Dermachem 100 g" width="300" height="300" loading="lazy" /></div>
-              <h3><small>Passo 2 · Esfolia</small>Esfoliante Facial</h3>
-              <p>Dermachem 100 g, com casca de coco e óleo de rosa mosqueta. Esfolia suavemente, na frequência indicada no rótulo.</p>
-              <span class="rotulo">Na embalagem: limpeza, revitalização e hidratação</span>
-            </article>
-            <article class="passo">
-              <span class="num">3</span>
-              <div class="foto"><img src="./products/novos/oleo-rosa-mosqueta.webp" alt="Óleo de Rosa Mosqueta Apinil 30 ml" width="300" height="300" loading="lazy" /></div>
-              <h3><small>Passo 3 · Finaliza</small>Óleo de Rosa Mosqueta</h3>
-              <p>Apinil 30 ml, com bico aplicador. Algumas gotas fecham a rotina, no rosto ou no corpo.</p>
-              <span class="rotulo">Sai gota a gota, sem desperdício</span>
-            </article>
+          <h2>3 passos. <em>Uma rotina completa.</em></h2>
+          <div class="mini">
+            <div><img src="./products/novos/sabonete-rosa-mosqueta.webp" alt="Sabonete Facial Rosa Mosqueta 100 ml" width="200" height="200" loading="lazy" /><b>1 · Limpa</b><span>Sabonete facial</span></div>
+            <div><img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="Esfoliante Facial Rosa Mosqueta 100 g" width="200" height="200" loading="lazy" /><b>2 · Esfolia</b><span>Esfoliante facial</span></div>
+            <div><img src="./products/novos/oleo-rosa-mosqueta.webp" alt="Óleo de Rosa Mosqueta 30 ml" width="200" height="200" loading="lazy" /><b>3 · Finaliza</b><span>Óleo 30 ml</span></div>
           </div>
-          <a class="btn" style="max-width:420px;margin:34px auto 0" href="https://wa.me/5538999659366" data-ipay="SELKITRM">Quero os 3 por R$ 59,90</a>
-        </div>
-      </section>
-
-      <!-- RITUAL -->
-      <section class="ritual">
-        <div class="wrap estreito">
-          <p class="kicker">Seu ritual de 3 minutos</p>
-          <h2 style="margin-top:12px">Como fica o seu dia com o kit</h2>
-          <div class="linha">
-            <div><b>1'</b><span><h4>Lave o rosto com o sabonete</h4><p>Molhe, massageie, enxágue. A base da rotina.</p></span></div>
-            <div><b>1'</b><span><h4>Esfolie quando o rótulo indicar</h4><p>Movimentos circulares suaves, evitando a área dos olhos.</p></span></div>
-            <div><b>1'</b><span><h4>Finalize com o óleo</h4><p>Algumas gotas na pele limpa e seca. Massageie até absorver.</p></span></div>
-          </div>
-          <p style="margin-top:18px;font-size:13px;color:var(--ink-soft)">Uso externo. Siga as orientações e advertências de cada embalagem e faça um teste numa pequena área da pele antes do primeiro uso.</p>
-        </div>
-      </section>
-
-      <!-- PILHA DE VALOR -->
-      <section class="valor centro">
-        <div class="wrap">
-          <p class="kicker">Tudo o que você leva</p>
-          <h2 style="margin-top:12px">Faça as contas</h2>
-          <div class="caixa" style="text-align:left">
-            <div class="item"><span>Sabonete Facial Rosa Mosqueta · 100 ml</span><span>R$ 32,90</span></div>
-            <div class="item"><span>Esfoliante Facial Rosa Mosqueta · 100 g</span><span>R$ 34,90</span></div>
-            <div class="item"><span>Óleo de Rosa Mosqueta Apinil · 30 ml</span><span>R$ 24,96</span></div>
-            <div class="item bonus"><span>Frete para todo o Brasil</span><span>GRÁTIS</span></div>
-            <div class="item bonus"><span>Nota fiscal no seu nome</span><span>Incluso</span></div>
-            <div class="total"><span>Comprando separado</span><s>R$ 92,76</s></div>
-            <div class="final">
-              <span class="kicker" style="color:var(--gold-l)">No kit de Black Friday</span>
-              <strong>R$ 59,90</strong>
-              <span class="pix">ou R$ 56,91 no Pix</span>
-              <a class="btn rose" href="https://wa.me/5538999659366" data-ipay="SELKITRM">🔒 Garantir meu kit</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- COMPARAÇÃO -->
-      <section style="padding-top:0">
-        <div class="wrap">
-          <div class="comparar">
-            <div class="ruim">
-              <h3>Continuar como está</h3>
-              <ul>
-                <li>Creme caro sem limpeza e esfoliação antes</li>
-                <li>Produtos soltos que não conversam entre si</li>
-                <li>Pele repuxando e sem viço</li>
-                <li>Pagar mais por cada item separado</li>
-              </ul>
-            </div>
-            <div class="bom">
-              <h3>Com o Kit Rosa Mosqueta</h3>
-              <ul>
-                <li>Rotina completa em 3 passos simples</li>
-                <li>Linha rosa mosqueta do começo ao fim</li>
-                <li>3 minutos por dia, sem complicação</li>
-                <li>R$ 32,86 mais barato, com frete grátis</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- GARANTIA -->
-      <section class="garantia">
-        <div class="wrap estreito">
-          <div class="box">
-            <div class="medalha"><b>7</b><span>dias para<br />desistir</span></div>
-            <div>
-              <h2 class="serif" style="font-size:clamp(28px,5vw,40px)">Compra sem risco</h2>
-              <p>Recebeu e mudou de ideia? Você tem <b>7 dias após o recebimento</b> para desistir, é só chamar no WhatsApp. Todo pedido sai <b>original, lacrado e com nota fiscal</b>, com código de rastreio.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section style="background:var(--off)">
-        <div class="wrap estreito">
-          <p class="kicker">Dúvidas</p>
-          <h2 style="margin-top:12px">Antes de você decidir</h2>
-          <details><summary>Os produtos são originais?</summary><p>Sim. Compramos de distribuidor com nota fiscal e enviamos lacrados, na embalagem do fabricante, com nota fiscal no seu nome.</p></details>
-          <details><summary>Serve para a minha pele?</summary><p>O sabonete e o esfoliante dizem na embalagem que são para pele sensível e extrasseca. Siga as orientações de cada rótulo e faça um teste numa pequena área antes do primeiro uso. Ficou em dúvida? Chame no WhatsApp.</p></details>
-          <details><summary>Quando chega?</summary><p>O envio é em 3 a 7 dias úteis, com frete grátis para todo o Brasil e código de rastreio no WhatsApp.</p></details>
-          <details><summary>Como pago?</summary><p>Pix com 5% de desconto (R$ 56,91), cartão de crédito à vista ou parcelado, ou boleto, no checkout seguro. Não precisa criar conta.</p></details>
-          <details><summary>Até quando vale o preço?</summary><p>A oferta de Black Friday vale até 01/12 ou enquanto durar o estoque do kit.</p></details>
-          <details><summary>Posso devolver?</summary><p>Sim. Você tem 7 dias após o recebimento para desistir da compra. É só chamar no WhatsApp.</p></details>
+          <p class="lead" style="margin-top:22px">Separados: <s>R$ 92,76</s>. No kit: <b>R$ 59,90</b> com frete grátis.</p>
+          <p style="margin-top:6px;font-size:12px;color:var(--ink-soft)">Uso externo. Siga as orientações de cada embalagem.</p>
         </div>
       </section>
 
       <!-- FECHAMENTO -->
       <section class="fim centro">
         <div class="wrap estreito">
-          <p class="kicker">Última chamada</p>
-          <h2 style="margin-top:12px">Daqui a 3 minutos, sua pele pode estar <em>sendo cuidada.</em></h2>
-          <div class="trio">
-            <img src="./products/novos/sabonete-rosa-mosqueta.webp" alt="" width="140" height="140" loading="lazy" />
-            <img src="./products/novos/esfoliante-rosa-mosqueta.webp" alt="" width="140" height="140" loading="lazy" />
-            <img src="./products/novos/oleo-rosa-mosqueta.webp" alt="" width="140" height="140" loading="lazy" />
-          </div>
-          <p style="margin:18px 0 0;font-weight:700">O frete grátis da Black Friday termina em:</p>
+          <h2>O frete grátis termina em:</h2>
           <div class="relogio" aria-live="off">
             <div><b data-r="d">--</b><span>dias</span></div>
             <div><b data-r="h">--</b><span>horas</span></div>
             <div><b data-r="m">--</b><span>min</span></div>
             <div><b data-r="s">--</b><span>seg</span></div>
           </div>
-          <div class="oferta-box" style="max-width:460px;margin:26px auto 0;text-align:left">
+          <div class="oferta-box" style="max-width:460px;margin:24px auto 0;text-align:left">
             <div class="de">De <s>R$ 92,76</s></div>
             <div class="por"><strong>R$ 59,90</strong><span class="off">−35%</span></div>
             <span class="pix">ou R$ 56,91 no Pix</span>
             <a class="btn rose" href="https://wa.me/5538999659366" data-ipay="SELKITRM">🔒 Quero meu kit agora</a>
+            <p style="margin:14px 0 0;font-size:13px;color:var(--ink-soft);text-align:center">Original, com nota fiscal · <b>7 dias para desistir</b></p>
           </div>
-          <p style="margin-top:16px;font-size:14px;color:var(--ink-soft)">Dúvida antes de comprar? <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Kit%20Rosa%20Mosqueta.">Fale no WhatsApp</a></p>
+          <div style="text-align:left;margin-top:30px">
+            <details><summary>Quando chega?</summary><p>Envio em 3 a 7 dias úteis, frete grátis e código de rastreio no WhatsApp.</p></details>
+            <details><summary>Como pago?</summary><p>Pix com 5% off (R$ 56,91), cartão à vista ou parcelado, ou boleto. Não precisa criar conta.</p></details>
+            <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias após receber para desistir. É só chamar no <a href="https://wa.me/5538999659366?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Kit%20Rosa%20Mosqueta.">WhatsApp</a>.</p></details>
+          </div>
         </div>
       </section>
     </main>
