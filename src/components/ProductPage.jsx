@@ -23,7 +23,7 @@ function Pergunta({ q, a, aberta }) {
 export default function ProductPage({ codigo }) {
   const p = VITRINE.find((x) => x.ipayCode === codigo);
   const d = DETALHES[codigo];
-  const fotos = p.photos || [p.photo];
+  const fotos = p.cover ? [p.cover, ...p.photos] : p.photos || [p.photo];
   const [foto, setFoto] = useState(0);
   const [barra, setBarra] = useState(false);
   const botoes = useRef(null);

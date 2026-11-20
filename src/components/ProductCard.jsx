@@ -7,7 +7,8 @@ import { adicionar } from "../cart";
 export default function ProductCard({ p, compacto = false }) {
   const d = DETALHES[p.ipayCode] || {};
   const href = paginaDe(p.ipayCode);
-  const fotos = p.photos || [p.photo];
+  // Kits com foto de estúdio mostram a capa (os produtos juntos); os outros mostram a foto única.
+  const fotos = p.cover ? [p.cover] : p.photos || [p.photo];
   return (
     <article className="group flex flex-col rounded-2xl bg-white border border-beige overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-light hover:shadow-[0_22px_44px_-26px_rgba(74,52,38,.5)]">
       <a href={href} className={`relative block bg-white overflow-hidden ${fotos.length > 1 ? "aspect-[4/3]" : "aspect-square"}`} aria-label={`Ver detalhes: ${p.shortName}`}>
@@ -19,12 +20,12 @@ export default function ProductCard({ p, compacto = false }) {
           </div>
         ) : (
           <img
-            src={p.photo}
+            src={fotos[0]}
             alt={p.name}
             loading="lazy"
             width="800"
             height="800"
-            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.04]"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
         )}
         {p.badge && (
