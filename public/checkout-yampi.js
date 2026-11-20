@@ -1,5 +1,5 @@
 /* Checkout Yampi: ao clicar em "Comprar", leva o cliente para o checkout da Yampi
-   (pagamento pelo PagBank, order bump e recuperação de carrinho). */
+   (pagamento pelo Mercado Pago, order bump e recuperação de carrinho). */
 (function () {
   var LOJA = 'https://selune-oficialcombr.pay.yampi.com.br/r/';
   var TOKENS = {
@@ -62,6 +62,20 @@
     get: function () { return carrinho; },
     set: function (f) { window.__seluneCarrinhoIpay = f; }
   });
+
+  // Deixa o link certo no próprio botão (funciona mesmo antes do script rodar,
+  // ao segurar o dedo no botão ou em navegadores de Instagram/Facebook).
+  function corrige(raiz) {
+    [].forEach.call((raiz || document).querySelectorAll('a[data-ipay]'), function (a) {
+      var t = TOKENS[codigoDe(a)];
+      if (t && a.getAttribute('href') !== LOJA + t) a.setAttribute('href', LOJA + t);
+    });
+  }
+  function inicia() {
+    corrige();
+    if (window.MutationObserver) new MutationObserver(function () { corrige(); }).observe(document.body, { childList: true, subtree: true });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', inicia); else inicia();
 
   // Libera o botão quando o cliente volta do checkout pelo "voltar".
   window.addEventListener('pageshow', function () {
