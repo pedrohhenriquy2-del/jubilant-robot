@@ -33,7 +33,9 @@ for (const [, cod, slug, titulo, resumo] of codigos) {
     <meta property="og:title" content="${esc(nome)} · R$ ${preco} com frete grátis" />
     <meta property="og:description" content="${esc(titulo)}. Original, com nota fiscal. 5% off no Pix." />
     <meta property="og:url" content="https://selune-oficial.com.br/${slug}.html" />
-    <meta property="og:image" content="https://selune-oficial.com.br/${foto}" />
+    <meta property="og:image" content="https://selune-oficial.com.br/og/${foto.split("/").pop().replace(".webp", ".jpg")}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="product:price:amount" content="${preco.replace(",", ".")}" />
     <meta property="product:price:currency" content="BRL" />
     <link rel="preload" as="image" href="./${foto}" fetchpriority="high" />
