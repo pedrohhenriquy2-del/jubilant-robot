@@ -56,7 +56,7 @@ export default function Header({ naLoja = true }) {
         </span>
       </a>
       <header
-        className={`sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur transition-shadow ${rolou ? "shadow-[0_6px_24px_-18px_rgba(74,52,38,.6)]" : ""}`}
+        className={`sticky top-0 z-50 border-b border-beige bg-cream/95 backdrop-blur transition-shadow ${rolou ? "shadow-[0_6px_24px_-18px_rgba(62,18,34,.6)]" : ""}`}
       >
         <div className="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center px-4 py-3 md:px-6 md:py-4">
           <div className="flex items-center">

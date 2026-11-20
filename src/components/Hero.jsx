@@ -35,7 +35,7 @@ export default function Hero() {
           <div className="mt-7 grid gap-3 sm:flex sm:flex-wrap md:justify-start sm:justify-center">
             <a
               href="#ofertas"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-accent px-8 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_-14px_rgba(74,52,38,.8)] hover:bg-accent-dark transition-colors"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-accent px-8 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_-14px_rgba(62,18,34,.8)] hover:bg-accent-dark transition-colors"
             >
               Ver ofertas <ArrowDown size={16} aria-hidden="true" />
             </a>

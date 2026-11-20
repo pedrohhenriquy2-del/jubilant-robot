@@ -10,7 +10,7 @@ export default function ProductCard({ p, compacto = false }) {
   // Kits com foto de estúdio mostram a capa (os produtos juntos); os outros mostram a foto única.
   const fotos = p.cover ? [p.cover] : p.photos || [p.photo];
   return (
-    <article className="group flex flex-col rounded-2xl bg-white border border-beige overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-light hover:shadow-[0_22px_44px_-26px_rgba(74,52,38,.5)]">
+    <article className="group flex flex-col rounded-2xl bg-white border border-beige overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-light hover:shadow-[0_22px_44px_-26px_rgba(62,18,34,.5)]">
       <a href={href} className={`relative block bg-white overflow-hidden ${fotos.length > 1 ? "aspect-[4/3]" : "aspect-square"}`} aria-label={`Ver detalhes: ${p.shortName}`}>
         {fotos.length > 1 ? (
           <div className="absolute inset-0 grid grid-cols-3 items-center px-2">

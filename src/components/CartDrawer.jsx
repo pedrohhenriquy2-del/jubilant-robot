@@ -33,7 +33,7 @@ export default function CartDrawer() {
   return (
     <div className={`fixed inset-0 z-[60] ${aberto ? "" : "pointer-events-none"}`} aria-hidden={!aberto}>
       <div
-        className={`absolute inset-0 bg-[#2F2018]/40 transition-opacity duration-300 ${aberto ? "opacity-100" : "opacity-0"}`}
+        className={`absolute inset-0 bg-[#3E1222]/40 transition-opacity duration-300 ${aberto ? "opacity-100" : "opacity-0"}`}
         onClick={() => abrirCarrinho(false)}
       />
       <aside

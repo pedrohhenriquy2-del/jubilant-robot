@@ -47,9 +47,9 @@ export default function Ofertas() {
             return (
               <article
                 key={c.p.id}
-                className="flex flex-col overflow-hidden rounded-3xl border border-beige bg-white shadow-[0_26px_60px_-38px_rgba(74,52,38,.6)]"
+                className="flex flex-col overflow-hidden rounded-3xl border border-beige bg-white shadow-[0_26px_60px_-38px_rgba(62,18,34,.6)]"
               >
-                <a href={paginaDe(c.p.ipayCode)} className="relative block bg-[#ECE2D6]" aria-label={`Ver detalhes: ${c.titulo}`}>
+                <a href={paginaDe(c.p.ipayCode)} className="relative block bg-[#EBDBD7]" aria-label={`Ver detalhes: ${c.titulo}`}>
                   <img src={c.p.cover} alt="" width="1000" height="1000" loading="lazy" className="block aspect-[5/4] w-full object-cover object-[50%_45%]" />
                   <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-cream">{c.selo}</span>
                   <span className="absolute right-4 top-4 rounded-full bg-gold px-3 py-1 text-[11px] sm:text-xs font-bold text-white">−{off}%</span>
@@ -93,7 +93,7 @@ export default function Ofertas() {
                     data-name={c.p.name}
                     data-value={c.p.price}
                     onClick={trackProductClick}
-                    className="mt-4 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-accent px-4 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-[0_14px_28px_-14px_rgba(74,52,38,.9)] hover:bg-accent-dark transition-colors"
+                    className="mt-4 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-accent px-4 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-[0_14px_28px_-14px_rgba(62,18,34,.9)] hover:bg-accent-dark transition-colors"
                   >
                     <Lock size={15} aria-hidden="true" /> Comprar agora
                   </a>

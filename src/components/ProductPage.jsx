@@ -113,7 +113,7 @@ export default function ProductPage({ codigo }) {
               <button
                 type="button"
                 onClick={() => adicionar(p.ipayCode)}
-                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-accent px-6 text-sm font-semibold uppercase tracking-[0.12em] text-white shadow-[0_14px_30px_-16px_rgba(74,52,38,.9)] hover:bg-accent-dark transition-colors"
+                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-accent px-6 text-sm font-semibold uppercase tracking-[0.12em] text-white shadow-[0_14px_30px_-16px_rgba(62,18,34,.9)] hover:bg-accent-dark transition-colors"
               >
                 <ShoppingBag size={17} aria-hidden="true" /> Adicionar ao carrinho
               </button>

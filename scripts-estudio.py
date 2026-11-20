@@ -1,6 +1,6 @@
 """Gera as fotos de estúdio da Selune a partir das fotos reais dos produtos.
 
-Cada produto (foto original em fundo branco) vai para um cenário bege da marca:
+Cada produto (foto original em fundo branco) vai para um cenário porcelana rosé da marca:
 fundo em degradê, arco claro atrás e sombra no chão. O produto não é redesenhado:
 é a foto real, só que num cenário igual para toda a loja.
 
@@ -26,10 +26,26 @@ def limpa(nome):
     return im.crop(caixa)
 
 
+def pedestal(img, cx, topo, largura):
+    """Pedestal redondo (porcelana com fio champanhe) para os kits."""
+    rx, ry, h = largura / 2, S * 0.045, S * 0.07
+    mascara = Image.new("L", (S, S), 0)
+    d = ImageDraw.Draw(mascara)
+    d.rectangle((cx - rx, topo, cx + rx, topo + h), fill=255)
+    d.ellipse((cx - rx, topo + h - ry, cx + rx, topo + h + ry), fill=255)
+    x = np.linspace(-1, 1, S)[None, :]
+    luz = 1 - 0.10 * np.abs(x - (cx / S * 2 - 1) * 0 + 0.15) - 0.06 * (x * (S / (2 * rx))) ** 2
+    lado = (np.array([238, 222, 218])[None, None, :] * np.clip(luz, 0.82, 1)[..., None]).repeat(S, axis=0).astype("uint8")
+    img.paste(Image.fromarray(lado), (0, 0), mascara)
+    d2 = ImageDraw.Draw(img)
+    d2.ellipse((cx - rx, topo - ry, cx + rx, topo + ry), fill=(250, 244, 242), outline=(196, 160, 112), width=3)
+    return img
+
+
 def cenario(arco_w=0.64):
     """Fundo bege em degradê, arco claro e luz suave."""
     y = np.linspace(0, 1, S)[:, None]
-    topo, base = np.array([247, 242, 236]), np.array([236, 226, 214])
+    topo, base = np.array([249, 242, 240]), np.array([235, 219, 215])
     fundo = (topo * (1 - y[..., None]) + base * y[..., None]).repeat(S, axis=1).astype("uint8")
     img = Image.fromarray(fundo)
     arco = Image.new("L", (S, S), 0)
@@ -39,7 +55,7 @@ def cenario(arco_w=0.64):
     d.rounded_rectangle((x0, y0, x1, y1), radius=w // 2, fill=255)
     d.rectangle((x0, y0 + w // 2, x1, y1), fill=255)
     arco = arco.filter(ImageFilter.GaussianBlur(2))
-    img.paste(Image.new("RGB", (S, S), (252, 249, 245)), (0, 0), arco)
+    img.paste(Image.new("RGB", (S, S), (253, 250, 249)), (0, 0), arco)
     # chão: faixa um pouco mais escura embaixo
     chao = Image.new("L", (S, S), 0)
     ImageDraw.Draw(chao).rectangle((0, int(S * 0.86), S, S), fill=16)
@@ -58,7 +74,7 @@ def sombra(img, itens):
     return ImageChops.multiply(img, Image.merge("RGB", (camada,) * 3))
 
 
-def compoe(arquivo, produtos, altura=0.62, espaco=0.30, base=0.86, arco_w=0.64, limite=0.86):
+def compoe(arquivo, produtos, altura=0.62, espaco=0.30, base=0.86, arco_w=0.64, limite=0.86, podio=False):
     """produtos: lista de nomes de arquivo (sem .webp). Lado a lado, centralizados."""
     img = cenario(arco_w)
     fotos = [limpa(n) for n in produtos]
@@ -82,6 +98,8 @@ def compoe(arquivo, produtos, altura=0.62, espaco=0.30, base=0.86, arco_w=0.64, 
         itens.append((cx, y_base, l))
         posicoes.append((f.resize((int(f.width * e), int(f.height * e)), Image.LANCZOS), int(x), y_base))
         x += l + espaco * S * 0.1
+    if podio:
+        img = pedestal(img, S / 2, y_base - 6, min(total + S * 0.08, S * 0.80))
     img = sombra(img, itens)
     for f, px, yb in posicoes:
         camada = Image.new("RGB", (S, S), (255, 255, 255))
@@ -99,7 +117,7 @@ AVULSOS = [
 for n in AVULSOS:
     compoe(n, [n], altura=0.64)
 
-compoe("kit-pele-oleosa", ["sabonete-salicilico", "serum-hialuronico", "protetor-fps60"], altura=0.52, espaco=0.55, arco_w=0.84, limite=0.78)
-compoe("kit-glow", ["mousse-micelar", "serum-rosa-mosqueta", "creme-rosa-mosqueta"], altura=0.52, espaco=0.55, arco_w=0.84, limite=0.78)
-compoe("kit-rosa-mosqueta", ["sabonete-rosa-mosqueta", "esfoliante-rosa-mosqueta", "oleo-rosa-mosqueta"], altura=0.52, espaco=0.55, arco_w=0.84, limite=0.78)
-compoe("kit-firmeza", ["serum-ghk-cu", "creme-vitamina-c"], altura=0.52, espaco=0.55, arco_w=0.84, limite=0.78)
+compoe("kit-pele-oleosa", ["sabonete-salicilico", "serum-hialuronico", "protetor-fps60"], altura=0.50, espaco=0.55, arco_w=0.84, limite=0.74, base=0.80, podio=True)
+compoe("kit-glow", ["mousse-micelar", "serum-rosa-mosqueta", "creme-rosa-mosqueta"], altura=0.50, espaco=0.55, arco_w=0.84, limite=0.74, base=0.80, podio=True)
+compoe("kit-rosa-mosqueta", ["sabonete-rosa-mosqueta", "esfoliante-rosa-mosqueta", "oleo-rosa-mosqueta"], altura=0.50, espaco=0.55, arco_w=0.84, limite=0.74, base=0.80, podio=True)
+compoe("kit-firmeza", ["serum-ghk-cu", "creme-vitamina-c"], altura=0.50, espaco=0.55, arco_w=0.84, limite=0.74, base=0.80, podio=True)

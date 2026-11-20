@@ -14,7 +14,7 @@ export default function Footer({ naLoja = true }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#2F2018] text-cream/80 pt-14 pb-10">
+    <footer className="bg-[#3E1222] text-cream/80 pt-14 pb-10">
       <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center md:flex-row md:items-center md:justify-between gap-8">
         <div className="flex items-center gap-3">
           <div>

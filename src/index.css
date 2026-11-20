@@ -5,19 +5,19 @@
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
   /* Paleta premium Selune: branco, bege, nude, dourado discreto e marrom suave */
-  --color-cream: #FBF8F4;       /* branco premium (fundo) */
-  --color-offwhite: #F5EFE8;    /* bege claro (faixas) */
-  --color-beige: #EADFD3;       /* bege sofisticado (bordas, cartões) */
-  --color-beige-dark: #D9C8B6;  /* nude (bordas fortes) */
-  --color-nude: #C9A99A;        /* nude rosado (detalhes) */
-  --color-nude-dark: #4A3A30;
-  --color-gold: #A8875A;        /* dourado discreto */
-  --color-gold-light: #E8D9C0;
-  --color-ink: #3D2E25;         /* marrom suave para textos */
-  --color-ink-soft: #7A6658;
+  --color-cream: #FCF8F7;       /* branco premium (fundo) */
+  --color-offwhite: #F7EEEC;    /* bege claro (faixas) */
+  --color-beige: #EEDDD9;       /* bege sofisticado (bordas, cartões) */
+  --color-beige-dark: #DDC4BE;  /* nude (bordas fortes) */
+  --color-nude: #C9969E;        /* nude rosado (detalhes) */
+  --color-nude-dark: #4A2430;
+  --color-gold: #B08A55;        /* dourado discreto */
+  --color-gold-light: #EBDCC4;
+  --color-ink: #2B1B21;         /* marrom suave para textos */
+  --color-ink-soft: #76606A;
   /* Cor de ação: marrom profundo com texto branco (contraste 10:1) */
-  --color-accent: #4A3426;
-  --color-accent-dark: #2F2018;
+  --color-accent: #6E1F3B;
+  --color-accent-dark: #3E1222;
 }
 
 html {

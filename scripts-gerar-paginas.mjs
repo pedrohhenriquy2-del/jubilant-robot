@@ -26,7 +26,7 @@ for (const [, cod, slug, titulo, resumo] of codigos) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>${esc(t)}</title>
     <meta name="description" content="${esc(desc)}" />
-    <meta name="theme-color" content="#FBF8F4" />
+    <meta name="theme-color" content="#FCF8F7" />
     <link rel="canonical" href="https://selune-oficial.com.br/${slug}.html" />
     <meta property="og:type" content="product" />
     <meta property="og:site_name" content="Selune Oficial" />
