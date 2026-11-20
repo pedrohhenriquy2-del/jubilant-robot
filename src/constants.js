@@ -748,6 +748,11 @@ export const FAQ_ITEMS = [
       "Cada página mostra o que a embalagem do fabricante indica. Se ficar em dúvida, chame no WhatsApp: uma pessoa da Selune te ajuda a montar a rotina antes de você comprar.",
   },
   {
+    question: "Vocês enviam para fora do Brasil?",
+    answer:
+      "Sim, sob consulta. Chame no WhatsApp (38) 99965-9366: combinamos o frete internacional e enviamos um link de pagamento. Impostos e taxas de importação do país de destino ficam por conta de quem recebe. Protetor solar não é enviado para o exterior.",
+  },
+  {
     question: "Preciso usar protetor solar junto?",
     answer:
       "Durante o dia, o protetor solar é o último passo de qualquer rotina de skincare. Siga também as advertências de cada embalagem.",

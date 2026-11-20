@@ -8,7 +8,11 @@ import {
   LEGAL,
   WHATSAPP_LINK,
   trackWhatsAppClick,
+  buildWhatsAppLink,
 } from "../constants";
+
+// Pedido de quem mora fora do Brasil: atendido caso a caso pelo WhatsApp (pagamento por link e envio internacional).
+const LINK_EXTERIOR = buildWhatsAppLink("Olá! Moro fora do Brasil e quero fazer um pedido na Selune. / Hi! I live outside Brazil and would like to place an order.");
 
 export default function Footer({ naLoja = true }) {
   const year = new Date().getFullYear();
@@ -70,6 +74,11 @@ export default function Footer({ naLoja = true }) {
         <li>ANVISA: peça no WhatsApp o número de notificação de qualquer produto</li>
         <li>Pagamento seguro por Pix, cartão ou boleto</li>
         <li>7 dias para desistir</li>
+        <li>
+          <a href={LINK_EXTERIOR} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppClick} className="underline decoration-gold underline-offset-4 hover:text-cream">
+            Mora fora do Brasil? Peça pelo WhatsApp · Living abroad? Order on WhatsApp
+          </a>
+        </li>
       </ul>
 
       <div className="mx-auto max-w-6xl px-6 mt-6 pt-6 border-t border-cream/10 text-center space-y-3">
