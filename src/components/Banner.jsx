@@ -21,7 +21,7 @@ function slides() {
       texto: "Kit Rosa Mosqueta: sabonete, esfoliante e óleo. Limpa, esfolia e finaliza em 3 minutos, e chega na sua casa com frete grátis.",
       preco: KITRM.price,
       de: KITRM.compareAtPrice,
-      fotos: KITRM.photos,
+      foto: KITRM.cover,
       href: paginaDe("SELKITRM"),
       cta: "Quero o meu kit",
       fundo: "bg-ink",
@@ -105,7 +105,7 @@ export default function Banner() {
                     ))}
                   </span>
                 ) : (
-                  <img src={s.foto} alt="" width="600" height={s.larga ? 450 : 600} fetchpriority={n === 0 ? "high" : "auto"} loading={n === 0 ? "eager" : "lazy"} className={`w-full rounded-[28px] bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)] ${s.larga ? "aspect-[4/3] object-cover" : "aspect-square object-contain p-3"}`} />
+                  <img src={s.foto} alt="" width="600" height={s.larga ? 450 : 600} fetchpriority={n === 0 ? "high" : "auto"} loading={n === 0 ? "eager" : "lazy"} className={`w-full rounded-[28px] bg-white shadow-[0_24px_60px_-30px_rgba(0,0,0,.45)] ${s.larga ? "aspect-[4/3] object-cover" : "aspect-square object-cover"}`} />
                 )}
               </a>
               <div className={`order-2 md:order-1 text-center md:text-left ${s.claro ? "text-cream" : "text-ink"}`}>
