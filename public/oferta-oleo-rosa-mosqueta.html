@@ -154,7 +154,7 @@
     </style>
   </head>
   <body>
-    <div class="faixa">Black Friday Selune · <b>Frete grátis</b> até 01/12</div>
+    <div class="faixa" id="faixa-of">Black Friday Selune · <b>Frete grátis</b> para todo o Brasil</div>
     <header class="topo">
       <div class="wrap">
         <a href="./" aria-label="Selune Oficial, página inicial"><img src="./logo-selune.svg" alt="Selune" width="160" height="44" /></a>
@@ -270,13 +270,13 @@
       <!-- 7. Oferta final -->
       <section class="oferta" id="comprar">
         <div class="wrap">
-          <p class="kicker">Oferta de Black Friday</p>
+          <p class="kicker" id="kicker-of">Oferta de Black Friday</p>
           <h2>Garanta o seu antes que acabe</h2>
           <div class="caixa">
             <img src="./products/novos/oleo-rosa-mosqueta.webp" alt="" width="140" height="140" loading="lazy" />
             <div class="valor">R$ 24,96</div>
             <span class="pix" style="display:inline-block;background:var(--rose);color:#fff;font-weight:800;border-radius:999px;padding:6px 14px">ou R$ 23,71 no Pix</span>
-            <p class="timer">Frete grátis termina em <b id="tempo">--</b></p>
+            <p class="timer">Preço de Black Friday termina em <b id="tempo">--</b></p>
             <a class="btn" href="https://wa.me/5538999659366" data-ipay="SELOLEO" data-valor="24.96" data-nome="Óleo de Rosa Mosqueta Apinil 30 ml" data-name="Óleo de Rosa Mosqueta Apinil 30 ml" data-value="24.96">🔒 Comprar agora</a>
             <p class="nota">Original · lacrado · nota fiscal · envio em 3 a 7 dias úteis</p>
           </div>
@@ -320,9 +320,16 @@
           b.setAttribute('aria-pressed', String(!v.muted));
         });
       })();
-      // Contagem até o fim do frete grátis (01/12 às 23:59, horário de Brasília)
+      // Contagem até o fim do preço de Black Friday (01/12 às 23:59, horário de Brasília).
+      // Depois disso, some a contagem e os textos de Black Friday (o frete grátis continua).
       (function () {
         var fim = new Date('2026-12-01T23:59:59-03:00').getTime(), el = document.getElementById('tempo');
+        if (Date.now() > fim) {
+          el.parentNode.style.display = 'none';
+          document.getElementById('kicker-of').textContent = 'Frete grátis para todo o Brasil';
+          document.getElementById('faixa-of').innerHTML = '<b>Frete grátis</b> para todo o Brasil · 5% off no Pix';
+          return;
+        }
         function tick() {
           var s = Math.max(0, Math.floor((fim - Date.now()) / 1000));
           var d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), ss = s % 60;

@@ -247,7 +247,7 @@
     </style>
   </head>
   <body>
-    <div class="faixa" aria-label="Black Friday da Selune · Frete grátis para todo o Brasil · 5% off no Pix · Nota fiscal em todo pedido · 7 dias para desistir"><div class="faixa-trilho" aria-hidden="true"><div><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i></div><div><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i><span>Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i></div></div></div>
+    <div class="faixa" aria-label="Black Friday da Selune · Frete grátis para todo o Brasil · 5% off no Pix · Nota fiscal em todo pedido · 7 dias para desistir"><div class="faixa-trilho" aria-hidden="true"><div><span data-natal="Peça até 14/12 e receba antes do Natal" data-normal="Kit Rosa Mosqueta por R$ 59,90">Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i><span data-natal="Peça até 14/12 e receba antes do Natal" data-normal="Kit Rosa Mosqueta por R$ 59,90">Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i></div><div><span data-natal="Peça até 14/12 e receba antes do Natal" data-normal="Kit Rosa Mosqueta por R$ 59,90">Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i><span data-natal="Peça até 14/12 e receba antes do Natal" data-normal="Kit Rosa Mosqueta por R$ 59,90">Black Friday da Selune</span><i>✦</i><span>Frete grátis para todo o Brasil</span><i>✦</i><span>5% off no Pix</span><i>✦</i><span>Nota fiscal em todo pedido</span><i>✦</i><span>7 dias para desistir</span><i>✦</i></div></div></div>
     <header class="topo">
       <div class="wrap">
         <a href="./" aria-label="Selune Oficial, página inicial"><img src="./logo-selune.svg" alt="Selune" width="160" height="44" /></a>
@@ -260,7 +260,7 @@
       <section class="hero">
         <div class="wrap grid">
           <div>
-            <span class="selo">🖤 Black Friday · −35%</span>
+            <span class="selo" data-natal="🎁 Presente de Natal · −35%" data-normal="🌹 Rotina completa · −35%">🖤 Black Friday · −35%</span>
             <h1>Sua pele não precisa de mais um creme. Precisa de uma <em>rotina.</em></h1>
             <p class="lead"><b>Limpa, esfolia e finaliza</b> em 3 minutos. Um momento só seu, todo dia, com tudo que faltava num kit só.</p>
             <figure class="palco" aria-label="O que vem no kit">
@@ -352,7 +352,7 @@
       <section class="fim centro">
         <div class="wrap estreito">
           <h2>Você merece <em>3 minutos por dia</em> só seus.</h2>
-          <p class="lead" style="margin:6px 0 0">Preço de Black Friday e frete grátis para todo o Brasil, até 01/12.</p>
+          <p class="lead" style="margin:6px 0 0" data-natal="Frete grátis para todo o Brasil. Peça até 14/12 para receber antes do Natal." data-normal="Frete grátis para todo o Brasil, 5% off no Pix e 7 dias para desistir.">Preço de Black Friday até 01/12, com frete grátis para todo o Brasil.</p>
           <div class="oferta-box" style="max-width:460px;margin:24px auto 0;text-align:left">
             <div class="de">De <s>R$ 92,76</s></div>
             <div class="por"><strong>R$ 59,90</strong><span class="off">−35%</span></div>
@@ -418,6 +418,15 @@
         function roda() { if (calmo) return; clearInterval(t); t = setInterval(function () { mostra((i + 1) % passos.length); }, 4500); }
         abas.forEach(function (a, k) { a.addEventListener('click', function () { mostra(k); box.classList.add('parado'); clearInterval(t); }); });
         if ('IntersectionObserver' in window) { new IntersectionObserver(function (e) { if (e[0].isIntersecting && !box.classList.contains('parado')) roda(); else clearInterval(t); }, { threshold: .3 }).observe(box); } else roda();
+      })();
+    </script>
+    <script>
+      // Troca os textos sozinha: Black Friday até 01/12, Natal até 14/12, depois o texto normal.
+      (function () {
+        var t = Date.now(), f = t <= Date.parse('2026-12-01T23:59:59-03:00') ? '' : t <= Date.parse('2026-12-14T23:59:59-03:00') ? 'natal' : 'normal';
+        if (!f) return;
+        [].forEach.call(document.querySelectorAll('[data-' + f + ']'), function (el) { el.textContent = el.getAttribute('data-' + f); });
+        var fx = document.querySelector('.faixa'); if (fx) fx.setAttribute('aria-label', fx.textContent.replace(/\s*✦\s*/g, ' · ').trim());
       })();
     </script>
     <script src="./checkout-yampi.js?v=5" defer></script>

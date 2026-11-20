@@ -5,14 +5,20 @@ import { useCarrinho, abrirCarrinho } from "../cart";
 import { CATEGORIAS, NECESSIDADES, filtrar } from "../loja";
 import Busca from "./Busca";
 
-// Fim da oferta de Black Friday (frete grátis até 01/12, horário de Brasília).
-const FIM_BLACK_FRIDAY = new Date("2026-12-01T23:59:59-03:00").getTime();
+import { porFase } from "../oferta";
 
-// Frases que passam na faixa do topo (letreiro). Depois da Black Friday, ficam só as garantias.
+// Frases que passam na faixa do topo (letreiro): mudam sozinhas na Black Friday, no Natal e depois.
 const FAIXA_BF = [
   "Black Friday da Selune",
   "Frete grátis para todo o Brasil",
   "Kit Rosa Mosqueta por R$ 59,90",
+  "5% off no Pix",
+  "Nota fiscal em todo pedido",
+];
+const FAIXA_NATAL = [
+  "Peça até 14/12 e receba antes do Natal",
+  "Frete grátis para todo o Brasil",
+  "Kit Rosa Mosqueta: presente pronto",
   "5% off no Pix",
   "Nota fiscal em todo pedido",
 ];
@@ -26,7 +32,7 @@ export default function Header({ naLoja = true }) {
   const { qtd } = useCarrinho();
   const base = import.meta.env.BASE_URL;
   const link = (h) => (naLoja ? h : `${base}${h}`);
-  const frases = Date.now() < FIM_BLACK_FRIDAY ? FAIXA_BF : FAIXA;
+  const frases = porFase({ bf: FAIXA_BF, natal: FAIXA_NATAL, normal: FAIXA });
   const fecharBusca = useCallback(() => setBusca(false), []);
 
   useEffect(() => {

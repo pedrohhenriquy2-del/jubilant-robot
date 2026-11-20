@@ -1,3 +1,4 @@
+import { porFase } from "./oferta";
 // ============================================================
 // DADOS CENTRAIS DO SITE — SELUNE OFICIAL
 // Edite este arquivo para atualizar textos, contatos e serviços
@@ -699,7 +700,7 @@ export const NOVOS_PRODUTOS = [
     photo: `${ASSET_BASE}products/estudio/kit-rosa-mosqueta.webp`,
     cover: `${ASSET_BASE}products/estudio/kit-rosa-mosqueta.webp`,
     photos: [`${ASSET_BASE}products/novos/sabonete-rosa-mosqueta.webp`, `${ASSET_BASE}products/novos/esfoliante-rosa-mosqueta.webp`, `${ASSET_BASE}products/novos/oleo-rosa-mosqueta.webp`],
-    badge: "Black Friday",
+    badge: porFase({ bf: "Black Friday", natal: "Presente de Natal", normal: "Kit" }),
   },
   {
     id: 115, category: "Kits", brand: "Selune", shortName: "Kit Firmeza",

@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { VITRINE, formatPrice } from "../constants";
 import { paginaDe } from "../detalhes";
+import { porFase } from "../oferta";
 
-const BF_FIM = new Date("2026-12-01T23:59:59-03:00").getTime();
 const base = import.meta.env.BASE_URL;
 const GHK = VITRINE.find((p) => p.ipayCode === "SELGHK");
 const KITRM = VITRINE.find((p) => p.ipayCode === "SELKITRM");
@@ -12,11 +12,10 @@ const MENOR = Math.min(...VITRINE.map((p) => p.price));
 // Banner rotativo da página inicial: três ofertas, troca sozinho a cada 6 s,
 // pausa quando a pessoa interage, aceita deslizar no celular e as setas.
 function slides() {
-  const bf = Date.now() < BF_FIM;
   return [
     {
       id: "kitrm",
-      selo: bf ? "Black Friday · −35%" : "Kit rosa mosqueta",
+      selo: porFase({ bf: "Black Friday · −35%", natal: "Presente de Natal · −35%", normal: "Kit rosa mosqueta · −35%" }),
       titulo: "A rotina que a sua pele estava esperando",
       texto: "Kit Rosa Mosqueta: sabonete, esfoliante e óleo. Limpa, esfolia e finaliza em 3 minutos, e chega na sua casa com frete grátis.",
       preco: KITRM.price,
@@ -29,7 +28,7 @@ function slides() {
     },
     {
       id: "bf",
-      selo: bf ? "Black Friday · frete grátis até 01/12" : "Frete grátis",
+      selo: porFase({ bf: "Black Friday da Selune", natal: "Peça até 14/12 e receba antes do Natal", normal: "Frete grátis para todo o Brasil" }),
       titulo: "Cuidar de você não precisa custar caro",
       texto: `Skincare original a partir de ${formatPrice(MENOR)}, com nota fiscal e frete grátis para todo o Brasil.`,
       foto: `${base}banners/hero-premium-mob.webp`,

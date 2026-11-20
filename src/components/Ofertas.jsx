@@ -1,6 +1,7 @@
 import { Check, Lock, ShieldCheck, Truck } from "lucide-react";
 import { VITRINE, formatPrice, precoPix, trackProductClick } from "../constants";
 import { paginaDe } from "../detalhes";
+import { porFase } from "../oferta";
 
 // Ofertas da semana: só os kits da linha rosa mosqueta.
 // "Comprar agora" vai direto para o pagamento.
@@ -10,7 +11,7 @@ const KITGL = VITRINE.find((p) => p.ipayCode === "SELKITGL");
 const CARTOES = [
   {
     p: KITRM,
-    selo: "Black Friday",
+    selo: porFase({ bf: "Black Friday", natal: "Presente de Natal", normal: "Mais completo" }),
     titulo: "Kit Rosa Mosqueta",
     sub: "Sabonete + Esfoliante + Óleo · limpa, esfolia e finaliza",
     itens: ["Sabonete Facial Rosa Mosqueta · 100 ml", "Esfoliante Facial Rosa Mosqueta · 100 g", "Óleo de Rosa Mosqueta Apinil · 30 ml"],
@@ -36,7 +37,7 @@ export default function Ofertas() {
             Sua rotina completa, num pedido só
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm md:text-base text-ink-soft">
-            Tudo combina e tudo chega junto. Escolha o seu kit de rosa mosqueta com preço de Black Friday e frete grátis até 01/12.
+            {porFase({ bf: "Tudo combina e tudo chega junto. Escolha o seu kit de rosa mosqueta com preço de Black Friday até 01/12 e frete grátis.", natal: "Presente pronto, que chega junto e com frete grátis. Peça até 14/12 para receber antes do Natal.", normal: "Tudo combina e tudo chega junto, com frete grátis para todo o Brasil." })}
           </p>
         </header>
 
