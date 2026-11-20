@@ -49,15 +49,11 @@ export default function Ofertas() {
                 key={c.p.id}
                 className="flex flex-col overflow-hidden rounded-3xl border border-beige bg-white shadow-[0_26px_60px_-38px_rgba(74,52,38,.6)]"
               >
-                <a href={paginaDe(c.p.ipayCode)} className="relative block bg-gradient-to-b from-offwhite to-cream px-5 pt-10 pb-5" aria-label={`Ver detalhes: ${c.titulo}`}>
+                <a href={paginaDe(c.p.ipayCode)} className="relative block bg-[#ECE2D6]" aria-label={`Ver detalhes: ${c.titulo}`}>
+                  <img src={c.p.cover} alt="" width="1000" height="1000" loading="lazy" className="block aspect-[5/4] w-full object-cover object-[50%_62%]" />
                   <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-cream">{c.selo}</span>
                   <span className="absolute right-4 top-4 rounded-full bg-gold px-3 py-1 text-[11px] sm:text-xs font-bold text-white">−{off}%</span>
-                  <span className="grid grid-cols-3 items-end gap-3">
-                    {c.p.photos.map((f) => (
-                      <img key={f} src={f} alt="" width="300" height="300" loading="lazy" className="w-full h-auto mix-blend-multiply" />
-                    ))}
-                  </span>
-                  <span className="mt-3 grid grid-cols-3 gap-3 text-center text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-gold">
+                  <span className="absolute inset-x-0 bottom-0 grid grid-cols-3 gap-3 bg-white/70 px-5 py-2.5 text-center text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-ink backdrop-blur-sm">
                     {c.passos.map((t, i) => (
                       <span key={t}>{i + 1} · {t}</span>
                     ))}
