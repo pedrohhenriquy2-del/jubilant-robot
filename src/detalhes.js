@@ -208,7 +208,8 @@ export const DETALHES = {
       "Enxágue bem e seque.",
     ],
     indicacao: "Pele sensível e extrasseca, segundo a embalagem. Siga as advertências do rótulo.",
-    combina: ["SELROSA", "SELCREM"],
+    combina: ["SELESF", "SELOLEO"],
+    kit: "SELKITRM",
   },
   SELESF: {
     slug: "esfoliante-facial-rosa-mosqueta",
@@ -225,7 +226,8 @@ export const DETALHES = {
       "Enxágue bem. Siga a frequência de uso indicada no rótulo.",
     ],
     indicacao: "Pele sensível e extrasseca, segundo a embalagem. Siga as advertências do rótulo.",
-    combina: ["SELSABRM", "SELCREM"],
+    combina: ["SELSABRM", "SELOLEO"],
+    kit: "SELKITRM",
   },
   SELOLEO: {
     slug: "oleo-de-rosa-mosqueta",
@@ -240,7 +242,8 @@ export const DETALHES = {
       "Siga o modo de uso indicado no rótulo.",
     ],
     indicacao: "Uso externo. Siga as orientações e advertências da embalagem.",
-    combina: ["SELSABRM", "SELCREM"],
+    combina: ["SELSABRM", "SELESF"],
+    kit: "SELKITRM",
   },
   SELKITOL: {
     slug: "kit-pele-oleosa",

@@ -120,6 +120,20 @@ export default function ProductPage({ codigo }) {
               {comprar}
             </div>
 
+            {kit && (
+              <a
+                href={paginaDe(kit.ipayCode)}
+                className="mt-4 flex items-center gap-3 rounded-2xl border border-gold/40 bg-gold-light/40 p-3 pr-4 transition-colors hover:bg-gold-light/70"
+              >
+                <img src={kit.cover || kit.photo} alt="" width="72" height="72" loading="lazy" className="h-[72px] w-[72px] shrink-0 rounded-xl object-cover" />
+                <span className="min-w-0 text-sm leading-snug text-ink">
+                  <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-gold">Vale mais a pena</span>
+                  Por <b>{formatPrice(kit.price - p.price)}</b> a mais, leve o <b>{kit.shortName}</b> com a rotina completa
+                  <span className="mt-0.5 block text-xs font-semibold text-accent">Ver o kit →</span>
+                </span>
+              </a>
+            )}
+
             <ul className="mt-5 grid grid-cols-2 gap-2 text-xs text-ink">
               {[
                 [ShieldCheck, "Original e lacrado"],

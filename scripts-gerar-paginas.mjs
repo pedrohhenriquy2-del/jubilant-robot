@@ -44,7 +44,7 @@ ${pixel}
   <body>
     <div id="root" data-produto="${cod}"></div>
     <script type="module" src="/src/produto.jsx"></script>
-    <script src="./checkout-yampi.js?v=4" defer></script>
+    <script src="./checkout-yampi.js?v=5" defer></script>
   </body>
 </html>
 `);

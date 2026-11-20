@@ -27,6 +27,19 @@
 
   function codigoDe(a) { return a.dataset.ipay || ''; }
 
+  // Avisa o Meta que a cliente começou a compra (o clique é interceptado aqui,
+  // então os outros scripts da página não chegam a ver o clique).
+  function rastreia(a) {
+    try {
+      if (typeof window.seluneTrackCheckout === 'function') return window.seluneTrackCheckout(a);
+      if (typeof window.fbq !== 'function') return;
+      var dados = { content_ids: [codigoDe(a)], content_type: 'product', currency: 'BRL' };
+      if (a.dataset.valor) dados.value = parseFloat(a.dataset.valor);
+      if (a.dataset.nome) dados.content_name = a.dataset.nome;
+      window.fbq('track', 'InitiateCheckout', dados);
+    } catch (e) {}
+  }
+
   function ir(url, botao) {
     if (botao && botao.style) { botao.setAttribute('aria-busy', 'true'); botao.style.opacity = '.6'; }
     window.location.href = url;
@@ -40,6 +53,7 @@
     if (!token) return;
     ev.preventDefault();
     ev.stopImmediatePropagation();
+    rastreia(a);
     ir(LOJA + token, a);
   }, true);
 
