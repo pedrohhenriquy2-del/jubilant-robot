@@ -103,6 +103,10 @@ export function trackProductClick(e) {
   });
 }
 
+// O checkout-yampi.js intercepta o clique antes do React; ele chama esta função
+// para o Meta receber o InitiateCheckout com produto e valor (em todas as páginas).
+if (typeof window !== "undefined") window.seluneTrackCheckout = (a) => trackProductClick({ currentTarget: a });
+
 // Catálogo de produtos (o botão Comprar abre o checkout da Yampi; ver public/checkout-yampi.js).
 // Adicione novos produtos aqui conforme forem confirmados (nome + preço + link).
 export const PRODUCTS = [
