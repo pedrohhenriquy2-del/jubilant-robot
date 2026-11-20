@@ -30,6 +30,26 @@ export default function CartDrawer() {
     .find((c) => !noCarrinho.has(c) && !kitsDentro.includes(c));
   const sugestao = VITRINE.find((p) => p.ipayCode === sugestaoCod);
 
+  // Troca inteligente: com 2 ou mais itens de um kit no carrinho, oferece trocar pelo kit
+  // (todos os itens do kit, com frete grátis e mais barato do que comprar separado).
+  const troca = VITRINE.filter((k) => DETALHES[k.ipayCode] && DETALHES[k.ipayCode].incluso && !noCarrinho.has(k.ipayCode))
+    .map((k) => {
+      const inc = DETALHES[k.ipayCode].incluso;
+      const dentro = inc.filter((c) => noCarrinho.has(c));
+      const pagaHoje = dentro.reduce((s, c) => s + VITRINE.find((x) => x.ipayCode === c).price, 0);
+      return { k, inc, dentro, pagaHoje, extra: k.price - pagaHoje, falta: inc.length - dentro.length };
+    })
+    .filter((t) => t.dentro.length >= 2)
+    .sort((a, b) => b.dentro.length - a.dentro.length)[0];
+
+  function trocarPeloKit() {
+    troca.dentro.forEach((c) => {
+      const l = linhas.find((x) => x.codigo === c);
+      mudarQtd(c, l.q - 1);
+    });
+    adicionar(troca.k.ipayCode);
+  }
+
   return (
     <div className={`fixed inset-0 z-[60] ${aberto ? "" : "pointer-events-none"}`} aria-hidden={!aberto}>
       <div
@@ -76,7 +96,7 @@ export default function CartDrawer() {
               {linhas.map(({ codigo, q, p }) => (
                 <li key={codigo} className="flex gap-3 py-4">
                   <a href={paginaDe(codigo)} className="h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-beige bg-white">
-                    <img src={p.photo} alt="" width="80" height="80" className="h-full w-full object-contain" />
+                    <img src={p.cover || p.photo} alt="" width="80" height="80" className="h-full w-full object-cover" />
                   </a>
                   <div className="min-w-0 flex-1">
                     <p className="text-sm font-semibold leading-snug text-ink">{p.shortName}</p>
@@ -99,11 +119,31 @@ export default function CartDrawer() {
             </ul>
           )}
 
-          {sugestao && (
+          {troca && (
+            <div className="mt-4 overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-offwhite to-white p-3">
+              <p className="px-1 text-[11px] font-bold uppercase tracking-[0.14em] text-accent">
+                {troca.falta > 0 ? `Falta ${troca.falta === 1 ? "1 item" : `${troca.falta} itens`} para a rotina completa` : "Sai mais barato em kit"}
+              </p>
+              <div className="mt-2 flex items-center gap-3">
+                <img src={troca.k.cover || troca.k.photo} alt="" width="64" height="64" className="h-16 w-16 shrink-0 rounded-xl object-cover" />
+                <div className="min-w-0 flex-1 text-sm leading-snug text-ink">
+                  <p className="font-semibold">{troca.k.shortName}</p>
+                  <p className="text-ink-soft">
+                    {troca.extra > 0 ? <>Só <b className="text-ink">+{formatPrice(troca.extra)}</b> e leva o kit todo</> : <>Economize <b className="text-ink">{formatPrice(-troca.extra)}</b> trocando pelo kit</>}
+                  </p>
+                </div>
+              </div>
+              <button type="button" onClick={trocarPeloKit} className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-ink text-sm font-semibold text-cream hover:bg-accent-dark">
+                Trocar pelo {troca.k.shortName}
+              </button>
+            </div>
+          )}
+
+          {!troca && sugestao && (
             <div className="mt-4 rounded-2xl border border-gold-light bg-white p-3">
               <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold">Combina com a sua rotina</p>
               <div className="mt-2 flex items-center gap-3">
-                <img src={sugestao.photo} alt="" width="56" height="56" className="h-14 w-14 rounded-lg object-contain" />
+                <img src={sugestao.cover || sugestao.photo} alt="" width="56" height="56" className="h-14 w-14 rounded-lg object-cover" />
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold leading-snug text-ink">{sugestao.shortName}</p>
                   <p className="text-sm text-ink-soft">{formatPrice(sugestao.price)}</p>

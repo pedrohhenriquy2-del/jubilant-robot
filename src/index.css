@@ -60,3 +60,8 @@ h3, h4 {
 @keyframes sobe { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
 .anima { animation: sobe .7s ease-out both }
 @media (prefers-reduced-motion: reduce) { .anima { animation: none } html { scroll-behavior: auto } }
+
+/* Resultado do teste "Qual é a sua rotina?" */
+@keyframes surge { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+.rotina-resultado { animation: surge .45s cubic-bezier(.2,.8,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { .rotina-resultado { animation: none; } }

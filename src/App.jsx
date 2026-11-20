@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Ofertas from "./components/Ofertas";
 import Products from "./components/Products";
+import Rotina from "./components/Rotina";
 import Benefits from "./components/Benefits";
 import Reviews from "./components/Reviews";
 import Promessa from "./components/Promessa";
@@ -20,6 +21,7 @@ function App() {
         <Banner />
         <Ofertas />
         <Benefits />
+        <Rotina />
         <Products />
         <Reviews />
         <Promessa />
