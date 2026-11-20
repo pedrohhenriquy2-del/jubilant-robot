@@ -62,8 +62,9 @@ export default function ProductCard({ p, compacto = false }) {
             onClick={() => adicionar(p.ipayCode)}
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-accent px-3 text-[13px] md:text-sm leading-tight font-semibold tracking-wide text-white hover:bg-accent-dark transition-colors"
           >
-            <ShoppingBag size={16} aria-hidden="true" className="hidden sm:block" />
-            Adicionar ao carrinho
+            <ShoppingBag size={16} aria-hidden="true" />
+            <span className="sm:hidden">Adicionar</span>
+            <span className="hidden sm:inline">Adicionar ao carrinho</span>
           </button>
           {!compacto && (
             <a href={href} className="inline-flex min-h-11 items-center justify-center rounded-full border border-beige-dark px-4 text-sm font-medium text-ink hover:border-ink transition-colors">
